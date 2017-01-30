@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- database driver (com.mysql.jdbc.Driver) -->
+	<set name="DATA_BASE_DRIVER" value="com.mysql.jdbc.Driver" />
+	<!-- database address (jdbc:mysql://localhost/stdb) -->
+	<set name="DATA_BASE_URL" value="jdbc:mysql://localhost/tera" />
+	
+	<!-- login to access the database (root) -->
+	<set name="DATA_BASE_LOGIN" value="root" />
+	<!-- password to access the database (000000) -->
+	<set name="DATA_BASE_PASSWORD" value="" />
+	
+	<!-- maximum number of connections to the database in the pool (10) -->
+	<set name="DATA_BASE_MAX_CONNECTIONS" value="10" />
+	<!-- maximum number of generated statements (1000) -->
+	<set name="DATA_BASE_MAX_STATEMENTS" value="1000" />
+	<!-- cleanup database at server startup (true) -->
+	<set name="DATA_BASE_CLEANING_START" value="true" />
+</list>    

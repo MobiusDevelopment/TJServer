@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+	<template id="1010100" name="Smoke Aggressor I" level="18" lifeTime="50" class="SMOKE_SUMMON" ai="WARRIOR" type="1023" attack="600" defense="250" impact="40" balance="100" maxHp="1" maxMp="300" atkSpd="120" geomRadius="25" runSpd="130" skills="300;301;302;303;304;305;306;" >
+		<add stat="weakRcpt" order="0x40" val="41" />
+		<add stat="dmgRcpt" order="0x40" val="41" />
+		<add stat="stunRcpt" order="0x40" val="41" />
+	</template>
+	
+	<template id="1010101" name="Smoke Aggressor II" level="24" lifeTime="50" class="SMOKE_SUMMON" ai="WARRIOR" type="1023" attack="1200" defense="300" impact="50" balance="130" maxHp="1" maxMp="300" atkSpd="120" geomRadius="25" runSpd="135" skills="300;301;302;303;304;305;306;" >
+		<add stat="weakRcpt" order="0x40" val="41" />
+		<add stat="dmgRcpt" order="0x40" val="41" />
+		<add stat="stunRcpt" order="0x40" val="41" />
+	</template>
+	
+	<template id="1010102" name="Smoke Aggressor III" level="30" lifeTime="50" class="SMOKE_SUMMON" ai="WARRIOR" type="1023" attack="2000" defense="350" impact="60" balance="140" maxHp="1" maxMp="300" atkSpd="120" geomRadius="25" runSpd="140" skills="300;301;302;303;304;305;306;" >
+		<add stat="weakRcpt" order="0x40" val="41" />
+		<add stat="dmgRcpt" order="0x40" val="41" />
+		<add stat="stunRcpt" order="0x40" val="41" />
+	</template>
+	
+	<template id="1010103" name="Smoke Aggressor IV" level="36" lifeTime="50" class="SMOKE_SUMMON" ai="WARRIOR" type="1023" attack="3500" defense="400" impact="70" balance="150" maxHp="1" maxMp="300" atkSpd="120" geomRadius="25" runSpd="145" skills="300;301;302;303;304;305;306;" >
+		<add stat="weakRcpt" order="0x40" val="41" />
+		<add stat="dmgRcpt" order="0x40" val="41" />
+		<add stat="stunRcpt" order="0x40" val="41" />
+	</template>
+	
+	<template id="1010104" name="Smoke Aggressor V" level="42" lifeTime="50" class="SMOKE_SUMMON" ai="WARRIOR" type="1023" attack="5000" defense="450" impact="80" balance="160" maxHp="1" maxMp="300" atkSpd="120" geomRadius="25" runSpd="150" skills="300;301;302;303;304;305;306;" >
+		<add stat="weakRcpt" order="0x40" val="41" />
+		<add stat="dmgRcpt" order="0x40" val="41" />
+		<add stat="stunRcpt" order="0x40" val="41" />
+	</template>
+	
+	<template id="1010105" name="Smoke Aggressor VI" level="48" lifeTime="50" class="SMOKE_SUMMON" ai="WARRIOR" type="1023" attack="6500" defense="500" impact="90" balance="170" maxHp="1" maxMp="300" atkSpd="120" geomRadius="25" runSpd="155" skills="300;301;302;303;304;305;306;" >
+		<add stat="weakRcpt" order="0x40" val="41" />
+		<add stat="dmgRcpt" order="0x40" val="41" />
+		<add stat="stunRcpt" order="0x40" val="41" />
+	</template>
+	
+	<template id="1010106" name="Smoke Aggressor VII" level="54" lifeTime="50" class="SMOKE_SUMMON" ai="WARRIOR" type="1023" attack="8000" defense="550" impact="100" balance="180" maxHp="1" maxMp="300" atkSpd="120" geomRadius="25" runSpd="160" skills="300;301;302;303;304;305;306;" >
+		<add stat="weakRcpt" order="0x40" val="41" />
+		<add stat="dmgRcpt" order="0x40" val="41" />
+		<add stat="stunRcpt" order="0x40" val="41" />
+	</template>
+</list>

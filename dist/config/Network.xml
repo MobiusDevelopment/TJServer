@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- number of streams in a synchronous network -->
+	<set name="NETWORK_GROUP_SIZE" value="5" />
+	<!-- priority thread asynchronous network -->
+	<set name="NETWORK_THREAD_PRIORITY" value="5" />
+	<!-- buffer size client packages -->
+	<set name="NETWORK_READ_BUFFER_SIZE" value="16384" />
+	<!-- buffer size server packages -->
+	<set name="NETWORK_WRITE_BUFFER_SIZE" value="262144" />
+	<!-- maximum number of cutting client package -->
+	<set name="NETWORK_MAXIMUM_PACKET_CUT" value="10" />
+	
+	<!-- whether to display readable network exception -->
+	<set name="NETWORK_VISIBLE_READ_EXCEPTION" value="false" />
+	<!-- whether to display written network exception -->
+	<set name="NETWORK_VISIBLE_WRITE_EXCEPTION" value="false" />
+</list>

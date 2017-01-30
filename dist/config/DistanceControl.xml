@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- turned on the remote control -->
+	<set name="DIST_CONTROL_ENABLED" value="true" />
+	
+	<!-- port for connecting to the management -->
+	<set name="DIST_CONTROL_PORT" value="2101" />
+	
+	<!-- check interval of a connection the client, the more, the less load -->
+	<set name="DIST_CONTROL_CLIENT_INTERVAL" value="1000" />
+	
+	<!-- login authorization management client -->
+	<set name="DIST_CONTROL_LOGIN" value="root" />
+	<!-- password authorization management client -->
+	<set name="DIST_CONTROL_PASSWORD" value="df1sdf7d852cs" />
+</list>    

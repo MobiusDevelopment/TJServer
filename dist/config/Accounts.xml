@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- minimum level of rights to log on to the server (0) -->
+	<set name="ACCOUNT_MIN_ACCESS_LEVEL" value="0" />
+	
+	<!-- experience rate for premiun users (2.0) -->
+	<set name="ACCOUNT_PREMIUM_EXP_RATE" value="2.0" />
+	<!-- money rate for premiun users (2.0) -->
+	<set name="ACCOUNT_PREMIUM_MONEY_RATE" value="2.0" />
+	<!-- drop rate for premiun users (2.0) -->
+	<set name="ACCOUNT_PREMIUM_DROP_RATE" value="2.0" />
+
+
+	<set name="ACCOUNT_PREMIUM_QUEST_RATE" value="2.0" />	
+	<set name="ACCOUNT_PREMIUM_QUEST" value="true" />
+	
+	
+	<!-- whether to include the auto account creation at the entrance (true) -->
+	<set name="ACCOUNT_AUTO_CREATE" value="true" />
+	<!-- include the ability to access the server only premium accounts (false) -->
+	<set name="ACCOUNT_ONLY_PAID" value="false" />
+	
+	<!-- whether premium accounts gain bonus exp (true) -->
+	<set name="ACCOUNT_PREMIUM_EXP" value="true" />
+	<!-- whether premium accounts gain bonus money (true) -->
+	<set name="ACCOUNT_PREMIUM_MONEY" value="true" />
+	<!-- whether premium accounts gain bonus drops (true) -->
+	<set name="ACCOUNT_PREMIUM_DROP" value="true" />
+</list>

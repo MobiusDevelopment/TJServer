@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- the maximum range of the mob -->
+	<set name="AI_MAX_ACTIVE_RANGE" value="2000" />
+	<!-- the maximum radius of a mob response -->
+	<set name="AI_MAX_REACTION_RANGE" value="1500" />
+	
+	<!-- the minimum random of walk range from spawn point -->
+	<set name="AI_MIN_RANDOM_WALK_RANGE" value="60" />
+	<!-- ranged maximum random walk from the spawn points -->
+	<set name="AI_MAX_RANDOM_WALK_RANGE" value="120" />
+	<!-- the time between walk (max 32000) -->
+	<set name="AI_MIN_RANDOM_WALK_DELAY" value="900000" />
+	<!-- the time between walk (max 32000) -->
+	<set name="AI_MAX_RANDOM_WALK_DELAY" value="180000" />
+	
+	<!-- the gap between the performance of the AI TASK (the smaller, the faster the mob thinks) -->
+	<set name="AI_TASK_DELAY" value="200" />
+	
+	<!-- chance of randomly selecting a point to attack targets -->
+	<set name="AI_RANDOM_POINT_ON_CAST" value="60" />
+	
+	<!-- chance to use skills -->
+	<set name="AI_ATTACK_RATE" value="50" />
+	<set name="AI_BUFF_RATE" value="5" />
+	<set name="AI_DEBUFF_RATE" value="25" />
+	<set name="AI_DEFENSE_RATE" value="20" />
+	<set name="AI_JUMP_RATE" value="50" />
+	<set name="AI_SIDE_RATE" value="25" />
+	<set name="AI_ULTIMATE_RATE" value="20" />
+</list>    

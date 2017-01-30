@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+	<template id="1023200" name="Thrall of Life I" level="16" class="HEALER" ai="HEALER" type="1023" lifeTime="12" attack="40" defense="60" impact="10" balance="100" powerFactor="35" defenseFactor="73" maxHp="4000" maxMp="300" atkSpd="120" geomRadius="20" runSpd="200" skills="102;100;101;" />
+	<template id="1023201" name="Thrall of Life II" level="20" class="HEALER" ai="HEALER" type="1023" lifeTime="12" attack="60" defense="80" impact="10" balance="120" powerFactor="35" defenseFactor="73" maxHp="4200" maxMp="300" atkSpd="120" geomRadius="25" runSpd="200" skills="102;103;104;" />
+	<template id="1023202" name="Thrall of Life III" level="24" class="HEALER" ai="HEALER" type="1023" lifeTime="12" attack="80" defense="100" impact="10" balance="140" powerFactor="35" defenseFactor="73" maxHp="4400" maxMp="300" atkSpd="120" geomRadius="25" runSpd="200" skills="102;105;106;" />
+	<template id="1023203" name="Thrall of Life IV" level="28" class="HEALER" ai="HEALER" type="1023" lifeTime="12" attack="100" defense="120" impact="10" balance="160" powerFactor="35" defenseFactor="73" maxHp="4600" maxMp="300" atkSpd="120" geomRadius="25" runSpd="200" skills="102;107;108;" />
+	<template id="1023204" name="Thrall of Life V" level="32" class="HEALER" ai="HEALER" type="1023" lifeTime="12" attack="120" defense="140" impact="10" balance="180" powerFactor="35" defenseFactor="73" maxHp="4800" maxMp="300" atkSpd="120" geomRadius="25" runSpd="200" skills="102;109;110;" />
+	<template id="1023205" name="Thrall of Life VI" level="36" class="HEALER" ai="HEALER" type="1023" lifeTime="12" attack="140" defense="160" impact="10" balance="200" powerFactor="35" defenseFactor="73" maxHp="5000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="200" skills="102;111;112;" />
+	<template id="1023206" name="Thrall of Life VII" level="40" class="HEALER" ai="HEALER" type="1023" lifeTime="12" attack="160" defense="180" impact="10" balance="220" powerFactor="35" defenseFactor="73" maxHp="5500" maxMp="300" atkSpd="120" geomRadius="25" runSpd="200" skills="102;113;114;" />
+	
+	<template id="1023207" name="Thrall of Life VIII" level="40" class="HEALER" ai="HEALER" type="1023" lifeTime="12" attack="180" defense="200" impact="10" balance="250" powerFactor="35" defenseFactor="73" maxHp="6000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="200" skills="102;115;116;" />
+	<template id="1023208" name="Thrall of Life IX" level="40" class="HEALER" ai="HEALER" type="1023" lifeTime="12" attack="220" defense="230" impact="10" balance="280" powerFactor="35" defenseFactor="73" maxHp="6500" maxMp="300" atkSpd="120" geomRadius="25" runSpd="200" skills="102;117;118;" />
+	<template id="1023209" name="Thrall of Life X" level="40" class="HEALER" ai="HEALER" type="1023" lifeTime="12" attack="260" defense="270" impact="10" balance="330" powerFactor="35" defenseFactor="73" maxHp="7000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="200" skills="102;119;120;" />
+	<template id="1023210" name="Thrall of Life XI" level="40" class="HEALER" ai="HEALER" type="1023" lifeTime="12" attack="300" defense="320" impact="10" balance="400" powerFactor="35" defenseFactor="73" maxHp="7500" maxMp="300" atkSpd="120" geomRadius="25" runSpd="200" skills="102;121;122;" />
+</list>
+
+
+
+

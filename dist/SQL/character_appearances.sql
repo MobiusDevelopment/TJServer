@@ -1,0 +1,45 @@
+SET FOREIGN_KEY_CHECKS=0;
+-- ----------------------------
+-- Table structure for `character_appearances`
+-- ----------------------------
+DROP TABLE IF EXISTS `character_appearances`;
+CREATE TABLE `character_appearances` (
+  `object_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `face_color` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `face_skin` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `adorments_skin` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `features_skin` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `features_color` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `voice` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `bone_structure_brow` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `bone_structure_cheekbones` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `bone_structure_jaw` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `bone_structure_jaw_jut` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `ears_rotation` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `ears_extension` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `ears_trim` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `ears_size` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `eyes_width` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `eyes_height` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `eyes_separation` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `eyes_angle` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `eyes_inner_brow` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `eyes_outer_brow` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `nose_extension` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `nose_size` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `nose_bridge` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `nose_nostril_width` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `nose_tip_width` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `nose_tip` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `nose_nostril_flare` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `mouth_pucker` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `mouth_position` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `mouth_width` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `mouth_lip_thickness` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `mouse_corners` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `eyes_shape` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `nose_bend` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `bone_structure_jaw_width` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `mouth_gape` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`object_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

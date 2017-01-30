@@ -1,0 +1,45 @@
+SET FOREIGN_KEY_CHECKS=0;
+-- ----------------------------
+-- Table structure for `characters`
+-- ----------------------------
+DROP TABLE IF EXISTS `characters`;
+CREATE TABLE `characters` (
+  `account_name` varchar(45) NOT NULL DEFAULT '',
+  `object_id` int(11) NOT NULL DEFAULT '0',
+  `class_id` tinyint(3) NOT NULL DEFAULT '0',
+  `race_id` tinyint(1) NOT NULL DEFAULT '0',
+  `sex` tinyint(1) NOT NULL DEFAULT '0',
+  `char_name` varchar(35) NOT NULL DEFAULT '',
+  `heading` int(15) NOT NULL DEFAULT '0',
+  `online_time` bigint(15) NOT NULL DEFAULT '0',
+  `create_time` bigint(15) NOT NULL DEFAULT '0',
+  `end_ban` bigint(15) NOT NULL DEFAULT '0',
+  `end_chat_ban` bigint(15) NOT NULL DEFAULT '0',
+  `title` varchar(16) NOT NULL DEFAULT '',
+  `guild_id` int(15) NOT NULL DEFAULT '0',
+  `access_level` tinyint(4) NOT NULL DEFAULT '0',
+  `level` tinyint(3) NOT NULL DEFAULT '0',
+  `exp` bigint(15) NOT NULL DEFAULT '0',
+  `hp` int(11) NOT NULL DEFAULT '0',
+  `mp` int(11) NOT NULL DEFAULT '0',
+  `x` double(11,2) DEFAULT '0.00',
+  `y` double(11,2) DEFAULT '0.00',
+  `z` double(11,2) DEFAULT '0.00',
+  `heart` smallint(3) NOT NULL DEFAULT '0',
+  `attack_counter` tinyint(3) NOT NULL DEFAULT '0',
+  `pvp_count` int(11) NOT NULL DEFAULT '0',
+  `pve_count` int(11) NOT NULL DEFAULT '0',
+  `guild_rank` tinyint(3) NOT NULL DEFAULT '0',
+  `zone_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `guild_note` varchar(35) NOT NULL DEFAULT '',
+  `karma` int(10) unsigned NOT NULL DEFAULT '0',
+  `collect_mining` int(10) unsigned NOT NULL DEFAULT '1',
+  `collect_plant` int(10) unsigned NOT NULL DEFAULT '1',
+  `collect_energy` int(10) unsigned NOT NULL DEFAULT '1',
+  `last_online` int(10) unsigned NOT NULL DEFAULT '0',
+  `continent_id` smallint(3) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`object_id`),
+  UNIQUE KEY `char_name` (`char_name`),
+  KEY `account_name` (`account_name`),
+  KEY `guild` (`guild_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

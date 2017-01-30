@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- the minimum interval between cars Event (30) -->
+	<set name="EVENT_MIN_TIMEOUT" value="30" />
+	<!-- maximum interval between cars Event (60) -->
+	<set name="EVENT_MAX_TIMEOUT" value="60" />
+	
+	<!-- TVT at the time of registration (5) -->
+	<set name="EVENT_TVT_REGISTER_TIME" value="5" />
+	<!-- the battle on the CT (15) -->
+	<set name="EVENT_TVT_BATTLE_TIME" value="15" />
+	<!-- Minimum number of players on the TVT (10) -->
+	<set name="EVENT_TVT_MIN_PLAYERS" value="6" />
+	<!-- the maximum number of players in the TVS (30) -->
+	<set name="EVENT_TVT_MAX_PLAYERS" value="100" />
+	<!-- minimum level for TVT (20) -->
+	<set name="EVENT_TVT_MIN_LEVEL" value="1" />
+	<!-- maximum level for TVT (60) -->
+	<set name="EVENT_TVT_MAX_LEVEL" value="60" />
+	
+	<!-- LH at the time of registration (5 -->
+	<set name="EVENT_LH_REGISTER_TIME" value="5" />
+	<!-- the battle on the LH (15) -->
+	<set name="EVENT_LH_BATTLE_TIME" value="15" />
+	<!-- Minimum number of players on the LH (10) -->
+	<set name="EVENT_LH_MIN_PLAYERS" value="10" />
+	<!-- the maximum number of players on the LH (30) -->
+	<set name="EVENT_LH_MAX_PLAYERS" value="130" />
+	<!-- the minimum level for the LH20 -->
+	<set name="EVENT_LH_MIN_LEVEL" value="1" />
+	<!-- maximum level for LH (60) -->
+	<set name="EVENT_LH_MAX_LEVEL" value="60" />
+	
+	<!-- time of registration on the TMT (5) -->
+	<set name="EVENT_TMT_REGISTER_TIME" value="5" />
+	<!-- the battle on the TMT (5) -->
+	<set name="EVENT_TMT_BATTLE_TIME" value="5" />
+	<!-- the minimum number of teams in the TMT (5) -->
+	<set name="EVENT_TMT_MIN_TEAMS" value="4" />
+	<!-- the maximum number of teams in the TMT (20) -->
+	<set name="EVENT_TMT_MAX_TEAMS" value="20" />
+	<!-- Minimum number of players per team on TMT (2) -->
+	<set name="EVENT_TMT_MIN_TEAM_SIZE" value="2" />
+	<!-- Maximum number of players per team on TMT (3) -->
+	<set name="EVENT_TMT_MAX_TEAM_SIZE" value="5" />
+	<!-- minimum level for TMT (20) -->
+	<set name="EVENT_TMT_MIN_LEVEL" value="1" />
+	<!-- maximum level for TMT (60) -->
+	<set name="EVENT_TMT_MAX_LEVEL" value="60" />
+	
+	<!-- TVM at the time of registration (5) -->
+	<set name="EVENT_EB_REGISTER_TIME" value="5" />
+	<!-- the battle in the TVM (15) -->
+	<set name="EVENT_EB_BATTLE_TIME" value="15" />
+	<!-- the minimum number of players in the TVM (10) -->
+	<set name="EVENT_EB_MIN_PLAYERS" value="1" />
+	<!-- the maximum number of players on TVM (30) -->
+	<set name="EVENT_EB_MAX_PLAYERS" value="18" />
+	<!-- minimum level for TVM (20) -->
+	<set name="EVENT_EB_MIN_LEVEL" value="20" />
+	<!-- maximum level for TVM (60) -->
+	<set name="EVENT_EB_MAX_LEVEL" value="60" />
+	
+	<!-- time of registration on the TDM (5) -->
+	<set name="EVENT_TDM_REGISTER_TIME" value="3" />
+	<!-- the battle on the TDM (15) -->
+	<set name="EVENT_TDM_BATTLE_TIME" value="10" />
+	<!-- Minimum number of players on the TDM (10) -->
+	<set name="EVENT_TDM_MIN_PLAYERS" value="2" />
+	<!-- the maximum number of players on the TDM (30) -->
+	<set name="EVENT_TDM_MAX_PLAYERS" value="1000" />
+	<!-- for TDM minimum level (20) -->
+	<set name="EVENT_TDM_MIN_LEVEL" value="1" />
+	<!-- the maximum level for the TDM (60) -->
+	<set name="EVENT_TDM_MAX_LEVEL" value="60" />
+	
+	<!-- how much money for 1 point of fame -->
+	<set name="EVENT_HERO_POINT_TO_GOLD" value="1000" />
+</list>    

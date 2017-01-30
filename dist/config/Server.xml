@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- server port to Bind (14752) -->
+	<set name="SERVER_PORT" value="14752" />
+
+	<!-- valid characters for a new nickname -->
+	<set name="SERVER_NAME_TEMPLATE" value="([0-9A-Za-z]{2,16})|([0-9\u0410-\u044f]{2,16})|([0-9А-Яа-я]{2,16})" />
+	
+	<!-- Experience gained factor (1.0) -->
+	<set name="SERVER_RATE_EXP" value="1.0" />
+	<!-- the multiplier of experience in party (1.1) -->
+	<set name="SERVER_PARTY_RATE_EXP" value="1.1" />
+	<!-- drop a money multiplier (1.0) -->
+	<set name="SERVER_RATE_MONEY" value="1.0" />
+	<!-- item drop factor (1.0) -->
+	<set name="SERVER_RATE_DROP_ITEM" value="1.0" />
+	<!-- rate reward quest (1.0) -->
+	<set name="SERVER_RATE_QUEST_REWARD" value="1.0" />
+	
+	<!-- whether to use a sniffer opcodes (false) -->
+	<set name="SERVER_USE_SNIFFER_OPCODE" value="true" />
+	<!-- whether to use real randomayzer to drop (false) -->
+	<set name="SERVER_DROP_REAL_RANDOM" value="true" />
+	<!-- whether to use a real Cretan randomayzer (false) -->
+	<set name="SERVER_CRIT_REAL_RANDOM" value="false" />
+	<!-- whether to use the real effects for randomayzer (false) -->
+	<set name="SERVER_EFFECT_REAL_RANDOM" value="false" />
+	<!-- whether to use real functions randomayzer (false) -->
+	<set name="SERVER_FUNC_REAL_RANDOM" value="false" />
+	<!-- whether to use real randomayzer for damage (false) -->
+	<set name="SERVER_DAMAGE_REAL_RANDOM" value="false" />
+	<!-- whether to use real randomayzer for tipping (false) -->
+	<set name="SERVER_OWERTURN_REAL_RANDOM" value="false" />
+	
+    <!-- modifier available online (online command) (1.0) -->
+	<set name="SERVER_ONLINE_FAKE" value="1.0" />
+	<!-- O address online file server /home/brabusx/online/online.txt -->
+	<set name="SERVER_ONLINE_FILE" value="online.php" />
+	
+	
+	
+	<!-- Id sub players (1000) -->
+	<set name="SERVER_PLAYER_SUB_ID" value="1000" />
+	<!-- NPC sub id (2000) -->
+	<set name="SERVER_NPC_SUB_ID" value="2000" />
+	<!-- sub id an item (3000) -->
+	<set name="SERVER_ITEM_SUB_ID" value="3000" />
+	<!-- sub of the shots (4000) -->
+	<set name="SERVER_SHOT_SUB_ID" value="4000" />
+	<!-- sub object IDs (5000) -->
+	<set name="SERVER_OBJECT_SUB_ID" value="5000" />
+	<!-- sub id traps (6000) -->
+	<set name="SERVER_TRAP_SUB_ID" value="6000" />
+	<!-- sub id resources (7000) -->
+	<set name="SERVER_RESOURSE_SUB_ID" value="7000" />
+</list>    

@@ -1,0 +1,7 @@
+--kill_me - kill the character;
+--version - The current version of the server;
+--online - the current online server;
+--restore_skills - restoration of basic skills with the removal of all current;
+--end_pay - end time payment PA;
+--time - show the current time on the server;
+--restore_characters - restores the input characters on account;

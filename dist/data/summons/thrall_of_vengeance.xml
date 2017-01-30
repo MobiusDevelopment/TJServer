@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+	<template id="1023300" name="Thrall of Vengeance I" level="12" lifeTime="17" class="DEFAULT" ai="VENGENCE_AI" type="1023" attack="1500" defense="30" impact="20" balance="50" maxHp="8000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="0" skills="200;201;202;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023301" name="Thrall of Vengeance II" level="16" lifeTime="17" class="DEFAULT" ai="VENGENCE_AI" type="1023" attack="3000" defense="40" impact="25" balance="60" maxHp="8500" maxMp="300" atkSpd="125" geomRadius="25" runSpd="0" skills="200;201;202;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023302" name="Thrall of Vengeance III" level="20" lifeTime="17" class="DEFAULT" ai="VENGENCE_AI" type="1023" attack="4500" defense="50" impact="30" balance="70" maxHp="9000" maxMp="300" atkSpd="130" geomRadius="25" runSpd="0" skills="200;201;202;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023303" name="Thrall of Vengeance IV" level="24" lifeTime="17" class="DEFAULT" ai="VENGENCE_AI" type="1023" attack="8500" defense="60" impact="35" balance="80" maxHp="9500" maxMp="300" atkSpd="135" geomRadius="25" runSpd="0" skills="200;201;202;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023304" name="Thrall of Vengeance V" level="28" lifeTime="17" class="DEFAULT" ai="VENGENCE_AI" type="1023" attack="11000" defense="70" impact="40" balance="90" maxHp="10000" maxMp="300" atkSpd="140" geomRadius="25" runSpd="0" skills="200;201;202;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023305" name="Thrall of Vengeance VI" level="32" lifeTime="17" class="DEFAULT" ai="VENGENCE_AI" type="1023" attack="17000" defense="80" impact="45" balance="100" maxHp="11000" maxMp="300" atkSpd="145" geomRadius="25" runSpd="0" skills="200;201;202;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023306" name="Thrall of Vengeance VII" level="36" lifeTime="17" class="DEFAULT" ai="VENGENCE_AI" type="1023" attack="25000" defense="90" impact="50" balance="110" maxHp="12000" maxMp="300" atkSpd="150" geomRadius="25" runSpd="0" skills="200;201;202;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023307" name="Thrall of Vengeance VIII" level="40" lifeTime="17" class="DEFAULT" ai="VENGENCE_AI" type="1023" attack="30000" defense="100" impact="55" balance="120" maxHp="14000" maxMp="300" atkSpd="155" geomRadius="25" runSpd="0" skills="200;201;202;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023308" name="Thrall of Vengeance IX" level="44" lifeTime="17" class="DEFAULT" ai="VENGENCE_AI" type="1023" attack="37000" defense="100" impact="55" balance="120" maxHp="14000" maxMp="300" atkSpd="155" geomRadius="25" runSpd="0" skills="200;201;202;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023309" name="Thrall of Vengeance X" level="48" lifeTime="17" class="DEFAULT" ai="VENGENCE_AI" type="1023" attack="46000" defense="100" impact="55" balance="120" maxHp="14000" maxMp="300" atkSpd="155" geomRadius="25" runSpd="0" skills="200;201;202;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023310" name="Thrall of Vengeance XI" level="52" lifeTime="17" class="DEFAULT" ai="VENGENCE_AI" type="1023" attack="55000" defense="100" impact="55" balance="120" maxHp="14000" maxMp="300" atkSpd="155" geomRadius="25" runSpd="0" skills="200;201;202;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023311" name="Thrall of Vengeance XII" level="56" lifeTime="17" class="DEFAULT" ai="VENGENCE_AI" type="1023" attack="65000" defense="100" impact="55" balance="120" maxHp="14000" maxMp="300" atkSpd="155" geomRadius="25" runSpd="0" skills="200;201;202;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+</list>
+
+
+
+

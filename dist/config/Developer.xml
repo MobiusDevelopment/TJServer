@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- conclusion of information about sending debug client packages -->
+	<set name="DEVELOPER_DEBUG_CLIENT_PACKETS" value="false" />
+	<!-- conclusion of information about sending debug server packages -->
+	<set name="DEVELOPER_DEBUG_SERVER_PACKETS" value="false" />
+	<!-- the total output of debug of information -->
+	<set name="DEVELOPER_MAIN_DEBUG" value="false" />
+	<!-- the output of information related to debug target skills -->
+	<set name="DEVELOPER_DEBUG_TARGET_TYPE" value="false" />
+	
+	<!-- the output associated with the debug custom skill -->
+	<set name="DEVELOPER_DEBUG_CASTING_SKILL" value="false" />
+	<!-- the output debug associated with the movement of the player -->
+	<set name="DEVELOPER_DEBUG_MOVING_PLAYER" value="false" />
+	<!-- the output debug associated with the movement of NPC -->
+	<set name="DEVELOPER_DEBUG_MOVING_NPC" value="false" />
+	<!-- logging of movement of players -->
+	<set name="DEVELOPER_GEO_LOGING" value="false" />
+	
+	<!-- establish a compulsory rate of attack all the characters (0 - off) -->
+	<set name="DEVELOPER_FORCE_ATTACK_SPEED" value="0" />
+</list>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+	<template id="1023400" name="Thrall of Wrath I" level="38" lifeTime="17" class="DEFAULT" ai="FIGHTER" type="1023" attack="200" defense="130" impact="10" balance="50" powerFactor="50" defenseFactor="73" maxHp="8000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="0" skills="200;201;202;" />
+
+</list>
+
+
+
+

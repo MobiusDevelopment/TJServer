@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+	<template id="1023000" name="Thrall of Protection I" class="DEFAULT_SUMMON" type="1023" level="4" ttack="90" defense="60" impact="10" balance="50" maxHp="20000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+    	<add stat="weakRcpt" order="0x40" val="33" />
+		<add stat="dmgRcpt" order="0x40" val="33" />
+		<add stat="stunRcpt" order="0x40" val="33" />
+	</template>
+	
+	<template id="1023001" name="Thrall of Protection II" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="8" lifeTime="600" attack="150" defense="90" impact="15" balance="60" maxHp="23000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023002" name="Thrall of Protection III" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="12" lifeTime="600" attack="400" defense="120" impact="20" balance="70" maxHp="25000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023003" name="Thrall of Protection IV" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="16" lifeTime="600" attack="800" defense="150" impact="25" balance="80" maxHp="30000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023004" name="Thrall of Protection V" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="20" lifeTime="600" attack="1400" defense="180" impact="30" balance="90" maxHp="34000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023005" name="Thrall of Protection VI" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="24" lifeTime="600" attack="2400" defense="210" impact="35" balance="100" maxHp="38000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023006" name="Thrall of Protection VII" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="28" lifeTime="600" attack="4000" defense="240" impact="40" balance="110" maxHp="40000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="41" />
+		<add stat="dmgRcpt" order="0x40" val="41" />
+		<add stat="stunRcpt" order="0x40" val="41" />
+	</template>
+	
+	<template id="1023007" name="Thrall of Protection VIII" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="32" lifeTime="600" attack="7000" defense="270" impact="45" balance="120" maxHp="42000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023008" name="Thrall of Protection IX" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="36" lifeTime="600" attack="12000" defense="300" impact="50" balance="130" maxHp="47000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="41" />
+		<add stat="dmgRcpt" order="0x40" val="41" />
+		<add stat="stunRcpt" order="0x40" val="41" />
+	</template>
+	
+	<template id="1023009" name="Thrall of Protection X" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="40" lifeTime="600" attack="19000" defense="330" impact="55" balance="140" maxHp="50000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023010" name="Thrall of Protection XI" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="44" lifeTime="600" attack="23000" defense="360" impact="60" balance="150" maxHp="55000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023011" name="Thrall of Protection XII" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="48" lifeTime="600" attack="27000" defense="390" impact="65" balance="160" maxHp="60000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023012" name="Thrall of Protection XIII" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="52" lifeTime="600" attack="32000" defense="420" impact="70" balance="170" maxHp="65000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+	
+	<template id="1023013" name="Thrall of Protection XIV" class="DEFAULT" ai="THRALL_PROTECTION_AI" type="1023" level="56" lifeTime="600" attack="37000" defense="450" impact="75" balance="180" maxHp="70000" maxMp="300" atkSpd="120" geomRadius="25" runSpd="180" skills="1;2;" >
+		<add stat="weakRcpt" order="0x40" val="61" />
+		<add stat="dmgRcpt" order="0x40" val="61" />
+		<add stat="stunRcpt" order="0x40" val="61" />
+	</template>
+</list>
+
+
+
+

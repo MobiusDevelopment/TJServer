@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- lifetime of an item has fallen from a mob in seconds (300) -->
+	<set name="WORLD_LIFE_TIME_DROP_ITEM" value="300" />
+	<!-- blocking time an item has fallen to a stranger lifting in seconds (20) -->
+	<set name="WORLD_BLOCK_TIME_DROP_ITEM" value="20" />
+	
+	<!-- width of the region in the world (2048)-->
+	<set name="WORLD_WIDTH_REGION" value="2048" />
+	<!-- height of the region in the world (2048) -->
+	<set name="WORLD_HEIGHT_REGION" value="2048" />
+	
+	<!-- minimum level of access to enter the world (0) -->
+	<set name="WORLD_MIN_ACCESS_LEVEL" value="0" />
+	<!-- maximum level of the player (60) -->
+	<set name="WORLD_PLAYER_MAX_LEVEL" value="60" />
+	<!-- how many successful attacks reduce the number of hearts (13) -->
+	<set name="WORLD_PLAYER_THRESHOLD_ATTACKS" value="23" />
+	<!-- how many successful attacks reflections reduce the number of hearts (12) -->
+	<set name="WORLD_PLAYER_THRESHOLD_BLOOKS" value="18" />
+	<!-- while in a fighting stance (10) -->
+	<set name="WORLD_PLAYER_TIME_BATTLE_STANCE" value="10" />
+	<!-- to study whether the skills automatically (false) -->
+	<set name="WORLD_AUTO_LEARN_SKILLS" value="false" />
+	<!-- study only implemented skills (true) -->
+	<set name="WORLD_LEARN_ONLY_IMPLEMENTED_SKILLS" value="true" />
+	<!-- maximum difference in the player's level mob loot for loss (4) -->
+	<set name="WORLD_MAX_DIFF_LEVEL_ON_DROP" value="5" />
+	<!-- a chance to remove the crystal death (13) -->
+	<set name="WORLD_CHANCE_DELETE_CRYSTAL" value="8" />
+	<!-- a chance to remove the crystal death (300) -->
+	<set name="WORLD_MAX_COLLECT_LEVEL" value="300" />
+	<!-- number of continents in the world (3) -->
+	<set name="WORLD_CONTINENT_COUNT" value="3" />
+	
+	<!-- what level targets can not be drained into the PK -->
+    <set name="WORLD_MIN_TARGET_LEVEL_FOR_PK" value="40" />
+
+	
+	<!-- modifier prices in the store (1) -->
+	<set name="WORLD_SHOP_PRICE_MOD" value="1" />
+	<!-- maximum size of the pot Player (288) -->
+	<set name="WORLD_BANK_MAX_SIZE" value="288" />
+	<!-- maximum size of the guild bank (288) -->
+	<set name="WORLD_GUILD_BANK_MAX_SIZE" value="288" />
+	
+	<!-- maximum online (~) -->
+	<set name="WORLD_MAXIMUM_ONLINE" value="5000" />
+	
+	<set name="WORLD_ENCHANT_ITEM_CHANCE" value="60" />
+	<set name="WORLD_DONATE_ITEMS" value="12356,12358,12357,12355,12354,12360,12359,12353,18599,18600,18601,18602,18603,18604,18605,18606,18607,13185,13187,13178,13176,13183,13181,13188,13182,13238,13230,13231,13232,13233,13234,13235,13236,13237,18555,18556,18557,18558,18559,18560,18561,18562,18563,20328,20361,20329,20362,20410,20628,20661,20707,20629,20662,20630,20100,20061,20029,20101,20062,20030,20105,16492,15520,17590,15907,16494,15522,17592,15909,16493,15521,17591,15908,16489,15517,17587,15904,16491,15519,17589,15906,16490,15518,17588,15905,16486,15514,17584,15901,16488,15516,17586,15903,16487,15515,17585,15902,16468,16469,16470,16471,16472,16473,16474,16475,16476,13222,13223,13224,13225,13226,13227,13228,20722,20134,20434,13222,13223,13224,13225,13226,13227,13228,13229,20722,20134,20434" />
+ 
+	<!-- maximum distance for the trade (150) -->
+	<set name="WORLD_TRADE_MAX_RANGE" value="150" />
+	<!-- maximum distance for a duel (150) -->
+	<set name="WORLD_DUEL_MAX_RANGE" value="150" />
+	<!-- maximum distance for an invitation to the GOP (150) -->
+	<set name="WORLD_GUILD_INVITE_MAX_RANGE" value="150" />
+	<!-- maximum error between the position of the client and the server at the start of casting the skill (300) -->
+	<set name="WORLD_MAX_SKILL_DESYNC" value="300" />
+	
+	<!-- PC mode is available if players (true) -->
+	<set name="WORLD_PK_AVAILABLE" value="true" />
+	
+	<!-- modifier rollback fellow skills (1) -->
+	<set name="WORLD_SHORT_SKILL_REUSE_MOD" value="0.9" />
+	<!-- modifier rollback distant skills (1) -->
+	<set name="WORLD_RANGE_SKILL_REUSE_MOD" value="0.9" />
+	<!-- modifier others skills (1) -->
+	<set name="WORLD_OTHER_SKILL_REUSE_MOD" value="0.9" />
+
+</list>    

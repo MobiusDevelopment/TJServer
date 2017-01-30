@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+
+	<!-- Рецепты -->	
+	<common id="26550" type="other" name="Attune: Stormforge Hauberk" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="254126" sellPrice="121026" />
+	<common id="26551" type="other" name="Attune: Undercurrent Grips" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="190617" sellPrice="90770" />
+	<common id="25456" type="other" name="Design: Icy Khatic Scepter" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="26554" type="other" name="Attune: Goldgrain Gloves of Eternity" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="190617" sellPrice="90770" />
+	<common id="26555" type="other" name="Attune: Boots of the Long Road" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="190617" sellPrice="90770" />
+	<common id="26552" type="other" name="Attune: Seastrike Greaves" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="190617" sellPrice="90770" />
+	<common id="26553" type="other" name="Attune: Angelic Wingfield Cuirass" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="254156" sellPrice="121026" />
+	<common id="26558" type="other" name="Attune: Featherstep Shoes" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="190617" sellPrice="90770" />
+	<common id="22015" type="other" name="Lesson: Tier 3 Leather Extraction" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="1994" sellPrice="199" />
+	<common id="26556" type="other" name="Attune: Robe of the Ebon Egg" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="254156" sellPrice="121026" />
+	<common id="26557" type="other" name="Attune: Creative Fingers" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="190617" sellPrice="90770" />
+	<common id="25454" type="other" name="Design: Kaylwood Hunting Bow" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="25455" type="other" name="Design: Staff of Frosty Welcomes" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="25452" type="other" name="Design: Weighty Shadowaxe" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="25453" type="other" name="Design: Icedisc of Balance" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="25450" type="other" name="Design: Shadowband Lance Set" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="25451" type="other" name="Design: Shadsteel Greatsword" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="25449" type="other" name="Design: Dual Shadows" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="26512" type="other" name="Design: Creative Fingers" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="190617" sellPrice="90770" />
+	<common id="26513" type="other" name="Design: Featherstep Shoes" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="190617" sellPrice="90770" />
+	<common id="26505" type="other" name="Design: Stormforge Hauberk" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="254156" sellPrice="121026" />
+	<common id="26507" type="other" name="Design: Seastrike Greaves" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="190617" sellPrice="90770" />
+	<common id="26506" type="other" name="Design: Undercurrent Grips" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="190617" sellPrice="90770" />
+	<common id="26509" type="other" name="Design: Goldgrain Gloves of Eternity" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="190617" sellPrice="90770" />
+	<common id="26508" type="other" name="Design: Angelic Wingfield Cuirass" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="254156" sellPrice="121026" />
+	<common id="26511" type="other" name="Design: Robe of the Ebon Egg" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="254156" sellPrice="121026" />
+	<common id="26510" type="other" name="Design: Boots of the Long Road" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="190617" sellPrice="90770" />
+	<common id="22025" type="other" name="Lesson: Tier 5 Leather Extraction" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="6053" sellPrice="605" />
+	<common id="22024" type="other" name="Lesson: Tier 5 Alchemy Extraction" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="6053" sellPrice="605" />
+	<common id="23010" type="other" name="Design: Boscleather" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="3026" sellPrice="302" />
+	<common id="23011" type="other" name="Design: Norsteel Ingot" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="6631" sellPrice="663" />
+	<common id="23012" type="other" name="Design: Shetlacloth" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="6631" sellPrice="663" />
+	<common id="22020" type="other" name="Lesson: Tier 4 Leather Extraction" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="4199" sellPrice="419" />
+	<common id="23013" type="other" name="Design: Norsteel Ingot" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="6631" sellPrice="663" />
+	<common id="23014" type="other" name="Design: Astrosilex" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="6631" sellPrice="663" />
+	<common id="23015" type="other" name="Design: Marleather" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="6631" sellPrice="663" />
+	<common id="22046" type="other" name="Lesson: Tier 10 Cloth Extraction" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="100855" sellPrice="10085" />
+	<common id="22047" type="other" name="Lesson: Tier 10 Metal Extraction" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="100855" sellPrice="10085" />
+	<common id="25496" type="other" name="Attune: Icy Khatic Scepter" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="22050" type="other" name="Lesson: Tier 10 Leather Extraction" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="100855" sellPrice="10085" />
+	<common id="25489" type="other" name="Attune: Dual Shadows" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="22049" type="other" name="Lesson: Tier 10 Alchemy Extraction" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="100855" sellPrice="10085" />
+	<common id="25490" type="other" name="Attune: Shadowband Lance Set" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="25491" type="other" name="Attune: Shadsteel Greatsword" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="25492" type="other" name="Attune: Weighty Shadowaxe" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="25493" type="other" name="Attune: Icedisc of Balance" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="25494" type="other" name="Attune: Kaylwood Hunting Bow" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="25495" type="other" name="Attune: Staff of Frosty Welcomes" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
+	<common id="25001" type="other" name="Design: Matched Kryswords" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
+	<common id="25002" type="other" name="Design: Rokelance Starter Assemblage" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
+	<common id="25003" type="other" name="Design: Krysteel Tyroblade" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
+	<common id="25004" type="other" name="Design: Krysteel Cleaver" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
+	<common id="25005" type="other" name="Design: Keener's Sundisc" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
+	<common id="25006" type="other" name="Design: Practice Rokebow" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
+	<common id="25007" type="other" name="Design: Novice's Rokestaff" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
+	<common id="25008" type="other" name="Design: Initiate's Rokewood Scepter" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
+			
+	<!-- Предметы продваемые у мерчантов в VELIKA но не реализованные -->
+	<common id="334" type="other" name="Bahaar's Spark of War" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="30000" sellPrice="3000" />		
+	<common id="335" type="other" name="Kaia's Acquiescence" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="3000" sellPrice="300" />	
+	
+</list>
