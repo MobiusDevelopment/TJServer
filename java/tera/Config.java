@@ -54,7 +54,7 @@ public final class Config
 	public static boolean ACCOUNT_PREMIUM_QUEST;
 	
 	public static String SERVER_NAME_TEMPLATE;
-	public static String SERVER_VERSION = "Mobius v1";
+	public static String SERVER_VERSION = "NAEU-17.3204";
 	public static String SERVER_ONLINE_FILE;
 	
 	public static int SERVER_PLAYER_SUB_ID;
