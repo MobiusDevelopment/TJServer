@@ -41,21 +41,7 @@
 			<player percentHp="5" />
 		</mul>
 	</template>
-	
-	<template id="1000" name="Nightmare Kelsaik" class="RAID_BOSS" type="775" level="50" exp="1000000" attack="400000" defense="3500" impact="3000" balance="30000" maxHp="5000000" maxMp="100000" atkSpd="120" runSpd="300" regHp="10000" regMp="10000" geomRadius="90" geomHeight="160" critRate="150" turnSpeed="12000" skills="17011;17012;17013;17014;17015;17016;17017;17018;17019;17020;17021;">
-    	<add stat="weakRcpt" order="0x40" val="90" />
-		<add stat="dmgRcpt" order="0x40" val="90" />
-		<add stat="stunRcpt" order="0x40" val="90" />
-		
-		<mul stat="cAtk" order="0x30" val="2" >
-			<player percentHp="60" />
-		</mul>
-		
-		<mul stat="cAtk" order="0x30" val="2" >
-			<player percentHp="5" />
-		</mul>
-	</template>
-	
+
 	<template id="1003" name="Nightmare Kelsaik Rampant" class="RAID_BOSS" type="775" level="50" exp="1000000" attack="400000" defense="3500" impact="3000" balance="30000" maxHp="5000000" maxMp="100000" atkSpd="120" runSpd="300" regHp="10000" regMp="10000" geomRadius="90" geomHeight="160" critRate="150" turnSpeed="12000" skills="17011;17012;17013;17014;17015;17016;17017;17018;17019;17020;17021;">
     	<add stat="weakRcpt" order="0x40" val="90" />
 		<add stat="dmgRcpt" order="0x40" val="90" />

@@ -167,7 +167,6 @@
 
 	<template id="1100" name="1100" class="FRIENDLY" type="230" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1056" name="1056" class="FRIENDLY" type="230" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
-	<template id="1056" name="1056" class="FRIENDLY" type="230" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1101" name="1101" class="FRIENDLY" type="71" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1006" name="1006" class="FRIENDLY" type="71" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1047" name="1047" class="FRIENDLY" type="230" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
@@ -181,7 +180,6 @@
 	<template id="1105" name="1105" class="FRIENDLY" type="71" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="3015" name="3015" class="FRIENDLY" type="71" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1010" name="1010" class="FRIENDLY" type="71" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
-	<template id="1101" name="1101" class="FRIENDLY" type="71" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1002" name="1002" class="REGION_WAR_SHOP" type="371" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1108" name="1108" class="FRIENDLY" type="71" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1302" name="1302" class="REGION_WAR_SHOP" type="371" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
@@ -305,7 +303,6 @@
 	<template id="1072" name="1072" class="FRIENDLY" type="230" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1073" name="1073" class="FRIENDLY" type="230" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1025" name="1025" class="FRIENDLY" type="230" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
-	<template id="1070" name="1070" class="FRIENDLY" type="230" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1070" name="1070" class="FRIENDLY" type="230" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1447" name="1447" class="FRIENDLY" type="72" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="1071" name="1071" class="FRIENDLY" type="230" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />

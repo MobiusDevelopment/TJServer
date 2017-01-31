@@ -227,5 +227,43 @@
 		<!-- центр города -->
 		<center x="-10872" y="5070" z="3980" />
 	</town>
+		<town name="DRAGONFALL" id="154460" zone="3" continentId="2" >
+		<!-- Description of the data associated with Pegasus -->
+		<pegas local="100000" portal="100000" landing="100000" >
+			<portal x="-36253.65" y="7895.808" z="4536.037" />
+			<landing x="-36253.65" y="7895.808" z="4536.037" />
+		</pegas>
+		
+		<!-- center -->
+		<center x="-38501.31" y="7907.7476" z="4645.5557" />
+	</town>
+	
+	<town name="SCYTHERA" id="145376" zone="3" continentId="2" >
+		<!-- Description of the data associated with Pegasus -->
+		<pegas local="100000" portal="100000" landing="100000" >
+			<portal x="-56333.13" y="-24042.79" z="2165.748" />
+			<landing x="-56333.13" y="-24042.79" z="2165.748" />
+		</pegas>
+		<!-- center -->
+		<center x="-57942.887" y="-25270.363" z="2137.4006" />
+	</town>
+	<town name="PATHFINDER" id="177026" zone="3" continentId="2" >
+		<!-- Description of the data associated with Pegasus -->
+		<pegas local="100000" portal="100000" landing="100000" >
+			<portal x="12874.428" y="-24317.168" z="-134.1125" />
+			<landing x="12874.428" y="-24317.168" z="-134.1125" />
+		</pegas>
+		<!-- center -->
+		<center x="12474.041" y="-27661.494" z="168.97343" />
+	</town>
+	<town name="HABERE" id="170611" zone="3" continentId="2" >
+		<!-- Description of the data associated with Pegasus -->
+		<pegas local="100000" portal="100000" landing="100000" >
+			<portal x="-5220.351" y="59202.758" z="5555.541" />
+			<landing x="-5220.351" y="59202.758" z="5555.541" />
+		</pegas>
+		<!-- center -->
+		<center x="-5071.3755" y="62254.766" z="6020.389" />
+	</town>
 </list>    
 	

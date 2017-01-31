@@ -50,14 +50,6 @@
 	<common id="25493" type="other" name="Attune: Icedisc of Balance" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
 	<common id="25494" type="other" name="Attune: Kaylwood Hunting Bow" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
 	<common id="25495" type="other" name="Attune: Staff of Frosty Welcomes" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="635391" sellPrice="302567" />
-	<common id="25001" type="other" name="Design: Matched Kryswords" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
-	<common id="25002" type="other" name="Design: Rokelance Starter Assemblage" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
-	<common id="25003" type="other" name="Design: Krysteel Tyroblade" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
-	<common id="25004" type="other" name="Design: Krysteel Cleaver" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
-	<common id="25005" type="other" name="Design: Keener's Sundisc" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
-	<common id="25006" type="other" name="Design: Practice Rokebow" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
-	<common id="25007" type="other" name="Design: Novice's Rokestaff" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
-	<common id="25008" type="other" name="Design: Initiate's Rokewood Scepter" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="574" sellPrice="57" />
 			
 	<!-- Предметы продваемые у мерчантов в VELIKA но не реализованные -->
 	<common id="334" type="other" name="Bahaar's Spark of War" tradable="true" sellable="true" bank="true" guildBank="true" buyPrice="30000" sellPrice="3000" />		
