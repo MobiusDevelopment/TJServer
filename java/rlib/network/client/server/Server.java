@@ -22,6 +22,7 @@ import rlib.network.packets.ReadeablePacket;
 import rlib.network.packets.SendablePacket;
 import rlib.util.Synchronized;
 
+@SuppressWarnings("rawtypes")
 public interface Server<C extends ServerConnection> extends Synchronized
 {
 	void close();

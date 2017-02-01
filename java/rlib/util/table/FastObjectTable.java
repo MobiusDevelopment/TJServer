@@ -30,7 +30,7 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 	private final FoldablePool<Entry<K, V>> entryPool;
 	private Entry<K, V>[] table;
 	private int threshold;
-	private int size;
+	int size;
 	private float loadFactor;
 	
 	protected FastObjectTable()
@@ -43,6 +43,7 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 		this(loadFactor, 16);
 	}
 	
+	@SuppressWarnings("unchecked")
 	protected FastObjectTable(float loadFactor, int initCapacity)
 	{
 		this.loadFactor = loadFactor;
@@ -64,7 +65,7 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 		Entry<K, V> newEntry = this.entryPool.take();
 		if (newEntry == null)
 		{
-			newEntry = new Entry();
+			newEntry = new Entry<>();
 		}
 		newEntry.set(hash, key, value, entry);
 		table[index] = newEntry;
@@ -110,16 +111,17 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final void clear()
 	{
 		Object[] table = this.table();
-		Entry next = null;
+		Entry<K, V> next = null;
 		int i = 0;
 		int length = table.length;
 		while (i < length)
 		{
-			Entry entry = (Entry) table[i];
+			Entry<K, V> entry = (Entry<K, V>) table[i];
 			while (entry != null)
 			{
 				next = entry.getNext();
@@ -154,8 +156,7 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 		int length = table.length;
 		while (i < length)
 		{
-			Entry element;
-			Entry entry = element = table[i];
+			Entry<?, ?> entry = table[i];
 			while (entry != null)
 			{
 				if (value.equals(entry.getValue()))
@@ -298,7 +299,7 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 		return value;
 	}
 	
-	private final Entry<K, V> removeEntryForKey(K key)
+	final Entry<K, V> removeEntryForKey(K key)
 	{
 		Entry<K, V> prev;
 		int hash = AbstractTable.hash(key.hashCode());
@@ -327,6 +328,11 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 		return entry;
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	private final void resize(int newLength)
 	{
 		Entry<K, V>[] oldTable = this.table();
@@ -348,7 +354,7 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 		return this.size;
 	}
 	
-	private final Entry<K, V>[] table()
+	final Entry<K, V>[] table()
 	{
 		return this.table;
 	}
@@ -425,15 +431,16 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 	
 	private static final class Entry<K, V> implements Foldable
 	{
-		private Entry<K, V> next;
+		Entry<K, V> next;
 		private K key;
 		private V value;
 		private int hash;
 		
-		private Entry()
+		Entry()
 		{
 		}
 		
+		@SuppressWarnings("unchecked")
 		@Override
 		public boolean equals(Object object)
 		{
@@ -444,7 +451,7 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 			{
 				return false;
 			}
-			Entry entry = (Entry) object;
+			Entry<?, ?> entry = (Entry<?, ?>) object;
 			K firstKey = getKey();
 			secondKey = (K) entry.getKey();
 			if (((firstKey == secondKey) || ((firstKey != null) && firstKey.equals(secondKey))) && (((firstValue = getValue()) == (secondValue = (V) entry.getValue())) || ((firstValue != null) && firstValue.equals(secondValue))))
@@ -527,9 +534,15 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 		private Entry<K, V> next;
 		private Entry<K, V> current;
 		private int index;
+		@SuppressWarnings("rawtypes")
 		final /* synthetic */ FastObjectTable this$0;
 		
-		private TableIterator(FastObjectTable fastObjectTable)
+		@SuppressWarnings(
+		{
+			"rawtypes",
+			"unchecked"
+		})
+		TableIterator(FastObjectTable fastObjectTable)
 		{
 			this.this$0 = fastObjectTable;
 			Entry[] table = fastObjectTable.table();
@@ -557,6 +570,11 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 			return this.nextEntry().getValue();
 		}
 		
+		@SuppressWarnings(
+		{
+			"unchecked",
+			"rawtypes"
+		})
 		private Entry<K, V> nextEntry()
 		{
 			Entry[] table = this.this$0.table();
@@ -576,6 +594,7 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 			return entry;
 		}
 		
+		@SuppressWarnings("unchecked")
 		@Override
 		public void remove()
 		{

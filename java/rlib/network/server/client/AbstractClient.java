@@ -27,6 +27,7 @@ import rlib.network.GameCrypt;
 import rlib.network.packets.ReadeablePacket;
 import rlib.network.packets.SendablePacket;
 
+@SuppressWarnings("rawtypes")
 public abstract class AbstractClient<A, O, C extends AsynConnection, T extends GameCrypt> implements Client<A, O, C>
 {
 	protected static final Logger log = Loggers.getLogger("Client");
@@ -102,6 +103,7 @@ public abstract class AbstractClient<A, O, C extends AsynConnection, T extends G
 		this.lock.lock();
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final void readPacket(ReadeablePacket packet, ByteBuffer buffer)
 	{
@@ -117,6 +119,7 @@ public abstract class AbstractClient<A, O, C extends AsynConnection, T extends G
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final void sendPacket(SendablePacket packet)
 	{

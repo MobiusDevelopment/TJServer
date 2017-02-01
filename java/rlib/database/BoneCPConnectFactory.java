@@ -46,7 +46,7 @@ public final class BoneCPConnectFactory extends ConnectFactory
 		return source.getConnection();
 	}
 	
-	public synchronized void init(BoneCPConfig config, String driver) throws SQLException
+	public synchronized void init(BoneCPConfig config, String driver)
 	{
 		try
 		{

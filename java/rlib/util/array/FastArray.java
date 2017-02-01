@@ -235,6 +235,7 @@ public class FastArray<E> extends AbstractArray<E>
 		return this.fastRemove(this.size - 1);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final boolean removeAll(Array<?> target)
 	{
@@ -349,6 +350,7 @@ public class FastArray<E> extends AbstractArray<E>
 		return this;
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final <T> T[] toArray(T[] container)
 	{

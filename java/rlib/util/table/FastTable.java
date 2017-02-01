@@ -28,8 +28,9 @@ public final class FastTable<K, V> implements Table<K, V>
 {
 	private int threshold = 12;
 	private final float loadFactor = 0.75f;
-	private int size = 0;
-	private Entry<V>[] table = new Entry[16];
+	int size = 0;
+	@SuppressWarnings("unchecked")
+	Entry<V>[] table = new Entry[16];
 	
 	private static int hash(int hash)
 	{
@@ -49,7 +50,7 @@ public final class FastTable<K, V> implements Table<K, V>
 	private void addEntry(int hash, int key, V value, int index)
 	{
 		Entry<V> entry = this.table[index];
-		this.table[index] = new Entry(key, value, entry, hash);
+		this.table[index] = new Entry<>(key, value, entry, hash);
 		if (this.size++ >= this.threshold)
 		{
 			this.resize(2 * this.table.length);
@@ -110,8 +111,7 @@ public final class FastTable<K, V> implements Table<K, V>
 		int length = this.table.length;
 		while (i < length)
 		{
-			Entry element;
-			Entry entry = element = this.table[i];
+			Entry<V> entry = this.table[i];
 			while (entry != null)
 			{
 				if (value.equals(entry.value))
@@ -134,11 +134,12 @@ public final class FastTable<K, V> implements Table<K, V>
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public V get(int key)
 	{
 		int hash = FastTable.hash(key);
-		Entry entry = this.table[FastTable.indexFor(hash, this.table.length)];
+		Entry<?> entry = this.table[FastTable.indexFor(hash, this.table.length)];
 		while (entry != null)
 		{
 			if ((entry.hash == hash) && (entry.key == key))
@@ -165,7 +166,7 @@ public final class FastTable<K, V> implements Table<K, V>
 	private Entry<V> getEntry(int key)
 	{
 		int hash = FastTable.hash(key);
-		Entry entry = this.table[FastTable.indexFor(hash, this.table.length)];
+		Entry<V> entry = this.table[FastTable.indexFor(hash, this.table.length)];
 		while (entry != null)
 		{
 			if (entry.key == key)
@@ -223,12 +224,13 @@ public final class FastTable<K, V> implements Table<K, V>
 		throw new IllegalArgumentException("not supported.");
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public V put(int key, V value)
 	{
 		int hash = FastTable.hash(key);
 		int i = FastTable.indexFor(hash, this.table.length);
-		Entry entry = this.table[i];
+		Entry<?> entry = this.table[i];
 		while (entry != null)
 		{
 			if (entry.key == key)
@@ -295,15 +297,15 @@ public final class FastTable<K, V> implements Table<K, V>
 		throw new IllegalArgumentException("not supported.");
 	}
 	
-	private Entry<V> removeEntryForKey(int key)
+	Entry<V> removeEntryForKey(int key)
 	{
-		Entry prev;
+		Entry<V> prev;
 		int hash = FastTable.hash(key);
 		int i = FastTable.indexFor(hash, this.table.length);
-		Entry entry = prev = this.table[i];
+		Entry<V> entry = prev = this.table[i];
 		while (entry != null)
 		{
-			Entry next = entry.next;
+			Entry<V> next = entry.next;
 			if ((entry.hash == hash) && (entry.key == key))
 			{
 				--this.size;
@@ -323,6 +325,11 @@ public final class FastTable<K, V> implements Table<K, V>
 		return entry;
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	private void resize(int newLength)
 	{
 		Entry<V>[] oldTable = this.table;
@@ -358,10 +365,10 @@ public final class FastTable<K, V> implements Table<K, V>
 		int length = original.length;
 		while (j < length)
 		{
-			Entry entry = original[j];
+			Entry<V> entry = original[j];
 			if (entry != null)
 			{
-				Entry next;
+				Entry<V> next;
 				original[j] = null;
 				do
 				{
@@ -394,12 +401,12 @@ public final class FastTable<K, V> implements Table<K, V>
 	
 	private static final class Entry<V>
 	{
-		private V value;
-		private Entry<V> next;
-		private final int key;
-		private final int hash;
+		V value;
+		Entry<V> next;
+		final int key;
+		final int hash;
 		
-		private Entry(int key, V value, Entry<V> next, int hash)
+		Entry(int key, V value, Entry<V> next, int hash)
 		{
 			this.key = key;
 			this.value = value;
@@ -414,7 +421,7 @@ public final class FastTable<K, V> implements Table<K, V>
 			{
 				return false;
 			}
-			Entry entry = (Entry) object;
+			Entry<?> entry = (Entry<?>) object;
 			if ((this.key == entry.key) && (this.value == entry.value))
 			{
 				return true;
@@ -434,11 +441,21 @@ public final class FastTable<K, V> implements Table<K, V>
 			return String.valueOf(this.key) + " = " + this.value;
 		}
 		
+		@SuppressWarnings(
+		{
+			"unchecked",
+			"rawtypes"
+		})
 		static /* synthetic */ void access$5(Entry entry, Object object)
 		{
 			entry.value = object;
 		}
 		
+		@SuppressWarnings(
+		{
+			"rawtypes",
+			"unchecked"
+		})
 		static /* synthetic */ void access$6(Entry entry, Entry entry2)
 		{
 			entry.next = entry2;
@@ -450,9 +467,15 @@ public final class FastTable<K, V> implements Table<K, V>
 		private Entry<V> next;
 		private int index;
 		private Entry<V> current;
+		@SuppressWarnings("rawtypes")
 		final /* synthetic */ FastTable this$0;
 		
-		private TableIterator(FastTable fastTable)
+		@SuppressWarnings(
+		{
+			"rawtypes",
+			"unchecked"
+		})
+		TableIterator(FastTable fastTable)
 		{
 			this.this$0 = fastTable;
 			if (fastTable.size > 0)
@@ -479,6 +502,7 @@ public final class FastTable<K, V> implements Table<K, V>
 			return this.nextEntry().value;
 		}
 		
+		@SuppressWarnings("unchecked")
 		private Entry<V> nextEntry()
 		{
 			Entry<V> entry = this.next;

@@ -27,8 +27,8 @@ public class ConcurrentArray<E> extends AbstractArray<E>
 	private static final long serialVersionUID = 1;
 	private final Lock readLock;
 	private final Lock writeLock;
-	private volatile E[] array;
-	private volatile int size;
+	volatile E[] array;
+	volatile int size;
 	
 	public ConcurrentArray(Class<E> type)
 	{
@@ -59,7 +59,7 @@ public class ConcurrentArray<E> extends AbstractArray<E>
 			}
 			this.array[this.size] = element;
 			++this.size;
-			ConcurrentArray concurrentArray = this;
+			ConcurrentArray<E> concurrentArray = this;
 			return concurrentArray;
 		}
 		finally
@@ -91,7 +91,7 @@ public class ConcurrentArray<E> extends AbstractArray<E>
 				this.add(array[i]);
 				++i;
 			}
-			ConcurrentArray concurrentArray = this;
+			ConcurrentArray<E> concurrentArray = this;
 			return concurrentArray;
 		}
 		finally
@@ -122,7 +122,7 @@ public class ConcurrentArray<E> extends AbstractArray<E>
 				this.add(elements[i]);
 				++i;
 			}
-			ConcurrentArray concurrentArray = this;
+			ConcurrentArray<E> concurrentArray = this;
 			return concurrentArray;
 		}
 		finally
@@ -145,7 +145,7 @@ public class ConcurrentArray<E> extends AbstractArray<E>
 		{
 			Arrays.clear(this.array);
 			this.size = 0;
-			ConcurrentArray concurrentArray = this;
+			ConcurrentArray<E> concurrentArray = this;
 			return concurrentArray;
 		}
 		finally
@@ -363,6 +363,7 @@ public class ConcurrentArray<E> extends AbstractArray<E>
 		this.readLock.unlock();
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final boolean removeAll(Array<?> target)
 	{
@@ -519,7 +520,7 @@ public class ConcurrentArray<E> extends AbstractArray<E>
 		try
 		{
 			Arrays.sort(this.array, comparator);
-			ConcurrentArray concurrentArray = this;
+			ConcurrentArray<E> concurrentArray = this;
 			return concurrentArray;
 		}
 		finally
@@ -528,6 +529,7 @@ public class ConcurrentArray<E> extends AbstractArray<E>
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final <T> T[] toArray(T[] container)
 	{
@@ -572,7 +574,7 @@ public class ConcurrentArray<E> extends AbstractArray<E>
 		try
 		{
 			this.array = Arrays.copyOfRange(this.array, 0, this.size);
-			ConcurrentArray concurrentArray = this;
+			ConcurrentArray<E> concurrentArray = this;
 			return concurrentArray;
 		}
 		finally
@@ -617,9 +619,9 @@ public class ConcurrentArray<E> extends AbstractArray<E>
 	private final class FastIterator implements ArrayIterator<E>
 	{
 		private int ordinal;
-		final /* synthetic */ ConcurrentArray this$0;
+		final /* synthetic */ ConcurrentArray<?> this$0;
 		
-		private FastIterator(ConcurrentArray concurrentArray)
+		FastIterator(ConcurrentArray<?> concurrentArray)
 		{
 			this.this$0 = concurrentArray;
 		}
@@ -646,6 +648,7 @@ public class ConcurrentArray<E> extends AbstractArray<E>
 			return this.ordinal - 1;
 		}
 		
+		@SuppressWarnings("unchecked")
 		@Override
 		public E next()
 		{

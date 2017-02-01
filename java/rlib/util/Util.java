@@ -26,7 +26,7 @@ public abstract class Util
 {
 	private static final SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss:SSS");
 	
-	public static boolean checkFreePorts(String host, int port) throws InterruptedException
+	public static boolean checkFreePorts(String host, int port)
 	{
 		try
 		{
@@ -40,7 +40,7 @@ public abstract class Util
 		return true;
 	}
 	
-	public static boolean checkFreePorts(String host, int[] ports) throws InterruptedException
+	public static boolean checkFreePorts(String host, int[] ports)
 	{
 		int[] arrn = ports;
 		int n = arrn.length;

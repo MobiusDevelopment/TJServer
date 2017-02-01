@@ -20,7 +20,7 @@ import rlib.network.AsynConnection;
 import rlib.network.packets.ReadeablePacket;
 import rlib.network.packets.SendablePacket;
 
-public interface ServerConnection<T extends Server, R extends ReadeablePacket<T>, S extends SendablePacket<T>> extends AsynConnection<R, S>
+public interface ServerConnection<T extends Server<?>, R extends ReadeablePacket<T>, S extends SendablePacket<T>> extends AsynConnection<R, S>
 {
 	T getServer();
 	

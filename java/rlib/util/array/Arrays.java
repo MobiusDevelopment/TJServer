@@ -156,7 +156,7 @@ public abstract class Arrays
 	
 	public static <T> T[] copyOf(T[] old, int added)
 	{
-		Class newType = old.getClass();
+		Class<? extends Object[]> newType = old.getClass();
 		T[] copy = Arrays.create(newType.getComponentType(), old.length + added);
 		System.arraycopy(old, 0, copy, 0, Math.min(old.length, copy.length));
 		return copy;
@@ -180,13 +180,14 @@ public abstract class Arrays
 	
 	public static <T> T[] copyOfRange(T[] original, int from, int to)
 	{
-		Class newType = original.getClass();
+		Class<? extends Object[]> newType = original.getClass();
 		int newLength = to - from;
 		T[] copy = Arrays.create(newType.getComponentType(), newLength);
 		System.arraycopy(original, from, copy, 0, Math.min(original.length - from, newLength));
 		return copy;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public static <T> T[] create(Class<?> type, int size)
 	{
 		return (T[]) java.lang.reflect.Array.newInstance(type, size);
@@ -252,41 +253,81 @@ public abstract class Arrays
 		java.util.Arrays.sort(array, comparator);
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	public static <E> Array<E> toArray(Class<?> type)
 	{
 		return new FastArray(type);
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	public static <E> Array<E> toArray(Class<?> type, int size)
 	{
 		return new FastArray(type, size);
 	}
 	
+	@SuppressWarnings(
+	{
+		"rawtypes",
+		"unchecked"
+	})
 	public static <E> Array<E> toArraySet(Class<?> type)
 	{
 		return new FastArraySet(type);
 	}
 	
+	@SuppressWarnings(
+	{
+		"rawtypes",
+		"unchecked"
+	})
 	public static <E> Array<E> toArraySet(Class<?> type, int size)
 	{
 		return new FastArraySet(type, size);
 	}
 	
+	@SuppressWarnings(
+	{
+		"rawtypes",
+		"unchecked"
+	})
 	public static <E> Array<E> toConcurrentArray(Class<?> type)
 	{
 		return new ConcurrentArray(type);
 	}
 	
+	@SuppressWarnings(
+	{
+		"rawtypes",
+		"unchecked"
+	})
 	public static <E> Array<E> toConcurrentArray(Class<?> type, int size)
 	{
 		return new ConcurrentArray(type, size);
 	}
 	
+	@SuppressWarnings(
+	{
+		"rawtypes",
+		"unchecked"
+	})
 	public static <E> Array<E> toConcurrentArraySet(Class<?> type)
 	{
 		return new ConcurrentArraySet(type);
 	}
 	
+	@SuppressWarnings(
+	{
+		"rawtypes",
+		"unchecked"
+	})
 	public static <E> Array<E> toConcurrentArraySet(Class<?> type, int size)
 	{
 		return new ConcurrentArraySet(type, size);
@@ -308,11 +349,21 @@ public abstract class Arrays
 		return elements;
 	}
 	
+	@SuppressWarnings(
+	{
+		"rawtypes",
+		"unchecked"
+	})
 	public static <E extends Comparable<E>> Array<E> toSortedArray(Class<?> type)
 	{
 		return new SortedArray(type);
 	}
 	
+	@SuppressWarnings(
+	{
+		"rawtypes",
+		"unchecked"
+	})
 	public static <E extends Comparable<E>> Array<E> toSortedArray(Class<?> type, int size)
 	{
 		return new SortedArray(type, size);
@@ -414,6 +465,11 @@ public abstract class Arrays
 		return builder.toString();
 	}
 	
+	@SuppressWarnings(
+	{
+		"rawtypes",
+		"unchecked"
+	})
 	public static <E> Array<E> toSynchronizedArray(Class<?> type)
 	{
 		return new SynchronizedArray(type);

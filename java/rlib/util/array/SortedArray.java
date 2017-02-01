@@ -30,6 +30,11 @@ public class SortedArray<E extends Comparable<E>> extends FastArray<E>
 		super(type, size);
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	@Override
 	public SortedArray<E> add(E element)
 	{

@@ -45,6 +45,7 @@ public class ConcurrentFoldablePool<E extends Foldable> implements FoldablePool<
 		this.pool.add(object);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public E take()
 	{

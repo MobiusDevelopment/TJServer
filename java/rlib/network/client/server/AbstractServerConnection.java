@@ -25,7 +25,7 @@ import rlib.network.client.ClientNetwork;
 import rlib.network.packets.ReadeablePacket;
 import rlib.network.packets.SendablePacket;
 
-public abstract class AbstractServerConnection<T extends Server, R extends ReadeablePacket<T>, S extends SendablePacket<T>> extends AbstractAsynConnection<ClientNetwork, R, S> implements ServerConnection<T, R, S>
+public abstract class AbstractServerConnection<T extends Server<?>, R extends ReadeablePacket<T>, S extends SendablePacket<T>> extends AbstractAsynConnection<ClientNetwork, R, S> implements ServerConnection<T, R, S>
 {
 	protected static final Logger log = Loggers.getLogger(ServerConnection.class);
 	protected T server;

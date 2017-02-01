@@ -369,10 +369,10 @@ public class Rotation
 	{
 		int prime = 31;
 		int result = 1;
-		result = (31 * result) + Float.floatToIntBits(w);
-		result = (31 * result) + Float.floatToIntBits(x);
-		result = (31 * result) + Float.floatToIntBits(y);
-		result = (31 * result) + Float.floatToIntBits(z);
+		result = (prime * result) + Float.floatToIntBits(w);
+		result = (prime * result) + Float.floatToIntBits(x);
+		result = (prime * result) + Float.floatToIntBits(y);
+		result = (prime * result) + Float.floatToIntBits(z);
 		return result;
 	}
 	

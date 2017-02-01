@@ -31,102 +31,102 @@ public final class Tables
 	
 	public static <V> Table<IntKey, V> newConcurrentIntegerTable()
 	{
-		return new ConcurrentIntegerTable();
+		return new ConcurrentIntegerTable<>();
 	}
 	
 	public static <V> Table<IntKey, V> newConcurrentIntegerTable(float loadFactor)
 	{
-		return new ConcurrentIntegerTable(loadFactor);
+		return new ConcurrentIntegerTable<>(loadFactor);
 	}
 	
 	public static <V> Table<IntKey, V> newConcurrentIntegerTable(int initCapacity)
 	{
-		return new ConcurrentIntegerTable(initCapacity);
+		return new ConcurrentIntegerTable<>(initCapacity);
 	}
 	
 	public static <V> Table<LongKey, V> newConcurrentLongTable()
 	{
-		return new ConcurrentLongTable();
+		return new ConcurrentLongTable<>();
 	}
 	
 	public static <V> Table<LongKey, V> newConcurrentLongTable(float loadFactor)
 	{
-		return new ConcurrentLongTable(loadFactor);
+		return new ConcurrentLongTable<>(loadFactor);
 	}
 	
 	public static <V> Table<LongKey, V> newConcurrentLongTable(int initCapacity)
 	{
-		return new ConcurrentLongTable(initCapacity);
+		return new ConcurrentLongTable<>(initCapacity);
 	}
 	
 	public static <K, V> Table<K, V> newConcurrentObjectTable()
 	{
-		return new ConcurrentObjectTable();
+		return new ConcurrentObjectTable<>();
 	}
 	
 	public static <K, V> Table<K, V> newConcurrentObjectTable(float loadFactor)
 	{
-		return new ConcurrentObjectTable(loadFactor);
+		return new ConcurrentObjectTable<>(loadFactor);
 	}
 	
 	public static <K, V> Table<K, V> newConcurrentObjectTable(int initCapacity)
 	{
-		return new ConcurrentObjectTable(initCapacity);
+		return new ConcurrentObjectTable<>(initCapacity);
 	}
 	
 	public static <K, V> Table<K, V> newConcurrentTable()
 	{
-		return new ConcurrentTable();
+		return new ConcurrentTable<>();
 	}
 	
 	public static <V> Table<IntKey, V> newIntegerTable()
 	{
-		return new FastIntegerTable();
+		return new FastIntegerTable<>();
 	}
 	
 	public static <V> Table<IntKey, V> newIntegerTable(float loadFactor)
 	{
-		return new FastIntegerTable(loadFactor);
+		return new FastIntegerTable<>(loadFactor);
 	}
 	
 	public static <V> Table<IntKey, V> newIntegerTable(int initCapacity)
 	{
-		return new FastIntegerTable(initCapacity);
+		return new FastIntegerTable<>(initCapacity);
 	}
 	
 	public static <V> Table<LongKey, V> newLongTable()
 	{
-		return new FastLongTable();
+		return new FastLongTable<>();
 	}
 	
 	public static <V> Table<LongKey, V> newLongTable(float loadFactor)
 	{
-		return new FastLongTable(loadFactor);
+		return new FastLongTable<>(loadFactor);
 	}
 	
 	public static <V> Table<LongKey, V> newLongTable(int initCapacity)
 	{
-		return new FastLongTable(initCapacity);
+		return new FastLongTable<>(initCapacity);
 	}
 	
 	public static <K, V> Table<K, V> newObjectTable()
 	{
-		return new FastObjectTable();
+		return new FastObjectTable<>();
 	}
 	
 	public static <K, V> Table<K, V> newObjectTable(float loadFactor)
 	{
-		return new FastObjectTable(loadFactor);
+		return new FastObjectTable<>(loadFactor);
 	}
 	
 	public static <K, V> Table<K, V> newObjectTable(int initCapacity)
 	{
-		return new FastObjectTable(initCapacity);
+		return new FastObjectTable<>(initCapacity);
 	}
 	
 	public static <K, V> Table<K, V> newTable()
 	{
-		return new FastTable();
+		return new FastTable<>();
 	}
 	
 	private Tables()

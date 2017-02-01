@@ -45,6 +45,7 @@ public class FastFoldablePool<E extends Foldable> implements FoldablePool<E>
 		this.pool.add(object);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public E take()
 	{

@@ -20,27 +20,27 @@ public final class Pools
 {
 	public static <T extends Foldable> FoldablePool<T> newConcurrentFoldablePool(Class<? extends Foldable> type)
 	{
-		return new ConcurrentFoldablePool(10, type);
+		return new ConcurrentFoldablePool<>(10, type);
 	}
 	
 	public static <T extends Foldable> FoldablePool<T> newConcurrentFoldablePool(Class<? extends Foldable> type, int size)
 	{
-		return new ConcurrentFoldablePool(size, type);
+		return new ConcurrentFoldablePool<>(size, type);
 	}
 	
 	public static <T extends Foldable> FoldablePool<T> newFoldablePool(Class<? extends Foldable> type)
 	{
-		return new FastFoldablePool(10, type);
+		return new FastFoldablePool<>(10, type);
 	}
 	
 	public static <T extends Foldable> FoldablePool<T> newFoldablePool(Class<? extends Foldable> type, int size)
 	{
-		return new FastFoldablePool(size, type);
+		return new FastFoldablePool<>(size, type);
 	}
 	
 	public static <T extends Foldable> FoldablePool<T> newMultiConcurrentFoldablePool(int size, Class<? extends Foldable> type)
 	{
-		return new MultiConcurrentFoldablePool(size, type);
+		return new MultiConcurrentFoldablePool<>(size, type);
 	}
 	
 	private Pools()

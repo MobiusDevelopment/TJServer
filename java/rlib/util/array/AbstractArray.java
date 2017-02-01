@@ -26,6 +26,7 @@ public abstract class AbstractArray<E> implements Array<E>
 		this(type, 10);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public AbstractArray(Class<E> type, int size)
 	{
 		if (size < 0)
@@ -36,6 +37,7 @@ public abstract class AbstractArray<E> implements Array<E>
 		this.setArray((E[]) java.lang.reflect.Array.newInstance(type, size));
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final boolean containsAll(Array<?> array)
 	{

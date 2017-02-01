@@ -46,7 +46,8 @@ public interface IntegerArray extends Iterable<Integer>
 	
 	boolean isEmpty();
 	
-	@Override ArrayIterator<Integer> iterator();
+	@Override
+	ArrayIterator<Integer> iterator();
 	
 	int last();
 	

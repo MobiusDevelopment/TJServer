@@ -34,7 +34,7 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 	private final AsynReadSynWriteLock locker;
 	private volatile Entry<V>[] table;
 	private volatile int threshold;
-	private volatile int size;
+	volatile int size;
 	private volatile float loadFactor;
 	
 	protected ConcurrentLongTable()
@@ -47,6 +47,7 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		this(loadFactor, 16);
 	}
 	
+	@SuppressWarnings("unchecked")
 	protected ConcurrentLongTable(float loadFactor, int initCapacity)
 	{
 		this.loadFactor = loadFactor;
@@ -69,7 +70,7 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		Entry<V> newEntry = this.entryPool.take();
 		if (newEntry == null)
 		{
-			newEntry = new Entry(null);
+			newEntry = new Entry<>();
 		}
 		newEntry.set(hash, key, value, entry);
 		table[index] = newEntry;
@@ -111,6 +112,7 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final void clear()
 	{
@@ -118,12 +120,12 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		try
 		{
 			Object[] table = this.table();
-			Entry next = null;
+			Entry<V> next = null;
 			int i = 0;
 			int length = table.length;
 			while (i < length)
 			{
-				Entry entry = (Entry) table[i];
+				Entry<V> entry = (Entry<V>) table[i];
 				while (entry != null)
 				{
 					next = entry.getNext();
@@ -177,8 +179,7 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 			int length = table.length;
 			while (i < length)
 			{
-				Entry element;
-				Entry entry = element = table[i];
+				Entry<?> entry = table[i];
 				while (entry != null)
 				{
 					if (value.equals(entry.getValue()))
@@ -388,7 +389,7 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		}
 	}
 	
-	private final Entry<V> removeEntryForKey(long key)
+	final Entry<V> removeEntryForKey(long key)
 	{
 		Entry<V> prev;
 		int hash = AbstractTable.hash(key);
@@ -417,6 +418,11 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		return entry;
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	private final void resize(int newLength)
 	{
 		Entry<V>[] oldTable = this.table();
@@ -438,7 +444,7 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		return this.size;
 	}
 	
-	private final Entry<V>[] table()
+	final Entry<V>[] table()
 	{
 		return this.table;
 	}
@@ -545,11 +551,16 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 	
 	private static final class Entry<V> implements Foldable
 	{
-		private Entry<V> next;
+		Entry<V> next;
 		private V value;
-		private long key;
 		private int hash;
+		private long key;
 		
+		Entry()
+		{
+		}
+		
+		@SuppressWarnings("unchecked")
 		@Override
 		public boolean equals(Object object)
 		{
@@ -560,7 +571,7 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 			{
 				return false;
 			}
-			Entry entry = (Entry) object;
+			Entry<?> entry = (Entry<?>) object;
 			long firstKey = getKey();
 			secondKey = entry.getKey();
 			if ((firstKey == secondKey) && (((firstValue = getValue()) == (secondValue = (V) entry.getValue())) || ((firstValue != null) && firstValue.equals(secondValue))))
@@ -636,11 +647,6 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		{
 			return "Entry : " + this.key + " = " + this.value;
 		}
-		
-		/* synthetic */ Entry(Entry entry)
-		{
-			Entry<V> entry2;
-		}
 	}
 	
 	private final class TableIterator implements Iterator<V>
@@ -648,9 +654,14 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		private Entry<V> next;
 		private Entry<V> current;
 		private int index;
-		final /* synthetic */ ConcurrentLongTable this$0;
+		final /* synthetic */ ConcurrentLongTable<?> this$0;
 		
-		private TableIterator(ConcurrentLongTable concurrentLongTable)
+		@SuppressWarnings(
+		{
+			"rawtypes",
+			"unchecked"
+		})
+		TableIterator(ConcurrentLongTable<?> concurrentLongTable)
 		{
 			this.this$0 = concurrentLongTable;
 			Entry[] table = concurrentLongTable.table();
@@ -678,6 +689,11 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 			return this.nextEntry().getValue();
 		}
 		
+		@SuppressWarnings(
+		{
+			"unchecked",
+			"rawtypes"
+		})
 		private Entry<V> nextEntry()
 		{
 			Entry[] table = this.this$0.table();

@@ -23,6 +23,7 @@ import rlib.network.packets.ReadeablePacket;
 import rlib.network.packets.SendablePacket;
 import rlib.util.Synchronized;
 
+@SuppressWarnings("rawtypes")
 public interface Client<A, P, C extends AsynConnection> extends Synchronized
 {
 	void close();

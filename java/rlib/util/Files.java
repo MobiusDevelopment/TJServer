@@ -228,10 +228,7 @@ public class Files
 			}
 			finally
 			{
-				if (in != null)
-				{
-					in.close();
-				}
+				in.close();
 			}
 		}
 		catch (IOException e)

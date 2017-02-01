@@ -29,13 +29,14 @@ import rlib.util.array.LongArray;
 
 public final class ConcurrentTable<K, V> implements Table<K, V>
 {
-	private final Lock readLock;
+	final Lock readLock;
 	private final Lock writeLock;
-	private volatile Entry<V>[] table;
+	volatile Entry<V>[] table;
 	private volatile int threshold = 12;
-	private volatile int size;
+	volatile int size;
 	private volatile float loadFactor = 0.75f;
 	
+	@SuppressWarnings("unchecked")
 	public ConcurrentTable()
 	{
 		ReadWriteLock readWriteLock = Locks.newRWLock();
@@ -50,7 +51,7 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 		try
 		{
 			Entry<V> entry = this.table[index];
-			this.table[index] = new Entry(key, value, entry, hash);
+			this.table[index] = new Entry<>(key, value, entry, hash);
 			if (this.size++ >= this.threshold)
 			{
 				this.resize(2 * this.table.length);
@@ -121,8 +122,7 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 			int length = this.table.length;
 			while (i < length)
 			{
-				Entry element;
-				Entry entry = element = this.table[i];
+				Entry<?> entry = this.table[i];
 				while (entry != null)
 				{
 					if (value.equals(entry.value))
@@ -150,6 +150,7 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public V get(int key)
 	{
@@ -157,7 +158,7 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 		this.readLock.lock();
 		try
 		{
-			Entry entry = this.table[Tables.indexFor(hash, this.table.length)];
+			Entry<?> entry = this.table[Tables.indexFor(hash, this.table.length)];
 			while (entry != null)
 			{
 				if ((entry.hash == hash) && (entry.key == key))
@@ -193,12 +194,12 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 		this.readLock.lock();
 		try
 		{
-			Entry entry = this.table[Tables.indexFor(hash, this.table.length)];
+			Entry<V> entry = this.table[Tables.indexFor(hash, this.table.length)];
 			while (entry != null)
 			{
 				if (entry.key == key)
 				{
-					Entry entry2 = entry;
+					Entry<V> entry2 = entry;
 					return entry2;
 				}
 				entry = entry.next;
@@ -257,6 +258,11 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 		throw new IllegalArgumentException("not supported.");
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	@Override
 	public V put(int key, V value)
 	{
@@ -321,6 +327,7 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 	{
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public V remove(int key)
 	{
@@ -349,18 +356,18 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 		throw new IllegalArgumentException("not supported.");
 	}
 	
-	private Entry<V> removeEntryForKey(int key)
+	Entry<V> removeEntryForKey(int key)
 	{
 		int hash = Tables.hash(key);
 		int i = Tables.indexFor(hash, this.table.length);
 		this.writeLock.lock();
 		try
 		{
-			Entry prev;
-			Entry entry = prev = this.table[i];
+			Entry<V> prev;
+			Entry<V> entry = prev = this.table[i];
 			while (entry != null)
 			{
-				Entry next = entry.next;
+				Entry<V> next = entry.next;
 				if ((entry.hash == hash) && (entry.key == key))
 				{
 					--this.size;
@@ -372,13 +379,13 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 					{
 						Entry.access$6(prev, next);
 					}
-					Entry entry2 = entry;
+					Entry<V> entry2 = entry;
 					return entry2;
 				}
 				prev = entry;
 				entry = next;
 			}
-			Entry entry3 = entry;
+			Entry<V> entry3 = entry;
 			return entry3;
 		}
 		finally
@@ -387,6 +394,11 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 		}
 	}
 	
+	@SuppressWarnings(
+	{
+		"rawtypes",
+		"unchecked"
+	})
 	private void resize(int newLength)
 	{
 		this.writeLock.lock();
@@ -424,10 +436,10 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 		int length = original.length;
 		while (j < length)
 		{
-			Entry entry = original[j];
+			Entry<V> entry = original[j];
 			if (entry != null)
 			{
-				Entry next;
+				Entry<V> next;
 				original[j] = null;
 				do
 				{
@@ -462,12 +474,12 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 	
 	private static final class Entry<V>
 	{
-		private volatile V value;
-		private volatile Entry<V> next;
-		private final int key;
-		private final int hash;
+		volatile V value;
+		volatile Entry<V> next;
+		final int key;
+		final int hash;
 		
-		private Entry(int key, V value, Entry<V> next, int hash)
+		Entry(int key, V value, Entry<V> next, int hash)
 		{
 			this.key = key;
 			this.value = value;
@@ -482,7 +494,7 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 			{
 				return false;
 			}
-			Entry entry = (Entry) object;
+			Entry<?> entry = (Entry<?>) object;
 			if ((this.key == entry.key) && (this.value == entry.value))
 			{
 				return true;
@@ -502,11 +514,16 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 			return String.valueOf(this.key) + " = " + this.value;
 		}
 		
-		static /* synthetic */ void access$5(Entry entry, Object object)
+		static /* synthetic */ void access$5(Entry<Object> entry, Object object)
 		{
 			entry.value = object;
 		}
 		
+		@SuppressWarnings(
+		{
+			"unchecked",
+			"rawtypes"
+		})
 		static /* synthetic */ void access$6(Entry entry, Entry entry2)
 		{
 			entry.next = entry2;
@@ -518,9 +535,15 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 		private Entry<V> next;
 		private int index;
 		private Entry<V> current;
+		@SuppressWarnings("rawtypes")
 		final /* synthetic */ ConcurrentTable this$0;
 		
-		private TableIterator(ConcurrentTable concurrentTable)
+		@SuppressWarnings(
+		{
+			"unchecked",
+			"rawtypes"
+		})
+		TableIterator(ConcurrentTable concurrentTable)
 		{
 			this.this$0 = concurrentTable;
 			if (concurrentTable.size > 0)
@@ -555,6 +578,7 @@ public final class ConcurrentTable<K, V> implements Table<K, V>
 			return this.nextEntry().value;
 		}
 		
+		@SuppressWarnings("unchecked")
 		private Entry<V> nextEntry()
 		{
 			Entry<V> entry;

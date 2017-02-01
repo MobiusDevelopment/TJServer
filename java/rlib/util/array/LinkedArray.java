@@ -66,7 +66,7 @@ public class LinkedArray<E> extends AbstractArray<E>
 		Node<E> node = this.pool.take();
 		if (node == null)
 		{
-			node = new Node();
+			node = new Node<>();
 		}
 		node.setItem(item);
 		node.setNext(next);
@@ -325,7 +325,7 @@ public class LinkedArray<E> extends AbstractArray<E>
 		private Node<E> prev;
 		private Node<E> next;
 		
-		private Node()
+		Node()
 		{
 		}
 		

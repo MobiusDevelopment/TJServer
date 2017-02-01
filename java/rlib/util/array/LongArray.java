@@ -46,7 +46,8 @@ public interface LongArray extends Iterable<Long>
 	
 	boolean isEmpty();
 	
-	@Override ArrayIterator<Long> iterator();
+	@Override
+	ArrayIterator<Long> iterator();
 	
 	long last();
 	

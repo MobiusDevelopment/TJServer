@@ -27,6 +27,7 @@ import rlib.util.array.Arrays;
 
 public abstract class Objects
 {
+	@SuppressWarnings("unchecked")
 	public static <T> T clone(T original)
 	{
 		if (original == null)
@@ -115,7 +116,7 @@ public abstract class Objects
 		int n2 = 0;
 		while (n2 < n)
 		{
-			Constructor constructor = arrconstructor[n2];
+			Constructor<?> constructor = arrconstructor[n2];
 			if (!constructor.isAccessible())
 			{
 				constructor.setAccessible(true);
@@ -150,7 +151,7 @@ public abstract class Objects
 			return;
 		}
 		Array<Field> array = Arrays.toArray(Field.class);
-		Class cs = original.getClass();
+		Class<?> cs = original.getClass();
 		while (cs != null)
 		{
 			Field[] fields = cs.getDeclaredFields();

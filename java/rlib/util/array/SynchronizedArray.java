@@ -21,8 +21,8 @@ import java.util.Comparator;
 public final class SynchronizedArray<E> extends AbstractArray<E>
 {
 	private static final long serialVersionUID = -8477384427415127978L;
-	private E[] array;
-	private int size;
+	E[] array;
+	int size;
 	
 	public SynchronizedArray(Class<E> type)
 	{
@@ -231,6 +231,7 @@ public final class SynchronizedArray<E> extends AbstractArray<E>
 		return this.fastRemove(this.size - 1);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public synchronized boolean removeAll(Array<?> targetArray)
 	{
@@ -337,6 +338,7 @@ public final class SynchronizedArray<E> extends AbstractArray<E>
 		return this;
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public synchronized <T> T[] toArray(T[] newArray)
 	{
@@ -386,9 +388,9 @@ public final class SynchronizedArray<E> extends AbstractArray<E>
 	private final class FastIterator implements ArrayIterator<E>
 	{
 		private int ordinal;
-		final /* synthetic */ SynchronizedArray this$0;
+		final /* synthetic */ SynchronizedArray<?> this$0;
 		
-		private FastIterator(SynchronizedArray synchronizedArray)
+		FastIterator(SynchronizedArray<?> synchronizedArray)
 		{
 			this.this$0 = synchronizedArray;
 		}
@@ -415,6 +417,7 @@ public final class SynchronizedArray<E> extends AbstractArray<E>
 			return this.ordinal - 1;
 		}
 		
+		@SuppressWarnings("unchecked")
 		@Override
 		public E next()
 		{

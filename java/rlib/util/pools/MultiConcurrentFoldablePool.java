@@ -22,6 +22,7 @@ public final class MultiConcurrentFoldablePool<E extends Foldable> implements Fo
 	private final int limit;
 	private int order;
 	
+	@SuppressWarnings("unchecked")
 	protected MultiConcurrentFoldablePool(int size, Class<?> type)
 	{
 		this.pools = new ConcurrentFoldablePool[size];
@@ -29,7 +30,7 @@ public final class MultiConcurrentFoldablePool<E extends Foldable> implements Fo
 		int i = 0;
 		while (i < size)
 		{
-			this.pools[i] = new ConcurrentFoldablePool(10, type);
+			this.pools[i] = new ConcurrentFoldablePool<>(10, type);
 			++i;
 		}
 	}

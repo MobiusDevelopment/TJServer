@@ -34,7 +34,7 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 	private final AsynReadSynWriteLock locker;
 	private volatile Entry<V>[] table;
 	private volatile int threshold;
-	private volatile int size;
+	volatile int size;
 	private volatile float loadFactor;
 	
 	protected ConcurrentIntegerTable()
@@ -47,6 +47,7 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 		this(loadFactor, 16);
 	}
 	
+	@SuppressWarnings("unchecked")
 	protected ConcurrentIntegerTable(float loadFactor, int initCapacity)
 	{
 		this.loadFactor = loadFactor;
@@ -69,7 +70,7 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 		Entry<V> newEntry = this.entryPool.take();
 		if (newEntry == null)
 		{
-			newEntry = new Entry();
+			newEntry = new Entry<>();
 		}
 		newEntry.set(hash, key, value, entry);
 		table[index] = newEntry;
@@ -111,6 +112,7 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final void clear()
 	{
@@ -118,12 +120,12 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 		try
 		{
 			Object[] table = this.table();
-			Entry next = null;
+			Entry<V> next = null;
 			int i = 0;
 			int length = table.length;
 			while (i < length)
 			{
-				Entry entry = (Entry) table[i];
+				Entry<V> entry = (Entry<V>) table[i];
 				while (entry != null)
 				{
 					next = entry.getNext();
@@ -171,8 +173,7 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 			int length = table.length;
 			while (i < length)
 			{
-				Entry element;
-				Entry entry = element = table[i];
+				Entry<?> entry = table[i];
 				while (entry != null)
 				{
 					if (value.equals(entry.getValue()))
@@ -364,7 +365,7 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 		}
 	}
 	
-	private final Entry<V> removeEntryForKey(int key)
+	final Entry<V> removeEntryForKey(int key)
 	{
 		Entry<V> prev;
 		int hash = AbstractTable.hash(key);
@@ -393,6 +394,11 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 		return entry;
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	private final void resize(int newLength)
 	{
 		Entry<V>[] oldTable = this.table();
@@ -414,7 +420,7 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 		return this.size;
 	}
 	
-	private final Entry<V>[] table()
+	final Entry<V>[] table()
 	{
 		return this.table;
 	}
@@ -521,26 +527,27 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 	
 	private static final class Entry<V> implements Foldable
 	{
-		private Entry<V> next;
+		Entry<V> next;
 		private V value;
 		private int hash;
 		private int key;
 		
-		private Entry()
+		Entry()
 		{
 		}
 		
+		@SuppressWarnings("unchecked")
 		@Override
 		public boolean equals(Object object)
 		{
 			int secondKey;
-			V secondValue;
 			V firstValue;
+			V secondValue;
 			if ((object == null) || (object.getClass() != Entry.class))
 			{
 				return false;
 			}
-			Entry entry = (Entry) object;
+			Entry<?> entry = (Entry<?>) object;
 			int firstKey = getKey();
 			secondKey = entry.getKey();
 			if ((firstKey == secondKey) && (((firstValue = getValue()) == (secondValue = (V) entry.getValue())) || ((firstValue != null) && firstValue.equals(secondValue))))
@@ -623,9 +630,14 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 		private Entry<V> next;
 		private Entry<V> current;
 		private int index;
-		final /* synthetic */ ConcurrentIntegerTable this$0;
+		final /* synthetic */ ConcurrentIntegerTable<?> this$0;
 		
-		private TableIterator(ConcurrentIntegerTable concurrentIntegerTable)
+		@SuppressWarnings(
+		{
+			"rawtypes",
+			"unchecked"
+		})
+		TableIterator(ConcurrentIntegerTable<?> concurrentIntegerTable)
 		{
 			this.this$0 = concurrentIntegerTable;
 			Entry[] table = concurrentIntegerTable.table();
@@ -653,6 +665,11 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 			return this.nextEntry().getValue();
 		}
 		
+		@SuppressWarnings(
+		{
+			"unchecked",
+			"rawtypes"
+		})
 		private Entry<V> nextEntry()
 		{
 			Entry[] table = this.this$0.table();

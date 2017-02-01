@@ -30,7 +30,7 @@ public final class ReflectionUtils
 	
 	public static /* varargs */ void addAllFields(Array<Field> container, Class<?> cs, Class<?> last, boolean declared, String... exceptions)
 	{
-		Class next = cs;
+		Class<?> next = cs;
 		while ((next != null) && (next != last))
 		{
 			Field[] fields = declared ? next.getDeclaredFields() : next.getFields();

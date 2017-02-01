@@ -20,6 +20,7 @@ import rlib.network.AsynConnection;
 import rlib.network.packets.ReadeablePacket;
 import rlib.network.packets.SendablePacket;
 
+@SuppressWarnings("rawtypes")
 public interface ClientConnection<T extends Client, R extends ReadeablePacket<T>, S extends SendablePacket<T>> extends AsynConnection<R, S>
 {
 	T getClient();

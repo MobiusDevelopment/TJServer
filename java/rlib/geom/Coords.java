@@ -24,6 +24,7 @@ import rlib.util.Rnd;
 
 public abstract class Coords
 {
+	@SuppressWarnings("unchecked")
 	public static <T extends GamePoint> T[] arcCoords(Class<T> type, float x, float y, float z, int heading, int radius, int count, int degree, int width)
 	{
 		GamePoint[] locs = (GamePoint[]) Array.newInstance(type, count);
@@ -52,6 +53,7 @@ public abstract class Coords
 		return (T[]) locs;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public static <T extends GamePoint> T[] arcCoords(Class<T> type, GameObject object, int radius, int count, int degree, int width)
 	{
 		GamePoint[] locs = (GamePoint[]) Array.newInstance(type, count);
@@ -113,6 +115,7 @@ public abstract class Coords
 		return y + (distance * (float) Math.sin(Angles.headingToRadians(heading + offset)));
 	}
 	
+	@SuppressWarnings("unchecked")
 	public static <T extends GamePoint> T[] circularCoords(Class<T> type, float x, float y, float z, int radius, int count)
 	{
 		GamePoint[] locs = (GamePoint[]) Array.newInstance(type, count);

@@ -63,7 +63,10 @@ public class GroupThreadFactory implements ThreadFactory
 		{
 			Loggers.warning("GroupThreadFactory", e);
 		}
-		thread.setPriority(priority);
+		if (thread != null)
+		{
+			thread.setPriority(priority);
+		}
 		return thread;
 	}
 }

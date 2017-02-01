@@ -26,6 +26,7 @@ import rlib.network.GameCrypt;
 import rlib.network.packets.ReadeablePacket;
 import rlib.network.packets.SendablePacket;
 
+@SuppressWarnings("rawtypes")
 public abstract class AbstractServer<C extends ServerConnection, T extends GameCrypt> implements Server<C>
 {
 	protected static final Logger log = Loggers.getLogger("Server");
@@ -87,6 +88,7 @@ public abstract class AbstractServer<C extends ServerConnection, T extends GameC
 		this.lock.lock();
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final void readPacket(ReadeablePacket packet, ByteBuffer buffer)
 	{
@@ -102,6 +104,7 @@ public abstract class AbstractServer<C extends ServerConnection, T extends GameC
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final void sendPacket(SendablePacket packet)
 	{

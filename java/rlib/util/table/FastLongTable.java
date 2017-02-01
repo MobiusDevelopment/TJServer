@@ -31,7 +31,7 @@ public class FastLongTable<V> extends AbstractTable<LongKey, V>
 	private final FoldablePool<Entry<V>> entryPool;
 	private Entry<V>[] table;
 	private int threshold;
-	private int size;
+	int size;
 	private float loadFactor;
 	
 	protected FastLongTable()
@@ -44,6 +44,7 @@ public class FastLongTable<V> extends AbstractTable<LongKey, V>
 		this(loadFactor, 16);
 	}
 	
+	@SuppressWarnings("unchecked")
 	protected FastLongTable(float loadFactor, int initCapacity)
 	{
 		this.loadFactor = loadFactor;
@@ -65,7 +66,7 @@ public class FastLongTable<V> extends AbstractTable<LongKey, V>
 		Entry<V> newEntry = this.entryPool.take();
 		if (newEntry == null)
 		{
-			newEntry = new Entry();
+			newEntry = new Entry<>();
 		}
 		newEntry.set(hash, key, value, entry);
 		table[index] = newEntry;
@@ -99,16 +100,17 @@ public class FastLongTable<V> extends AbstractTable<LongKey, V>
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public final void clear()
 	{
 		Object[] table = this.table();
-		Entry next = null;
+		Entry<V> next = null;
 		int i = 0;
 		int length = table.length;
 		while (i < length)
 		{
-			Entry entry = (Entry) table[i];
+			Entry<V> entry = (Entry<V>) table[i];
 			while (entry != null)
 			{
 				next = entry.getNext();
@@ -149,8 +151,7 @@ public class FastLongTable<V> extends AbstractTable<LongKey, V>
 		int length = table.length;
 		while (i < length)
 		{
-			Entry element;
-			Entry entry = element = table[i];
+			Entry<?> entry = table[i];
 			while (entry != null)
 			{
 				if (value.equals(entry.getValue()))
@@ -299,7 +300,7 @@ public class FastLongTable<V> extends AbstractTable<LongKey, V>
 		return value;
 	}
 	
-	private final Entry<V> removeEntryForKey(long key)
+	final Entry<V> removeEntryForKey(long key)
 	{
 		Entry<V> prev;
 		int hash = AbstractTable.hash(key);
@@ -328,6 +329,11 @@ public class FastLongTable<V> extends AbstractTable<LongKey, V>
 		return entry;
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	private final void resize(int newLength)
 	{
 		Entry<V>[] oldTable = this.table();
@@ -349,7 +355,7 @@ public class FastLongTable<V> extends AbstractTable<LongKey, V>
 		return this.size;
 	}
 	
-	private final Entry<V>[] table()
+	final Entry<V>[] table()
 	{
 		return this.table;
 	}
@@ -426,15 +432,16 @@ public class FastLongTable<V> extends AbstractTable<LongKey, V>
 	
 	private static final class Entry<V> implements Foldable
 	{
-		private Entry<V> next;
+		Entry<V> next;
 		private V value;
 		private long key;
 		private int hash;
 		
-		private Entry()
+		Entry()
 		{
 		}
 		
+		@SuppressWarnings("unchecked")
 		@Override
 		public boolean equals(Object object)
 		{
@@ -445,7 +452,7 @@ public class FastLongTable<V> extends AbstractTable<LongKey, V>
 			{
 				return false;
 			}
-			Entry entry = (Entry) object;
+			Entry<?> entry = (Entry<?>) object;
 			long firstKey = getKey();
 			secondKey = entry.getKey();
 			if ((firstKey == secondKey) && (((firstValue = getValue()) == (secondValue = (V) entry.getValue())) || ((firstValue != null) && firstValue.equals(secondValue))))
@@ -528,9 +535,14 @@ public class FastLongTable<V> extends AbstractTable<LongKey, V>
 		private Entry<V> next;
 		private Entry<V> current;
 		private int index;
-		final /* synthetic */ FastLongTable this$0;
+		final /* synthetic */ FastLongTable<?> this$0;
 		
-		private TableIterator(FastLongTable fastLongTable)
+		@SuppressWarnings(
+		{
+			"unchecked",
+			"rawtypes"
+		})
+		TableIterator(FastLongTable<?> fastLongTable)
 		{
 			this.this$0 = fastLongTable;
 			Entry[] table = fastLongTable.table();
@@ -558,6 +570,11 @@ public class FastLongTable<V> extends AbstractTable<LongKey, V>
 			return this.nextEntry().getValue();
 		}
 		
+		@SuppressWarnings(
+		{
+			"unchecked",
+			"rawtypes"
+		})
 		private Entry<V> nextEntry()
 		{
 			Entry[] table = this.this$0.table();

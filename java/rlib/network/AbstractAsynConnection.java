@@ -28,6 +28,7 @@ import rlib.logging.Loggers;
 import rlib.util.array.Array;
 import rlib.util.array.Arrays;
 
+@SuppressWarnings("rawtypes")
 public abstract class AbstractAsynConnection<N extends AsynchronousNetwork, R, S> implements AsynConnection<R, S>
 {
 	protected static final Logger log = Loggers.getLogger(AsynConnection.class);
@@ -48,7 +49,6 @@ public abstract class AbstractAsynConnection<N extends AsynchronousNetwork, R, S
 	{
 		this.readHandler = new CompletionHandler<Integer, AbstractAsynConnection>()
 		{
-			
 			@Override
 			public void completed(Integer result, AbstractAsynConnection attachment)
 			{

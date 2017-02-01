@@ -33,7 +33,7 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 	private final AsynReadSynWriteLock locker;
 	private volatile Entry<K, V>[] table;
 	private volatile int threshold;
-	private volatile int size;
+	volatile int size;
 	private volatile float loadFactor;
 	
 	protected ConcurrentObjectTable()
@@ -46,6 +46,7 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 		this(loadFactor, 16);
 	}
 	
+	@SuppressWarnings("unchecked")
 	protected ConcurrentObjectTable(float loadFactor, int initCapacity)
 	{
 		this.loadFactor = loadFactor;
@@ -68,7 +69,7 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 		Entry<K, V> newEntry = this.entryPool.take();
 		if (newEntry == null)
 		{
-			newEntry = new Entry();
+			newEntry = new Entry<>();
 		}
 		newEntry.set(hash, key, value, entry);
 		table[index] = newEntry;
@@ -130,6 +131,11 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 		}
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	@Override
 	public final void clear()
 	{
@@ -190,8 +196,7 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 			int length = table.length;
 			while (i < length)
 			{
-				Entry element;
-				Entry entry = element = table[i];
+				Entry<?, ?> entry = table[i];
 				while (entry != null)
 				{
 					if (value.equals(entry.getValue()))
@@ -394,7 +399,7 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 		}
 	}
 	
-	private final Entry<K, V> removeEntryForKey(K key)
+	final Entry<K, V> removeEntryForKey(K key)
 	{
 		Entry<K, V> prev;
 		int hash = AbstractTable.hash(key.hashCode());
@@ -423,6 +428,11 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 		return entry;
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	private final void resize(int newLength)
 	{
 		Entry<K, V>[] oldTable = this.table();
@@ -444,7 +454,7 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 		return this.size;
 	}
 	
-	private final Entry<K, V>[] table()
+	final Entry<K, V>[] table()
 	{
 		return this.table;
 	}
@@ -551,15 +561,16 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 	
 	private static final class Entry<K, V> implements Foldable
 	{
-		private Entry<K, V> next;
+		Entry<K, V> next;
 		private K key;
 		private V value;
 		private int hash;
 		
-		private Entry()
+		Entry()
 		{
 		}
 		
+		@SuppressWarnings("unchecked")
 		@Override
 		public boolean equals(Object object)
 		{
@@ -570,7 +581,7 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 			{
 				return false;
 			}
-			Entry entry = (Entry) object;
+			Entry<?, ?> entry = (Entry<?, ?>) object;
 			K firstKey = getKey();
 			secondKey = (K) entry.getKey();
 			if (((firstKey == secondKey) || ((firstKey != null) && firstKey.equals(secondKey))) && (((firstValue = getValue()) == (secondValue = (V) entry.getValue())) || ((firstValue != null) && firstValue.equals(secondValue))))
@@ -653,9 +664,15 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 		private Entry<K, V> next;
 		private Entry<K, V> current;
 		private int index;
+		@SuppressWarnings("rawtypes")
 		final /* synthetic */ ConcurrentObjectTable this$0;
 		
-		private TableIterator(ConcurrentObjectTable concurrentObjectTable)
+		@SuppressWarnings(
+		{
+			"rawtypes",
+			"unchecked"
+		})
+		TableIterator(ConcurrentObjectTable concurrentObjectTable)
 		{
 			this.this$0 = concurrentObjectTable;
 			Entry[] table = concurrentObjectTable.table();
@@ -683,6 +700,11 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 			return this.nextEntry().getValue();
 		}
 		
+		@SuppressWarnings(
+		{
+			"rawtypes",
+			"unchecked"
+		})
 		private Entry<K, V> nextEntry()
 		{
 			Entry[] table = this.this$0.table();
@@ -702,6 +724,7 @@ public class ConcurrentObjectTable<K, V> extends AbstractTable<K, V>
 			return entry;
 		}
 		
+		@SuppressWarnings("unchecked")
 		@Override
 		public void remove()
 		{

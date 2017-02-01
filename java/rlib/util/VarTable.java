@@ -68,6 +68,7 @@ public class VarTable
 		return def;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public <T> T get(String key, T def)
 	{
 		Object object = values.get(key);
@@ -75,7 +76,7 @@ public class VarTable
 		{
 			return def;
 		}
-		Class type = def.getClass();
+		Class<? extends Object> type = def.getClass();
 		if (type.isInstance(object))
 		{
 			return (T) object;
@@ -353,6 +354,7 @@ public class VarTable
 		throw new IllegalArgumentException("not found " + key);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public <T extends Enum<T>> T getEnum(String key, Class<T> type)
 	{
 		Object object = values.get(key);
@@ -362,7 +364,7 @@ public class VarTable
 		}
 		if (type.isInstance(object))
 		{
-			return (T) ((Enum) type.cast(object));
+			return (T) ((Enum<?>) type.cast(object));
 		}
 		if (object instanceof String)
 		{
@@ -371,6 +373,7 @@ public class VarTable
 		throw new IllegalArgumentException("not found " + key);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public <T extends Enum<T>> T getEnum(String key, Class<T> type, T def)
 	{
 		Object object = values.get(key);
@@ -380,7 +383,7 @@ public class VarTable
 		}
 		if (type.isInstance(object))
 		{
-			return (T) ((Enum) type.cast(object));
+			return (T) ((Enum<?>) type.cast(object));
 		}
 		if (object instanceof String)
 		{
@@ -389,6 +392,11 @@ public class VarTable
 		return def;
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	public <T extends Enum<T>> T[] getEnumArray(String key, Class<T> type, String regex)
 	{
 		Object object = values.get(key);
@@ -416,6 +424,11 @@ public class VarTable
 		throw new IllegalArgumentException("not found " + key);
 	}
 	
+	@SuppressWarnings(
+	{
+		"unchecked",
+		"rawtypes"
+	})
 	public /* varargs */ <T extends Enum<T>> T[] getEnumArray(String key, Class<T> type, String regex, T... def)
 	{
 		Object object = values.get(key);
@@ -547,6 +560,7 @@ public class VarTable
 		throw new IllegalArgumentException("not found " + key);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public <T> T[] getGenericArray(String key, Class<T[]> type)
 	{
 		Object object = values.get(key);
@@ -561,6 +575,7 @@ public class VarTable
 		throw new IllegalArgumentException("not found " + key);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public /* varargs */ <T> T[] getGenericArray(String key, Class<T[]> type, T... def)
 	{
 		Object object = values.get(key);

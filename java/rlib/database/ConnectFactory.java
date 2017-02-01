@@ -28,16 +28,9 @@ public abstract class ConnectFactory
 {
 	public static ConnectFactory newBoneCPConnectFactory(BoneCPConfig config, String driver)
 	{
-		try
-		{
-			BoneCPConnectFactory connects = new BoneCPConnectFactory();
-			connects.init(config, driver);
-			return connects;
-		}
-		catch (SQLException e)
-		{
-			throw new IllegalArgumentException(e);
-		}
+		BoneCPConnectFactory connects = new BoneCPConnectFactory();
+		connects.init(config, driver);
+		return connects;
 	}
 	
 	public abstract Connection getConnection() throws SQLException;

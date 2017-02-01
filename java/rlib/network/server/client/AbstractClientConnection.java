@@ -32,6 +32,7 @@ import rlib.network.server.ServerNetwork;
 import rlib.util.array.Array;
 import rlib.util.array.Arrays;
 
+@SuppressWarnings("rawtypes")
 public abstract class AbstractClientConnection<T extends Client, R extends ReadeablePacket<T>, S extends SendablePacket<T>> implements ClientConnection<T, R, S>
 {
 	protected static final Logger log = Loggers.getLogger(ClientConnection.class);

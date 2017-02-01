@@ -37,6 +37,7 @@ public abstract class AbstractReadeablePacket<C> extends AbstractPacket<C> imple
 		return buffer.remaining();
 	}
 	
+	@SuppressWarnings("rawtypes")
 	protected abstract FoldablePool getPool();
 	
 	@Override
@@ -45,10 +46,11 @@ public abstract class AbstractReadeablePacket<C> extends AbstractPacket<C> imple
 		return false;
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public ReadeablePacket<C> newInstance()
 	{
-		return (ReadeablePacket) this.getPool().take();
+		return (ReadeablePacket<C>) getPool().take();
 	}
 	
 	@Override
@@ -136,6 +138,7 @@ public abstract class AbstractReadeablePacket<C> extends AbstractPacket<C> imple
 	{
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public void run()
 	{
@@ -148,12 +151,12 @@ public abstract class AbstractReadeablePacket<C> extends AbstractPacket<C> imple
 			catch (Exception e)
 			{
 				log.warning(this, e);
-				this.getPool().put(this);
+				getPool().put(this);
 			}
 		}
 		finally
 		{
-			this.getPool().put(this);
+			getPool().put(this);
 		}
 	}
 	

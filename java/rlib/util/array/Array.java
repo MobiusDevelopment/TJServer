@@ -51,7 +51,8 @@ public interface Array<E> extends Iterable<E>, Serializable, Foldable
 	
 	boolean isEmpty();
 	
-	@Override ArrayIterator<E> iterator();
+	@Override
+	ArrayIterator<E> iterator();
 	
 	E last();
 	
