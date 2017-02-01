@@ -32,5 +32,5 @@ public interface DamageListener
 	 * @param info AttackInfo
 	 * @param skill Skill
 	 */
-	public void onDamage(Character attacker, Character attacked, AttackInfo info, Skill skill);
+	void onDamage(Character attacker, Character attacked, AttackInfo info, Skill skill);
 }

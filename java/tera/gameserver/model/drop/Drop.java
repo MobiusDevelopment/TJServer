@@ -33,17 +33,17 @@ public interface Drop
 	 * @param creator TObject
 	 * @param owner Character
 	 */
-	public void addDrop(Array<ItemInstance> container, TObject creator, Character owner);
+	void addDrop(Array<ItemInstance> container, TObject creator, Character owner);
 	
 	/**
 	 * Method getTemplateId.
 	 * @return int
 	 */
-	public int getTemplateId();
+	int getTemplateId();
 	
 	/**
 	 * Method getTemplateType.
 	 * @return int
 	 */
-	public int getTemplateType();
+	int getTemplateType();
 }

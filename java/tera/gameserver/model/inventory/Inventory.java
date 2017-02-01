@@ -29,7 +29,7 @@ import rlib.util.pools.Foldable;
 public interface Inventory extends Foldable, Synchronized
 {
 	
-	public static final int MONEY_ITEM_ID = 20000000;
+	int MONEY_ITEM_ID = 20000000;
 	
 	/**
 	 * Method addItem.
@@ -38,15 +38,15 @@ public interface Inventory extends Foldable, Synchronized
 	 * @param autor String
 	 * @return boolean
 	 */
-	public boolean addItem(int itemId, long count, String autor);
+	boolean addItem(int itemId, long count, String autor);
 	
-	public void addLevel();
+	void addLevel();
 	
 	/**
 	 * Method addMoney.
 	 * @param count long
 	 */
-	public void addMoney(long count);
+	void addMoney(long count);
 	
 	/**
 	 * Method containsItems.
@@ -54,9 +54,9 @@ public interface Inventory extends Foldable, Synchronized
 	 * @param itemCount int
 	 * @return boolean
 	 */
-	public boolean containsItems(int itemId, int itemCount);
+	boolean containsItems(int itemId, int itemCount);
 	
-	public void fold();
+	void fold();
 	
 	/**
 	 * Method forceAddItem.
@@ -65,114 +65,114 @@ public interface Inventory extends Foldable, Synchronized
 	 * @param autor String
 	 * @return boolean
 	 */
-	public boolean forceAddItem(int itemId, long count, String autor);
+	boolean forceAddItem(int itemId, long count, String autor);
 	
 	/**
 	 * Method getAllMaxCells.
 	 * @return int
 	 */
-	public int getAllMaxCells();
+	int getAllMaxCells();
 	
 	/**
 	 * Method getBaseLevel.
 	 * @return int
 	 */
-	public int getBaseLevel();
+	int getBaseLevel();
 	
 	/**
 	 * Method getCell.
 	 * @param index int
 	 * @return Cell
 	 */
-	public Cell getCell(int index);
+	Cell getCell(int index);
 	
 	/**
 	 * Method getCellForObjectId.
 	 * @param objectId int
 	 * @return Cell
 	 */
-	public Cell getCellForObjectId(int objectId);
+	Cell getCellForObjectId(int objectId);
 	
 	/**
 	 * Method getCells.
 	 * @return Cell[]
 	 */
-	public Cell[] getCells();
+	Cell[] getCells();
 	
 	/**
 	 * Method getEngagedCells.
 	 * @return int
 	 */
-	public int getEngagedCells();
+	int getEngagedCells();
 	
 	/**
 	 * Method getFreeCells.
 	 * @return int
 	 */
-	public int getFreeCells();
+	int getFreeCells();
 	
 	/**
 	 * Method getGold.
 	 * @return Cell
 	 */
-	public Cell getGold();
+	Cell getGold();
 	
 	/**
 	 * Method getItemCount.
 	 * @param itemId int
 	 * @return int
 	 */
-	public int getItemCount(int itemId);
+	int getItemCount(int itemId);
 	
 	/**
 	 * Method getItemForItemId.
 	 * @param itemId int
 	 * @return ItemInstance
 	 */
-	public ItemInstance getItemForItemId(int itemId);
+	ItemInstance getItemForItemId(int itemId);
 	
 	/**
 	 * Method getItemForObjectId.
 	 * @param objectId int
 	 * @return ItemInstance
 	 */
-	public ItemInstance getItemForObjectId(int objectId);
+	ItemInstance getItemForObjectId(int objectId);
 	
 	/**
 	 * Method getLastIndex.
 	 * @return int
 	 */
-	public int getLastIndex();
+	int getLastIndex();
 	
 	/**
 	 * Method getLevel.
 	 * @return int
 	 */
-	public int getLevel();
+	int getLevel();
 	
 	/**
 	 * Method getLevelBonus.
 	 * @return int
 	 */
-	public int getLevelBonus();
+	int getLevelBonus();
 	
 	/**
 	 * Method getMaxCells.
 	 * @return int
 	 */
-	public int getMaxCells();
+	int getMaxCells();
 	
 	/**
 	 * Method getMoney.
 	 * @return long
 	 */
-	public long getMoney();
+	long getMoney();
 	
 	/**
 	 * Method getOwner.
 	 * @return Character
 	 */
-	public Character getOwner();
+	Character getOwner();
 	
 	/**
 	 * Method moveItem.
@@ -180,21 +180,21 @@ public interface Inventory extends Foldable, Synchronized
 	 * @param source Inventory
 	 * @return boolean
 	 */
-	public boolean moveItem(ItemInstance item, Inventory source);
+	boolean moveItem(ItemInstance item, Inventory source);
 	
 	/**
 	 * Method putItem.
 	 * @param item ItemInstance
 	 * @return boolean
 	 */
-	public boolean putItem(ItemInstance item);
+	boolean putItem(ItemInstance item);
 	
 	/**
 	 * Method removeItem.
 	 * @param itemId int
 	 * @return boolean
 	 */
-	public boolean removeItem(int itemId);
+	boolean removeItem(int itemId);
 	
 	/**
 	 * Method removeItem.
@@ -202,14 +202,14 @@ public interface Inventory extends Foldable, Synchronized
 	 * @param count long
 	 * @return boolean
 	 */
-	public boolean removeItem(int itemId, long count);
+	boolean removeItem(int itemId, long count);
 	
 	/**
 	 * Method removeItem.
 	 * @param item ItemInstance
 	 * @return boolean
 	 */
-	public boolean removeItem(ItemInstance item);
+	boolean removeItem(ItemInstance item);
 	
 	/**
 	 * Method removeItemFromIndex.
@@ -217,19 +217,19 @@ public interface Inventory extends Foldable, Synchronized
 	 * @param index int
 	 * @return boolean
 	 */
-	public boolean removeItemFromIndex(long count, int index);
+	boolean removeItemFromIndex(long count, int index);
 	
 	/**
 	 * Method setCells.
 	 * @param cells Cell[]
 	 */
-	public void setCells(Cell[] cells);
+	void setCells(Cell[] cells);
 	
 	/**
 	 * Method setGold.
 	 * @param gold Cell
 	 */
-	public void setGold(Cell gold);
+	void setGold(Cell gold);
 	
 	/**
 	 * Method setItem.
@@ -237,25 +237,25 @@ public interface Inventory extends Foldable, Synchronized
 	 * @param index int
 	 * @return boolean
 	 */
-	public boolean setItem(ItemInstance item, int index);
+	boolean setItem(ItemInstance item, int index);
 	
 	/**
 	 * Method setOwner.
 	 * @param owenr Character
 	 */
-	public void setOwner(Character owenr);
+	void setOwner(Character owenr);
 	
 	/**
 	 * Method sort.
 	 * @return boolean
 	 */
-	public boolean sort();
+	boolean sort();
 	
-	public void subLevel();
+	void subLevel();
 	
 	/**
 	 * Method subMoney.
 	 * @param count long
 	 */
-	public void subMoney(long count);
+	void subMoney(long count);
 }

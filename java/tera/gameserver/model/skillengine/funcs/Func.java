@@ -28,11 +28,11 @@ public interface Func
 	 * Method addFuncTo.
 	 * @param owner Character
 	 */
-	public void addFuncTo(Character owner);
+	void addFuncTo(Character owner);
 	
 	/**
 	 * Method removeFuncTo.
 	 * @param owner Character
 	 */
-	public void removeFuncTo(Character owner);
+	void removeFuncTo(Character owner);
 }

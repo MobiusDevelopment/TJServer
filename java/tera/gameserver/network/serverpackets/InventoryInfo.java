@@ -257,7 +257,7 @@ public class InventoryInfo extends ServerPacket
 	
 	public InventoryInfo()
 	{
-		this.prepare = ByteBuffer.allocate(1024000).order(ByteOrder.LITTLE_ENDIAN);
+		prepare = ByteBuffer.allocate(1024000).order(ByteOrder.LITTLE_ENDIAN);
 	}
 	
 	@Override

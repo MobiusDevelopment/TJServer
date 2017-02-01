@@ -46,17 +46,17 @@ public class VarTable
 	
 	public void clear()
 	{
-		this.values.clear();
+		values.clear();
 	}
 	
 	public Object get(String key)
 	{
-		return this.values.get(key);
+		return values.get(key);
 	}
 	
 	public <T, E extends T> T get(String key, Class<T> type, E def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -70,7 +70,7 @@ public class VarTable
 	
 	public <T> T get(String key, T def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -85,7 +85,7 @@ public class VarTable
 	
 	public boolean getBoolean(String key)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -103,7 +103,7 @@ public class VarTable
 	
 	public boolean getBoolean(String key, boolean def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -121,7 +121,7 @@ public class VarTable
 	
 	public boolean[] getBooleanArray(String key, String regex)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -148,7 +148,7 @@ public class VarTable
 	
 	public /* varargs */ boolean[] getBooleanArray(String key, String regex, boolean... def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -175,7 +175,7 @@ public class VarTable
 	
 	public byte getByte(String key)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -193,7 +193,7 @@ public class VarTable
 	
 	public byte getByte(String key, byte def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -211,7 +211,7 @@ public class VarTable
 	
 	public byte[] getByteArray(String key, String regex)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -238,7 +238,7 @@ public class VarTable
 	
 	public /* varargs */ byte[] getByteArray(String key, String regex, byte... def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -265,7 +265,7 @@ public class VarTable
 	
 	public double getDouble(String key)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -283,7 +283,7 @@ public class VarTable
 	
 	public double getDouble(String key, double def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -301,7 +301,7 @@ public class VarTable
 	
 	public double[] getDoubleArray(String key, String regex)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -328,7 +328,7 @@ public class VarTable
 	
 	public /* varargs */ double[] getDoubleArray(String key, String regex, double... def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -355,7 +355,7 @@ public class VarTable
 	
 	public <T extends Enum<T>> T getEnum(String key, Class<T> type)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -373,7 +373,7 @@ public class VarTable
 	
 	public <T extends Enum<T>> T getEnum(String key, Class<T> type, T def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -391,7 +391,7 @@ public class VarTable
 	
 	public <T extends Enum<T>> T[] getEnumArray(String key, Class<T> type, String regex)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -418,7 +418,7 @@ public class VarTable
 	
 	public /* varargs */ <T extends Enum<T>> T[] getEnumArray(String key, Class<T> type, String regex, T... def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -445,7 +445,7 @@ public class VarTable
 	
 	public float getFloat(String key)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -463,7 +463,7 @@ public class VarTable
 	
 	public float getFloat(String key, float def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -481,7 +481,7 @@ public class VarTable
 	
 	public float[] getFloatArray(String key, String regex)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException();
@@ -508,7 +508,7 @@ public class VarTable
 	
 	public /* varargs */ float[] getFloatArray(String key, String regex, float... def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -535,7 +535,7 @@ public class VarTable
 	
 	public <T> T getGeneric(String key, Class<T> type)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException();
@@ -549,7 +549,7 @@ public class VarTable
 	
 	public <T> T[] getGenericArray(String key, Class<T[]> type)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -563,7 +563,7 @@ public class VarTable
 	
 	public /* varargs */ <T> T[] getGenericArray(String key, Class<T[]> type, T... def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -577,7 +577,7 @@ public class VarTable
 	
 	public int getInteger(String key)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -595,7 +595,7 @@ public class VarTable
 	
 	public int getInteger(String key, int def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -613,7 +613,7 @@ public class VarTable
 	
 	public int[] getIntegerArray(String key, String regex)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -640,7 +640,7 @@ public class VarTable
 	
 	public /* varargs */ int[] getIntegerArray(String key, String regex, int... def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -667,7 +667,7 @@ public class VarTable
 	
 	public long getLong(String key)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -685,7 +685,7 @@ public class VarTable
 	
 	public long getLong(String key, long def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -703,7 +703,7 @@ public class VarTable
 	
 	public long[] getLongArray(String key, String regex)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -730,7 +730,7 @@ public class VarTable
 	
 	public /* varargs */ long[] getLongArray(String key, String regex, long... def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -757,7 +757,7 @@ public class VarTable
 	
 	public short getShort(String key)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -775,7 +775,7 @@ public class VarTable
 	
 	public short getShort(String key, short def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -793,7 +793,7 @@ public class VarTable
 	
 	public short[] getShortArray(String key, String regex)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -820,7 +820,7 @@ public class VarTable
 	
 	public /* varargs */ short[] getShortArray(String key, String regex, short... def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -847,7 +847,7 @@ public class VarTable
 	
 	public String getString(String key)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -861,7 +861,7 @@ public class VarTable
 	
 	public String getString(String key, String def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -875,7 +875,7 @@ public class VarTable
 	
 	public String[] getStringArray(String key, String regex)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -893,7 +893,7 @@ public class VarTable
 	
 	public /* varargs */ String[] getStringArray(String key, String regex, String... def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -911,12 +911,12 @@ public class VarTable
 	
 	public Table<String, Object> getValues()
 	{
-		return this.values;
+		return values;
 	}
 	
 	public Vector getVector(String key)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			throw new IllegalArgumentException("not found " + key);
@@ -937,7 +937,7 @@ public class VarTable
 	
 	public Vector getVector(String key, Vector def)
 	{
-		Object object = this.values.get(key);
+		Object object = values.get(key);
 		if (object == null)
 		{
 			return def;
@@ -958,7 +958,7 @@ public class VarTable
 	
 	public VarTable parse(Node node)
 	{
-		this.values.clear();
+		values.clear();
 		if (node == null)
 		{
 			return this;
@@ -973,7 +973,7 @@ public class VarTable
 		while (i < length)
 		{
 			Node item = attrs.item(i);
-			this.set(item.getNodeName(), item.getNodeValue());
+			set(item.getNodeName(), item.getNodeValue());
 			++i;
 		}
 		return this;
@@ -981,7 +981,7 @@ public class VarTable
 	
 	public VarTable parse(Node node, String childName, String nameType, String nameValue)
 	{
-		this.values.clear();
+		values.clear();
 		if (node == null)
 		{
 			return this;
@@ -996,7 +996,7 @@ public class VarTable
 				Node val = attrs.getNamedItem(nameValue);
 				if ((name != null) && (val != null))
 				{
-					this.set(name.getNodeValue(), val.getNodeValue());
+					set(name.getNodeValue(), val.getNodeValue());
 				}
 			}
 			child = child.getNextSibling();
@@ -1006,18 +1006,18 @@ public class VarTable
 	
 	public void set(String key, Object value)
 	{
-		this.values.put(key, value);
+		values.put(key, value);
 	}
 	
 	public VarTable set(VarTable set)
 	{
-		this.values.put(set.getValues());
+		values.put(set.getValues());
 		return this;
 	}
 	
 	@Override
 	public String toString()
 	{
-		return "VarTable: " + (this.values != null ? new StringBuilder("values = ").append(this.values).toString() : "");
+		return "VarTable: " + (values != null ? new StringBuilder("values = ").append(values).toString() : "");
 	}
 }

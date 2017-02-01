@@ -27,19 +27,19 @@ public interface CharacterAI extends AI
 	 * Method isGlobalAI.
 	 * @return boolean
 	 */
-	public boolean isGlobalAI();
+	boolean isGlobalAI();
 	
-	public void startAITask();
+	void startAITask();
 	
-	public void stopAITask();
+	void stopAITask();
 	
-	public void clearTaskList();
+	void clearTaskList();
 	
-	public void abortAttack();
+	void abortAttack();
 	
 	/**
 	 * Method startAttack.
 	 * @param target Character
 	 */
-	public void startAttack(Character target);
+	void startAttack(Character target);
 }

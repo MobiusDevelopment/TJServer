@@ -24,13 +24,13 @@ public abstract class ConnectHandler implements CompletionHandler<Void, Asynchro
 	@Override
 	public void completed(Void result, AsynchronousSocketChannel attachment)
 	{
-		this.onConnect(attachment);
+		onConnect(attachment);
 	}
 	
 	@Override
 	public void failed(Throwable exc, AsynchronousSocketChannel attachment)
 	{
-		this.onFailed(exc);
+		onFailed(exc);
 	}
 	
 	protected abstract void onConnect(AsynchronousSocketChannel var1);

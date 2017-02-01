@@ -30,7 +30,7 @@ public abstract class AbstractWrap implements Wrap
 	@Override
 	public final void fold()
 	{
-		this.getWrapType().put(this);
+		getWrapType().put(this);
 	}
 	
 	@Override

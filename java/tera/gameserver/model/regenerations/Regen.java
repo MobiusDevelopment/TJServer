@@ -26,7 +26,7 @@ public interface Regen
 	 * Method checkCondition.
 	 * @return boolean
 	 */
-	public boolean checkCondition();
+	boolean checkCondition();
 	
-	public void doRegen();
+	void doRegen();
 }

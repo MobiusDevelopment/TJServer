@@ -25,11 +25,11 @@ public interface QuestEventListener
 	 * Method getType.
 	 * @return QuestEventType
 	 */
-	public QuestEventType getType();
+	QuestEventType getType();
 	
 	/**
 	 * Method notifyQuest.
 	 * @param event QuestEvent
 	 */
-	public void notifyQuest(QuestEvent event);
+	void notifyQuest(QuestEvent event);
 }

@@ -29,14 +29,14 @@ public final class BoundingSphere extends AbstractBounding
 	{
 		super(center, offset);
 		this.radius = radius;
-		this.squareRadius = radius * radius;
+		squareRadius = radius * radius;
 	}
 	
 	@Override
 	public boolean contains(float x, float y, float z, VectorBuffer buffer)
 	{
-		Vector center = this.getResultCenter(buffer);
-		if (center.distanceSquared(x, y, z) < this.squareRadius)
+		Vector center = getResultCenter(buffer);
+		if (center.distanceSquared(x, y, z) < squareRadius)
 		{
 			return true;
 		}
@@ -53,12 +53,12 @@ public final class BoundingSphere extends AbstractBounding
 	public Vector getResultCenter(VectorBuffer buffer)
 	{
 		Vector vector = buffer.getNextVector();
-		vector.set(this.center);
-		if (this.offset == Vector.ZERO)
+		vector.set(center);
+		if (offset == Vector.ZERO)
 		{
 			return vector;
 		}
-		return vector.addLocal(this.offset);
+		return vector.addLocal(offset);
 	}
 	
 	@Override
@@ -73,9 +73,9 @@ public final class BoundingSphere extends AbstractBounding
 			case 2:
 			{
 				BoundingSphere sphere = (BoundingSphere) bounding;
-				Vector diff = this.getResultCenter(buffer);
+				Vector diff = getResultCenter(buffer);
 				diff.subtractLocal(sphere.getResultCenter(buffer));
-				float rsum = this.getRadius() + sphere.getRadius();
+				float rsum = getRadius() + sphere.getRadius();
 				if (diff.dot(diff) <= (rsum * rsum))
 				{
 					return true;
@@ -85,17 +85,17 @@ public final class BoundingSphere extends AbstractBounding
 			case 1:
 			{
 				AxisAlignedBoundingBox box = (AxisAlignedBoundingBox) bounding;
-				Vector center = this.getResultCenter(buffer);
+				Vector center = getResultCenter(buffer);
 				Vector target = box.getResultCenter(buffer);
-				if (Math.abs(target.getX() - center.getX()) >= (this.getRadius() + box.getSizeX()))
+				if (Math.abs(target.getX() - center.getX()) >= (getRadius() + box.getSizeX()))
 				{
 					return false;
 				}
-				if (Math.abs(target.getY() - center.getY()) >= (this.getRadius() + box.getSizeY()))
+				if (Math.abs(target.getY() - center.getY()) >= (getRadius() + box.getSizeY()))
 				{
 					return false;
 				}
-				if (Math.abs(target.getZ() - center.getZ()) >= (this.getRadius() + box.getSizeZ()))
+				if (Math.abs(target.getZ() - center.getZ()) >= (getRadius() + box.getSizeZ()))
 				{
 					return false;
 				}
@@ -109,8 +109,8 @@ public final class BoundingSphere extends AbstractBounding
 	public boolean intersects(Vector start, Vector direction, VectorBuffer buffer)
 	{
 		Vector diff = buffer.getNextVector();
-		diff.set(start).subtractLocal(this.getResultCenter(buffer));
-		float a = start.dot(diff) - this.squareRadius;
+		diff.set(start).subtractLocal(getResultCenter(buffer));
+		float a = start.dot(diff) - squareRadius;
 		if (a <= 0.0)
 		{
 			return true;
@@ -129,13 +129,13 @@ public final class BoundingSphere extends AbstractBounding
 	
 	public float getRadius()
 	{
-		return this.radius;
+		return radius;
 	}
 	
 	@Override
 	public String toString()
 	{
-		return "BoundingSphere [radius=" + this.radius + ", squareRadius=" + this.squareRadius + "]";
+		return "BoundingSphere [radius=" + radius + ", squareRadius=" + squareRadius + "]";
 	}
 	
 	static /* synthetic */ int[] $SWITCH_TABLE$rlib$geom$bounding$BoundingType()

@@ -31,277 +31,277 @@ import rlib.util.pools.Foldable;
 public interface Effect extends Foldable
 {
 	
-	public void exit();
+	void exit();
 	
-	public void fold();
+	void fold();
 	
 	/**
 	 * Method getChance.
 	 * @return int
 	 */
-	public int getChance();
+	int getChance();
 	
 	/**
 	 * Method getCount.
 	 * @return int
 	 */
-	public int getCount();
+	int getCount();
 	
 	/**
 	 * Method getEffected.
 	 * @return Character
 	 */
-	public Character getEffected();
+	Character getEffected();
 	
 	/**
 	 * Method getEffectId.
 	 * @return int
 	 */
-	public int getEffectId();
+	int getEffectId();
 	
 	/**
 	 * Method getEffectList.
 	 * @return EffectList
 	 */
-	public EffectList getEffectList();
+	EffectList getEffectList();
 	
 	/**
 	 * Method getEffector.
 	 * @return Character
 	 */
-	public Character getEffector();
+	Character getEffector();
 	
 	/**
 	 * Method getEffectType.
 	 * @return EffectType
 	 */
-	public EffectType getEffectType();
+	EffectType getEffectType();
 	
 	/**
 	 * Method getFuncs.
 	 * @return Func[]
 	 */
-	public Func[] getFuncs();
+	Func[] getFuncs();
 	
 	/**
 	 * Method getOrder.
 	 * @return int
 	 */
-	public int getOrder();
+	int getOrder();
 	
 	/**
 	 * Method getPeriod.
 	 * @return int
 	 */
-	public int getPeriod();
+	int getPeriod();
 	
 	/**
 	 * Method getResistType.
 	 * @return ResistType
 	 */
-	public ResistType getResistType();
+	ResistType getResistType();
 	
 	/**
 	 * Method getSkillClassId.
 	 * @return int
 	 */
-	public int getSkillClassId();
+	int getSkillClassId();
 	
 	/**
 	 * Method getSkillId.
 	 * @return int
 	 */
-	public int getSkillId();
+	int getSkillId();
 	
 	/**
 	 * Method getSkillTemplate.
 	 * @return SkillTemplate
 	 */
-	public SkillTemplate getSkillTemplate();
+	SkillTemplate getSkillTemplate();
 	
 	/**
 	 * Method getStackType.
 	 * @return String
 	 */
-	public String getStackType();
+	String getStackType();
 	
 	/**
 	 * Method getStartTime.
 	 * @return long
 	 */
-	public long getStartTime();
+	long getStartTime();
 	
 	/**
 	 * Method getState.
 	 * @return EffectState
 	 */
-	public EffectState getState();
+	EffectState getState();
 	
 	/**
 	 * Method getTemplate.
 	 * @return EffectTemplate
 	 */
-	public EffectTemplate getTemplate();
+	EffectTemplate getTemplate();
 	
 	/**
 	 * Method getTime.
 	 * @return int
 	 */
-	public int getTime();
+	int getTime();
 	
 	/**
 	 * Method getTimeEnd.
 	 * @return int
 	 */
-	public int getTimeEnd();
+	int getTimeEnd();
 	
 	/**
 	 * Method getTimeForPacket.
 	 * @return int
 	 */
-	public int getTimeForPacket();
+	int getTimeForPacket();
 	
 	/**
 	 * Method getTotalTime.
 	 * @return int
 	 */
-	public int getTotalTime();
+	int getTotalTime();
 	
 	/**
 	 * Method getUsingCount.
 	 * @return int
 	 */
-	public int getUsingCount();
+	int getUsingCount();
 	
 	/**
 	 * Method hasStackType.
 	 * @return boolean
 	 */
-	public boolean hasStackType();
+	boolean hasStackType();
 	
 	/**
 	 * Method isAura.
 	 * @return boolean
 	 */
-	public boolean isAura();
+	boolean isAura();
 	
 	/**
 	 * Method isDebuff.
 	 * @return boolean
 	 */
-	public boolean isDebuff();
+	boolean isDebuff();
 	
 	/**
 	 * Method isEffect.
 	 * @return boolean
 	 */
-	public boolean isEffect();
+	boolean isEffect();
 	
 	/**
 	 * Method isEnded.
 	 * @return boolean
 	 */
-	public boolean isEnded();
+	boolean isEnded();
 	
 	/**
 	 * Method isFinished.
 	 * @return boolean
 	 */
-	public boolean isFinished();
+	boolean isFinished();
 	
 	/**
 	 * Method isInUse.
 	 * @return boolean
 	 */
-	public boolean isInUse();
+	boolean isInUse();
 	
 	/**
 	 * Method isNoAttack.
 	 * @return boolean
 	 */
-	public boolean isNoAttack();
+	boolean isNoAttack();
 	
 	/**
 	 * Method isNoAttacked.
 	 * @return boolean
 	 */
-	public boolean isNoAttacked();
+	boolean isNoAttacked();
 	
 	/**
 	 * Method isNoOwerturn.
 	 * @return boolean
 	 */
-	public boolean isNoOwerturn();
+	boolean isNoOwerturn();
 	
 	/**
 	 * Method onActionTime.
 	 * @return boolean
 	 */
-	public boolean onActionTime();
+	boolean onActionTime();
 	
-	public void onExit();
+	void onExit();
 	
-	public void onStart();
+	void onStart();
 	
-	public void scheduleEffect();
+	void scheduleEffect();
 	
 	/**
 	 * Method setCount.
 	 * @param count int
 	 */
-	public void setCount(int count);
+	void setCount(int count);
 	
 	/**
 	 * Method setEffected.
 	 * @param effected Character
 	 */
-	public void setEffected(Character effected);
+	void setEffected(Character effected);
 	
 	/**
 	 * Method setEffectList.
 	 * @param effectList EffectList
 	 */
-	public void setEffectList(EffectList effectList);
+	void setEffectList(EffectList effectList);
 	
 	/**
 	 * Method setEffector.
 	 * @param effector Character
 	 */
-	public void setEffector(Character effector);
+	void setEffector(Character effector);
 	
 	/**
 	 * Method setInUse.
 	 * @param value boolean
 	 */
-	public void setInUse(boolean value);
+	void setInUse(boolean value);
 	
 	/**
 	 * Method setPeriod.
 	 * @param period int
 	 */
-	public void setPeriod(int period);
+	void setPeriod(int period);
 	
 	/**
 	 * Method setStartTime.
 	 * @param startTime long
 	 */
-	public void setStartTime(long startTime);
+	void setStartTime(long startTime);
 	
 	/**
 	 * Method setState.
 	 * @param state EffectState
 	 */
-	public void setState(EffectState state);
+	void setState(EffectState state);
 	
 	/**
 	 * Method isDynamicCount.
 	 * @return boolean
 	 */
-	public boolean isDynamicCount();
+	boolean isDynamicCount();
 	
 	/**
 	 * Method isDynamicTime.
 	 * @return boolean
 	 */
-	public boolean isDynamicTime();
+	boolean isDynamicTime();
 }

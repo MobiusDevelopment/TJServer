@@ -25,7 +25,7 @@ public abstract class SafeTask implements Runnable
 	{
 		try
 		{
-			this.runImpl();
+			runImpl();
 		}
 		catch (Exception e)
 		{

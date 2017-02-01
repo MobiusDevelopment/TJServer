@@ -30,7 +30,7 @@ public abstract class GameLoggers
 	private static String directory;
 	private static Array<GameLogger> loggers;
 	
-	public static final void finish()
+	public static void finish()
 	{
 		for (GameLogger logger : loggers)
 		{
@@ -38,7 +38,7 @@ public abstract class GameLoggers
 		}
 	}
 	
-	public static final ByteGameLogger getByteLogger(String name)
+	public static ByteGameLogger getByteLogger(String name)
 	{
 		File dir = new File(String.valueOf(directory) + "/" + name);
 		if (!dir.exists())
@@ -62,7 +62,7 @@ public abstract class GameLoggers
 		}
 	}
 	
-	public static final StringGameLogger getLogger(String name)
+	public static StringGameLogger getLogger(String name)
 	{
 		File dir = new File(String.valueOf(directory) + "/" + name);
 		if (!dir.exists())
@@ -86,7 +86,7 @@ public abstract class GameLoggers
 		}
 	}
 	
-	public static final void setDirectory(String directory)
+	public static void setDirectory(String directory)
 	{
 		GameLoggers.directory = directory;
 		loggers = Arrays.toConcurrentArray(GameLogger.class);

@@ -18,9 +18,9 @@ package rlib.util.pools;
 
 public interface FoldablePool<E extends Foldable>
 {
-	public boolean isEmpty();
+	boolean isEmpty();
 	
-	public void put(E var1);
+	void put(E var1);
 	
-	public E take();
+	E take();
 }

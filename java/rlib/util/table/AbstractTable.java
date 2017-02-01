@@ -26,20 +26,20 @@ public abstract class AbstractTable<K, V> implements Table<K, V>
 	protected static final int DEFAULT_MAXIMUM_CAPACITY = 1073741824;
 	protected static final float DEFAULT_LOAD_FACTOR = 0.75f;
 	
-	protected static final int hash(int hash)
+	protected static int hash(int hash)
 	{
 		hash ^= (hash >>> 20) ^ (hash >>> 12);
 		return hash ^ (hash >>> 7) ^ (hash >>> 4);
 	}
 	
-	protected static final int hash(long key)
+	protected static int hash(long key)
 	{
 		int hash = (int) (key ^ (key >>> 32));
 		hash ^= (hash >>> 20) ^ (hash >>> 12);
 		return hash ^ (hash >>> 7) ^ (hash >>> 4);
 	}
 	
-	protected static final int indexFor(int hash, int length)
+	protected static int indexFor(int hash, int length)
 	{
 		return hash & (length - 1);
 	}
@@ -71,7 +71,7 @@ public abstract class AbstractTable<K, V> implements Table<K, V>
 	@Override
 	public void finalyze()
 	{
-		this.clear();
+		clear();
 	}
 	
 	@Override
@@ -95,7 +95,7 @@ public abstract class AbstractTable<K, V> implements Table<K, V>
 	@Override
 	public boolean isEmpty()
 	{
-		if (this.size() < 1)
+		if (size() < 1)
 		{
 			return true;
 		}

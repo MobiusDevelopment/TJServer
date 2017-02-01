@@ -30,17 +30,17 @@ public interface ItemExecutor
 	 * @param item ItemInstance
 	 * @param player Player
 	 */
-	public void execution(ItemInstance item, Player player);
+	void execution(ItemInstance item, Player player);
 	
 	/**
 	 * Method getAccess.
 	 * @return int
 	 */
-	public int getAccess();
+	int getAccess();
 	
 	/**
 	 * Method getItemIds.
 	 * @return int[]
 	 */
-	public int[] getItemIds();
+	int[] getItemIds();
 }

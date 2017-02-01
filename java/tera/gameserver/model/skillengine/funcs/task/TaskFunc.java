@@ -27,11 +27,11 @@ public interface TaskFunc extends Func, Runnable
 	 * Method getInterval.
 	 * @return int
 	 */
-	public int getInterval();
+	int getInterval();
 	
 	/**
 	 * Method getLimit.
 	 * @return int
 	 */
-	public int getLimit();
+	int getLimit();
 }

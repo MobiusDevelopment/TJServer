@@ -27,7 +27,7 @@ final class ObjectWrap extends AbstractWrap
 	@Override
 	public Object getObject()
 	{
-		return this.object;
+		return object;
 	}
 	
 	@Override

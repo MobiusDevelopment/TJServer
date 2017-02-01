@@ -76,7 +76,7 @@ public final class BossSpawnManager
 	 * @param spawn Spawn
 	 * @return boolean
 	 */
-	public synchronized final boolean addSpawn(Spawn spawn)
+	public final synchronized boolean addSpawn(Spawn spawn)
 	{
 		if (spawns.contains(spawn))
 		{
@@ -92,7 +92,7 @@ public final class BossSpawnManager
 	 * @param template NpcTemplate
 	 * @return long
 	 */
-	public synchronized final long getSpawn(NpcTemplate template)
+	public final synchronized long getSpawn(NpcTemplate template)
 	{
 		final Table<IntKey, Wrap> table = spawnTable.get(template.getTemplateId());
 		
@@ -110,7 +110,7 @@ public final class BossSpawnManager
 	 * @param template NpcTemplate
 	 * @param spawn long
 	 */
-	public synchronized final void updateSpawn(NpcTemplate template, long spawn)
+	public final synchronized void updateSpawn(NpcTemplate template, long spawn)
 	{
 		Table<IntKey, Wrap> table = spawnTable.get(template.getTemplateId());
 		final DataBaseManager manager = DataBaseManager.getInstance();

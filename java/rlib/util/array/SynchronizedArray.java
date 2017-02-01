@@ -243,7 +243,7 @@ public final class SynchronizedArray<E> extends AbstractArray<E>
 		int length = targetArray.size();
 		while (i < length)
 		{
-			this.fastRemove(array[i]);
+			fastRemove(array[i]);
 			++i;
 		}
 		return true;

@@ -57,7 +57,7 @@ public final class Party implements Foldable
 	private static final FoldablePool<Party> pool = Pools.newConcurrentFoldablePool(Party.class);
 	public static final int MAX_RANGE = 1000;
 	
-	public static final Party newInstance(Player leader, int objectId)
+	public static Party newInstance(Player leader, int objectId)
 	{
 		Party party = pool.take();
 		

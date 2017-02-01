@@ -18,5 +18,5 @@ package rlib.util.array;
 
 public interface Search<E>
 {
-	public boolean compare(E var1, E var2);
+	boolean compare(E var1, E var2);
 }

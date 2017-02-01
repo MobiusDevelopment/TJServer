@@ -32,7 +32,7 @@ public class MountOn extends ServerPacket
 	 * @param skillId int
 	 * @return MountOn
 	 */
-	public static final MountOn getInstance(Player player, int skillId)
+	public static MountOn getInstance(Player player, int skillId)
 	{
 		final MountOn packet = (MountOn) instance.newInstance();
 		packet.objectId = player.getObjectId();

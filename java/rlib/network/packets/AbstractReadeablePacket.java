@@ -34,7 +34,7 @@ public abstract class AbstractReadeablePacket<C> extends AbstractPacket<C> imple
 	@Override
 	public final int getAvaliableBytes()
 	{
-		return this.buffer.remaining();
+		return buffer.remaining();
 	}
 	
 	protected abstract FoldablePool getPool();
@@ -62,54 +62,54 @@ public abstract class AbstractReadeablePacket<C> extends AbstractPacket<C> imple
 		catch (Exception e)
 		{
 			log.warning(this, e);
-			log.warning(this, "buffer " + this.buffer + "\n" + Util.hexdump(this.buffer.array(), this.buffer.limit()));
+			log.warning(this, "buffer " + buffer + "\n" + Util.hexdump(buffer.array(), buffer.limit()));
 			return false;
 		}
 	}
 	
 	protected final int readByte()
 	{
-		return this.buffer.get() & 255;
+		return buffer.get() & 255;
 	}
 	
 	protected final void readBytes(byte[] array)
 	{
-		this.buffer.get(array);
+		buffer.get(array);
 	}
 	
 	protected final void readBytes(byte[] array, int offset, int length)
 	{
-		this.buffer.get(array, offset, length);
+		buffer.get(array, offset, length);
 	}
 	
 	protected final float readFloat()
 	{
-		return this.buffer.getFloat();
+		return buffer.getFloat();
 	}
 	
 	protected abstract void readImpl();
 	
 	protected final int readInt()
 	{
-		return this.buffer.getInt();
+		return buffer.getInt();
 	}
 	
 	protected final long readLong()
 	{
-		return this.buffer.getLong();
+		return buffer.getLong();
 	}
 	
 	protected final int readShort()
 	{
-		return this.buffer.getShort() & 65535;
+		return buffer.getShort() & 65535;
 	}
 	
 	protected final String readString()
 	{
 		StringBuilder builder = new StringBuilder();
-		while (this.buffer.remaining() > 1)
+		while (buffer.remaining() > 1)
 		{
-			char cha = this.buffer.getChar();
+			char cha = buffer.getChar();
 			if (cha == '\u0000')
 			{
 				break;
@@ -123,9 +123,9 @@ public abstract class AbstractReadeablePacket<C> extends AbstractPacket<C> imple
 	{
 		char[] array = new char[length];
 		int i = 0;
-		while ((i < length) && (this.buffer.remaining() > 1))
+		while ((i < length) && (buffer.remaining() > 1))
 		{
-			array[i] = this.buffer.getChar();
+			array[i] = buffer.getChar();
 			++i;
 		}
 		return new String(array);

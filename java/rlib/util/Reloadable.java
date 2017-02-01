@@ -18,5 +18,5 @@ package rlib.util;
 
 public interface Reloadable<E>
 {
-	public void reload(E var1);
+	void reload(E var1);
 }

@@ -27,5 +27,5 @@ public interface DeleteListener
 	 * Method onDelete.
 	 * @param object TObject
 	 */
-	public void onDelete(TObject object);
+	void onDelete(TObject object);
 }

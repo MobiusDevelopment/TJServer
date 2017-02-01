@@ -22,5 +22,5 @@ import rlib.network.AsynchronousNetwork;
 
 public interface ClientNetwork extends AsynchronousNetwork
 {
-	public void connect(InetSocketAddress var1);
+	void connect(InetSocketAddress var1);
 }

@@ -44,7 +44,7 @@ public final class EffectTemplate
 	 * Method getEmptyTemplates.
 	 * @return EffectTemplate[]
 	 */
-	public static final EffectTemplate[] getEmptyTemplates()
+	public static EffectTemplate[] getEmptyTemplates()
 	{
 		return EMPTY_TEMPLATES;
 	}

@@ -99,7 +99,7 @@ public abstract class AbstractSendablePacket<C> extends AbstractPacket<C> implem
 	
 	protected final void writeByte(int value)
 	{
-		this.writeByte(this.buffer, value);
+		this.writeByte(buffer, value);
 	}
 	
 	protected final void writeChar(ByteBuffer buffer, char value)
@@ -114,12 +114,12 @@ public abstract class AbstractSendablePacket<C> extends AbstractPacket<C> implem
 	
 	protected final void writeChar(char value)
 	{
-		this.writeChar(this.buffer, value);
+		this.writeChar(buffer, value);
 	}
 	
 	protected final void writeChar(int value)
 	{
-		this.writeChar(this.buffer, value);
+		this.writeChar(buffer, value);
 	}
 	
 	protected final void writeFloat(ByteBuffer buffer, float value)
@@ -129,7 +129,7 @@ public abstract class AbstractSendablePacket<C> extends AbstractPacket<C> implem
 	
 	protected final void writeFloat(float value)
 	{
-		this.writeFloat(this.buffer, value);
+		this.writeFloat(buffer, value);
 	}
 	
 	protected void writeImpl()
@@ -149,7 +149,7 @@ public abstract class AbstractSendablePacket<C> extends AbstractPacket<C> implem
 	
 	protected final void writeInt(int value)
 	{
-		this.writeInt(this.buffer, value);
+		this.writeInt(buffer, value);
 	}
 	
 	@Override
@@ -167,7 +167,7 @@ public abstract class AbstractSendablePacket<C> extends AbstractPacket<C> implem
 		catch (Exception e)
 		{
 			log.warning(this, e);
-			log.warning(this, "Buffer " + this.buffer + "\n" + Util.hexdump(this.buffer.array(), this.buffer.position()));
+			log.warning(this, "Buffer " + buffer + "\n" + Util.hexdump(buffer.array(), buffer.position()));
 		}
 	}
 	
@@ -178,7 +178,7 @@ public abstract class AbstractSendablePacket<C> extends AbstractPacket<C> implem
 	
 	protected final void writeLong(long value)
 	{
-		this.writeLong(this.buffer, value);
+		this.writeLong(buffer, value);
 	}
 	
 	protected void writeShort(ByteBuffer buffer, int value)
@@ -188,7 +188,7 @@ public abstract class AbstractSendablePacket<C> extends AbstractPacket<C> implem
 	
 	protected void writeShort(int value)
 	{
-		this.writeShort(this.buffer, value);
+		this.writeShort(buffer, value);
 	}
 	
 	protected void writeString(ByteBuffer buffer, String string)
@@ -208,6 +208,6 @@ public abstract class AbstractSendablePacket<C> extends AbstractPacket<C> implem
 	
 	protected void writeString(String string)
 	{
-		this.writeString(this.buffer, string);
+		this.writeString(buffer, string);
 	}
 }

@@ -254,7 +254,7 @@ public final class Config
 	 * @param name String
 	 * @return boolean
 	 */
-	public static final boolean checkName(String name)
+	public static boolean checkName(String name)
 	{
 		final Matcher metcher = namePattern.matcher(name);
 		return metcher.matches();

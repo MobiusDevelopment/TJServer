@@ -25,7 +25,7 @@ public class Sha160 extends BaseHash
 	private int h3;
 	private int h4;
 	
-	private static final synchronized int[] sha(int hh0, int hh1, int hh2, int hh3, int hh4, byte[] in, int offset)
+	private static synchronized int[] sha(int hh0, int hh1, int hh2, int hh3, int hh4, byte[] in, int offset)
 	{
 		int T;
 		int A = hh0;
@@ -107,13 +107,13 @@ public class Sha160 extends BaseHash
 	private Sha160(Sha160 md)
 	{
 		this();
-		this.h0 = md.h0;
-		this.h1 = md.h1;
-		this.h2 = md.h2;
-		this.h3 = md.h3;
-		this.h4 = md.h4;
-		this.count = md.count;
-		this.buffer = md.buffer.clone();
+		h0 = md.h0;
+		h1 = md.h1;
+		h2 = md.h2;
+		h3 = md.h3;
+		h4 = md.h4;
+		count = md.count;
+		buffer = md.buffer.clone();
 	}
 	
 	@Override
@@ -127,26 +127,26 @@ public class Sha160 extends BaseHash
 	{
 		byte[] result = new byte[]
 		{
-			(byte) this.h0,
-			(byte) (this.h0 >>> 8),
-			(byte) (this.h0 >>> 16),
-			(byte) (this.h0 >>> 24),
-			(byte) this.h1,
-			(byte) (this.h1 >>> 8),
-			(byte) (this.h1 >>> 16),
-			(byte) (this.h1 >>> 24),
-			(byte) this.h2,
-			(byte) (this.h2 >>> 8),
-			(byte) (this.h2 >>> 16),
-			(byte) (this.h2 >>> 24),
-			(byte) this.h3,
-			(byte) (this.h3 >>> 8),
-			(byte) (this.h3 >>> 16),
-			(byte) (this.h3 >>> 24),
-			(byte) this.h4,
-			(byte) (this.h4 >>> 8),
-			(byte) (this.h4 >>> 16),
-			(byte) (this.h4 >>> 24)
+			(byte) h0,
+			(byte) (h0 >>> 8),
+			(byte) (h0 >>> 16),
+			(byte) (h0 >>> 24),
+			(byte) h1,
+			(byte) (h1 >>> 8),
+			(byte) (h1 >>> 16),
+			(byte) (h1 >>> 24),
+			(byte) h2,
+			(byte) (h2 >>> 8),
+			(byte) (h2 >>> 16),
+			(byte) (h2 >>> 24),
+			(byte) h3,
+			(byte) (h3 >>> 8),
+			(byte) (h3 >>> 16),
+			(byte) (h3 >>> 24),
+			(byte) h4,
+			(byte) (h4 >>> 8),
+			(byte) (h4 >>> 16),
+			(byte) (h4 >>> 24)
 		};
 		return result;
 	}
@@ -154,11 +154,11 @@ public class Sha160 extends BaseHash
 	@Override
 	protected byte[] padBuffer()
 	{
-		int n = (int) (this.count % 64);
+		int n = (int) (count % 64);
 		int padding = n >= 56 ? 120 - n : 56 - n;
 		byte[] result = new byte[padding + 8];
 		result[0] = -128;
-		long bits = this.count << 3;
+		long bits = count << 3;
 		result[padding++] = (byte) (bits >>> 56);
 		result[padding++] = (byte) (bits >>> 48);
 		result[padding++] = (byte) (bits >>> 40);
@@ -173,21 +173,21 @@ public class Sha160 extends BaseHash
 	@Override
 	protected void resetContext()
 	{
-		this.h0 = 1732584193;
-		this.h1 = -271733879;
-		this.h2 = -1732584194;
-		this.h3 = 271733878;
-		this.h4 = -1009589776;
+		h0 = 1732584193;
+		h1 = -271733879;
+		h2 = -1732584194;
+		h3 = 271733878;
+		h4 = -1009589776;
 	}
 	
 	@Override
 	protected void transform(byte[] in, int offset)
 	{
-		int[] result = Sha160.sha(this.h0, this.h1, this.h2, this.h3, this.h4, in, offset);
-		this.h0 = result[0];
-		this.h1 = result[1];
-		this.h2 = result[2];
-		this.h3 = result[3];
-		this.h4 = result[4];
+		int[] result = Sha160.sha(h0, h1, h2, h3, h4, in, offset);
+		h0 = result[0];
+		h1 = result[1];
+		h2 = result[2];
+		h3 = result[3];
+		h4 = result[4];
 	}
 }

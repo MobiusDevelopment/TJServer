@@ -47,7 +47,7 @@ public final class Duel extends SafeTask implements Foldable
 	 * @param enemy Player
 	 * @return Duel
 	 */
-	public static final Duel newInstance(Player actor, Player enemy)
+	public static Duel newInstance(Player actor, Player enemy)
 	{
 		Duel duel = pool.take();
 		

@@ -18,5 +18,5 @@ package rlib.data;
 
 public interface DocumentXML<C>
 {
-	public C parse();
+	C parse();
 }

@@ -25,5 +25,5 @@ public interface Identified
 	 * Method getObjectId.
 	 * @return int
 	 */
-	public int getObjectId();
+	int getObjectId();
 }

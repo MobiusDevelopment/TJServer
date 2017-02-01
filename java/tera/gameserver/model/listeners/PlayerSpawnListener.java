@@ -27,5 +27,5 @@ public interface PlayerSpawnListener
 	 * Method onSpawn.
 	 * @param player Player
 	 */
-	public void onSpawn(Player player);
+	void onSpawn(Player player);
 }

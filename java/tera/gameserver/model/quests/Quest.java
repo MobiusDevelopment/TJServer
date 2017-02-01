@@ -35,44 +35,44 @@ public interface Quest extends Reply, Reloadable<Quest>
 	 * @param npc Npc
 	 * @param player Player
 	 */
-	public void addLinks(Array<Link> container, Npc npc, Player player);
+	void addLinks(Array<Link> container, Npc npc, Player player);
 	
 	/**
 	 * Method cancel.
 	 * @param event QuestEvent
 	 * @param force boolean
 	 */
-	public void cancel(QuestEvent event, boolean force);
+	void cancel(QuestEvent event, boolean force);
 	
 	/**
 	 * Method finish.
 	 * @param event QuestEvent
 	 */
-	public void finish(QuestEvent event);
+	void finish(QuestEvent event);
 	
 	/**
 	 * Method getId.
 	 * @return int
 	 */
-	public int getId();
+	int getId();
 	
 	/**
 	 * Method getName.
 	 * @return String
 	 */
-	public String getName();
+	String getName();
 	
 	/**
 	 * Method getReward.
 	 * @return Reward
 	 */
-	public Reward getReward();
+	Reward getReward();
 	
 	/**
 	 * Method getType.
 	 * @return QuestType
 	 */
-	public QuestType getType();
+	QuestType getType();
 	
 	/**
 	 * Method isAvailable.
@@ -80,24 +80,24 @@ public interface Quest extends Reply, Reloadable<Quest>
 	 * @param player Player
 	 * @return boolean
 	 */
-	public boolean isAvailable(Npc npc, Player player);
+	boolean isAvailable(Npc npc, Player player);
 	
 	/**
 	 * Method notifyQuest.
 	 * @param event QuestEvent
 	 */
-	public void notifyQuest(QuestEvent event);
+	void notifyQuest(QuestEvent event);
 	
 	/**
 	 * Method notifyQuest.
 	 * @param type QuestEventType
 	 * @param event QuestEvent
 	 */
-	public void notifyQuest(QuestEventType type, QuestEvent event);
+	void notifyQuest(QuestEventType type, QuestEvent event);
 	
 	/**
 	 * Method start.
 	 * @param event QuestEvent
 	 */
-	public void start(QuestEvent event);
+	void start(QuestEvent event);
 }

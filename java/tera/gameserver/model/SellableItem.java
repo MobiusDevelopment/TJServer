@@ -39,7 +39,7 @@ public final class SellableItem implements Foldable
 	 * @param count long
 	 * @return SellableItem
 	 */
-	public static final SellableItem newInstance(ItemInstance item, Inventory inventory, long count)
+	public static SellableItem newInstance(ItemInstance item, Inventory inventory, long count)
 	{
 		SellableItem sell = pool.take();
 		

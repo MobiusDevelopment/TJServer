@@ -39,7 +39,7 @@ public class HotKeyChanger extends ServerPacket
 	 * @param vals int[]
 	 * @return HotKeyChanger
 	 */
-	public static final HotKeyChanger getInstance(ChangeType type, int... vals)
+	public static HotKeyChanger getInstance(ChangeType type, int... vals)
 	{
 		final HotKeyChanger packet = (HotKeyChanger) instance.newInstance();
 		packet.type = type;

@@ -94,7 +94,7 @@ public class SkillShopDialog extends AbstractDialog
 		return true;
 	}
 	
-	public static final SkillShopDialog newInstance(Npc npc, Player player, Bank bank, float resultTax)
+	public static SkillShopDialog newInstance(Npc npc, Player player, Bank bank, float resultTax)
 	{
 		final SkillShopDialog dialog = (SkillShopDialog) DialogType.SKILL_SHOP.newInstance();
 		dialog.npc = npc;

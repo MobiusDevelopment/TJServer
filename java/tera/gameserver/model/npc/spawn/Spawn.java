@@ -28,39 +28,39 @@ public interface Spawn
 	 * Method doDie.
 	 * @param npc Npc
 	 */
-	public void doDie(Npc npc);
+	void doDie(Npc npc);
 	
 	/**
 	 * Method getLocation.
 	 * @return Location
 	 */
-	public Location getLocation();
+	Location getLocation();
 	
 	/**
 	 * Method getRoute.
 	 * @return Location[]
 	 */
-	public Location[] getRoute();
+	Location[] getRoute();
 	
 	/**
 	 * Method getTemplateId.
 	 * @return int
 	 */
-	public int getTemplateId();
+	int getTemplateId();
 	
 	/**
 	 * Method getTemplateType.
 	 * @return int
 	 */
-	public int getTemplateType();
+	int getTemplateType();
 	
 	/**
 	 * Method setLocation.
 	 * @param location Location
 	 */
-	public void setLocation(Location location);
+	void setLocation(Location location);
 	
-	public void start();
+	void start();
 	
-	public void stop();
+	void stop();
 }

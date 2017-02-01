@@ -29,42 +29,42 @@ public interface ActionDialog extends Foldable
 	 * Method apply.
 	 * @return boolean
 	 */
-	public boolean apply();
+	boolean apply();
 	
 	/**
 	 * Method cancel.
 	 * @param player Player
 	 */
-	public void cancel(Player player);
+	void cancel(Player player);
 	
 	/**
 	 * Method getActor.
 	 * @return Player
 	 */
-	public Player getActor();
+	Player getActor();
 	
 	/**
 	 * Method getEnemy.
 	 * @return Player
 	 */
-	public Player getEnemy();
+	Player getEnemy();
 	
 	/**
 	 * Method getEnemy.
 	 * @param player Player
 	 * @return Player
 	 */
-	public Player getEnemy(Player player);
+	Player getEnemy(Player player);
 	
 	/**
 	 * Method getType.
 	 * @return ActionDialogType
 	 */
-	public ActionDialogType getType();
+	ActionDialogType getType();
 	
 	/**
 	 * Method init.
 	 * @return boolean
 	 */
-	public boolean init();
+	boolean init();
 }

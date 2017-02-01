@@ -33,7 +33,7 @@ public final class OrientedBoundingBox extends AbstractBounding
 	protected OrientedBoundingBox(Vector center, Vector offset, float sizeX, float sizeY, float sizeZ)
 	{
 		super(center, offset);
-		this.size = Vector.newInstance(sizeX, sizeY, sizeZ);
+		size = Vector.newInstance(sizeX, sizeY, sizeZ);
 		this.sizeX = sizeX;
 		this.sizeY = sizeY;
 		this.sizeZ = sizeZ;
@@ -42,8 +42,8 @@ public final class OrientedBoundingBox extends AbstractBounding
 	@Override
 	public boolean contains(float x, float y, float z, VectorBuffer buffer)
 	{
-		Vector center = this.getResultCenter(buffer);
-		if ((Math.abs(center.getX() - x) < this.sizeX) && (Math.abs(center.getY() - y) < this.sizeY) && (Math.abs(center.getZ() - z) < this.sizeZ))
+		Vector center = getResultCenter(buffer);
+		if ((Math.abs(center.getX() - x) < sizeX) && (Math.abs(center.getY() - y) < sizeY) && (Math.abs(center.getZ() - z) < sizeZ))
 		{
 			return true;
 		}
@@ -60,12 +60,12 @@ public final class OrientedBoundingBox extends AbstractBounding
 	public Vector getResultCenter(VectorBuffer buffer)
 	{
 		Vector vector = buffer.getNextVector();
-		vector.set(this.center);
-		if (this.offset == Vector.ZERO)
+		vector.set(center);
+		if (offset == Vector.ZERO)
 		{
 			return vector;
 		}
-		return vector.addLocal(this.offset);
+		return vector.addLocal(offset);
 	}
 	
 	@Override
@@ -81,10 +81,10 @@ public final class OrientedBoundingBox extends AbstractBounding
 			{
 				OrientedBoundingBox box = (OrientedBoundingBox) bounding;
 				Vector target = box.getResultCenter(buffer);
-				Vector center = this.getResultCenter(buffer);
-				float sizeX = this.getSizeX();
-				float sizeY = this.getSizeY();
-				float sizeZ = this.getSizeZ();
+				Vector center = getResultCenter(buffer);
+				float sizeX = getSizeX();
+				float sizeY = getSizeY();
+				float sizeZ = getSizeZ();
 				if (((center.getX() + sizeX) < (target.getX() - box.getSizeX())) || ((center.getX() - sizeX) > (target.getX() + box.getSizeX())))
 				{
 					return false;
@@ -103,17 +103,17 @@ public final class OrientedBoundingBox extends AbstractBounding
 			{
 				BoundingSphere sphere = (BoundingSphere) bounding;
 				Vector target = sphere.getResultCenter(buffer);
-				Vector center = this.getResultCenter(buffer);
+				Vector center = getResultCenter(buffer);
 				float radius = sphere.getRadius();
-				if (Math.abs(center.getX() - target.getX()) > (radius + this.getSizeX()))
+				if (Math.abs(center.getX() - target.getX()) > (radius + getSizeX()))
 				{
 					return false;
 				}
-				if (Math.abs(center.getY() - target.getY()) > (radius + this.getSizeY()))
+				if (Math.abs(center.getY() - target.getY()) > (radius + getSizeY()))
 				{
 					return false;
 				}
-				if (Math.abs(center.getZ() - target.getZ()) > (radius + this.getSizeZ()))
+				if (Math.abs(center.getZ() - target.getZ()) > (radius + getSizeZ()))
 				{
 					return false;
 				}
@@ -127,7 +127,7 @@ public final class OrientedBoundingBox extends AbstractBounding
 	@Override
 	public boolean intersects(Vector start, Vector direction, VectorBuffer buffer)
 	{
-		Vector diff = start.subtract(this.getResultCenter(buffer), buffer.getNextVector());
+		Vector diff = start.subtract(getResultCenter(buffer), buffer.getNextVector());
 		Vector fWdU = buffer.getNextVector();
 		Vector fAWdU = buffer.getNextVector();
 		Vector fDdU = buffer.getNextVector();
@@ -137,9 +137,9 @@ public final class OrientedBoundingBox extends AbstractBounding
 		fAWdU.setX(Math.abs(fWdU.getX()));
 		fDdU.setX(diff.dot(Vector.UNIT_X));
 		fADdU.setX(Math.abs(fDdU.getX()));
-		float sizeX = this.getSizeX();
-		float sizeY = this.getSizeY();
-		float sizeZ = this.getSizeZ();
+		float sizeX = getSizeX();
+		float sizeY = getSizeY();
+		float sizeZ = getSizeZ();
 		if ((fADdU.getX() > sizeX) && ((fDdU.getX() * fWdU.getX()) >= 0.0f))
 		{
 			return false;
@@ -181,35 +181,35 @@ public final class OrientedBoundingBox extends AbstractBounding
 	@Override
 	public void update(Rotation rotation, VectorBuffer buffer)
 	{
-		this.matrix.set(rotation);
-		this.matrix.absoluteLocal();
+		matrix.set(rotation);
+		matrix.absoluteLocal();
 		Vector vector = buffer.getNextVector();
-		vector.set(this.size);
-		this.matrix.mult(vector, vector);
-		this.sizeX = Math.abs(vector.getX());
-		this.sizeY = Math.abs(vector.getY());
-		this.sizeZ = Math.abs(vector.getZ());
+		vector.set(size);
+		matrix.mult(vector, vector);
+		sizeX = Math.abs(vector.getX());
+		sizeY = Math.abs(vector.getY());
+		sizeZ = Math.abs(vector.getZ());
 	}
 	
 	public final float getSizeX()
 	{
-		return this.sizeX;
+		return sizeX;
 	}
 	
 	public final float getSizeY()
 	{
-		return this.sizeY;
+		return sizeY;
 	}
 	
 	public final float getSizeZ()
 	{
-		return this.sizeZ;
+		return sizeZ;
 	}
 	
 	@Override
 	public String toString()
 	{
-		return "BoundingBox size = " + this.size + ", sizeX = " + this.sizeX + ", sizeY = " + this.sizeY + ", sizeZ = " + this.sizeZ + ", center = " + this.center + ", offset = " + this.offset;
+		return "BoundingBox size = " + size + ", sizeX = " + sizeX + ", sizeY = " + sizeY + ", sizeZ = " + sizeZ + ", center = " + center + ", offset = " + offset;
 	}
 	
 	static /* synthetic */ int[] $SWITCH_TABLE$rlib$geom$bounding$BoundingType()

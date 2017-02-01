@@ -27,13 +27,13 @@ public interface BankDialog extends Dialog
 	 * @param itemId int
 	 * @param count int
 	 */
-	public void addItem(int index, int itemId, int count);
+	void addItem(int index, int itemId, int count);
 	
 	/**
 	 * Method addMoney.
 	 * @param money int
 	 */
-	public void addMoney(int money);
+	void addMoney(int money);
 	
 	/**
 	 * Method getItem.
@@ -41,26 +41,26 @@ public interface BankDialog extends Dialog
 	 * @param itemId int
 	 * @param count int
 	 */
-	public void getItem(int index, int itemId, int count);
+	void getItem(int index, int itemId, int count);
 	
 	/**
 	 * Method getMoney.
 	 * @param money int
 	 */
-	public void getMoney(int money);
+	void getMoney(int money);
 	
 	/**
 	 * Method movingItem.
 	 * @param oldCell int
 	 * @param newCell int
 	 */
-	public void movingItem(int oldCell, int newCell);
+	void movingItem(int oldCell, int newCell);
 	
 	/**
 	 * Method setStartCell.
 	 * @param startCell int
 	 */
-	public void setStartCell(int startCell);
+	void setStartCell(int startCell);
 	
-	public void sort();
+	void sort();
 }

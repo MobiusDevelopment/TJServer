@@ -105,8 +105,8 @@ public final class SkillListInfo extends ServerPacket
 	
 	public SkillListInfo()
 	{
-		this.skills = Arrays.toArray(Skill.class);
-		this.prepare = ByteBuffer.allocate(4096).order(ByteOrder.LITTLE_ENDIAN);
+		skills = Arrays.toArray(Skill.class);
+		prepare = ByteBuffer.allocate(4096).order(ByteOrder.LITTLE_ENDIAN);
 	}
 	
 	@Override

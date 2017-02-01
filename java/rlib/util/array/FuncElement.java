@@ -18,5 +18,5 @@ package rlib.util.array;
 
 public interface FuncElement<E>
 {
-	public void apply(E var1);
+	void apply(E var1);
 }

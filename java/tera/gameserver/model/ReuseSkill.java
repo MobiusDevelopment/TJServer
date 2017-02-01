@@ -33,7 +33,7 @@ public final class ReuseSkill implements Foldable
 	 * @param reuse long
 	 * @return ReuseSkill
 	 */
-	public static final ReuseSkill newInstance(int skillId, long reuse)
+	public static ReuseSkill newInstance(int skillId, long reuse)
 	{
 		ReuseSkill reuseSkill = pool.take();
 		

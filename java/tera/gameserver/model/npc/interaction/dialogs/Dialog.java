@@ -31,35 +31,35 @@ public interface Dialog extends Foldable
 	 * Method apply.
 	 * @return boolean
 	 */
-	public boolean apply();
+	boolean apply();
 	
 	/**
 	 * Method close.
 	 * @return boolean
 	 */
-	public boolean close();
+	boolean close();
 	
 	/**
 	 * Method getNpc.
 	 * @return Npc
 	 */
-	public Npc getNpc();
+	Npc getNpc();
 	
 	/**
 	 * Method getPlayer.
 	 * @return Player
 	 */
-	public Player getPlayer();
+	Player getPlayer();
 	
 	/**
 	 * Method getType.
 	 * @return DialogType
 	 */
-	public DialogType getType();
+	DialogType getType();
 	
 	/**
 	 * Method init.
 	 * @return boolean
 	 */
-	public boolean init();
+	boolean init();
 }

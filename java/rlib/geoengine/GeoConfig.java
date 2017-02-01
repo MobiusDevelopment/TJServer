@@ -18,13 +18,13 @@ package rlib.geoengine;
 
 public interface GeoConfig
 {
-	public int getOffsetX();
+	int getOffsetX();
 	
-	public int getOffsetY();
+	int getOffsetY();
 	
-	public int getQuardHeight();
+	int getQuardHeight();
 	
-	public int getQuardSize();
+	int getQuardSize();
 	
-	public int getSplit();
+	int getSplit();
 }

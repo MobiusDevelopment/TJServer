@@ -143,7 +143,7 @@ public abstract class Objects
 		return null;
 	}
 	
-	public static final <O, N extends O> void reload(O original, N updated)
+	public static <O, N extends O> void reload(O original, N updated)
 	{
 		if ((original == null) || (updated == null))
 		{

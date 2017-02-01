@@ -18,66 +18,65 @@ package rlib.util.array;
 
 public interface LongArray extends Iterable<Long>
 {
-	public LongArray add(long var1);
+	LongArray add(long var1);
 	
-	public LongArray addAll(long[] var1);
+	LongArray addAll(long[] var1);
 	
-	public LongArray addAll(LongArray var1);
+	LongArray addAll(LongArray var1);
 	
-	public long[] array();
+	long[] array();
 	
-	public LongArray clear();
+	LongArray clear();
 	
-	public boolean contains(long var1);
+	boolean contains(long var1);
 	
-	public boolean containsAll(long[] var1);
+	boolean containsAll(long[] var1);
 	
-	public boolean containsAll(LongArray var1);
+	boolean containsAll(LongArray var1);
 	
-	public boolean fastRemove(int var1);
+	boolean fastRemove(int var1);
 	
-	public boolean fastRemove(long var1);
+	boolean fastRemove(long var1);
 	
-	public long first();
+	long first();
 	
-	public long get(int var1);
+	long get(int var1);
 	
-	public int indexOf(long var1);
+	int indexOf(long var1);
 	
-	public boolean isEmpty();
+	boolean isEmpty();
 	
-	@Override
-	public ArrayIterator<Long> iterator();
+	@Override ArrayIterator<Long> iterator();
 	
-	public long last();
+	long last();
 	
-	public int lastIndexOf(long var1);
+	int lastIndexOf(long var1);
 	
-	public long poll();
+	long poll();
 	
-	public long pop();
+	long pop();
 	
-	public void readLock();
+	void readLock();
 	
-	public void readUnlock();
+	void readUnlock();
 	
-	public boolean removeAll(LongArray var1);
+	boolean removeAll(LongArray var1);
 	
-	public boolean retainAll(LongArray var1);
+	boolean retainAll(LongArray var1);
 	
-	public int size();
+	int size();
 	
-	public boolean slowRemove(int var1);
+	boolean slowRemove(int var1);
 	
-	public boolean slowRemove(long var1);
+	boolean slowRemove(long var1);
 	
-	public LongArray sort();
+	LongArray sort();
 	
-	public long[] toArray(long[] var1);
+	long[] toArray(long[] var1);
 	
-	public LongArray trimToSize();
+	LongArray trimToSize();
 	
-	public void writeLock();
+	void writeLock();
 	
-	public void writeUnlock();
+	void writeUnlock();
 }

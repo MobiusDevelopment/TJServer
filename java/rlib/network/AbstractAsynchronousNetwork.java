@@ -34,53 +34,53 @@ public abstract class AbstractAsynchronousNetwork implements AsynchronousNetwork
 	protected AbstractAsynchronousNetwork(NetworkConfig config)
 	{
 		this.config = config;
-		this.readBufferPool = Arrays.toConcurrentArray(ByteBuffer.class);
-		this.writeBufferPool = Arrays.toConcurrentArray(ByteBuffer.class);
+		readBufferPool = Arrays.toConcurrentArray(ByteBuffer.class);
+		writeBufferPool = Arrays.toConcurrentArray(ByteBuffer.class);
 	}
 	
 	@Override
 	public NetworkConfig getConfig()
 	{
-		return this.config;
+		return config;
 	}
 	
 	@Override
 	public ByteBuffer getReadByteBuffer()
 	{
-		this.readBufferPool.writeLock();
+		readBufferPool.writeLock();
 		try
 		{
-			ByteBuffer buffer = this.readBufferPool.pop();
+			ByteBuffer buffer = readBufferPool.pop();
 			if (buffer == null)
 			{
-				buffer = ByteBuffer.allocate(this.config.getReadBufferSize()).order(ByteOrder.LITTLE_ENDIAN);
+				buffer = ByteBuffer.allocate(config.getReadBufferSize()).order(ByteOrder.LITTLE_ENDIAN);
 			}
 			ByteBuffer byteBuffer = buffer;
 			return byteBuffer;
 		}
 		finally
 		{
-			this.readBufferPool.writeUnlock();
+			readBufferPool.writeUnlock();
 		}
 	}
 	
 	@Override
 	public ByteBuffer getWriteByteBuffer()
 	{
-		this.writeBufferPool.writeLock();
+		writeBufferPool.writeLock();
 		try
 		{
-			ByteBuffer buffer = this.writeBufferPool.pop();
+			ByteBuffer buffer = writeBufferPool.pop();
 			if (buffer == null)
 			{
-				buffer = ByteBuffer.allocate(this.config.getWriteBufferSize()).order(ByteOrder.LITTLE_ENDIAN);
+				buffer = ByteBuffer.allocate(config.getWriteBufferSize()).order(ByteOrder.LITTLE_ENDIAN);
 			}
 			ByteBuffer byteBuffer = buffer;
 			return byteBuffer;
 		}
 		finally
 		{
-			this.writeBufferPool.writeUnlock();
+			writeBufferPool.writeUnlock();
 		}
 	}
 	
@@ -91,7 +91,7 @@ public abstract class AbstractAsynchronousNetwork implements AsynchronousNetwork
 		{
 			return;
 		}
-		this.readBufferPool.add(buffer);
+		readBufferPool.add(buffer);
 	}
 	
 	@Override
@@ -101,6 +101,6 @@ public abstract class AbstractAsynchronousNetwork implements AsynchronousNetwork
 		{
 			return;
 		}
-		this.writeBufferPool.add(buffer);
+		writeBufferPool.add(buffer);
 	}
 }

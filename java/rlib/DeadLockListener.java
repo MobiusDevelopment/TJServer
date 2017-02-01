@@ -20,5 +20,5 @@ import java.lang.management.ThreadInfo;
 
 public interface DeadLockListener
 {
-	public void onDetected(ThreadInfo var1);
+	void onDetected(ThreadInfo var1);
 }

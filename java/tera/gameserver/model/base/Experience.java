@@ -24,7 +24,7 @@ import tera.Config;
 public abstract class Experience
 {
 	
-	public final static int LEVEL[] =
+	public static final int LEVEL[] =
 	{
 		-1, // level 0
 		0,

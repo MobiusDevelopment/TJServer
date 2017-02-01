@@ -27,5 +27,5 @@ public interface PacketHandler
 	 * @param packet Packet
 	 * @return Packet
 	 */
-	public abstract Packet processing(Packet packet);
+	Packet processing(Packet packet);
 }

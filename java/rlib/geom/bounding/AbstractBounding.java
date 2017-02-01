@@ -38,31 +38,31 @@ public abstract class AbstractBounding implements Bounding
 	@Override
 	public boolean contains(Vector point, VectorBuffer buffer)
 	{
-		return this.contains(point.getX(), point.getY(), point.getZ(), buffer);
+		return contains(point.getX(), point.getY(), point.getZ(), buffer);
 	}
 	
 	@Override
 	public final float distanceTo(Vector point)
 	{
-		return this.center.distance(point);
+		return center.distance(point);
 	}
 	
 	@Override
 	public final Vector getCenter()
 	{
-		return this.center;
+		return center;
 	}
 	
 	@Override
 	public Vector getOffset()
 	{
-		return this.offset;
+		return offset;
 	}
 	
 	@Override
 	public final boolean intersects(Ray ray, VectorBuffer buffer)
 	{
-		return this.intersects(ray.getStart(), ray.getDirection(), buffer);
+		return intersects(ray.getStart(), ray.getDirection(), buffer);
 	}
 	
 	@Override

@@ -24,17 +24,17 @@ import rlib.util.Synchronized;
 
 public interface Server<C extends ServerConnection> extends Synchronized
 {
-	public void close();
+	void close();
 	
-	public void decrypt(ByteBuffer var1, int var2, int var3);
+	void decrypt(ByteBuffer var1, int var2, int var3);
 	
-	public void encrypt(ByteBuffer var1, int var2, int var3);
+	void encrypt(ByteBuffer var1, int var2, int var3);
 	
-	public C getConnection();
+	C getConnection();
 	
-	public boolean isConnected();
+	boolean isConnected();
 	
-	public void readPacket(ReadeablePacket var1, ByteBuffer var2);
+	void readPacket(ReadeablePacket var1, ByteBuffer var2);
 	
-	public void sendPacket(SendablePacket var1);
+	void sendPacket(SendablePacket var1);
 }

@@ -34,7 +34,7 @@ public class AddExp extends ServerPacket
 	 * @param npcSubId int
 	 * @return AddExp
 	 */
-	public static final AddExp getInstance(int exp, int added, int next, int npcId, int npcSubId)
+	public static AddExp getInstance(int exp, int added, int next, int npcId, int npcSubId)
 	{
 		final AddExp packet = (AddExp) instance.newInstance();
 		packet.exp = exp;

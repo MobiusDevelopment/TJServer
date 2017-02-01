@@ -18,9 +18,9 @@ package rlib.util;
 
 public interface Loadable
 {
-	public void load();
+	void load();
 	
-	public void reload();
+	void reload();
 	
-	public void unload();
+	void unload();
 }

@@ -43,7 +43,7 @@ public class Rotation
 	
 	private Rotation()
 	{
-		this.w = 1.0f;
+		w = 1.0f;
 	}
 	
 	private Rotation(float x, float y, float z, float w)
@@ -56,7 +56,7 @@ public class Rotation
 	
 	public float dot(Rotation q)
 	{
-		return (this.w * q.w) + (this.x * q.x) + (this.y * q.y) + (this.z * q.z);
+		return (w * q.w) + (x * q.x) + (y * q.y) + (z * q.z);
 	}
 	
 	public Vector getRotationColumn(VectorType type, Vector store)
@@ -66,19 +66,20 @@ public class Rotation
 		{
 			store = Vector.newInstance();
 		}
-		if ((norm = this.norm()) != 1.0f)
+		norm = norm();
+		if (norm != 1.0f)
 		{
 			norm = ExtMath.invSqrt(norm);
 		}
-		float xx = this.x * this.x * norm;
-		float xy = this.x * this.y * norm;
-		float xz = this.x * this.z * norm;
-		float xw = this.x * this.w * norm;
-		float yy = this.y * this.y * norm;
-		float yz = this.y * this.z * norm;
-		float yw = this.y * this.w * norm;
-		float zz = this.z * this.z * norm;
-		float zw = this.z * this.w * norm;
+		float xx = x * x * norm;
+		float xy = x * y * norm;
+		float xz = x * z * norm;
+		float xw = x * w * norm;
+		float yy = y * y * norm;
+		float yz = y * z * norm;
+		float yw = y * w * norm;
+		float zz = z * z * norm;
+		float zw = z * w * norm;
 		switch (Rotation.$SWITCH_TABLE$rlib$geom$VectorType()[type.ordinal()])
 		{
 			case 1:
@@ -107,35 +108,35 @@ public class Rotation
 	
 	public final float getW()
 	{
-		return this.w;
+		return w;
 	}
 	
 	public final float getX()
 	{
-		return this.x;
+		return x;
 	}
 	
 	public final float getY()
 	{
-		return this.y;
+		return y;
 	}
 	
 	public final float getZ()
 	{
-		return this.z;
+		return z;
 	}
 	
 	public float norm()
 	{
-		return (this.w * this.w) + (this.x * this.x) + (this.y * this.y) + (this.z * this.z);
+		return (w * w) + (x * x) + (y * y) + (z * z);
 	}
 	
 	public Rotation set(Rotation rotation)
 	{
-		this.x = rotation.x;
-		this.y = rotation.y;
-		this.z = rotation.z;
-		this.w = rotation.w;
+		x = rotation.x;
+		y = rotation.y;
+		z = rotation.z;
+		w = rotation.w;
 		return this;
 	}
 	
@@ -169,11 +170,11 @@ public class Rotation
 	
 	public void slerp(Rotation q2, float changeAmnt)
 	{
-		if ((this.x == q2.x) && (this.y == q2.y) && (this.z == q2.z) && (this.w == q2.w))
+		if ((x == q2.x) && (y == q2.y) && (z == q2.z) && (w == q2.w))
 		{
 			return;
 		}
-		float result = (this.x * q2.x) + (this.y * q2.y) + (this.z * q2.z) + (this.w * q2.w);
+		float result = (x * q2.x) + (y * q2.y) + (z * q2.z) + (w * q2.w);
 		if (result < 0.0f)
 		{
 			q2.x = -q2.x;
@@ -191,17 +192,17 @@ public class Rotation
 			scale0 = ExtMath.sin((1.0f - changeAmnt) * theta) * invSinTheta;
 			scale1 = ExtMath.sin(changeAmnt * theta) * invSinTheta;
 		}
-		this.x = (scale0 * this.x) + (scale1 * q2.x);
-		this.y = (scale0 * this.y) + (scale1 * q2.y);
-		this.z = (scale0 * this.z) + (scale1 * q2.z);
-		this.w = (scale0 * this.w) + (scale1 * q2.w);
+		x = (scale0 * x) + (scale1 * q2.x);
+		y = (scale0 * y) + (scale1 * q2.y);
+		z = (scale0 * z) + (scale1 * q2.z);
+		w = (scale0 * w) + (scale1 * q2.w);
 	}
 	
 	public Rotation slerp(Rotation q1, Rotation q2, float t)
 	{
 		if ((q1.x == q2.x) && (q1.y == q2.y) && (q1.z == q2.z) && (q1.w == q2.w))
 		{
-			this.set(q1);
+			set(q1);
 			return this;
 		}
 		float result = (q1.x * q2.x) + (q1.y * q2.y) + (q1.z * q2.z) + (q1.w * q2.w);
@@ -222,10 +223,10 @@ public class Rotation
 			scale0 = ExtMath.sin((1.0f - t) * theta) * invSinTheta;
 			scale1 = ExtMath.sin(t * theta) * invSinTheta;
 		}
-		this.x = (scale0 * q1.x) + (scale1 * q2.x);
-		this.y = (scale0 * q1.y) + (scale1 * q2.y);
-		this.z = (scale0 * q1.z) + (scale1 * q2.z);
-		this.w = (scale0 * q1.w) + (scale1 * q2.w);
+		x = (scale0 * q1.x) + (scale1 * q2.x);
+		y = (scale0 * q1.y) + (scale1 * q2.y);
+		z = (scale0 * q1.z) + (scale1 * q2.z);
+		w = (scale0 * q1.w) + (scale1 * q2.w);
 		return this;
 	}
 	
@@ -233,7 +234,7 @@ public class Rotation
 	{
 		if (start.equals(end))
 		{
-			this.set(start);
+			set(start);
 			return this;
 		}
 		float result = start.dot(end);
@@ -251,17 +252,17 @@ public class Rotation
 			startScale = ExtMath.sin((1.0f - done) * theta) * invSinTheta;
 			endScale = ExtMath.sin(done * theta) * invSinTheta;
 		}
-		this.x = (startScale * start.getX()) + (endScale * end.getX());
-		this.y = (startScale * start.getY()) + (endScale * end.getY());
-		this.z = (startScale * start.getZ()) + (endScale * end.getZ());
-		this.w = (startScale * start.getW()) + (endScale * end.getW());
+		x = (startScale * start.getX()) + (endScale * end.getX());
+		y = (startScale * start.getY()) + (endScale * end.getY());
+		z = (startScale * start.getZ()) + (endScale * end.getZ());
+		w = (startScale * start.getW()) + (endScale * end.getW());
 		return this;
 	}
 	
 	public final float toAngleAxis(Vector axisStore)
 	{
 		float angle;
-		float sqrLength = (this.x * this.x) + (this.y * this.y) + (this.z * this.z);
+		float sqrLength = (x * x) + (y * y) + (z * z);
 		if (sqrLength == 0.0f)
 		{
 			angle = 0.0f;
@@ -274,13 +275,13 @@ public class Rotation
 		}
 		else
 		{
-			angle = 2.0f * ExtMath.acos(this.w);
+			angle = 2.0f * ExtMath.acos(w);
 			if (axisStore != null)
 			{
 				float invLength = 1.0f / ExtMath.sqrt(sqrLength);
-				axisStore.setX(this.x * invLength);
-				axisStore.setY(this.y * invLength);
-				axisStore.setZ(this.z * invLength);
+				axisStore.setX(x * invLength);
+				axisStore.setY(y * invLength);
+				axisStore.setZ(z * invLength);
 			}
 		}
 		return angle;
@@ -288,12 +289,12 @@ public class Rotation
 	
 	public final Matrix3f toRotationMatrix(Matrix3f result)
 	{
-		float norm = this.norm();
+		float norm = norm();
 		float s = norm == 1.0f ? 2.0f : (norm > 0.0f ? 2.0f / norm : 0.0f);
-		float x = this.getX();
-		float y = this.getY();
-		float z = this.getZ();
-		float w = this.getW();
+		float x = getX();
+		float y = getY();
+		float z = getZ();
+		float w = getW();
 		float xs = x * s;
 		float ys = y * s;
 		float zs = z * s;
@@ -315,10 +316,10 @@ public class Rotation
 		float vectorX = vector.getX();
 		float vectorY = vector.getY();
 		float vectorZ = vector.getZ();
-		float x = this.getX();
-		float y = this.getY();
-		float z = this.getZ();
-		float w = this.getW();
+		float x = getX();
+		float y = getY();
+		float z = getZ();
+		float w = getW();
 		vector.setX(((((w * w * vectorX) + (2.0f * y * w * vectorZ)) - (2.0f * z * w * vectorY)) + (x * x * vectorX) + (2.0f * y * x * vectorY) + (2.0f * z * x * vectorZ)) - (z * z * vectorX) - (y * y * vectorX));
 		vector.setY(((((2.0f * x * y * vectorX) + (y * y * vectorY) + (2.0f * z * y * vectorZ) + (2.0f * w * z * vectorX)) - (z * z * vectorY)) + (w * w * vectorY)) - (2.0f * x * w * vectorZ) - (x * x * vectorY));
 		vector.setZ((((((2.0f * x * z * vectorX) + (2.0f * y * z * vectorY) + (z * z * vectorZ)) - (2.0f * w * y * vectorX) - (y * y * vectorZ)) + (2.0f * w * x * vectorY)) - (x * x * vectorZ)) + (w * w * vectorZ));
@@ -327,7 +328,7 @@ public class Rotation
 	
 	public final Rotation fromAngles(float[] angles)
 	{
-		return this.fromAngles(angles[0], angles[1], angles[2]);
+		return fromAngles(angles[0], angles[1], angles[2]);
 	}
 	
 	public final Rotation fromAngles(float angleX, float yAngle, float zAngle)
@@ -345,21 +346,21 @@ public class Rotation
 		float sinYXsinZ = sinY * sinZ;
 		float cosYXsinZ = cosY * sinZ;
 		float sinYXcosZ = sinY * cosZ;
-		this.w = (cosYXcosZ * cosX) - (sinYXsinZ * sinX);
-		this.x = (cosYXcosZ * sinX) + (sinYXsinZ * cosX);
-		this.y = (sinYXcosZ * cosX) + (cosYXsinZ * sinX);
-		this.z = (cosYXsinZ * cosX) - (sinYXcosZ * sinX);
-		this.normalizeLocal();
+		w = (cosYXcosZ * cosX) - (sinYXsinZ * sinX);
+		x = (cosYXcosZ * sinX) + (sinYXsinZ * cosX);
+		y = (sinYXcosZ * cosX) + (cosYXsinZ * sinX);
+		z = (cosYXsinZ * cosX) - (sinYXcosZ * sinX);
+		normalizeLocal();
 		return this;
 	}
 	
 	public final Rotation normalizeLocal()
 	{
-		float norm = ExtMath.invSqrt(this.norm());
-		this.x *= norm;
-		this.y *= norm;
-		this.z *= norm;
-		this.w *= norm;
+		float norm = ExtMath.invSqrt(norm());
+		x *= norm;
+		y *= norm;
+		z *= norm;
+		w *= norm;
 		return this;
 	}
 	
@@ -368,10 +369,10 @@ public class Rotation
 	{
 		int prime = 31;
 		int result = 1;
-		result = (31 * result) + Float.floatToIntBits(this.w);
-		result = (31 * result) + Float.floatToIntBits(this.x);
-		result = (31 * result) + Float.floatToIntBits(this.y);
-		result = (31 * result) + Float.floatToIntBits(this.z);
+		result = (31 * result) + Float.floatToIntBits(w);
+		result = (31 * result) + Float.floatToIntBits(x);
+		result = (31 * result) + Float.floatToIntBits(y);
+		result = (31 * result) + Float.floatToIntBits(z);
 		return result;
 	}
 	
@@ -386,24 +387,24 @@ public class Rotation
 		{
 			return false;
 		}
-		if (this.getClass() != obj.getClass())
+		if (getClass() != obj.getClass())
 		{
 			return false;
 		}
 		Rotation other = (Rotation) obj;
-		if (Float.floatToIntBits(this.w) != Float.floatToIntBits(other.w))
+		if (Float.floatToIntBits(w) != Float.floatToIntBits(other.w))
 		{
 			return false;
 		}
-		if (Float.floatToIntBits(this.x) != Float.floatToIntBits(other.x))
+		if (Float.floatToIntBits(x) != Float.floatToIntBits(other.x))
 		{
 			return false;
 		}
-		if (Float.floatToIntBits(this.y) != Float.floatToIntBits(other.y))
+		if (Float.floatToIntBits(y) != Float.floatToIntBits(other.y))
 		{
 			return false;
 		}
-		if (Float.floatToIntBits(this.z) != Float.floatToIntBits(other.z))
+		if (Float.floatToIntBits(z) != Float.floatToIntBits(other.z))
 		{
 			return false;
 		}
@@ -412,17 +413,17 @@ public class Rotation
 	
 	public final Rotation negateLocal()
 	{
-		this.x = -this.x;
-		this.y = -this.y;
-		this.z = -this.z;
-		this.w = -this.w;
+		x = -x;
+		y = -y;
+		z = -z;
+		w = -w;
 		return this;
 	}
 	
 	@Override
 	public String toString()
 	{
-		return "Rotation x = " + this.x + ", y = " + this.y + ", z = " + this.z + ", w = " + this.w;
+		return "Rotation x = " + x + ", y = " + y + ", z = " + z + ", w = " + w;
 	}
 	
 	static /* synthetic */ int[] $SWITCH_TABLE$rlib$geom$VectorType()

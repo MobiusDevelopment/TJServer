@@ -18,66 +18,65 @@ package rlib.util.array;
 
 public interface IntegerArray extends Iterable<Integer>
 {
-	public IntegerArray add(int var1);
+	IntegerArray add(int var1);
 	
-	public IntegerArray addAll(int[] var1);
+	IntegerArray addAll(int[] var1);
 	
-	public IntegerArray addAll(IntegerArray var1);
+	IntegerArray addAll(IntegerArray var1);
 	
-	public int[] array();
+	int[] array();
 	
-	public IntegerArray clear();
+	IntegerArray clear();
 	
-	public boolean contains(int var1);
+	boolean contains(int var1);
 	
-	public boolean containsAll(int[] var1);
+	boolean containsAll(int[] var1);
 	
-	public boolean containsAll(IntegerArray var1);
+	boolean containsAll(IntegerArray var1);
 	
-	public boolean fastRemove(int var1);
+	boolean fastRemove(int var1);
 	
-	public boolean fastRemoveByIndex(int var1);
+	boolean fastRemoveByIndex(int var1);
 	
-	public int first();
+	int first();
 	
-	public int get(int var1);
+	int get(int var1);
 	
-	public int indexOf(int var1);
+	int indexOf(int var1);
 	
-	public boolean isEmpty();
+	boolean isEmpty();
 	
-	@Override
-	public ArrayIterator<Integer> iterator();
+	@Override ArrayIterator<Integer> iterator();
 	
-	public int last();
+	int last();
 	
-	public int lastIndexOf(int var1);
+	int lastIndexOf(int var1);
 	
-	public int poll();
+	int poll();
 	
-	public int pop();
+	int pop();
 	
-	public void readLock();
+	void readLock();
 	
-	public void readUnlock();
+	void readUnlock();
 	
-	public boolean removeAll(IntegerArray var1);
+	boolean removeAll(IntegerArray var1);
 	
-	public boolean retainAll(IntegerArray var1);
+	boolean retainAll(IntegerArray var1);
 	
-	public int size();
+	int size();
 	
-	public boolean slowRemove(int var1);
+	boolean slowRemove(int var1);
 	
-	public boolean slowRemoveByIndex(int var1);
+	boolean slowRemoveByIndex(int var1);
 	
-	public IntegerArray sort();
+	IntegerArray sort();
 	
-	public int[] toArray(int[] var1);
+	int[] toArray(int[] var1);
 	
-	public IntegerArray trimToSize();
+	IntegerArray trimToSize();
 	
-	public void writeLock();
+	void writeLock();
 	
-	public void writeUnlock();
+	void writeUnlock();
 }

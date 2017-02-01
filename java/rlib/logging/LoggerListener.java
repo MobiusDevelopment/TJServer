@@ -18,5 +18,5 @@ package rlib.logging;
 
 public interface LoggerListener
 {
-	public void println(String var1);
+	void println(String var1);
 }

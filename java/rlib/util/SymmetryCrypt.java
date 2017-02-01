@@ -36,7 +36,7 @@ public class SymmetryCrypt
 	public SymmetryCrypt(String key) throws NoSuchAlgorithmException, NoSuchPaddingException, UnsupportedEncodingException, InvalidKeyException
 	{
 		final byte[] bytes = key.getBytes("UTF-8");
-		this.secretKey = new SecretKey()
+		secretKey = new SecretKey()
 		{
 			private static final long serialVersionUID = -8907627571317506056L;
 			
@@ -58,18 +58,18 @@ public class SymmetryCrypt
 				return "RAW";
 			}
 		};
-		this.ecipher.init(1, this.secretKey);
-		this.dcipher.init(2, this.secretKey);
+		ecipher.init(1, secretKey);
+		dcipher.init(2, secretKey);
 	}
 	
 	public void decrypt(byte[] in, int offset, int length, byte[] out) throws ShortBufferException, IllegalBlockSizeException, BadPaddingException
 	{
-		this.dcipher.doFinal(in, offset, length, out, offset);
+		dcipher.doFinal(in, offset, length, out, offset);
 	}
 	
 	public void encrypt(byte[] in, int offset, int length, byte[] out) throws ShortBufferException, IllegalBlockSizeException, BadPaddingException
 	{
-		this.ecipher.doFinal(in, offset, length, out, offset);
+		ecipher.doFinal(in, offset, length, out, offset);
 	}
 	
 }

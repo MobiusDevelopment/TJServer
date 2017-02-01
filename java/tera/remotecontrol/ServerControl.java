@@ -41,7 +41,7 @@ public final class ServerControl extends ServerThread
 	 * Method init.
 	 * @throws IOException
 	 */
-	public static final void init() throws IOException
+	public static void init() throws IOException
 	{
 		instance = new ServerControl();
 		serverSocket = new ServerSocket(Config.DIST_CONTROL_PORT);

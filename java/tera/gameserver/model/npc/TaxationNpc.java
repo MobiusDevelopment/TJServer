@@ -27,11 +27,11 @@ public interface TaxationNpc
 	 * Method getTax.
 	 * @return int
 	 */
-	public int getTax();
+	int getTax();
 	
 	/**
 	 * Method getTaxBank.
 	 * @return Bank
 	 */
-	public Bank getTaxBank();
+	Bank getTaxBank();
 }

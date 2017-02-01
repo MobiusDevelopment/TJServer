@@ -110,7 +110,7 @@ public abstract class EventUtils
 	 * Method putLocation.
 	 * @param loc Location
 	 */
-	public static final void putLocation(Location loc)
+	public static void putLocation(Location loc)
 	{
 		LOCATION_POOL.add(loc);
 	}
@@ -119,7 +119,7 @@ public abstract class EventUtils
 	 * Method takeLocation.
 	 * @return Location
 	 */
-	public static final Location takeLocation()
+	public static Location takeLocation()
 	{
 		if (LOCATION_POOL.isEmpty())
 		{

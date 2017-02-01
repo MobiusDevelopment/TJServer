@@ -35,7 +35,7 @@ public final class TradeItem implements Foldable
 	 * @param count long
 	 * @return TradeItem
 	 */
-	public static final TradeItem newInstance(ItemInstance item, long count)
+	public static TradeItem newInstance(ItemInstance item, long count)
 	{
 		TradeItem tradeItem = pool.take();
 		

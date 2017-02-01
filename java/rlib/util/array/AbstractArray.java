@@ -44,7 +44,7 @@ public abstract class AbstractArray<E> implements Array<E>
 		int length = array.size();
 		while (i < length)
 		{
-			if (!this.contains(elements[i]))
+			if (!contains(elements[i]))
 			{
 				return false;
 			}
@@ -60,7 +60,7 @@ public abstract class AbstractArray<E> implements Array<E>
 		int length = array.length;
 		while (i < length)
 		{
-			if (!this.contains(array[i]))
+			if (!contains(array[i]))
 			{
 				return false;
 			}
@@ -72,7 +72,7 @@ public abstract class AbstractArray<E> implements Array<E>
 	@Override
 	public boolean fastRemove(Object object)
 	{
-		if (this.fastRemove(this.indexOf(object)) != null)
+		if (fastRemove(indexOf(object)) != null)
 		{
 			return true;
 		}
@@ -82,7 +82,7 @@ public abstract class AbstractArray<E> implements Array<E>
 	@Override
 	public void finalyze()
 	{
-		this.clear();
+		clear();
 	}
 	
 	@Override
@@ -107,7 +107,7 @@ public abstract class AbstractArray<E> implements Array<E>
 	@Override
 	public final boolean slowRemove(Object object)
 	{
-		if (this.slowRemove(this.indexOf(object)) != null)
+		if (slowRemove(indexOf(object)) != null)
 		{
 			return true;
 		}
@@ -117,7 +117,7 @@ public abstract class AbstractArray<E> implements Array<E>
 	@Override
 	public String toString()
 	{
-		return String.valueOf(this.getClass().getSimpleName()) + " size = " + this.size() + " : " + Arrays.toString(this);
+		return String.valueOf(getClass().getSimpleName()) + " size = " + size() + " : " + Arrays.toString(this);
 	}
 	
 	@Override

@@ -18,19 +18,19 @@ package rlib.util.random;
 
 public interface Random
 {
-	public void byteArray(byte[] var1, int var2, int var3);
+	void byteArray(byte[] var1, int var2, int var3);
 	
-	public boolean chance(float var1);
+	boolean chance(float var1);
 	
-	public boolean chance(int var1);
+	boolean chance(int var1);
 	
-	public float nextFloat();
+	float nextFloat();
 	
-	public int nextInt();
+	int nextInt();
 	
-	public int nextInt(int var1);
+	int nextInt(int var1);
 	
-	public int nextInt(int var1, int var2);
+	int nextInt(int var1, int var2);
 	
-	public long nextLong(long var1, long var3);
+	long nextLong(long var1, long var3);
 }

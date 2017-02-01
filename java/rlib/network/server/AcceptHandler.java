@@ -31,14 +31,14 @@ public abstract class AcceptHandler implements CompletionHandler<AsynchronousSoc
 	public void completed(AsynchronousSocketChannel result, AsynchronousServerSocketChannel serverChannel)
 	{
 		serverChannel.accept(serverChannel, this);
-		this.onAccept(result);
+		onAccept(result);
 	}
 	
 	@Override
 	public void failed(Throwable exc, AsynchronousServerSocketChannel serverChannel)
 	{
 		serverChannel.accept(serverChannel, this);
-		this.onFailed(exc);
+		onFailed(exc);
 	}
 	
 	protected abstract void onAccept(AsynchronousSocketChannel var1);

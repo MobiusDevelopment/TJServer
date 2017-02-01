@@ -75,17 +75,17 @@ public abstract class World
 		activeRegions.add(region);
 	}
 	
-	public static final void addDroppedItems()
+	public static void addDroppedItems()
 	{
 		droppedItems += 1;
 	}
 	
-	public static final void addKilledNpc()
+	public static void addKilledNpc()
 	{
 		killedNpcs += 1;
 	}
 	
-	public static final void addKilledPlayers()
+	public static void addKilledPlayers()
 	{
 		killedPlayers += 1;
 	}
@@ -126,7 +126,7 @@ public abstract class World
 		}
 	}
 	
-	public static final void addSpawnedNpc()
+	public static void addSpawnedNpc()
 	{
 		spawnedNpcs += 1;
 	}
@@ -199,7 +199,7 @@ public abstract class World
 		}
 	}
 	
-	public static final void clear()
+	public static void clear()
 	{
 		for (WorldRegion[][][] regionsss : worldRegions)
 		{
@@ -594,7 +594,7 @@ public abstract class World
 	 * Method getDroppedItems.
 	 * @return long
 	 */
-	public static final long getDroppedItems()
+	public static long getDroppedItems()
 	{
 		return droppedItems;
 	}
@@ -603,7 +603,7 @@ public abstract class World
 	 * Method getKilledNpcs.
 	 * @return long
 	 */
-	public static final long getKilledNpcs()
+	public static long getKilledNpcs()
 	{
 		return killedNpcs;
 	}
@@ -612,7 +612,7 @@ public abstract class World
 	 * Method getKilledPlayers.
 	 * @return long
 	 */
-	public static final long getKilledPlayers()
+	public static long getKilledPlayers()
 	{
 		return killedPlayers;
 	}
@@ -761,7 +761,7 @@ public abstract class World
 	 * Method getPlayers.
 	 * @return Array<Player>
 	 */
-	public static final Array<Player> getPlayers()
+	public static Array<Player> getPlayers()
 	{
 		return players;
 	}
@@ -945,7 +945,7 @@ public abstract class World
 	 * Method getSpawnedNpcs.
 	 * @return long
 	 */
-	public static final long getSpawnedNpcs()
+	public static long getSpawnedNpcs()
 	{
 		return spawnedNpcs;
 	}

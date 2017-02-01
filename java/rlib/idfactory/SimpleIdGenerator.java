@@ -26,18 +26,18 @@ public final class SimpleIdGenerator implements IdGenerator
 	{
 		this.start = start;
 		this.end = end;
-		this.nextId = start;
+		nextId = start;
 	}
 	
 	@Override
 	public synchronized int getNextId()
 	{
-		if (this.nextId == this.end)
+		if (nextId == end)
 		{
-			this.nextId = this.start;
+			nextId = start;
 		}
-		++this.nextId;
-		return this.nextId;
+		++nextId;
+		return nextId;
 	}
 	
 	@Override
@@ -53,6 +53,6 @@ public final class SimpleIdGenerator implements IdGenerator
 	@Override
 	public int usedIds()
 	{
-		return this.nextId - this.start;
+		return nextId - start;
 	}
 }

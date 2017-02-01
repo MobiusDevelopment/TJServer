@@ -48,7 +48,7 @@ public final class PlayerEquipment extends AbstractEquipment
 		SlotType.SLOT_MASK,
 	};
 	
-	public static final Equipment newInstance(Character owner)
+	public static Equipment newInstance(Character owner)
 	{
 		Equipment equipment = pool.take();
 		

@@ -27,7 +27,7 @@ final class FloatWrap extends AbstractWrap
 	@Override
 	public float getFloat()
 	{
-		return this.value;
+		return value;
 	}
 	
 	@Override

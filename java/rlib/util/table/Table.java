@@ -23,65 +23,65 @@ import rlib.util.pools.Foldable;
 
 public interface Table<K, V> extends Iterable<V>, Foldable
 {
-	public static final int DEFAULT_INITIAL_CAPACITY = 16;
-	public static final int MAXIMUM_CAPACITY = 1073741824;
-	public static final float DEFAULT_LOAD_FACTOR = 0.75f;
+	int DEFAULT_INITIAL_CAPACITY = 16;
+	int MAXIMUM_CAPACITY = 1073741824;
+	float DEFAULT_LOAD_FACTOR = 0.75f;
 	
-	public void apply(FuncKeyValue<K, V> var1);
+	void apply(FuncKeyValue<K, V> var1);
 	
-	public void apply(FuncValue<V> var1);
+	void apply(FuncValue<V> var1);
 	
-	public void clear();
+	void clear();
 	
-	public boolean containsKey(int var1);
+	boolean containsKey(int var1);
 	
-	public boolean containsKey(K var1);
+	boolean containsKey(K var1);
 	
-	public boolean containsKey(long var1);
+	boolean containsKey(long var1);
 	
-	public boolean containsValue(V var1);
+	boolean containsValue(V var1);
 	
-	public V get(int var1);
+	V get(int var1);
 	
-	public V get(K var1);
+	V get(K var1);
 	
-	public V get(long var1);
+	V get(long var1);
 	
-	public TableType getType();
+	TableType getType();
 	
-	public boolean isEmpty();
+	boolean isEmpty();
 	
-	public Array<K> keyArray(Array<K> var1);
+	Array<K> keyArray(Array<K> var1);
 	
-	public IntegerArray keyIntegerArray(IntegerArray var1);
+	IntegerArray keyIntegerArray(IntegerArray var1);
 	
-	public LongArray keyLongArray(LongArray var1);
+	LongArray keyLongArray(LongArray var1);
 	
-	public void moveTo(Table<K, V> var1);
+	void moveTo(Table<K, V> var1);
 	
-	public V put(int var1, V var2);
+	V put(int var1, V var2);
 	
-	public V put(K var1, V var2);
+	V put(K var1, V var2);
 	
-	public V put(long var1, V var3);
+	V put(long var1, V var3);
 	
-	public void put(Table<K, V> var1);
+	void put(Table<K, V> var1);
 	
-	public void readLock();
+	void readLock();
 	
-	public void readUnlock();
+	void readUnlock();
 	
-	public V remove(int var1);
+	V remove(int var1);
 	
-	public V remove(K var1);
+	V remove(K var1);
 	
-	public V remove(long var1);
+	V remove(long var1);
 	
-	public int size();
+	int size();
 	
-	public Array<V> values(Array<V> var1);
+	Array<V> values(Array<V> var1);
 	
-	public void writeLock();
+	void writeLock();
 	
-	public void writeUnlock();
+	void writeUnlock();
 }

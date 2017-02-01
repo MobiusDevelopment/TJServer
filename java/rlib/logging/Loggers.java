@@ -43,36 +43,36 @@ public abstract class Loggers
 		listeners = Arrays.addToArray(listeners, listener, LoggerListener.class);
 	}
 	
-	public static final Logger getLogger(Class<?> cs)
+	public static Logger getLogger(Class<?> cs)
 	{
 		Logger logger = new Logger(cs.getSimpleName());
 		loggers.put(cs.getSimpleName(), logger);
 		return logger;
 	}
 	
-	public static final Logger getLogger(String name)
+	public static Logger getLogger(String name)
 	{
 		Logger logger = new Logger(name);
 		loggers.put(name, logger);
 		return logger;
 	}
 	
-	public static final void info(Class<?> cs, String message)
+	public static void info(Class<?> cs, String message)
 	{
 		log.info(cs, message);
 	}
 	
-	public static final void info(Object owner, String message)
+	public static void info(Object owner, String message)
 	{
 		log.info(owner, message);
 	}
 	
-	public static final void info(String name, String message)
+	public static void info(String name, String message)
 	{
 		log.info(name, message);
 	}
 	
-	public static final synchronized void println(String text)
+	public static synchronized void println(String text)
 	{
 		block8:
 		{
@@ -114,7 +114,7 @@ public abstract class Loggers
 		System.err.println(text);
 	}
 	
-	public static final void setFile(String projectPath, boolean val)
+	public static void setFile(String projectPath, boolean val)
 	{
 		if (!val)
 		{
@@ -146,7 +146,7 @@ public abstract class Loggers
 		log.warning(cs, exception);
 	}
 	
-	public static final void warning(Class<?> cs, String message)
+	public static void warning(Class<?> cs, String message)
 	{
 		log.warning(cs, message);
 	}
@@ -156,7 +156,7 @@ public abstract class Loggers
 		log.warning(owner, exception);
 	}
 	
-	public static final void warning(Object owner, String message)
+	public static void warning(Object owner, String message)
 	{
 		log.warning(owner, message);
 	}
@@ -166,7 +166,7 @@ public abstract class Loggers
 		log.warning(name, exception);
 	}
 	
-	public static final void warning(String name, String message)
+	public static void warning(String name, String message)
 	{
 		log.warning(name, message);
 	}

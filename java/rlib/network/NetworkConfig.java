@@ -18,19 +18,19 @@ package rlib.network;
 
 public interface NetworkConfig
 {
-	public String getGroupName();
+	String getGroupName();
 	
-	public int getGroupSize();
+	int getGroupSize();
 	
-	public int getReadBufferSize();
+	int getReadBufferSize();
 	
-	public Class<? extends Thread> getThreadClass();
+	Class<? extends Thread> getThreadClass();
 	
-	public int getThreadPriority();
+	int getThreadPriority();
 	
-	public int getWriteBufferSize();
+	int getWriteBufferSize();
 	
-	public boolean isVesibleReadException();
+	boolean isVesibleReadException();
 	
-	public boolean isVesibleWriteException();
+	boolean isVesibleWriteException();
 }

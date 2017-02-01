@@ -28,13 +28,13 @@ public interface QuestAction
 	 * Method apply.
 	 * @param event QuestEvent
 	 */
-	public void apply(QuestEvent event);
+	void apply(QuestEvent event);
 	
 	/**
 	 * Method getType.
 	 * @return QuestActionType
 	 */
-	public QuestActionType getType();
+	QuestActionType getType();
 	
 	/**
 	 * Method test.
@@ -42,5 +42,5 @@ public interface QuestAction
 	 * @param player Player
 	 * @return boolean
 	 */
-	public boolean test(Npc npc, Player player);
+	boolean test(Npc npc, Player player);
 }

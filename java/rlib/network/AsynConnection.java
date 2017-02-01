@@ -18,15 +18,15 @@ package rlib.network;
 
 public interface AsynConnection<R, S>
 {
-	public void close();
+	void close();
 	
-	public long getLastActive();
+	long getLastActive();
 	
-	public boolean isClosed();
+	boolean isClosed();
 	
-	public void sendPacket(S var1);
+	void sendPacket(S var1);
 	
-	public void setLastActive(long var1);
+	void setLastActive(long var1);
 	
-	public void startRead();
+	void startRead();
 }

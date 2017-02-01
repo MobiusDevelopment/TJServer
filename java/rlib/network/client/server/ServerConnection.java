@@ -22,7 +22,7 @@ import rlib.network.packets.SendablePacket;
 
 public interface ServerConnection<T extends Server, R extends ReadeablePacket<T>, S extends SendablePacket<T>> extends AsynConnection<R, S>
 {
-	public T getServer();
+	T getServer();
 	
-	public void setServer(T var1);
+	void setServer(T var1);
 }

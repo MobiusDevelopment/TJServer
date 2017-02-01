@@ -40,7 +40,7 @@ public final class Account implements Foldable
 	 * @param comments String
 	 * @return Account
 	 */
-	public static final Account valueOf(String name, String password, String lastIP, String comments)
+	public static Account valueOf(String name, String password, String lastIP, String comments)
 	{
 		Account account = pool.take();
 		
@@ -72,7 +72,7 @@ public final class Account implements Foldable
 	 * @param accessLevel int
 	 * @return Account
 	 */
-	public static final Account valueOf(String name, String password, String email, String lastIP, String allowIPs, String comments, long endBlock, long endPay, int accessLevel)
+	public static Account valueOf(String name, String password, String email, String lastIP, String allowIPs, String comments, long endBlock, long endPay, int accessLevel)
 	{
 		Account account = pool.take();
 		

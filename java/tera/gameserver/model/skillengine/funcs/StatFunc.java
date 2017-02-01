@@ -33,17 +33,17 @@ public interface StatFunc extends Func, Comparable<StatFunc>
 	 * @param val float
 	 * @return float
 	 */
-	public float calc(Character attacker, Character attacked, Skill skill, float val);
+	float calc(Character attacker, Character attacked, Skill skill, float val);
 	
 	/**
 	 * Method getOrder.
 	 * @return int
 	 */
-	public int getOrder();
+	int getOrder();
 	
 	/**
 	 * Method getStat.
 	 * @return StatType
 	 */
-	public StatType getStat();
+	StatType getStat();
 }

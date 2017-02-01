@@ -133,7 +133,7 @@ public class UserInfo extends ServerPacket
 	
 	public UserInfo()
 	{
-		this.prepare = ByteBuffer.allocate(20480).order(ByteOrder.LITTLE_ENDIAN);
+		prepare = ByteBuffer.allocate(20480).order(ByteOrder.LITTLE_ENDIAN);
 	}
 	
 	@Override

@@ -45,69 +45,69 @@ public final class DefaultServerNetwork implements ServerNetwork
 	public DefaultServerNetwork(NetworkConfig config, AcceptHandler acceptHandler) throws IOException
 	{
 		this.config = config;
-		this.readBufferPool = Arrays.toConcurrentArray(ByteBuffer.class);
-		this.writeBufferPool = Arrays.toConcurrentArray(ByteBuffer.class);
-		this.channelGroup = AsynchronousChannelGroup.withFixedThreadPool(config.getGroupSize(), new GroupThreadFactory(config.getGroupName(), config.getThreadClass(), config.getThreadPriority()));
-		this.serverChannel = AsynchronousServerSocketChannel.open(this.channelGroup);
+		readBufferPool = Arrays.toConcurrentArray(ByteBuffer.class);
+		writeBufferPool = Arrays.toConcurrentArray(ByteBuffer.class);
+		channelGroup = AsynchronousChannelGroup.withFixedThreadPool(config.getGroupSize(), new GroupThreadFactory(config.getGroupName(), config.getThreadClass(), config.getThreadPriority()));
+		serverChannel = AsynchronousServerSocketChannel.open(channelGroup);
 		this.acceptHandler = acceptHandler;
 	}
 	
 	@Override
 	public <A> void accept(A attachment, CompletionHandler<AsynchronousSocketChannel, ? super A> handler)
 	{
-		this.serverChannel.accept(attachment, handler);
+		serverChannel.accept(attachment, handler);
 	}
 	
 	@Override
 	public void bind(SocketAddress address) throws IOException
 	{
-		this.serverChannel.bind(address);
-		this.serverChannel.accept(this.serverChannel, this.acceptHandler);
+		serverChannel.bind(address);
+		serverChannel.accept(serverChannel, acceptHandler);
 	}
 	
 	@Override
 	public NetworkConfig getConfig()
 	{
-		return this.config;
+		return config;
 	}
 	
 	@Override
 	public ByteBuffer getReadByteBuffer()
 	{
-		this.readBufferPool.writeLock();
+		readBufferPool.writeLock();
 		try
 		{
-			ByteBuffer buffer = this.readBufferPool.pop();
+			ByteBuffer buffer = readBufferPool.pop();
 			if (buffer == null)
 			{
-				buffer = ByteBuffer.allocate(this.config.getReadBufferSize()).order(ByteOrder.LITTLE_ENDIAN);
+				buffer = ByteBuffer.allocate(config.getReadBufferSize()).order(ByteOrder.LITTLE_ENDIAN);
 			}
 			ByteBuffer byteBuffer = buffer;
 			return byteBuffer;
 		}
 		finally
 		{
-			this.readBufferPool.writeUnlock();
+			readBufferPool.writeUnlock();
 		}
 	}
 	
 	@Override
 	public ByteBuffer getWriteByteBuffer()
 	{
-		this.writeBufferPool.writeLock();
+		writeBufferPool.writeLock();
 		try
 		{
-			ByteBuffer buffer = this.writeBufferPool.pop();
+			ByteBuffer buffer = writeBufferPool.pop();
 			if (buffer == null)
 			{
-				buffer = ByteBuffer.allocate(this.config.getWriteBufferSize()).order(ByteOrder.LITTLE_ENDIAN);
+				buffer = ByteBuffer.allocate(config.getWriteBufferSize()).order(ByteOrder.LITTLE_ENDIAN);
 			}
 			ByteBuffer byteBuffer = buffer;
 			return byteBuffer;
 		}
 		finally
 		{
-			this.writeBufferPool.writeUnlock();
+			writeBufferPool.writeUnlock();
 		}
 	}
 	
@@ -118,7 +118,7 @@ public final class DefaultServerNetwork implements ServerNetwork
 		{
 			return;
 		}
-		this.readBufferPool.add(buffer);
+		readBufferPool.add(buffer);
 	}
 	
 	@Override
@@ -128,6 +128,6 @@ public final class DefaultServerNetwork implements ServerNetwork
 		{
 			return;
 		}
-		this.writeBufferPool.add(buffer);
+		writeBufferPool.add(buffer);
 	}
 }

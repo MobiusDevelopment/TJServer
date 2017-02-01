@@ -28,18 +28,18 @@ public class FastLongArray implements LongArray
 	
 	public FastLongArray(int size)
 	{
-		this.array = new long[size];
+		array = new long[size];
 		this.size = 0;
 	}
 	
 	@Override
 	public FastLongArray add(long element)
 	{
-		if (this.size == this.array.length)
+		if (size == array.length)
 		{
-			this.array = Arrays.copyOf(this.array, ((this.array.length * 3) / 2) + 1);
+			array = Arrays.copyOf(array, ((array.length * 3) / 2) + 1);
 		}
-		this.array[this.size++] = element;
+		array[size++] = element;
 		return this;
 	}
 	
@@ -50,16 +50,16 @@ public class FastLongArray implements LongArray
 		{
 			return this;
 		}
-		int diff = (this.size + elements.length) - this.array.length;
+		int diff = (size + elements.length) - array.length;
 		if (diff > 0)
 		{
-			this.array = Arrays.copyOf(this.array, diff);
+			array = Arrays.copyOf(array, diff);
 		}
 		int i = 0;
 		int length = elements.length;
 		while (i < length)
 		{
-			this.add(elements[i]);
+			add(elements[i]);
 			++i;
 		}
 		return this;
@@ -72,17 +72,17 @@ public class FastLongArray implements LongArray
 		{
 			return this;
 		}
-		int diff = (this.size + elements.size()) - this.array.length;
+		int diff = (size + elements.size()) - array.length;
 		if (diff > 0)
 		{
-			this.array = Arrays.copyOf(this.array, diff);
+			array = Arrays.copyOf(array, diff);
 		}
-		this.array = elements.array();
+		array = elements.array();
 		int i = 0;
 		int length = elements.size();
 		while (i < length)
 		{
-			this.add(this.array[i]);
+			add(array[i]);
 			++i;
 		}
 		return this;
@@ -91,22 +91,22 @@ public class FastLongArray implements LongArray
 	@Override
 	public final long[] array()
 	{
-		return this.array;
+		return array;
 	}
 	
 	@Override
 	public final FastLongArray clear()
 	{
-		this.size = 0;
+		size = 0;
 		return this;
 	}
 	
 	@Override
 	public final boolean contains(long element)
 	{
-		long[] array = this.array();
+		long[] array = array();
 		int i = 0;
-		int length = this.size;
+		int length = size;
 		while (i < length)
 		{
 			if (array[i] == element)
@@ -125,7 +125,7 @@ public class FastLongArray implements LongArray
 		int length = array.length;
 		while (i < length)
 		{
-			if (!this.contains(array[i]))
+			if (!contains(array[i]))
 			{
 				return false;
 			}
@@ -142,7 +142,7 @@ public class FastLongArray implements LongArray
 		int length = array.size();
 		while (i < length)
 		{
-			if (!this.contains(elements[i]))
+			if (!contains(elements[i]))
 			{
 				return false;
 			}
@@ -154,24 +154,24 @@ public class FastLongArray implements LongArray
 	@Override
 	public final boolean fastRemove(int index)
 	{
-		if ((index < 0) || (this.size < 1) || (index >= this.size))
+		if ((index < 0) || (size < 1) || (index >= size))
 		{
 			return false;
 		}
-		long[] array = this.array();
-		--this.size;
-		array[index] = array[this.size];
-		array[this.size] = 0;
+		long[] array = array();
+		--size;
+		array[index] = array[size];
+		array[size] = 0;
 		return true;
 	}
 	
 	@Override
 	public boolean fastRemove(long element)
 	{
-		int index = this.indexOf(element);
+		int index = indexOf(element);
 		if (index > -1)
 		{
-			this.fastRemove(index);
+			fastRemove(index);
 		}
 		if (index > -1)
 		{
@@ -183,25 +183,25 @@ public class FastLongArray implements LongArray
 	@Override
 	public final long first()
 	{
-		if (this.size < 1)
+		if (size < 1)
 		{
 			return 0;
 		}
-		return this.array[0];
+		return array[0];
 	}
 	
 	@Override
 	public final long get(int index)
 	{
-		return this.array[index];
+		return array[index];
 	}
 	
 	@Override
 	public final int indexOf(long element)
 	{
-		long[] array = this.array();
+		long[] array = array();
 		int i = 0;
-		int length = this.size;
+		int length = size;
 		while (i < length)
 		{
 			long val = array[i];
@@ -217,7 +217,7 @@ public class FastLongArray implements LongArray
 	@Override
 	public final boolean isEmpty()
 	{
-		if (this.size < 1)
+		if (size < 1)
 		{
 			return true;
 		}
@@ -233,20 +233,20 @@ public class FastLongArray implements LongArray
 	@Override
 	public final long last()
 	{
-		if (this.size < 1)
+		if (size < 1)
 		{
 			return 0;
 		}
-		return this.array[this.size - 1];
+		return array[size - 1];
 	}
 	
 	@Override
 	public final int lastIndexOf(long element)
 	{
-		long[] array = this.array();
+		long[] array = array();
 		int last = -1;
 		int i = 0;
-		int length = this.size;
+		int length = size;
 		while (i < length)
 		{
 			long val = array[i];
@@ -262,16 +262,16 @@ public class FastLongArray implements LongArray
 	@Override
 	public final long poll()
 	{
-		long val = this.first();
-		this.slowRemove(0);
+		long val = first();
+		slowRemove(0);
 		return val;
 	}
 	
 	@Override
 	public final long pop()
 	{
-		long last = this.last();
-		this.fastRemove(this.size - 1);
+		long last = last();
+		fastRemove(size - 1);
 		return last;
 	}
 	
@@ -297,7 +297,7 @@ public class FastLongArray implements LongArray
 		int length = target.size();
 		while (i < length)
 		{
-			this.fastRemove(array[i]);
+			fastRemove(array[i]);
 			++i;
 		}
 		return true;
@@ -306,14 +306,14 @@ public class FastLongArray implements LongArray
 	@Override
 	public final boolean retainAll(LongArray target)
 	{
-		long[] array = this.array();
+		long[] array = array();
 		int i = 0;
-		int length = this.size;
+		int length = size;
 		while (i < length)
 		{
 			if (!target.contains(array[i]))
 			{
-				this.fastRemove(i--);
+				fastRemove(i--);
 				--length;
 			}
 			++i;
@@ -324,34 +324,34 @@ public class FastLongArray implements LongArray
 	@Override
 	public final int size()
 	{
-		return this.size;
+		return size;
 	}
 	
 	@Override
 	public final boolean slowRemove(int index)
 	{
-		if ((index < 0) || (this.size < 1))
+		if ((index < 0) || (size < 1))
 		{
 			return false;
 		}
-		long[] array = this.array();
-		int numMoved = this.size - index - 1;
+		long[] array = array();
+		int numMoved = size - index - 1;
 		if (numMoved > 0)
 		{
 			System.arraycopy(array, index + 1, array, index, numMoved);
 		}
-		--this.size;
-		array[this.size] = 0;
+		--size;
+		array[size] = 0;
 		return true;
 	}
 	
 	@Override
 	public boolean slowRemove(long element)
 	{
-		int index = this.indexOf(element);
+		int index = indexOf(element);
 		if (index > -1)
 		{
-			this.slowRemove(index);
+			slowRemove(index);
 		}
 		if (index > -1)
 		{
@@ -363,15 +363,15 @@ public class FastLongArray implements LongArray
 	@Override
 	public final FastLongArray sort()
 	{
-		Arrays.sort(this.array, 0, this.size);
+		Arrays.sort(array, 0, size);
 		return this;
 	}
 	
 	@Override
 	public final long[] toArray(long[] container)
 	{
-		long[] array = this.array();
-		if (container.length >= this.size)
+		long[] array = array();
+		if (container.length >= size)
 		{
 			int i = 0;
 			int j = 0;
@@ -396,12 +396,12 @@ public class FastLongArray implements LongArray
 	@Override
 	public final FastLongArray trimToSize()
 	{
-		long[] array = this.array();
-		if (this.size == array.length)
+		long[] array = array();
+		if (size == array.length)
 		{
 			return this;
 		}
-		array = Arrays.copyOfRange(array, 0, this.size);
+		array = Arrays.copyOfRange(array, 0, size);
 		return this;
 	}
 	
@@ -421,19 +421,19 @@ public class FastLongArray implements LongArray
 		
 		public FastIterator()
 		{
-			this.ordinal = 0;
+			ordinal = 0;
 		}
 		
 		@Override
 		public void fastRemove()
 		{
-			FastLongArray.this.fastRemove(--this.ordinal);
+			FastLongArray.this.fastRemove(--ordinal);
 		}
 		
 		@Override
 		public boolean hasNext()
 		{
-			if (this.ordinal < FastLongArray.this.size)
+			if (ordinal < size)
 			{
 				return true;
 			}
@@ -443,25 +443,25 @@ public class FastLongArray implements LongArray
 		@Override
 		public int index()
 		{
-			return this.ordinal - 1;
+			return ordinal - 1;
 		}
 		
 		@Override
 		public Long next()
 		{
-			return FastLongArray.this.array[this.ordinal++];
+			return array[ordinal++];
 		}
 		
 		@Override
 		public void remove()
 		{
-			FastLongArray.this.fastRemove(--this.ordinal);
+			FastLongArray.this.fastRemove(--ordinal);
 		}
 		
 		@Override
 		public void slowRemove()
 		{
-			FastLongArray.this.slowRemove(--this.ordinal);
+			FastLongArray.this.slowRemove(--ordinal);
 		}
 	}
 	

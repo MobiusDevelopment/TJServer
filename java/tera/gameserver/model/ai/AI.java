@@ -40,23 +40,23 @@ public interface AI
 	 * @param attacker Character
 	 * @param aggro long
 	 */
-	public void notifyAgression(Character attacker, long aggro);
+	void notifyAgression(Character attacker, long aggro);
 	
 	/**
 	 * Method notifyAppliedEffect.
 	 * @param effect Effect
 	 */
-	public void notifyAppliedEffect(Effect effect);
+	void notifyAppliedEffect(Effect effect);
 	
-	public void notifyArrived();
+	void notifyArrived();
 	
-	public void notifyArrivedBlocked();
+	void notifyArrivedBlocked();
 	
 	/**
 	 * Method notifyArrivedTarget.
 	 * @param target TObject
 	 */
-	public void notifyArrivedTarget(TObject target);
+	void notifyArrivedTarget(TObject target);
 	
 	/**
 	 * Method notifyAttack.
@@ -64,7 +64,7 @@ public interface AI
 	 * @param skill Skill
 	 * @param damage int
 	 */
-	public void notifyAttack(Character attacked, Skill skill, int damage);
+	void notifyAttack(Character attacked, Skill skill, int damage);
 	
 	/**
 	 * Method notifyAttacked.
@@ -72,7 +72,7 @@ public interface AI
 	 * @param skill Skill
 	 * @param damage int
 	 */
-	public void notifyAttacked(Character attacker, Skill skill, int damage);
+	void notifyAttacked(Character attacker, Skill skill, int damage);
 	
 	/**
 	 * Method notifyClanAttacked.
@@ -80,25 +80,25 @@ public interface AI
 	 * @param attacker Character
 	 * @param damage int
 	 */
-	public void notifyClanAttacked(Character attackedMember, Character attacker, int damage);
+	void notifyClanAttacked(Character attackedMember, Character attacker, int damage);
 	
 	/**
 	 * Method notifyCollectResourse.
 	 * @param resourse ResourseInstance
 	 */
-	public void notifyCollectResourse(ResourseInstance resourse);
+	void notifyCollectResourse(ResourseInstance resourse);
 	
 	/**
 	 * Method notifyDead.
 	 * @param killer Character
 	 */
-	public void notifyDead(Character killer);
+	void notifyDead(Character killer);
 	
 	/**
 	 * Method notifyFinishCasting.
 	 * @param skill Skill
 	 */
-	public void notifyFinishCasting(Skill skill);
+	void notifyFinishCasting(Skill skill);
 	
 	/**
 	 * Method notifyPartyAttacked.
@@ -106,41 +106,41 @@ public interface AI
 	 * @param attacker Character
 	 * @param damage int
 	 */
-	public void notifyPartyAttacked(Character attackedMember, Character attacker, int damage);
+	void notifyPartyAttacked(Character attackedMember, Character attacker, int damage);
 	
 	/**
 	 * Method notifyPickUpItem.
 	 * @param item ItemInstance
 	 */
-	public void notifyPickUpItem(ItemInstance item);
+	void notifyPickUpItem(ItemInstance item);
 	
-	public void notifySpawn();
+	void notifySpawn();
 	
 	/**
 	 * Method notifyStartCasting.
 	 * @param skill Skill
 	 */
-	public void notifyStartCasting(Skill skill);
+	void notifyStartCasting(Skill skill);
 	
 	/**
 	 * Method notifyStartDialog.
 	 * @param player Player
 	 */
-	public void notifyStartDialog(Player player);
+	void notifyStartDialog(Player player);
 	
 	/**
 	 * Method notifyStopDialog.
 	 * @param player Player
 	 */
-	public void notifyStopDialog(Player player);
+	void notifyStopDialog(Player player);
 	
 	/**
 	 * Method startAction.
 	 * @param action Action
 	 */
-	public void startAction(Action action);
+	void startAction(Action action);
 	
-	public void startActive();
+	void startActive();
 	
 	/**
 	 * Method startCast.
@@ -154,7 +154,7 @@ public interface AI
 	 * @param targetY float
 	 * @param targetZ float
 	 */
-	public void startCast(float startX, float startY, float startZ, Skill skill, int state, int heading, float targetX, float targetY, float targetZ);
+	void startCast(float startX, float startY, float startZ, Skill skill, int state, int heading, float targetX, float targetY, float targetZ);
 	
 	/**
 	 * Method startCast.
@@ -164,38 +164,38 @@ public interface AI
 	 * @param targetY float
 	 * @param targetZ float
 	 */
-	public void startCast(Skill skill, int heading, float targetX, float targetY, float targetZ);
+	void startCast(Skill skill, int heading, float targetX, float targetY, float targetZ);
 	
 	/**
 	 * Method startCollectResourse.
 	 * @param resourse ResourseInstance
 	 */
-	public void startCollectResourse(ResourseInstance resourse);
+	void startCollectResourse(ResourseInstance resourse);
 	
 	/**
 	 * Method startDressItem.
 	 * @param index int
 	 * @param itemId int
 	 */
-	public void startDressItem(int index, int itemId);
+	void startDressItem(int index, int itemId);
 	
 	/**
 	 * Method startEmotion.
 	 * @param type EmotionType
 	 */
-	public void startEmotion(EmotionType type);
+	void startEmotion(EmotionType type);
 	
 	/**
 	 * Method startItemPickUp.
 	 * @param item ItemInstance
 	 */
-	public void startItemPickUp(ItemInstance item);
+	void startItemPickUp(ItemInstance item);
 	
 	/**
 	 * Method startIteract.
 	 * @param object Character
 	 */
-	public void startIteract(Character object);
+	void startIteract(Character object);
 	
 	/**
 	 * Method startMove.
@@ -210,7 +210,7 @@ public interface AI
 	 * @param broadCastMove boolean
 	 * @param sendSelfPacket boolean
 	 */
-	public void startMove(float startX, float startY, float startZ, int heading, MoveType type, float targetX, float targetY, float targetZ, boolean broadCastMove, boolean sendSelfPacket);
+	void startMove(float startX, float startY, float startZ, int heading, MoveType type, float targetX, float targetY, float targetZ, boolean broadCastMove, boolean sendSelfPacket);
 	
 	/**
 	 * Method startMove.
@@ -222,22 +222,22 @@ public interface AI
 	 * @param broadCastMove boolean
 	 * @param sendSelfPacket boolean
 	 */
-	public void startMove(int heading, MoveType type, float targetX, float targetY, float targetZ, boolean broadCastMove, boolean sendSelfPacket);
+	void startMove(int heading, MoveType type, float targetX, float targetY, float targetZ, boolean broadCastMove, boolean sendSelfPacket);
 	
 	/**
 	 * Method startNpcSpeak.
 	 * @param npc Npc
 	 */
-	public void startNpcSpeak(Npc npc);
+	void startNpcSpeak(Npc npc);
 	
-	public void startRest();
+	void startRest();
 	
 	/**
 	 * Method startSay.
 	 * @param text String
 	 * @param type SayType
 	 */
-	public void startSay(String text, SayType type);
+	void startSay(String text, SayType type);
 	
 	/**
 	 * Method startUseItem.
@@ -245,5 +245,5 @@ public interface AI
 	 * @param heading int
 	 * @param isHeb boolean
 	 */
-	public void startUseItem(ItemInstance item, int heading, boolean isHeb);
+	void startUseItem(ItemInstance item, int heading, boolean isHeb);
 }

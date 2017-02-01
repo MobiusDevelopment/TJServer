@@ -31,9 +31,9 @@ import rlib.util.pools.Foldable;
 public interface Skill extends Foldable
 {
 	
-	public static final int PVP_SKILL_ID = 67308865;
+	int PVP_SKILL_ID = 67308865;
 	
-	public static final int PVP_SKILL_CLASS = -1;
+	int PVP_SKILL_CLASS = -1;
 	
 	/**
 	 * Method addTargets.
@@ -43,7 +43,7 @@ public interface Skill extends Foldable
 	 * @param targetY float
 	 * @param targetZ float
 	 */
-	public void addTargets(Array<Character> targets, Character attacker, float targetX, float targetY, float targetZ);
+	void addTargets(Array<Character> targets, Character attacker, float targetX, float targetY, float targetZ);
 	
 	/**
 	 * Method applySkill.
@@ -51,14 +51,14 @@ public interface Skill extends Foldable
 	 * @param target Character
 	 * @return AttackInfo
 	 */
-	public AttackInfo applySkill(Character attacker, Character target);
+	AttackInfo applySkill(Character attacker, Character target);
 	
 	/**
 	 * Method blockMpConsume.
 	 * @param damage int
 	 * @return int
 	 */
-	public int blockMpConsume(int damage);
+	int blockMpConsume(int damage);
 	
 	/**
 	 * Method checkCondition.
@@ -68,7 +68,7 @@ public interface Skill extends Foldable
 	 * @param targetZ float
 	 * @return boolean
 	 */
-	public boolean checkCondition(Character attacker, float targetX, float targetY, float targetZ);
+	boolean checkCondition(Character attacker, float targetX, float targetY, float targetZ);
 	
 	/**
 	 * Method endSkill.
@@ -78,503 +78,503 @@ public interface Skill extends Foldable
 	 * @param targetZ float
 	 * @param force boolean
 	 */
-	public void endSkill(Character attacker, float targetX, float targetY, float targetZ, boolean force);
+	void endSkill(Character attacker, float targetX, float targetY, float targetZ, boolean force);
 	
-	public void fold();
+	void fold();
 	
 	/**
 	 * Method getAggroPoint.
 	 * @return int
 	 */
-	public int getAggroPoint();
+	int getAggroPoint();
 	
 	/**
 	 * Method getCastCount.
 	 * @return int
 	 */
-	public int getCastCount();
+	int getCastCount();
 	
 	/**
 	 * Method getCastHeading.
 	 * @return int
 	 */
-	public int getCastHeading();
+	int getCastHeading();
 	
 	/**
 	 * Method getCastId.
 	 * @return int
 	 */
-	public int getCastId();
+	int getCastId();
 	
 	/**
 	 * Method getCastMaxRange.
 	 * @return int
 	 */
-	public int getCastMaxRange();
+	int getCastMaxRange();
 	
 	/**
 	 * Method getCastMinRange.
 	 * @return int
 	 */
-	public int getCastMinRange();
+	int getCastMinRange();
 	
 	/**
 	 * Method getChance.
 	 * @return int
 	 */
-	public int getChance();
+	int getChance();
 	
 	/**
 	 * Method getClassId.
 	 * @return int
 	 */
-	public int getClassId();
+	int getClassId();
 	
 	/**
 	 * Method getCondition.
 	 * @return Condition
 	 */
-	public Condition getCondition();
+	Condition getCondition();
 	
 	/**
 	 * Method getDamageId.
 	 * @return int
 	 */
-	public int getDamageId();
+	int getDamageId();
 	
 	/**
 	 * Method getDegree.
 	 * @return int
 	 */
-	public int getDegree();
+	int getDegree();
 	
 	/**
 	 * Method getDelay.
 	 * @return int
 	 */
-	public int getDelay();
+	int getDelay();
 	
 	/**
 	 * Method getEffectTemplates.
 	 * @return EffectTemplate[]
 	 */
-	public EffectTemplate[] getEffectTemplates();
+	EffectTemplate[] getEffectTemplates();
 	
 	/**
 	 * Method getGroup.
 	 * @return String
 	 */
-	public String getGroup();
+	String getGroup();
 	
 	/**
 	 * Method getHeading.
 	 * @return int
 	 */
-	public int getHeading();
+	int getHeading();
 	
 	/**
 	 * Method getHitTime.
 	 * @return int
 	 */
-	public int getHitTime();
+	int getHitTime();
 	
 	/**
 	 * Method getHpConsume.
 	 * @return int
 	 */
-	public int getHpConsume();
+	int getHpConsume();
 	
 	/**
 	 * Method getIconId.
 	 * @return int
 	 */
-	public int getIconId();
+	int getIconId();
 	
 	/**
 	 * Method getId.
 	 * @return int
 	 */
-	public int getId();
+	int getId();
 	
 	/**
 	 * Method getImpactX.
 	 * @return float
 	 */
-	public float getImpactX();
+	float getImpactX();
 	
 	/**
 	 * Method getImpactY.
 	 * @return float
 	 */
-	public float getImpactY();
+	float getImpactY();
 	
 	/**
 	 * Method getImpactZ.
 	 * @return float
 	 */
-	public float getImpactZ();
+	float getImpactZ();
 	
 	/**
 	 * Method getInterval.
 	 * @return int
 	 */
-	public int getInterval();
+	int getInterval();
 	
 	/**
 	 * Method getItemCount.
 	 * @return int
 	 */
-	public int getItemCount();
+	int getItemCount();
 	
 	/**
 	 * Method getItemCountConsume.
 	 * @return long
 	 */
-	public long getItemCountConsume();
+	long getItemCountConsume();
 	
 	/**
 	 * Method getItemId.
 	 * @return int
 	 */
-	public int getItemId();
+	int getItemId();
 	
 	/**
 	 * Method getItemIdConsume.
 	 * @return int
 	 */
-	public int getItemIdConsume();
+	int getItemIdConsume();
 	
 	/**
 	 * Method getLevel.
 	 * @return int
 	 */
-	public int getLevel();
+	int getLevel();
 	
 	/**
 	 * Method getMaxTargets.
 	 * @return int
 	 */
-	public int getMaxTargets();
+	int getMaxTargets();
 	
 	/**
 	 * Method getMinRange.
 	 * @return int
 	 */
-	public int getMinRange();
+	int getMinRange();
 	
 	/**
 	 * Method getMoveDelay.
 	 * @return int
 	 */
-	public int getMoveDelay();
+	int getMoveDelay();
 	
 	/**
 	 * Method getMoveDistance.
 	 * @return int
 	 */
-	public int getMoveDistance();
+	int getMoveDistance();
 	
 	/**
 	 * Method getMoveHeading.
 	 * @return int
 	 */
-	public int getMoveHeading();
+	int getMoveHeading();
 	
 	/**
 	 * Method getMoveTime.
 	 * @return int
 	 */
-	public int getMoveTime();
+	int getMoveTime();
 	
 	/**
 	 * Method getMpConsume.
 	 * @return int
 	 */
-	public int getMpConsume();
+	int getMpConsume();
 	
 	/**
 	 * Method getName.
 	 * @return String
 	 */
-	public String getName();
+	String getName();
 	
 	/**
 	 * Method getOperateType.
 	 * @return OperateType
 	 */
-	public OperateType getOperateType();
+	OperateType getOperateType();
 	
 	/**
 	 * Method getOwerturnMod.
 	 * @return float
 	 */
-	public float getOwerturnMod();
+	float getOwerturnMod();
 	
 	/**
 	 * Method getPower.
 	 * @return int
 	 */
-	public int getPower();
+	int getPower();
 	
 	/**
 	 * Method getRadius.
 	 * @return int
 	 */
-	public int getRadius();
+	int getRadius();
 	
 	/**
 	 * Method getRange.
 	 * @return int
 	 */
-	public int getRange();
+	int getRange();
 	
 	/**
 	 * Method getRangeType.
 	 * @return SkillRangeType
 	 */
-	public SkillRangeType getRangeType();
+	SkillRangeType getRangeType();
 	
 	/**
 	 * Method getReuseDelay.
 	 * @param caster Character
 	 * @return int
 	 */
-	public int getReuseDelay(Character caster);
+	int getReuseDelay(Character caster);
 	
 	/**
 	 * Method getReuseId.
 	 * @return int
 	 */
-	public int getReuseId();
+	int getReuseId();
 	
 	/**
 	 * Method getReuseIds.
 	 * @return int[]
 	 */
-	public int[] getReuseIds();
+	int[] getReuseIds();
 	
 	/**
 	 * Method getSkillName.
 	 * @return SkillName
 	 */
-	public SkillName getSkillName();
+	SkillName getSkillName();
 	
 	/**
 	 * Method getSkillType.
 	 * @return SkillType
 	 */
-	public SkillType getSkillType();
+	SkillType getSkillType();
 	
 	/**
 	 * Method getSpeed.
 	 * @return int
 	 */
-	public int getSpeed();
+	int getSpeed();
 	
 	/**
 	 * Method getStage.
 	 * @return int
 	 */
-	public int getStage();
+	int getStage();
 	
 	/**
 	 * Method getTargetType.
 	 * @return TargetType
 	 */
-	public TargetType getTargetType();
+	TargetType getTargetType();
 	
 	/**
 	 * Method getTemplate.
 	 * @return SkillTemplate
 	 */
-	public SkillTemplate getTemplate();
+	SkillTemplate getTemplate();
 	
 	/**
 	 * Method getTransformId.
 	 * @return int
 	 */
-	public int getTransformId();
+	int getTransformId();
 	
 	/**
 	 * Method getWidth.
 	 * @return int
 	 */
-	public int getWidth();
+	int getWidth();
 	
 	/**
 	 * Method hasPrevSkillName.
 	 * @param skillName SkillName
 	 * @return boolean
 	 */
-	public boolean hasPrevSkillName(SkillName skillName);
+	boolean hasPrevSkillName(SkillName skillName);
 	
 	/**
 	 * Method isActive.
 	 * @return boolean
 	 */
-	public boolean isActive();
+	boolean isActive();
 	
 	/**
 	 * Method isAltCast.
 	 * @return boolean
 	 */
-	public boolean isAltCast();
+	boolean isAltCast();
 	
 	/**
 	 * Method isApply.
 	 * @return boolean
 	 */
-	public boolean isApply();
+	boolean isApply();
 	
 	/**
 	 * Method isBlockingMove.
 	 * @return boolean
 	 */
-	public boolean isBlockingMove();
+	boolean isBlockingMove();
 	
 	/**
 	 * Method isCanceable.
 	 * @return boolean
 	 */
-	public boolean isCanceable();
+	boolean isCanceable();
 	
 	/**
 	 * Method isCanOwerturn.
 	 * @return boolean
 	 */
-	public boolean isCanOwerturn();
+	boolean isCanOwerturn();
 	
 	/**
 	 * Method isCastToMove.
 	 * @return boolean
 	 */
-	public boolean isCastToMove();
+	boolean isCastToMove();
 	
 	/**
 	 * Method isEvasion.
 	 * @return boolean
 	 */
-	public boolean isEvasion();
+	boolean isEvasion();
 	
 	/**
 	 * Method isForceCast.
 	 * @return boolean
 	 */
-	public boolean isForceCast();
+	boolean isForceCast();
 	
 	/**
 	 * Method isHasFast.
 	 * @return boolean
 	 */
-	public boolean isHasFast();
+	boolean isHasFast();
 	
 	/**
 	 * Method isIgnoreBarrier.
 	 * @return boolean
 	 */
-	public boolean isIgnoreBarrier();
+	boolean isIgnoreBarrier();
 	
 	/**
 	 * Method isImplemented.
 	 * @return boolean
 	 */
-	public boolean isImplemented();
+	boolean isImplemented();
 	
 	/**
 	 * Method isNoCaster.
 	 * @return boolean
 	 */
-	public boolean isNoCaster();
+	boolean isNoCaster();
 	
 	/**
 	 * Method isOffensive.
 	 * @return boolean
 	 */
-	public boolean isOffensive();
+	boolean isOffensive();
 	
 	/**
 	 * Method isOneTarget.
 	 * @return boolean
 	 */
-	public boolean isOneTarget();
+	boolean isOneTarget();
 	
 	/**
 	 * Method isPassive.
 	 * @return boolean
 	 */
-	public boolean isPassive();
+	boolean isPassive();
 	
 	/**
 	 * Method isRush.
 	 * @return boolean
 	 */
-	public boolean isRush();
+	boolean isRush();
 	
 	/**
 	 * Method isShieldIgnore.
 	 * @return boolean
 	 */
-	public boolean isShieldIgnore();
+	boolean isShieldIgnore();
 	
 	/**
 	 * Method isShortSkill.
 	 * @return boolean
 	 */
-	public boolean isShortSkill();
+	boolean isShortSkill();
 	
 	/**
 	 * Method isStaticCast.
 	 * @return boolean
 	 */
-	public boolean isStaticCast();
+	boolean isStaticCast();
 	
 	/**
 	 * Method isStaticInterval.
 	 * @return boolean
 	 */
-	public boolean isStaticInterval();
+	boolean isStaticInterval();
 	
 	/**
 	 * Method isToggle.
 	 * @return boolean
 	 */
-	public boolean isToggle();
+	boolean isToggle();
 	
 	/**
 	 * Method isTrigger.
 	 * @return boolean
 	 */
-	public boolean isTrigger();
+	boolean isTrigger();
 	
 	/**
 	 * Method isVisibleOnSkillList.
 	 * @return boolean
 	 */
-	public boolean isVisibleOnSkillList();
+	boolean isVisibleOnSkillList();
 	
 	/**
 	 * Method isWaitable.
 	 * @return boolean
 	 */
-	public boolean isWaitable();
+	boolean isWaitable();
 	
 	/**
 	 * Method setImpactX.
 	 * @param targetX float
 	 */
-	public void setImpactX(float targetX);
+	void setImpactX(float targetX);
 	
 	/**
 	 * Method setImpactY.
 	 * @param targetY float
 	 */
-	public void setImpactY(float targetY);
+	void setImpactY(float targetY);
 	
 	/**
 	 * Method setImpactZ.
 	 * @param targetZ float
 	 */
-	public void setImpactZ(float targetZ);
+	void setImpactZ(float targetZ);
 	
 	/**
 	 * Method startSkill.
@@ -583,7 +583,7 @@ public interface Skill extends Foldable
 	 * @param targetY float
 	 * @param targetZ float
 	 */
-	public void startSkill(Character attacker, float targetX, float targetY, float targetZ);
+	void startSkill(Character attacker, float targetX, float targetY, float targetZ);
 	
 	/**
 	 * Method useSkill.
@@ -592,29 +592,29 @@ public interface Skill extends Foldable
 	 * @param targetY float
 	 * @param targetZ float
 	 */
-	public void useSkill(Character character, float targetX, float targetY, float targetZ);
+	void useSkill(Character character, float targetX, float targetY, float targetZ);
 	
 	/**
 	 * Method isStaticReuseDelay.
 	 * @return boolean
 	 */
-	public boolean isStaticReuseDelay();
+	boolean isStaticReuseDelay();
 	
 	/**
 	 * Method getSpeedOffset.
 	 * @return int
 	 */
-	public int getSpeedOffset();
+	int getSpeedOffset();
 	
 	/**
 	 * Method isCorrectableTarget.
 	 * @return boolean
 	 */
-	public boolean isCorrectableTarget();
+	boolean isCorrectableTarget();
 	
 	/**
 	 * Method isTargetSelf.
 	 * @return boolean
 	 */
-	public boolean isTargetSelf();
+	boolean isTargetSelf();
 }

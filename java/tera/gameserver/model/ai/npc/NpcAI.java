@@ -39,31 +39,31 @@ public interface NpcAI<T extends Npc> extends CharacterAI
 	 * @param skill Skill
 	 * @param target Character
 	 */
-	public void addCastMoveTask(float x, float y, float z, Skill skill, Character target);
+	void addCastMoveTask(float x, float y, float z, Skill skill, Character target);
 	
 	/**
 	 * Method addCastTask.
 	 * @param skill Skill
 	 * @param target Character
 	 */
-	public void addCastTask(Skill skill, Character target);
-	
-	/**
-	 * Method addCastTask.
-	 * @param skill Skill
-	 * @param target Character
-	 * @param heading int
-	 */
-	public void addCastTask(Skill skill, Character target, int heading);
+	void addCastTask(Skill skill, Character target);
 	
 	/**
 	 * Method addCastTask.
 	 * @param skill Skill
 	 * @param target Character
 	 * @param heading int
+	 */
+	void addCastTask(Skill skill, Character target, int heading);
+	
+	/**
+	 * Method addCastTask.
+	 * @param skill Skill
+	 * @param target Character
+	 * @param heading int
 	 * @param message String
 	 */
-	public void addCastTask(Skill skill, Character target, int heading, String message);
+	void addCastTask(Skill skill, Character target, int heading, String message);
 	
 	/**
 	 * Method addCastTask.
@@ -71,7 +71,7 @@ public interface NpcAI<T extends Npc> extends CharacterAI
 	 * @param target Character
 	 * @param message String
 	 */
-	public void addCastTask(Skill skill, Character target, String message);
+	void addCastTask(Skill skill, Character target, String message);
 	
 	/**
 	 * Method addMoveTask.
@@ -80,7 +80,7 @@ public interface NpcAI<T extends Npc> extends CharacterAI
 	 * @param z float
 	 * @param update boolean
 	 */
-	public void addMoveTask(float x, float y, float z, boolean update);
+	void addMoveTask(float x, float y, float z, boolean update);
 	
 	/**
 	 * Method addMoveTask.
@@ -90,17 +90,7 @@ public interface NpcAI<T extends Npc> extends CharacterAI
 	 * @param update boolean
 	 * @param message String
 	 */
-	public void addMoveTask(float x, float y, float z, boolean update, String message);
-	
-	/**
-	 * Method addMoveTask.
-	 * @param x float
-	 * @param y float
-	 * @param z float
-	 * @param skill Skill
-	 * @param target Character
-	 */
-	public void addMoveTask(float x, float y, float z, Skill skill, Character target);
+	void addMoveTask(float x, float y, float z, boolean update, String message);
 	
 	/**
 	 * Method addMoveTask.
@@ -109,16 +99,26 @@ public interface NpcAI<T extends Npc> extends CharacterAI
 	 * @param z float
 	 * @param skill Skill
 	 * @param target Character
+	 */
+	void addMoveTask(float x, float y, float z, Skill skill, Character target);
+	
+	/**
+	 * Method addMoveTask.
+	 * @param x float
+	 * @param y float
+	 * @param z float
+	 * @param skill Skill
+	 * @param target Character
 	 * @param message String
 	 */
-	public void addMoveTask(float x, float y, float z, Skill skill, Character target, String message);
+	void addMoveTask(float x, float y, float z, Skill skill, Character target, String message);
 	
 	/**
 	 * Method addMoveTask.
 	 * @param loc Location
 	 * @param update boolean
 	 */
-	public void addMoveTask(Location loc, boolean update);
+	void addMoveTask(Location loc, boolean update);
 	
 	/**
 	 * Method addMoveTask.
@@ -126,14 +126,14 @@ public interface NpcAI<T extends Npc> extends CharacterAI
 	 * @param update boolean
 	 * @param message String
 	 */
-	public void addMoveTask(Location loc, boolean update, String message);
+	void addMoveTask(Location loc, boolean update, String message);
 	
 	/**
 	 * Method addNoticeTask.
 	 * @param target Character
 	 * @param fast boolean
 	 */
-	public void addNoticeTask(Character target, boolean fast);
+	void addNoticeTask(Character target, boolean fast);
 	
 	/**
 	 * Method addNoticeTask.
@@ -141,20 +141,20 @@ public interface NpcAI<T extends Npc> extends CharacterAI
 	 * @param fast boolean
 	 * @param message String
 	 */
-	public void addNoticeTask(Character target, boolean fast, String message);
+	void addNoticeTask(Character target, boolean fast, String message);
 	
 	/**
 	 * Method addTask.
 	 * @param task Task
 	 */
-	public void addTask(Task task);
+	void addTask(Task task);
 	
 	/**
 	 * Method checkAggression.
 	 * @param target Character
 	 * @return boolean
 	 */
-	public boolean checkAggression(Character target);
+	boolean checkAggression(Character target);
 	
 	/**
 	 * Method doTask.
@@ -163,161 +163,161 @@ public interface NpcAI<T extends Npc> extends CharacterAI
 	 * @param local LocalObjects
 	 * @return boolean
 	 */
-	public boolean doTask(T actor, long currentTime, LocalObjects local);
+	boolean doTask(T actor, long currentTime, LocalObjects local);
 	
 	/**
 	 * Method getAttackedCount.
 	 * @return int
 	 */
-	public int getAttackedCount();
+	int getAttackedCount();
 	
 	/**
 	 * Method getAttackHeading.
 	 * @return Integer
 	 */
-	public Integer getAttackHeading();
+	Integer getAttackHeading();
 	
 	/**
 	 * Method getClearAggro.
 	 * @return long
 	 */
-	public long getClearAggro();
+	long getClearAggro();
 	
 	/**
 	 * Method getCurrentFactory.
 	 * @return TaskFactory
 	 */
-	public TaskFactory getCurrentFactory();
+	TaskFactory getCurrentFactory();
 	
 	/**
 	 * Method getCurrentState.
 	 * @return NpcAIState
 	 */
-	public NpcAIState getCurrentState();
+	NpcAIState getCurrentState();
 	
 	/**
 	 * Method getLastAttacked.
 	 * @return long
 	 */
-	public long getLastAttacked();
+	long getLastAttacked();
 	
 	/**
 	 * Method getLastMessage.
 	 * @return long
 	 */
-	public long getLastMessage();
+	long getLastMessage();
 	
 	/**
 	 * Method getLastNotifyIcon.
 	 * @return long
 	 */
-	public long getLastNotifyIcon();
+	long getLastNotifyIcon();
 	
 	/**
 	 * Method getNextRandomWalk.
 	 * @return long
 	 */
-	public long getNextRandomWalk();
+	long getNextRandomWalk();
 	
 	/**
 	 * Method getNextRoutePoint.
 	 * @return long
 	 */
-	public long getNextRoutePoint();
+	long getNextRoutePoint();
 	
 	/**
 	 * Method getRouteIndex.
 	 * @return int
 	 */
-	public int getRouteIndex();
+	int getRouteIndex();
 	
 	/**
 	 * Method getTarget.
 	 * @return Character
 	 */
-	public Character getTarget();
+	Character getTarget();
 	
 	/**
 	 * Method isActiveDialog.
 	 * @return boolean
 	 */
-	public boolean isActiveDialog();
+	boolean isActiveDialog();
 	
 	/**
 	 * Method isWaitingTask.
 	 * @return boolean
 	 */
-	public boolean isWaitingTask();
+	boolean isWaitingTask();
 	
 	/**
 	 * Method removeTask.
 	 * @param task Task
 	 */
-	public void removeTask(Task task);
+	void removeTask(Task task);
 	
 	/**
 	 * Method setAttackedCount.
 	 * @param count int
 	 */
-	public void setAttackedCount(int count);
+	void setAttackedCount(int count);
 	
 	/**
 	 * Method setAttackHeading.
 	 * @param attackHeading Integer
 	 */
-	public void setAttackHeading(Integer attackHeading);
+	void setAttackHeading(Integer attackHeading);
 	
 	/**
 	 * Method setClearAggro.
 	 * @param clearAggro long
 	 */
-	public void setClearAggro(long clearAggro);
+	void setClearAggro(long clearAggro);
 	
 	/**
 	 * Method setLastAttacked.
 	 * @param lastAttacked long
 	 */
-	public void setLastAttacked(long lastAttacked);
+	void setLastAttacked(long lastAttacked);
 	
 	/**
 	 * Method setLastMessage.
 	 * @param time long
 	 */
-	public void setLastMessage(long time);
+	void setLastMessage(long time);
 	
 	/**
 	 * Method setLastNotifyIcon.
 	 * @param lastNotifyIcon long
 	 */
-	public void setLastNotifyIcon(long lastNotifyIcon);
+	void setLastNotifyIcon(long lastNotifyIcon);
 	
 	/**
 	 * Method setNewState.
 	 * @param state NpcAIState
 	 */
-	public void setNewState(NpcAIState state);
+	void setNewState(NpcAIState state);
 	
 	/**
 	 * Method setNextRandomWalk.
 	 * @param nextRandomWalk long
 	 */
-	public void setNextRandomWalk(long nextRandomWalk);
+	void setNextRandomWalk(long nextRandomWalk);
 	
 	/**
 	 * Method setNextRoutePoint.
 	 * @param nextRoutePoint long
 	 */
-	public void setNextRoutePoint(long nextRoutePoint);
+	void setNextRoutePoint(long nextRoutePoint);
 	
 	/**
 	 * Method setRouteIndex.
 	 * @param routeIndex int
 	 */
-	public void setRouteIndex(int routeIndex);
+	void setRouteIndex(int routeIndex);
 	
 	/**
 	 * Method setTarget.
 	 * @param target Character
 	 */
-	public void setTarget(Character target);
+	void setTarget(Character target);
 }

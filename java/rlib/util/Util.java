@@ -95,7 +95,7 @@ public abstract class Util
 		return (short) ((bytes[offset + 1] << 8) | (bytes[offset] & 255));
 	}
 	
-	public static final String getUserName()
+	public static String getUserName()
 	{
 		return System.getProperty("user.name");
 	}
@@ -126,7 +126,8 @@ public abstract class Util
 			{
 				text = "0" + text;
 			}
-			if ((ch = val) < 33)
+			ch = val;
+			if (ch < 33)
 			{
 				ch = 46;
 			}

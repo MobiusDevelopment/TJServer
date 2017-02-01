@@ -27,7 +27,7 @@ final class CharWrap extends AbstractWrap
 	@Override
 	public char getChar()
 	{
-		return this.value;
+		return value;
 	}
 	
 	@Override

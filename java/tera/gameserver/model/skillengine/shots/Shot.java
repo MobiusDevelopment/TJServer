@@ -29,51 +29,51 @@ public interface Shot extends Foldable, Runnable
 	 * Method getObjectId.
 	 * @return int
 	 */
-	public int getObjectId();
+	int getObjectId();
 	
 	/**
 	 * Method getSubId.
 	 * @return int
 	 */
-	public int getSubId();
+	int getSubId();
 	
 	/**
 	 * Method getTarget.
 	 * @return Character
 	 */
-	public Character getTarget();
+	Character getTarget();
 	
 	/**
 	 * Method getTargetX.
 	 * @return float
 	 */
-	public float getTargetX();
+	float getTargetX();
 	
 	/**
 	 * Method getTargetY.
 	 * @return float
 	 */
-	public float getTargetY();
+	float getTargetY();
 	
 	/**
 	 * Method getTargetZ.
 	 * @return float
 	 */
-	public float getTargetZ();
+	float getTargetZ();
 	
 	/**
 	 * Method getType.
 	 * @return ShotType
 	 */
-	public ShotType getType();
+	ShotType getType();
 	
 	/**
 	 * Method isAuto.
 	 * @return boolean
 	 */
-	public boolean isAuto();
+	boolean isAuto();
 	
-	public void start();
+	void start();
 	
-	public void stop();
+	void stop();
 }

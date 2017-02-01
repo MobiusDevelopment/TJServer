@@ -40,31 +40,32 @@ public final class GeoMap3D implements GeoMap
 	
 	public GeoMap3D(GeoConfig config)
 	{
-		this.quardSize = config.getQuardSize();
-		this.quardHeight = config.getQuardHeight();
-		this.split = config.getSplit();
-		this.offsetX = config.getOffsetX();
-		this.offsetY = config.getOffsetY();
-		this.quards = new GeoQuard[0][][];
+		quardSize = config.getQuardSize();
+		quardHeight = config.getQuardHeight();
+		split = config.getSplit();
+		offsetX = config.getOffsetX();
+		offsetY = config.getOffsetY();
+		quards = new GeoQuard[0][][];
 	}
 	
 	@Override
 	public void addQuard(GeoQuard quard)
 	{
 		GeoQuard[][] yQuards;
-		if (quard.getX() >= this.quards.length)
+		if (quard.getX() >= quards.length)
 		{
-			this.quards = Arrays.copyOf(this.quards, quard.getX() + 1);
+			quards = Arrays.copyOf(quards, quard.getX() + 1);
 		}
-		if ((yQuards = this.quards[quard.getX()]) == null)
+		yQuards = quards[quard.getX()];
+		if (yQuards == null)
 		{
 			yQuards = new GeoQuard[quard.getY() + 1][];
-			this.quards[quard.getX()] = yQuards;
+			quards[quard.getX()] = yQuards;
 		}
 		else if (quard.getY() >= yQuards.length)
 		{
 			yQuards = Arrays.copyOf(yQuards, (quard.getY() + 1) - yQuards.length);
-			this.quards[quard.getX()] = yQuards;
+			quards[quard.getX()] = yQuards;
 		}
 		GeoQuard[] zQuards = yQuards[quard.getY()];
 		if (zQuards == null)
@@ -74,17 +75,17 @@ public final class GeoMap3D implements GeoMap
 				quard
 			};
 			yQuards[quard.getY()] = zQuards;
-			++this.size;
+			++size;
 		}
 		else
 		{
-			int z = (int) quard.getHeight() / this.quardHeight;
+			int z = (int) quard.getHeight() / quardHeight;
 			int i = 0;
 			int length = zQuards.length;
 			while (i < length)
 			{
 				GeoQuard target = zQuards[i];
-				int targetZ = (int) target.getHeight() / this.quardHeight;
+				int targetZ = (int) target.getHeight() / quardHeight;
 				if (z == targetZ)
 				{
 					if (target.getHeight() > quard.getHeight())
@@ -97,7 +98,7 @@ public final class GeoMap3D implements GeoMap
 				++i;
 			}
 			yQuards[quard.getY()] = Arrays.addToArray(zQuards, quard, GeoQuard.class);
-			++this.size;
+			++size;
 		}
 	}
 	
@@ -111,12 +112,12 @@ public final class GeoMap3D implements GeoMap
 			{
 				FileChannel channel = out.getChannel();
 				ByteBuffer buffer = ByteBuffer.allocate(16).order(ByteOrder.LITTLE_ENDIAN);
-				byte split = (byte) this.getSplit();
+				byte split = (byte) getSplit();
 				int x = 0;
-				int lengthX = this.quards.length;
+				int lengthX = quards.length;
 				while (x < lengthX)
 				{
-					GeoQuard[][] yQuards = this.quards[x];
+					GeoQuard[][] yQuards = quards[x];
 					if (yQuards != null)
 					{
 						int y = 0;
@@ -162,10 +163,10 @@ public final class GeoMap3D implements GeoMap
 	public Array<GeoQuard> getAllQuards(Array<GeoQuard> container)
 	{
 		int x = 0;
-		int lengthX = this.quards.length;
+		int lengthX = quards.length;
 		while (x < lengthX)
 		{
-			GeoQuard[][] yQuards = this.quards[x];
+			GeoQuard[][] yQuards = quards[x];
 			if (yQuards != null)
 			{
 				int y = 0;
@@ -195,8 +196,8 @@ public final class GeoMap3D implements GeoMap
 	public GeoQuard getGeoQuard(float x, float y, float z)
 	{
 		int newY;
-		int newX = this.toIndex(x) + this.offsetX;
-		GeoQuard[] quards = this.getQuards(newX, newY = this.toIndex(y) + this.offsetY);
+		int newX = toIndex(x) + offsetX;
+		GeoQuard[] quards = getQuards(newX, newY = toIndex(y) + offsetY);
 		if (quards == null)
 		{
 			int i = -2;
@@ -205,7 +206,7 @@ public final class GeoMap3D implements GeoMap
 				int j = -2;
 				while (j <= 2)
 				{
-					if (((i != 0) || (j != 0)) && ((quards = this.getQuards(Math.max(newX + i, 0), Math.max(newY + j, 0))) != null))
+					if (((i != 0) || (j != 0)) && ((quards = getQuards(Math.max(newX + i, 0), Math.max(newY + j, 0))) != null))
 					{
 						break;
 					}
@@ -251,21 +252,21 @@ public final class GeoMap3D implements GeoMap
 	@Override
 	public float getHeight(float x, float y, float z)
 	{
-		GeoQuard quard = this.getGeoQuard(x, y, z);
+		GeoQuard quard = getGeoQuard(x, y, z);
 		if (quard == null)
 		{
 			return z;
 		}
-		return Math.abs(quard.getHeight() - z) > this.quardHeight ? z : quard.getHeight();
+		return Math.abs(quard.getHeight() - z) > quardHeight ? z : quard.getHeight();
 	}
 	
 	public GeoQuard[] getQuards(int x, int y)
 	{
-		if (this.quards.length <= x)
+		if (quards.length <= x)
 		{
 			return null;
 		}
-		GeoQuard[][] yQuards = this.quards[x];
+		GeoQuard[][] yQuards = quards[x];
 		if ((yQuards == null) || (yQuards.length <= y))
 		{
 			return null;
@@ -275,7 +276,7 @@ public final class GeoMap3D implements GeoMap
 	
 	private int getSplit()
 	{
-		return this.split;
+		return split;
 	}
 	
 	@Override
@@ -293,7 +294,7 @@ public final class GeoMap3D implements GeoMap
 					{
 						Loggers.info(this, "start fast import " + file.getName());
 						ByteBuffer buffer = ByteBuffer.allocate((int) channel.size()).order(ByteOrder.LITTLE_ENDIAN);
-						byte split = (byte) this.getSplit();
+						byte split = (byte) getSplit();
 						buffer.clear();
 						channel.read(buffer);
 						buffer.flip();
@@ -311,13 +312,13 @@ public final class GeoMap3D implements GeoMap
 								Loggers.warning(this, "incorrect quard " + quard);
 								continue;
 							}
-							this.addQuard(quard);
+							addQuard(quard);
 						}
 						break block18;
 					}
 					Loggers.info(this, "start slow import " + file.getName());
 					ByteBuffer buffer = ByteBuffer.allocate(13).order(ByteOrder.LITTLE_ENDIAN);
-					byte split = (byte) this.getSplit();
+					byte split = (byte) getSplit();
 					while ((channel.size() - channel.position()) > 12)
 					{
 						buffer.clear();
@@ -335,7 +336,7 @@ public final class GeoMap3D implements GeoMap
 							Loggers.warning(this, "incorrect quard " + quard);
 							continue;
 						}
-						this.addQuard(quard);
+						addQuard(quard);
 					}
 				}
 				finally
@@ -348,17 +349,17 @@ public final class GeoMap3D implements GeoMap
 				Loggers.warning(this, e);
 			}
 		}
-		Loggers.info(this, "import ended. load " + this.size() + " quards.");
+		Loggers.info(this, "import ended. load " + size() + " quards.");
 		return this;
 	}
 	
 	public void remove(GeoQuard quard)
 	{
-		if (this.quards.length <= quard.getX())
+		if (quards.length <= quard.getX())
 		{
 			return;
 		}
-		GeoQuard[][] yQuards = this.quards[quard.getX()];
+		GeoQuard[][] yQuards = quards[quard.getX()];
 		if ((yQuards == null) || (yQuards.length <= quard.getY()))
 		{
 			return;
@@ -390,31 +391,32 @@ public final class GeoMap3D implements GeoMap
 	@Override
 	public int size()
 	{
-		return this.size;
+		return size;
 	}
 	
 	private int toIndex(float coord)
 	{
-		return (int) coord / this.quardSize;
+		return (int) coord / quardSize;
 	}
 	
 	@Override
 	public void addQuard(int x, int y, float height)
 	{
 		GeoQuard[][] yQuards;
-		if (x >= this.quards.length)
+		if (x >= quards.length)
 		{
-			this.quards = Arrays.copyOf(this.quards, x + 1);
+			quards = Arrays.copyOf(quards, x + 1);
 		}
-		if ((yQuards = this.quards[x]) == null)
+		yQuards = quards[x];
+		if (yQuards == null)
 		{
 			yQuards = new GeoQuard[y + 1][];
-			this.quards[x] = yQuards;
+			quards[x] = yQuards;
 		}
 		else if (y >= yQuards.length)
 		{
 			yQuards = Arrays.copyOf(yQuards, (y + 1) - yQuards.length);
-			this.quards[x] = yQuards;
+			quards[x] = yQuards;
 		}
 		GeoQuard[] zQuards = yQuards[y];
 		if (zQuards == null)
@@ -424,17 +426,17 @@ public final class GeoMap3D implements GeoMap
 				new GeoQuard(x, y, height)
 			};
 			yQuards[y] = zQuards;
-			++this.size;
+			++size;
 		}
 		else
 		{
-			int z = (int) height / this.quardHeight;
+			int z = (int) height / quardHeight;
 			int i = 0;
 			int length = zQuards.length;
 			while (i < length)
 			{
 				GeoQuard target = zQuards[i];
-				int targetZ = (int) target.getHeight() / this.quardHeight;
+				int targetZ = (int) target.getHeight() / quardHeight;
 				if (z == targetZ)
 				{
 					if (target.getHeight() > height)
@@ -447,7 +449,7 @@ public final class GeoMap3D implements GeoMap
 				++i;
 			}
 			yQuards[y] = Arrays.addToArray(zQuards, new GeoQuard(x, y, height), GeoQuard.class);
-			++this.size;
+			++size;
 		}
 	}
 }

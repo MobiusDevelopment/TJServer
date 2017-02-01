@@ -18,9 +18,9 @@ package rlib.logging;
 
 public interface GameLogger
 {
-	public void finish();
+	void finish();
 	
-	public void write(String var1);
+	void write(String var1);
 	
-	public void writeCache();
+	void writeCache();
 }

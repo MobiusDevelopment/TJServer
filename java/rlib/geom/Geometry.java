@@ -18,7 +18,7 @@ package rlib.geom;
 
 public abstract class Geometry
 {
-	public static final float getDistance(float startX, float startY, float startZ, float targetX, float targetY, float targetZ)
+	public static float getDistance(float startX, float startY, float startZ, float targetX, float targetY, float targetZ)
 	{
 		return (float) Math.sqrt(Geometry.getSquareDistance(startX, startY, startZ, targetX, targetY, targetZ));
 	}
@@ -28,12 +28,12 @@ public abstract class Geometry
 		return (float) Math.sqrt(Geometry.getSquareDistanceToLine(startX, startY, endX, endY, targetX, targetY));
 	}
 	
-	public static final float getDistanceToLine(float startX, float startY, float startZ, float endX, float endY, float endZ, float targetX, float targetY, float targetZ)
+	public static float getDistanceToLine(float startX, float startY, float startZ, float endX, float endY, float endZ, float targetX, float targetY, float targetZ)
 	{
 		return (float) Math.sqrt(Geometry.getSquareDistanceToLine(startX, startY, startZ, endX, endY, endZ, targetX, targetY, targetZ));
 	}
 	
-	public static final float getSquareDistance(float startX, float startY, float startZ, float targetX, float targetY, float targetZ)
+	public static float getSquareDistance(float startX, float startY, float startZ, float targetX, float targetY, float targetZ)
 	{
 		float dx = targetX - startX;
 		float dy = targetY - startY;
@@ -53,7 +53,7 @@ public abstract class Geometry
 		return lenSq;
 	}
 	
-	public static final float getSquareDistanceToLine(float startX, float startY, float startZ, float endX, float endY, float endZ, float targetX, float targetY, float targetZ)
+	public static float getSquareDistanceToLine(float startX, float startY, float startZ, float endX, float endY, float endZ, float targetX, float targetY, float targetZ)
 	{
 		float pointX = targetX - startX;
 		float pointY = targetY - startY;
@@ -78,12 +78,12 @@ public abstract class Geometry
 		return Geometry.squareLength(targetX, targetY, targetZ, pointX, pointY, pointZ);
 	}
 	
-	public static final float scalar(float x1, float y1, float z1, float x2, float y2, float z2)
+	public static float scalar(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
 		return (x1 * x2) + (y1 * y2) + (z1 * z2);
 	}
 	
-	public static final float squareLength(float x1, float y1, float z1, float x2, float y2, float z2)
+	public static float squareLength(float x1, float y1, float z1, float x2, float y2, float z2)
 	{
 		float dx = x1 - x2;
 		float dy = y1 - y2;

@@ -43,7 +43,7 @@ public final class Logger
 	
 	public void info(String message)
 	{
-		Loggers.println("INFO " + Util.formatTime(System.currentTimeMillis()) + " " + this.name + ": " + message);
+		Loggers.println("INFO " + Util.formatTime(System.currentTimeMillis()) + " " + name + ": " + message);
 	}
 	
 	public void info(String name, String message)
@@ -85,7 +85,7 @@ public final class Logger
 			builder.append(stack).append("\n");
 			++n2;
 		}
-		Loggers.println("WARNING " + Util.formatTime(System.currentTimeMillis()) + " " + this.name + ": " + builder);
+		Loggers.println("WARNING " + Util.formatTime(System.currentTimeMillis()) + " " + name + ": " + builder);
 	}
 	
 	public void warning(Object owner, Exception exception)
@@ -111,7 +111,7 @@ public final class Logger
 	
 	public void warning(String message)
 	{
-		Loggers.println("WARNING " + Util.formatTime(System.currentTimeMillis()) + " " + this.name + ": " + message);
+		Loggers.println("WARNING " + Util.formatTime(System.currentTimeMillis()) + " " + name + ": " + message);
 	}
 	
 	public void warning(String name, Exception exception)

@@ -36,75 +36,75 @@ public interface Equipment extends Foldable, Synchronized
 	 * @param cell Cell
 	 * @return boolean
 	 */
-	public boolean dressItem(Inventory inventory, Cell cell);
+	boolean dressItem(Inventory inventory, Cell cell);
 	
 	/**
 	 * Method equiped.
 	 * @param item ItemInstance
 	 * @return boolean
 	 */
-	public boolean equiped(ItemInstance item);
+	boolean equiped(ItemInstance item);
 	
-	public void fold();
+	void fold();
 	
 	/**
 	 * Method getCount.
 	 * @param type SlotType
 	 * @return int
 	 */
-	public int getCount(SlotType type);
+	int getCount(SlotType type);
 	
 	/**
 	 * Method getEngagedSlots.
 	 * @return int
 	 */
-	public int getEngagedSlots();
+	int getEngagedSlots();
 	
 	/**
 	 * Method getItem.
 	 * @param index int
 	 * @return ItemInstance
 	 */
-	public ItemInstance getItem(int index);
+	ItemInstance getItem(int index);
 	
 	/**
 	 * Method getItem.
 	 * @param type SlotType
 	 * @return ItemInstance
 	 */
-	public ItemInstance getItem(SlotType type);
+	ItemInstance getItem(SlotType type);
 	
 	/**
 	 * Method getItemId.
 	 * @param type SlotType
 	 * @return int
 	 */
-	public int getItemId(SlotType type);
+	int getItemId(SlotType type);
 	
 	/**
 	 * Method getOwner.
 	 * @return Character
 	 */
-	public Character getOwner();
+	Character getOwner();
 	
 	/**
 	 * Method getSlotForObjectId.
 	 * @param objectId int
 	 * @return Slot
 	 */
-	public Slot getSlotForObjectId(int objectId);
+	Slot getSlotForObjectId(int objectId);
 	
 	/**
 	 * Method getSlots.
 	 * @return Slot[]
 	 */
-	public Slot[] getSlots();
+	Slot[] getSlots();
 	
 	/**
 	 * Method recreateSlots.
 	 * @param slotTypes SlotType[]
 	 */
-	public void recreateSlots(SlotType... slotTypes);
+	void recreateSlots(SlotType... slotTypes);
 	
 	/**
 	 * Method setItem.
@@ -112,20 +112,20 @@ public interface Equipment extends Foldable, Synchronized
 	 * @param index int
 	 * @return boolean
 	 */
-	public boolean setItem(ItemInstance item, int index);
+	boolean setItem(ItemInstance item, int index);
 	
 	/**
 	 * Method setOwner.
 	 * @param owner Character
 	 * @return Equipment
 	 */
-	public Equipment setOwner(Character owner);
+	Equipment setOwner(Character owner);
 	
 	/**
 	 * Method setSlots.
 	 * @param slots Slot[]
 	 */
-	public void setSlots(Slot[] slots);
+	void setSlots(Slot[] slots);
 	
 	/**
 	 * Method shootItem.
@@ -134,18 +134,18 @@ public interface Equipment extends Foldable, Synchronized
 	 * @param itemId int
 	 * @return boolean
 	 */
-	public boolean shootItem(Inventory inventory, int index, int itemId);
+	boolean shootItem(Inventory inventory, int index, int itemId);
 	
 	/**
 	 * Method size.
 	 * @return int
 	 */
-	public int size();
+	int size();
 	
 	/**
 	 * Method unequiped.
 	 * @param item ItemInstance
 	 * @return boolean
 	 */
-	public boolean unequiped(ItemInstance item);
+	boolean unequiped(ItemInstance item);
 }

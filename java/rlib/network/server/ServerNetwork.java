@@ -25,7 +25,7 @@ import rlib.network.AsynchronousNetwork;
 
 public interface ServerNetwork extends AsynchronousNetwork
 {
-	public <A> void accept(A var1, CompletionHandler<AsynchronousSocketChannel, ? super A> var2);
+	<A> void accept(A var1, CompletionHandler<AsynchronousSocketChannel, ? super A> var2);
 	
-	public void bind(SocketAddress var1) throws IOException;
+	void bind(SocketAddress var1) throws IOException;
 }

@@ -28,22 +28,22 @@ public final class VectorBuffer
 	
 	private VectorBuffer(int size)
 	{
-		this.vectors = new Vector[size];
+		vectors = new Vector[size];
 		int i = 0;
-		int length = this.vectors.length;
+		int length = vectors.length;
 		while (i < length)
 		{
-			this.vectors[i] = Vector.newInstance();
+			vectors[i] = Vector.newInstance();
 			++i;
 		}
 	}
 	
 	public Vector getNextVector()
 	{
-		if (this.index == this.vectors.length)
+		if (index == vectors.length)
 		{
-			this.index = 0;
+			index = 0;
 		}
-		return this.vectors[this.index++];
+		return vectors[index++];
 	}
 }

@@ -34,5 +34,5 @@ public interface NpcInteractEvent
 	 * @param npc Npc
 	 * @param player Player
 	 */
-	public void addLinks(Array<Link> links, Npc npc, Player player);
+	void addLinks(Array<Link> links, Npc npc, Player player);
 }

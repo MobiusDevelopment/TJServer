@@ -275,7 +275,7 @@ public final class PrimeFinder
 		Arrays.sort(PRIME_CAPACITIES);
 	}
 	
-	public static final int nextPrime(int desiredCapacity)
+	public static int nextPrime(int desiredCapacity)
 	{
 		int i = Arrays.binarySearch(PRIME_CAPACITIES, desiredCapacity);
 		if (i < 0)

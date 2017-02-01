@@ -27,5 +27,5 @@ public interface LevelUpListener
 	 * Method onLevelUp.
 	 * @param player Player
 	 */
-	public void onLevelUp(Player player);
+	void onLevelUp(Player player);
 }

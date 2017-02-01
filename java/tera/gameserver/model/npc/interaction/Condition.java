@@ -24,7 +24,7 @@ import tera.gameserver.model.playable.Player;
  */
 public interface Condition
 {
-	public static final Condition[] EMPTY_CONDITIONS = new Condition[0];
+	Condition[] EMPTY_CONDITIONS = new Condition[0];
 	
 	/**
 	 * Method test.
@@ -32,5 +32,5 @@ public interface Condition
 	 * @param player Player
 	 * @return boolean
 	 */
-	public boolean test(Npc npc, Player player);
+	boolean test(Npc npc, Player player);
 }

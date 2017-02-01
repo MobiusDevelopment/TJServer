@@ -47,7 +47,7 @@ public class TradeDialog extends AbstractActionDialog
 	 * @param enemy Player
 	 * @return TradeDialog
 	 */
-	public static final TradeDialog newInstance(Player actor, Player enemy)
+	public static TradeDialog newInstance(Player actor, Player enemy)
 	{
 		final TradeDialog dialog = (TradeDialog) ActionDialogType.TRADE_DIALOG.newInstance();
 		final IdFactory idFactory = IdFactory.getInstance();

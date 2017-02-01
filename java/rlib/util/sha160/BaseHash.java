@@ -29,8 +29,8 @@ public abstract class BaseHash
 		this.name = name;
 		this.hashSize = hashSize;
 		this.blockSize = blockSize;
-		this.buffer = new byte[blockSize];
-		this.resetContext();
+		buffer = new byte[blockSize];
+		resetContext();
 	}
 	
 	@Override
@@ -38,10 +38,10 @@ public abstract class BaseHash
 	
 	public byte[] digest()
 	{
-		byte[] tail = this.padBuffer();
-		this.update(tail, 0, tail.length);
-		byte[] result = this.getResult();
-		this.reset();
+		byte[] tail = padBuffer();
+		update(tail, 0, tail.length);
+		byte[] result = getResult();
+		reset();
 		return result;
 	}
 	
@@ -49,20 +49,20 @@ public abstract class BaseHash
 	
 	public String name()
 	{
-		return this.name;
+		return name;
 	}
 	
 	protected abstract byte[] padBuffer();
 	
 	public void reset()
 	{
-		this.count = 0;
+		count = 0;
 		int i = 0;
-		while (i < this.blockSize)
+		while (i < blockSize)
 		{
-			this.buffer[i++] = 0;
+			buffer[i++] = 0;
 		}
-		this.resetContext();
+		resetContext();
 	}
 	
 	protected abstract void resetContext();
@@ -71,25 +71,25 @@ public abstract class BaseHash
 	
 	public void update(byte[] b, int offset, int len)
 	{
-		int n = (int) (this.count % this.blockSize);
-		this.count += len;
-		int partLen = this.blockSize - n;
+		int n = (int) (count % blockSize);
+		count += len;
+		int partLen = blockSize - n;
 		int i = 0;
 		if (len >= partLen)
 		{
-			System.arraycopy(b, offset, this.buffer, n, partLen);
-			this.transform(this.buffer, 0);
+			System.arraycopy(b, offset, buffer, n, partLen);
+			transform(buffer, 0);
 			i = partLen;
-			while (((i + this.blockSize) - 1) < len)
+			while (((i + blockSize) - 1) < len)
 			{
-				this.transform(b, offset + i);
-				i += this.blockSize;
+				transform(b, offset + i);
+				i += blockSize;
 			}
 			n = 0;
 		}
 		if (i < len)
 		{
-			System.arraycopy(b, offset + i, this.buffer, n, len - i);
+			System.arraycopy(b, offset + i, buffer, n, len - i);
 		}
 	}
 }

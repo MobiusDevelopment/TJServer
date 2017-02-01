@@ -36,14 +36,14 @@ public final class BoneCPConnectFactory extends ConnectFactory
 	
 	public synchronized void close()
 	{
-		this.source.close();
-		this.source.shutdown();
+		source.close();
+		source.shutdown();
 	}
 	
 	@Override
 	public Connection getConnection() throws SQLException
 	{
-		return this.source.getConnection();
+		return source.getConnection();
 	}
 	
 	public synchronized void init(BoneCPConfig config, String driver) throws SQLException
@@ -51,8 +51,8 @@ public final class BoneCPConnectFactory extends ConnectFactory
 		try
 		{
 			Class.forName(driver).newInstance();
-			this.source = new BoneCP(config);
-			this.source.getConnection().close();
+			source = new BoneCP(config);
+			source.getConnection().close();
 		}
 		catch (Exception e)
 		{

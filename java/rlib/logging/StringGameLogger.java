@@ -43,41 +43,41 @@ public class StringGameLogger implements GameLogger
 		{
 			outFile.createNewFile();
 		}
-		this.out = new FileWriter(outFile);
-		this.lock = Locks.newLock();
-		this.cache = Arrays.toArray(String.class);
+		out = new FileWriter(outFile);
+		lock = Locks.newLock();
+		cache = Arrays.toArray(String.class);
 	}
 	
 	@Override
 	public void finish()
 	{
-		this.lock.lock();
+		lock.lock();
 		try
 		{
-			this.writeCache();
+			writeCache();
 		}
 		finally
 		{
-			this.lock.unlock();
+			lock.unlock();
 		}
 	}
 	
 	@Override
 	public void write(String text)
 	{
-		this.lock.lock();
+		lock.lock();
 		try
 		{
-			if (this.cache.size() > 1000)
+			if (cache.size() > 1000)
 			{
-				this.writeCache();
+				writeCache();
 			}
-			this.date.setTime(System.currentTimeMillis());
-			this.cache.add(String.valueOf(this.timeFormat.format(this.date)) + ": " + text + "\n");
+			date.setTime(System.currentTimeMillis());
+			cache.add(String.valueOf(timeFormat.format(date)) + ": " + text + "\n");
 		}
 		finally
 		{
-			this.lock.unlock();
+			lock.unlock();
 		}
 	}
 	
@@ -86,16 +86,16 @@ public class StringGameLogger implements GameLogger
 	{
 		try
 		{
-			String[] array = this.cache.array();
+			String[] array = cache.array();
 			int i = 0;
-			int length = this.cache.size();
+			int length = cache.size();
 			while (i < length)
 			{
-				this.out.write(array[i]);
+				out.write(array[i]);
 				++i;
 			}
-			this.cache.clear();
-			this.out.flush();
+			cache.clear();
+			out.flush();
 		}
 		catch (IOException e)
 		{

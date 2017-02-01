@@ -26,11 +26,11 @@ public interface Lambda
 	 * @param val float
 	 * @return float
 	 */
-	public float calc(float val);
+	float calc(float val);
 	
 	/**
 	 * Method getValue.
 	 * @return Object
 	 */
-	public Object getValue();
+	Object getValue();
 }

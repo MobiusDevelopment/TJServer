@@ -34,7 +34,7 @@ public final class GuildMember implements Foldable
 	 * Method newInstance.
 	 * @return GuildMember
 	 */
-	public static final GuildMember newInstance()
+	public static GuildMember newInstance()
 	{
 		final GuildMember member = pool.take();
 		

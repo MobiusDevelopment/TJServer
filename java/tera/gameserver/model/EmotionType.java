@@ -115,7 +115,7 @@ public enum EmotionType
 	 * @param index int
 	 * @return EmotionType
 	 */
-	public static final EmotionType valueOf(int index)
+	public static EmotionType valueOf(int index)
 	{
 		if ((index < 0) || (index >= SIZE))
 		{

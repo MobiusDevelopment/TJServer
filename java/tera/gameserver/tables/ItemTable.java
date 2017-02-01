@@ -46,7 +46,7 @@ public final class ItemTable
 	 * @param count int
 	 * @return ItemInstance[]
 	 */
-	public static final ItemInstance[] createItem(int templateId, int count)
+	public static ItemInstance[] createItem(int templateId, int count)
 	{
 		if (Arrays.contains(Config.WORLD_DONATE_ITEMS, templateId))
 		{
@@ -93,7 +93,7 @@ public final class ItemTable
 	 * @param count long
 	 * @return ItemInstance
 	 */
-	public static final ItemInstance createItem(int templateId, long count)
+	public static ItemInstance createItem(int templateId, long count)
 	{
 		if (Arrays.contains(Config.WORLD_DONATE_ITEMS, templateId))
 		{
@@ -144,7 +144,7 @@ public final class ItemTable
 	 * @param item ItemInstance
 	 * @return int
 	 */
-	public static final int templateId(ItemInstance item)
+	public static int templateId(ItemInstance item)
 	{
 		if (item == null)
 		{

@@ -43,9 +43,9 @@ public abstract class AbstractServerConnection<T extends Server, R extends Reade
 		{
 			server.close();
 		}
-		else if (!this.isClosed())
+		else if (!isClosed())
 		{
-			this.close();
+			close();
 		}
 	}
 	

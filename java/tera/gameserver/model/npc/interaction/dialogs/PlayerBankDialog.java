@@ -39,7 +39,7 @@ public final class PlayerBankDialog extends AbstractDialog implements BankDialog
 	 * @param player Player
 	 * @return PlayerBankDialog
 	 */
-	public static final PlayerBankDialog newInstance(Npc npc, Player player)
+	public static PlayerBankDialog newInstance(Npc npc, Player player)
 	{
 		final PlayerBankDialog dialog = (PlayerBankDialog) DialogType.PLAYER_BANK.newInstance();
 		dialog.npc = npc;

@@ -41,7 +41,7 @@ public class TeleportDialog extends AbstractDialog
 	 * @param table Table<IntKey,TeleportRegion>
 	 * @return TeleportDialog
 	 */
-	public static final TeleportDialog newInstance(Npc npc, Player player, TeleportRegion[] regions, Table<IntKey, TeleportRegion> table)
+	public static TeleportDialog newInstance(Npc npc, Player player, TeleportRegion[] regions, Table<IntKey, TeleportRegion> table)
 	{
 		final TeleportDialog dialog = (TeleportDialog) DialogType.TELEPORT.newInstance();
 		dialog.npc = npc;

@@ -20,23 +20,23 @@ import java.nio.ByteBuffer;
 
 public interface SendablePacket<C> extends Packet<C>
 {
-	public void complete();
+	void complete();
 	
-	public void decreaseSends();
+	void decreaseSends();
 	
-	public void decreaseSends(int var1);
+	void decreaseSends(int var1);
 	
-	public void increaseSends();
+	void increaseSends();
 	
-	public void increaseSends(int var1);
+	void increaseSends(int var1);
 	
-	public boolean isSynchronized();
+	boolean isSynchronized();
 	
-	public void write(ByteBuffer var1);
+	void write(ByteBuffer var1);
 	
-	public void writeHeader(ByteBuffer var1, int var2);
+	void writeHeader(ByteBuffer var1, int var2);
 	
-	public void writeLocal();
+	void writeLocal();
 	
-	public void writePosition(ByteBuffer var1);
+	void writePosition(ByteBuffer var1);
 }

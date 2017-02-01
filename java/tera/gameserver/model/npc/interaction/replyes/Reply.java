@@ -32,5 +32,5 @@ public interface Reply
 	 * @param player Player
 	 * @param link Link
 	 */
-	public void reply(Npc npc, Player player, Link link);
+	void reply(Npc npc, Player player, Link link);
 }

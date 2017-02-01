@@ -23,72 +23,71 @@ import rlib.util.pools.Foldable;
 
 public interface Array<E> extends Iterable<E>, Serializable, Foldable
 {
-	public Array<E> add(E var1);
+	Array<E> add(E var1);
 	
-	public Array<E> addAll(Array<? extends E> var1);
+	Array<E> addAll(Array<? extends E> var1);
 	
-	public Array<E> addAll(E[] var1);
+	Array<E> addAll(E[] var1);
 	
-	public E[] array();
+	E[] array();
 	
-	public Array<E> clear();
+	Array<E> clear();
 	
-	public boolean contains(Object var1);
+	boolean contains(Object var1);
 	
-	public boolean containsAll(Array<?> var1);
+	boolean containsAll(Array<?> var1);
 	
-	public boolean containsAll(Object[] var1);
+	boolean containsAll(Object[] var1);
 	
-	public E fastRemove(int var1);
+	E fastRemove(int var1);
 	
-	public boolean fastRemove(Object var1);
+	boolean fastRemove(Object var1);
 	
-	public E first();
+	E first();
 	
-	public E get(int var1);
+	E get(int var1);
 	
-	public int indexOf(Object var1);
+	int indexOf(Object var1);
 	
-	public boolean isEmpty();
+	boolean isEmpty();
 	
-	@Override
-	public ArrayIterator<E> iterator();
+	@Override ArrayIterator<E> iterator();
 	
-	public E last();
+	E last();
 	
-	public int lastIndexOf(Object var1);
+	int lastIndexOf(Object var1);
 	
-	public E poll();
+	E poll();
 	
-	public E pop();
+	E pop();
 	
-	public void readLock();
+	void readLock();
 	
-	public void readUnlock();
+	void readUnlock();
 	
-	public boolean removeAll(Array<?> var1);
+	boolean removeAll(Array<?> var1);
 	
-	public boolean retainAll(Array<?> var1);
+	boolean retainAll(Array<?> var1);
 	
-	public E search(E var1, Search<E> var2);
+	E search(E var1, Search<E> var2);
 	
-	public void set(int var1, E var2);
+	void set(int var1, E var2);
 	
-	public int size();
+	int size();
 	
-	public E slowRemove(int var1);
+	E slowRemove(int var1);
 	
-	public boolean slowRemove(Object var1);
+	boolean slowRemove(Object var1);
 	
-	public Array<E> sort(Comparator<E> var1);
+	Array<E> sort(Comparator<E> var1);
 	
-	public <T> T[] toArray(T[] var1);
+	<T> T[] toArray(T[] var1);
 	
-	public Array<E> trimToSize();
+	Array<E> trimToSize();
 	
-	public void writeLock();
+	void writeLock();
 	
-	public void writeUnlock();
+	void writeUnlock();
 	
-	public void apply(FuncElement<? super E> var1);
+	void apply(FuncElement<? super E> var1);
 }

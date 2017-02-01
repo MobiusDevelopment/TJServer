@@ -18,11 +18,11 @@ package rlib.idfactory;
 
 public interface IdGenerator
 {
-	public int getNextId();
+	int getNextId();
 	
-	public void prepare();
+	void prepare();
 	
-	public void releaseId(int var1);
+	void releaseId(int var1);
 	
-	public int usedIds();
+	int usedIds();
 }

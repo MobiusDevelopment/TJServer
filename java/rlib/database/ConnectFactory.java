@@ -26,7 +26,7 @@ import com.jolbox.bonecp.BoneCPConfig;
 
 public abstract class ConnectFactory
 {
-	public static final ConnectFactory newBoneCPConnectFactory(BoneCPConfig config, String driver)
+	public static ConnectFactory newBoneCPConnectFactory(BoneCPConfig config, String driver)
 	{
 		try
 		{

@@ -25,20 +25,20 @@ import tera.gameserver.model.Character;
  */
 public interface Condition
 {
-	public static final Condition[] EMPTY_CONDITIONS = new Condition[0];
+	Condition[] EMPTY_CONDITIONS = new Condition[0];
 	
 	/**
 	 * Method getMsg.
 	 * @return String
 	 */
-	public String getMsg();
+	String getMsg();
 	
 	/**
 	 * Method setMsg.
 	 * @param msg Node
 	 * @return Condition
 	 */
-	public Condition setMsg(Node msg);
+	Condition setMsg(Node msg);
 	
 	/**
 	 * Method test.
@@ -48,5 +48,5 @@ public interface Condition
 	 * @param val float
 	 * @return boolean
 	 */
-	public boolean test(Character attacker, Character attacked, Skill skill, float val);
+	boolean test(Character attacker, Character attacked, Skill skill, float val);
 }

@@ -154,7 +154,7 @@ public abstract class AbstractClient<A, O, C extends AsynConnection, T extends G
 	@Override
 	public void successfulConnection()
 	{
-		log.info(this, String.valueOf(this.getHostAddress()) + " successful connection.");
+		log.info(this, String.valueOf(getHostAddress()) + " successful connection.");
 	}
 	
 	@Override

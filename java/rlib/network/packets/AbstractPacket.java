@@ -35,7 +35,7 @@ public abstract class AbstractPacket<C> implements Packet<C>
 	{
 		if (this.name == null)
 		{
-			this.name = this.getClass().getSimpleName();
+			this.name = getClass().getSimpleName();
 		}
 		return this.name;
 	}

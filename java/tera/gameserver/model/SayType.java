@@ -68,7 +68,7 @@ public enum SayType
 	 * @param index int
 	 * @return SayType
 	 */
-	public static final SayType valueOf(int index)
+	public static SayType valueOf(int index)
 	{
 		if ((index < 0) || (index >= VALUES.length))
 		{

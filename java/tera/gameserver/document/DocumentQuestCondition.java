@@ -53,7 +53,7 @@ public final class DocumentQuestCondition
 	 * Method getInstance.
 	 * @return DocumentQuestCondition
 	 */
-	public static final DocumentQuestCondition getInstance()
+	public static DocumentQuestCondition getInstance()
 	{
 		if (instance == null)
 		{

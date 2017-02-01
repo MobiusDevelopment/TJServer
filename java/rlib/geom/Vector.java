@@ -60,57 +60,57 @@ public final class Vector implements GamePoint
 	
 	public Vector addLocal(float addX, float addY, float addZ)
 	{
-		this.x += addX;
-		this.y += addY;
-		this.z += addZ;
+		x += addX;
+		y += addY;
+		z += addZ;
 		return this;
 	}
 	
 	public Vector addLocal(Vector vec)
 	{
-		return this.addLocal(vec.x, vec.y, vec.z);
+		return addLocal(vec.x, vec.y, vec.z);
 	}
 	
 	public Vector cross(float otherX, float otherY, float otherZ, Vector result)
 	{
-		float resX = (this.y * otherZ) - (this.z * otherY);
-		float resY = (this.z * otherX) - (this.x * otherZ);
-		float resZ = (this.x * otherY) - (this.y * otherX);
+		float resX = (y * otherZ) - (z * otherY);
+		float resY = (z * otherX) - (x * otherZ);
+		float resZ = (x * otherY) - (y * otherX);
 		result.setXYZ(resX, resY, resZ);
 		return result;
 	}
 	
 	public Vector cross(Vector vector)
 	{
-		return this.cross(vector, Vector.newInstance());
+		return cross(vector, Vector.newInstance());
 	}
 	
 	public Vector cross(Vector vector, Vector result)
 	{
-		return this.cross(vector.x, vector.y, vector.z, result);
+		return cross(vector.x, vector.y, vector.z, result);
 	}
 	
 	public float distance(Vector vector)
 	{
-		return ExtMath.sqrt(this.distanceSquared(vector));
+		return ExtMath.sqrt(distanceSquared(vector));
 	}
 	
 	public float distanceSquared(float targetX, float targetY, float targetZ)
 	{
-		float dx = this.x - targetX;
-		float dy = this.y - targetY;
-		float dz = this.z - targetZ;
+		float dx = x - targetX;
+		float dy = y - targetY;
+		float dz = z - targetZ;
 		return (dx * dx) + (dy * dy) + (dz * dz);
 	}
 	
 	public float distanceSquared(Vector vector)
 	{
-		return this.distanceSquared(vector.x, vector.y, vector.z);
+		return distanceSquared(vector.x, vector.y, vector.z);
 	}
 	
 	public float dot(Vector vector)
 	{
-		return (this.x * vector.x) + (this.y * vector.y) + (this.z * vector.z);
+		return (x * vector.x) + (y * vector.y) + (z * vector.z);
 	}
 	
 	@Override
@@ -122,24 +122,24 @@ public final class Vector implements GamePoint
 	@Override
 	public float getX()
 	{
-		return this.x;
+		return x;
 	}
 	
 	@Override
 	public float getY()
 	{
-		return this.y;
+		return y;
 	}
 	
 	@Override
 	public float getZ()
 	{
-		return this.z;
+		return z;
 	}
 	
 	public boolean isZero()
 	{
-		if ((this.x == 0.0f) && (this.y == 0.0f) && (this.z == 0.0f))
+		if ((x == 0.0f) && (y == 0.0f) && (z == 0.0f))
 		{
 			return true;
 		}
@@ -148,7 +148,7 @@ public final class Vector implements GamePoint
 	
 	public Vector multLocal(float scalar)
 	{
-		return this.multLocal(scalar, scalar, scalar);
+		return multLocal(scalar, scalar, scalar);
 	}
 	
 	public Vector multLocal(float x, float y, float z)
@@ -161,12 +161,12 @@ public final class Vector implements GamePoint
 	
 	public Vector multLocal(Vector vec)
 	{
-		return this.multLocal(vec.x, vec.y, vec.z);
+		return multLocal(vec.x, vec.y, vec.z);
 	}
 	
 	public Vector set(Vector vector)
 	{
-		return this.setXYZ(vector.x, vector.y, vector.z);
+		return setXYZ(vector.x, vector.y, vector.z);
 	}
 	
 	@Override
@@ -213,23 +213,23 @@ public final class Vector implements GamePoint
 	
 	public Vector subtract(Vector vector, Vector result)
 	{
-		result.x = this.x - vector.x;
-		result.y = this.y - vector.y;
-		result.z = this.z - vector.z;
+		result.x = x - vector.x;
+		result.y = y - vector.y;
+		result.z = z - vector.z;
 		return result;
 	}
 	
 	public Vector subtractLocal(float subX, float subY, float subZ)
 	{
-		this.x -= subX;
-		this.y -= subY;
-		this.z -= subZ;
+		x -= subX;
+		y -= subY;
+		z -= subZ;
 		return this;
 	}
 	
 	public Vector subtractLocal(Vector vector)
 	{
-		return this.subtractLocal(vector.x, vector.y, vector.z);
+		return subtractLocal(vector.x, vector.y, vector.z);
 	}
 	
 	public static boolean isValidVector(Vector vector)
@@ -252,6 +252,6 @@ public final class Vector implements GamePoint
 	@Override
 	public String toString()
 	{
-		return "Vector [x=" + this.x + ", y=" + this.y + ", z=" + this.z + "]";
+		return "Vector [x=" + x + ", y=" + y + ", z=" + z + "]";
 	}
 }

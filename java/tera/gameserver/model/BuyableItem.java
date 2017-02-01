@@ -36,7 +36,7 @@ public final class BuyableItem implements Foldable
 	 * @param count long
 	 * @return BuyableItem
 	 */
-	public static final BuyableItem newInstance(ItemTemplate item, long count)
+	public static BuyableItem newInstance(ItemTemplate item, long count)
 	{
 		BuyableItem buy = pool.take();
 		

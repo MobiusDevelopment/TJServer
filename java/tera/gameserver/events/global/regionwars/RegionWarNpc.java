@@ -27,23 +27,23 @@ public interface RegionWarNpc
 	 * Method setGuildOwner.
 	 * @param guild Guild
 	 */
-	public void setGuildOwner(Guild guild);
+	void setGuildOwner(Guild guild);
 	
 	/**
 	 * Method setRegion.
 	 * @param region Region
 	 */
-	public void setRegion(Region region);
+	void setRegion(Region region);
 	
 	/**
 	 * Method getRegion.
 	 * @return Region
 	 */
-	public Region getRegion();
+	Region getRegion();
 	
 	/**
 	 * Method getGuildOwner.
 	 * @return Guild
 	 */
-	public Guild getGuildOwner();
+	Guild getGuildOwner();
 }

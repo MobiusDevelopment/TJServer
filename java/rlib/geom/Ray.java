@@ -23,12 +23,12 @@ public class Ray
 	
 	public final Vector getDirection()
 	{
-		return this.direction;
+		return direction;
 	}
 	
 	public final Vector getStart()
 	{
-		return this.start;
+		return start;
 	}
 	
 	public final void setDirection(Vector direction)

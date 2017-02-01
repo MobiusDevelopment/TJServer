@@ -18,5 +18,5 @@ package rlib.util.table;
 
 public interface FuncValue<V>
 {
-	public void apply(V var1);
+	void apply(V var1);
 }

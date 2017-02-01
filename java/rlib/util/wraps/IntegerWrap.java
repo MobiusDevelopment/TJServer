@@ -27,7 +27,7 @@ final class IntegerWrap extends AbstractWrap
 	@Override
 	public int getInt()
 	{
-		return this.value;
+		return value;
 	}
 	
 	@Override
@@ -45,6 +45,6 @@ final class IntegerWrap extends AbstractWrap
 	@Override
 	public String toString()
 	{
-		return String.valueOf(this.value);
+		return String.valueOf(value);
 	}
 }

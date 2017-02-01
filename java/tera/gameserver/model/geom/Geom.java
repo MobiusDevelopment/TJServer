@@ -25,13 +25,13 @@ public interface Geom
 	 * Method getHeight.
 	 * @return float
 	 */
-	public float getHeight();
+	float getHeight();
 	
 	/**
 	 * Method getRadius.
 	 * @return float
 	 */
-	public float getRadius();
+	float getRadius();
 	
 	/**
 	 * Method isHit.
@@ -42,7 +42,7 @@ public interface Geom
 	 * @param attackerRadius float
 	 * @return boolean
 	 */
-	public boolean isHit(float attackerX, float attackerY, float attackerZ, float attackerHeight, float attackerRadius);
+	boolean isHit(float attackerX, float attackerY, float attackerZ, float attackerHeight, float attackerRadius);
 	
 	/**
 	 * Method isHit.
@@ -56,5 +56,5 @@ public interface Geom
 	 * @param checkHeight boolean
 	 * @return boolean
 	 */
-	public boolean isHit(float startX, float startY, float startZ, float endX, float endY, float endZ, float attackerRadius, boolean checkHeight);
+	boolean isHit(float startX, float startY, float startZ, float endX, float endY, float endZ, float attackerRadius, boolean checkHeight);
 }

@@ -25,29 +25,29 @@ import rlib.util.Synchronized;
 
 public interface Client<A, P, C extends AsynConnection> extends Synchronized
 {
-	public void close();
+	void close();
 	
-	public void decrypt(ByteBuffer var1, int var2, int var3);
+	void decrypt(ByteBuffer var1, int var2, int var3);
 	
-	public void encrypt(ByteBuffer var1, int var2, int var3);
+	void encrypt(ByteBuffer var1, int var2, int var3);
 	
-	public A getAccount();
+	A getAccount();
 	
-	public C getConnection();
+	C getConnection();
 	
-	public String getHostAddress();
+	String getHostAddress();
 	
-	public P getOwner();
+	P getOwner();
 	
-	public boolean isConnected();
+	boolean isConnected();
 	
-	public void readPacket(ReadeablePacket var1, ByteBuffer var2);
+	void readPacket(ReadeablePacket var1, ByteBuffer var2);
 	
-	public void sendPacket(SendablePacket var1);
+	void sendPacket(SendablePacket var1);
 	
-	public void setAccount(A var1);
+	void setAccount(A var1);
 	
-	public void setOwner(P var1);
+	void setOwner(P var1);
 	
-	public void successfulConnection();
+	void successfulConnection();
 }

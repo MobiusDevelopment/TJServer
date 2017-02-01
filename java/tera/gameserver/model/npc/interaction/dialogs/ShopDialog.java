@@ -46,7 +46,7 @@ public final class ShopDialog extends AbstractDialog
 	private static final FuncElement<BuyableItem> BUYABLE_ITEM_FOLD = item -> item.fold();
 	private static final FuncElement<SellableItem> SELLABLE_ITEM_FOLD = item -> item.fold();
 	
-	public static final ShopDialog newInstance(Npc npc, ItemTemplate[][] sections, Table<IntKey, ItemTemplate> availableItems, Player player, Bank bank, int sectionId, float resultTax)
+	public static ShopDialog newInstance(Npc npc, ItemTemplate[][] sections, Table<IntKey, ItemTemplate> availableItems, Player player, Bank bank, int sectionId, float resultTax)
 	{
 		final ShopDialog dialog = (ShopDialog) DialogType.SHOP_WINDOW.newInstance();
 		dialog.availableItems = availableItems;

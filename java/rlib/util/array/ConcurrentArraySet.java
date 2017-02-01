@@ -33,7 +33,7 @@ public class ConcurrentArraySet<E> extends ConcurrentArray<E>
 	@Override
 	public ConcurrentArray<E> add(E element)
 	{
-		if (this.contains(element))
+		if (contains(element))
 		{
 			return this;
 		}

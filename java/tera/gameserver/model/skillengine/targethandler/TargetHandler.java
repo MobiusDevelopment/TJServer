@@ -35,5 +35,5 @@ public interface TargetHandler
 	 * @param targetY float
 	 * @param targetZ float
 	 */
-	public void addTargetsTo(Array<Character> targets, Character caster, Skill skill, float targetX, float targetY, float targetZ);
+	void addTargetsTo(Array<Character> targets, Character caster, Skill skill, float targetX, float targetY, float targetZ);
 }

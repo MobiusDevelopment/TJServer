@@ -537,7 +537,7 @@ public abstract class TObject implements GameObject
 	 */
 	public boolean isHit(float startX, float startY, float startZ, float endX, float endY, float endZ, float radius)
 	{
-		return this.isHit(startX, startY, startZ, endX, endY, endZ, radius, true);
+		return isHit(startX, startY, startZ, endX, endY, endZ, radius, true);
 	}
 	
 	/**

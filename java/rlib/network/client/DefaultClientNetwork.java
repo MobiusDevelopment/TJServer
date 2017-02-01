@@ -34,7 +34,7 @@ public final class DefaultClientNetwork extends AbstractAsynchronousNetwork impl
 	public DefaultClientNetwork(NetworkConfig config, ConnectHandler connectHandler) throws IOException
 	{
 		super(config);
-		this.channelGroup = AsynchronousChannelGroup.withFixedThreadPool(config.getGroupSize(), new GroupThreadFactory(config.getGroupName(), config.getThreadClass(), config.getThreadPriority()));
+		channelGroup = AsynchronousChannelGroup.withFixedThreadPool(config.getGroupSize(), new GroupThreadFactory(config.getGroupName(), config.getThreadClass(), config.getThreadPriority()));
 		this.connectHandler = connectHandler;
 	}
 	
@@ -43,16 +43,16 @@ public final class DefaultClientNetwork extends AbstractAsynchronousNetwork impl
 	{
 		try
 		{
-			if (this.clientChannel != null)
+			if (clientChannel != null)
 			{
-				this.clientChannel.close();
+				clientChannel.close();
 			}
-			this.clientChannel = AsynchronousSocketChannel.open(this.channelGroup);
+			clientChannel = AsynchronousSocketChannel.open(channelGroup);
 		}
 		catch (IOException e)
 		{
 			log.warning(this, e);
 		}
-		this.clientChannel.connect(serverAddress, this.clientChannel, this.connectHandler);
+		clientChannel.connect(serverAddress, clientChannel, connectHandler);
 	}
 }

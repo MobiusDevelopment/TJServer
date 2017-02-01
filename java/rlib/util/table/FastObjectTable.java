@@ -243,7 +243,7 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 		{
 			throw new IllegalArgumentException("incorrect table type.");
 		}
-		if (this.isEmpty())
+		if (isEmpty())
 		{
 			return;
 		}
@@ -356,7 +356,7 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 	@Override
 	public final String toString()
 	{
-		StringBuilder builder = new StringBuilder(this.getClass().getSimpleName());
+		StringBuilder builder = new StringBuilder(getClass().getSimpleName());
 		builder.append(" size = ").append(this.size).append(" : ");
 		Entry<K, V>[] table = this.table();
 		int i = 0;
@@ -445,8 +445,9 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 				return false;
 			}
 			Entry entry = (Entry) object;
-			K firstKey = this.getKey();
-			if (((firstKey == (secondKey = (K) entry.getKey())) || ((firstKey != null) && firstKey.equals(secondKey))) && (((firstValue = this.getValue()) == (secondValue = (V) entry.getValue())) || ((firstValue != null) && firstValue.equals(secondValue))))
+			K firstKey = getKey();
+			secondKey = (K) entry.getKey();
+			if (((firstKey == secondKey) || ((firstKey != null) && firstKey.equals(secondKey))) && (((firstValue = getValue()) == (secondValue = (V) entry.getValue())) || ((firstValue != null) && firstValue.equals(secondValue))))
 			{
 				return true;
 			}
@@ -509,7 +510,7 @@ public class FastObjectTable<K, V> extends AbstractTable<K, V>
 		
 		public V setValue(V value)
 		{
-			V old = this.getValue();
+			V old = getValue();
 			this.value = value;
 			return old;
 		}

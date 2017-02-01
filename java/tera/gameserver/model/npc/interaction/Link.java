@@ -29,38 +29,38 @@ public interface Link
 	 * Method getIconId.
 	 * @return int
 	 */
-	public int getIconId();
+	int getIconId();
 	
 	/**
 	 * Method getId.
 	 * @return int
 	 */
-	public int getId();
+	int getId();
 	
 	/**
 	 * Method getName.
 	 * @return String
 	 */
-	public String getName();
+	String getName();
 	
 	/**
 	 * Method getReply.
 	 * @return Reply
 	 */
-	public Reply getReply();
+	Reply getReply();
 	
 	/**
 	 * Method getType.
 	 * @return LinkType
 	 */
-	public LinkType getType();
+	LinkType getType();
 	
 	/**
 	 * Method reply.
 	 * @param npc Npc
 	 * @param player Player
 	 */
-	public void reply(Npc npc, Player player);
+	void reply(Npc npc, Player player);
 	
 	/**
 	 * Method test.
@@ -68,5 +68,5 @@ public interface Link
 	 * @param player Player
 	 * @return boolean
 	 */
-	public boolean test(Npc npc, Player player);
+	boolean test(Npc npc, Player player);
 }

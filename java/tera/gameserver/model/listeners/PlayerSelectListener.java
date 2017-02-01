@@ -27,5 +27,5 @@ public interface PlayerSelectListener
 	 * Method onSelect.
 	 * @param player Player
 	 */
-	public void onSelect(Player player);
+	void onSelect(Player player);
 }

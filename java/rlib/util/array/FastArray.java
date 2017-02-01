@@ -247,7 +247,7 @@ public class FastArray<E> extends AbstractArray<E>
 		int length = target.size();
 		while (i < length)
 		{
-			this.fastRemove(array[i]);
+			fastRemove(array[i]);
 			++i;
 		}
 		return true;

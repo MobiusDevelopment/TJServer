@@ -29,13 +29,13 @@ import tera.gameserver.templates.ItemTemplate;
  */
 public interface ConstructorItem
 {
-	public static final ConstructorItem WEAPON = (objectId, template) -> new WeaponInstance(objectId, template);
+	ConstructorItem WEAPON = (objectId, template) -> new WeaponInstance(objectId, template);
 	
-	public static final ConstructorItem ARMOR = (objectId, template) -> new ArmorInstance(objectId, template);
+	ConstructorItem ARMOR = (objectId, template) -> new ArmorInstance(objectId, template);
 	
-	public static final ConstructorItem COMMON = (objectId, template) -> new CommonInstance(objectId, template);
+	ConstructorItem COMMON = (objectId, template) -> new CommonInstance(objectId, template);
 	
-	public static final ConstructorItem CRYSTAL = (objectId, template) -> new CrystalInstance(objectId, template);
+	ConstructorItem CRYSTAL = (objectId, template) -> new CrystalInstance(objectId, template);
 	
 	/**
 	 * Method newInstance.
@@ -43,5 +43,5 @@ public interface ConstructorItem
 	 * @param template ItemTemplate
 	 * @return ItemInstance
 	 */
-	public ItemInstance newInstance(int objectId, ItemTemplate template);
+	ItemInstance newInstance(int objectId, ItemTemplate template);
 }

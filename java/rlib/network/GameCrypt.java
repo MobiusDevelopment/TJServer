@@ -18,7 +18,7 @@ package rlib.network;
 
 public interface GameCrypt
 {
-	public void decrypt(byte[] var1, int var2, int var3);
+	void decrypt(byte[] var1, int var2, int var3);
 	
-	public void encrypt(byte[] var1, int var2, int var3);
+	void encrypt(byte[] var1, int var2, int var3);
 }

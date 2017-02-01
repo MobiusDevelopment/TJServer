@@ -36,13 +36,13 @@ public class GroupThreadFactory implements ThreadFactory
 		this.name = name;
 		try
 		{
-			this.constructor = cs.getConstructor(ThreadGroup.class, Runnable.class, String.class);
+			constructor = cs.getConstructor(ThreadGroup.class, Runnable.class, String.class);
 		}
 		catch (NoSuchMethodException | SecurityException e)
 		{
 			Loggers.warning("GroupThreadFactory", e);
 		}
-		this.group = new ThreadGroup(name);
+		group = new ThreadGroup(name);
 	}
 	
 	@Override
@@ -53,17 +53,17 @@ public class GroupThreadFactory implements ThreadFactory
 		{
 			Object[] arrobject = new Object[]
 			{
-				this.group,
+				group,
 				runnable,
-				String.valueOf(this.name) + "-" + this.ordinal++
+				String.valueOf(name) + "-" + ordinal++
 			};
-			thread = this.constructor.newInstance(arrobject);
+			thread = constructor.newInstance(arrobject);
 		}
 		catch (IllegalAccessException | IllegalArgumentException | InstantiationException | InvocationTargetException e)
 		{
 			Loggers.warning("GroupThreadFactory", e);
 		}
-		thread.setPriority(this.priority);
+		thread.setPriority(priority);
 		return thread;
 	}
 }

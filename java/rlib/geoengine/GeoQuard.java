@@ -31,17 +31,17 @@ public final class GeoQuard
 	
 	public final float getHeight()
 	{
-		return this.height;
+		return height;
 	}
 	
 	public final int getX()
 	{
-		return this.x;
+		return x;
 	}
 	
 	public final int getY()
 	{
-		return this.y;
+		return y;
 	}
 	
 	public final void setHeight(float height)
@@ -52,6 +52,6 @@ public final class GeoQuard
 	@Override
 	public String toString()
 	{
-		return "GeoQuard [x = " + this.x + ", y = " + this.y + ", height = " + this.height + "]";
+		return "GeoQuard [x = " + x + ", y = " + y + ", height = " + height + "]";
 	}
 }

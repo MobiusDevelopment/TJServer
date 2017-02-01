@@ -32,7 +32,7 @@ public class MountOff extends ServerPacket
 	 * @param skillId int
 	 * @return MountOff
 	 */
-	public static final MountOff getInstance(Player player, int skillId)
+	public static MountOff getInstance(Player player, int skillId)
 	{
 		final MountOff packet = (MountOff) instance.newInstance();
 		packet.objectId = player.getObjectId();

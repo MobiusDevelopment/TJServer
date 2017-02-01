@@ -32,7 +32,7 @@ public class EnchantResult extends ServerConstPacket
 	 * Method getSuccessful.
 	 * @return EnchantResult
 	 */
-	public static final EnchantResult getSuccessful()
+	public static EnchantResult getSuccessful()
 	{
 		return SUCCESSFUL;
 	}
@@ -41,7 +41,7 @@ public class EnchantResult extends ServerConstPacket
 	 * Method getFail.
 	 * @return EnchantResult
 	 */
-	public static final EnchantResult getFail()
+	public static EnchantResult getFail()
 	{
 		return FAIL;
 	}

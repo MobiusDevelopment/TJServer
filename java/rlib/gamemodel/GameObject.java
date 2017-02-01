@@ -18,17 +18,17 @@ package rlib.gamemodel;
 
 public interface GameObject extends Comparable<GameObject>
 {
-	public int getHeading();
+	int getHeading();
 	
-	public int getObjectId();
+	int getObjectId();
 	
-	public float getX();
+	float getX();
 	
-	public float getY();
+	float getY();
 	
-	public float getZ();
+	float getZ();
 	
-	public boolean isVisible();
+	boolean isVisible();
 	
-	public void spawnMe(float var1, float var2, float var3, int var4);
+	void spawnMe(float var1, float var2, float var3, int var4);
 }

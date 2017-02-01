@@ -238,7 +238,7 @@ public enum ServerPacketType
 	
 	public static final int LENGTH = values().length;
 	
-	public static final void init()
+	public static void init()
 	{
 		ITEM_TEMPLATE_INFO.set(PLAYER_INVENTORY_ITEM_INFO);
 		QUEST_INFO.set(NPC_DIALOG_WINDOW);

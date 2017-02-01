@@ -27,13 +27,13 @@ public final class Synchronizer implements Synchronized
 	
 	public final boolean isLocked()
 	{
-		return this.locked;
+		return locked;
 	}
 	
 	@Override
 	public void lock()
 	{
-		this.lock.lock();
+		lock.lock();
 	}
 	
 	public final void setLocked(boolean locked)
@@ -44,6 +44,6 @@ public final class Synchronizer implements Synchronized
 	@Override
 	public void unlock()
 	{
-		this.lock.unlock();
+		lock.unlock();
 	}
 }

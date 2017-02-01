@@ -98,7 +98,7 @@ public class LinkedArray<E> extends AbstractArray<E>
 		{
 			this.add(element);
 		}
-		System.out.println(this.getClass() + ".addAll() is not recomended method.");
+		System.out.println(getClass() + ".addAll() is not recomended method.");
 		return this;
 	}
 	
@@ -114,7 +114,7 @@ public class LinkedArray<E> extends AbstractArray<E>
 			this.add(element);
 			++n2;
 		}
-		System.out.println(this.getClass() + ".addAll() is not recomended method.");
+		System.out.println(getClass() + ".addAll() is not recomended method.");
 		return this;
 	}
 	

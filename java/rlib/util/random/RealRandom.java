@@ -27,7 +27,7 @@ public final class RealRandom implements Random
 	{
 		try
 		{
-			this.random = SecureRandom.getInstance("SHA1PRNG");
+			random = SecureRandom.getInstance("SHA1PRNG");
 		}
 		catch (NoSuchAlgorithmException e)
 		{
@@ -41,7 +41,7 @@ public final class RealRandom implements Random
 		int i = offset;
 		while (i < (length += offset))
 		{
-			array[i] = (byte) this.nextInt(256);
+			array[i] = (byte) nextInt(256);
 			++i;
 		}
 	}
@@ -57,7 +57,7 @@ public final class RealRandom implements Random
 		{
 			return true;
 		}
-		if ((this.nextFloat() * this.nextInt(100)) <= chance)
+		if ((nextFloat() * nextInt(100)) <= chance)
 		{
 			return true;
 		}
@@ -75,7 +75,7 @@ public final class RealRandom implements Random
 		{
 			return true;
 		}
-		if (this.nextInt(99) <= chance)
+		if (nextInt(99) <= chance)
 		{
 			return true;
 		}
@@ -85,30 +85,30 @@ public final class RealRandom implements Random
 	@Override
 	public float nextFloat()
 	{
-		return this.random.nextFloat();
+		return random.nextFloat();
 	}
 	
 	@Override
 	public int nextInt()
 	{
-		return this.random.nextInt();
+		return random.nextInt();
 	}
 	
 	@Override
 	public int nextInt(int max)
 	{
-		return this.random.nextInt(max);
+		return random.nextInt(max);
 	}
 	
 	@Override
 	public int nextInt(int min, int max)
 	{
-		return min + this.nextInt(Math.abs(max - min) + 1);
+		return min + nextInt(Math.abs(max - min) + 1);
 	}
 	
 	@Override
 	public long nextLong(long min, long max)
 	{
-		return min + Math.round((this.nextFloat() * Math.abs(max - min)) + 1.0f);
+		return min + Math.round((nextFloat() * Math.abs(max - min)) + 1.0f);
 	}
 }

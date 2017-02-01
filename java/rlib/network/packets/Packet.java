@@ -20,13 +20,13 @@ import java.nio.ByteBuffer;
 
 public interface Packet<C>
 {
-	public ByteBuffer getBuffer();
+	ByteBuffer getBuffer();
 	
-	public String getName();
+	String getName();
 	
-	public C getOwner();
+	C getOwner();
 	
-	public void setBuffer(ByteBuffer var1);
+	void setBuffer(ByteBuffer var1);
 	
-	public void setOwner(C var1);
+	void setOwner(C var1);
 }

@@ -32,14 +32,14 @@ public interface Territory
 	 * Method addListener.
 	 * @param listener TerritoryListener
 	 */
-	public void addListener(TerritoryListener listener);
+	void addListener(TerritoryListener listener);
 	
 	/**
 	 * Method addPoint.
 	 * @param x int
 	 * @param y int
 	 */
-	public void addPoint(int x, int y);
+	void addPoint(int x, int y);
 	
 	/**
 	 * Method contains.
@@ -47,7 +47,7 @@ public interface Territory
 	 * @param y float
 	 * @return boolean
 	 */
-	public boolean contains(float x, float y);
+	boolean contains(float x, float y);
 	
 	/**
 	 * Method contains.
@@ -56,101 +56,101 @@ public interface Territory
 	 * @param z float
 	 * @return boolean
 	 */
-	public boolean contains(float x, float y, float z);
+	boolean contains(float x, float y, float z);
 	
 	/**
 	 * Method getContinentId.
 	 * @return int
 	 */
-	public int getContinentId();
+	int getContinentId();
 	
 	/**
 	 * Method getId.
 	 * @return int
 	 */
-	public int getId();
+	int getId();
 	
 	/**
 	 * Method getMaximumX.
 	 * @return int
 	 */
-	public int getMaximumX();
+	int getMaximumX();
 	
 	/**
 	 * Method getMaximumY.
 	 * @return int
 	 */
-	public int getMaximumY();
+	int getMaximumY();
 	
 	/**
 	 * Method getMaximumZ.
 	 * @return int
 	 */
-	public int getMaximumZ();
+	int getMaximumZ();
 	
 	/**
 	 * Method getMinimumX.
 	 * @return int
 	 */
-	public int getMinimumX();
+	int getMinimumX();
 	
 	/**
 	 * Method getMinimumY.
 	 * @return int
 	 */
-	public int getMinimumY();
+	int getMinimumY();
 	
 	/**
 	 * Method getMinimumZ.
 	 * @return int
 	 */
-	public int getMinimumZ();
+	int getMinimumZ();
 	
 	/**
 	 * Method getName.
 	 * @return String
 	 */
-	public String getName();
+	String getName();
 	
 	/**
 	 * Method getObjects.
 	 * @return Array<TObject>
 	 */
-	public Array<TObject> getObjects();
+	Array<TObject> getObjects();
 	
 	/**
 	 * Method getRegions.
 	 * @return WorldRegion[]
 	 */
-	public WorldRegion[] getRegions();
+	WorldRegion[] getRegions();
 	
 	/**
 	 * Method getType.
 	 * @return TerritoryType
 	 */
-	public TerritoryType getType();
+	TerritoryType getType();
 	
 	/**
 	 * Method onEnter.
 	 * @param object TObject
 	 */
-	public void onEnter(TObject object);
+	void onEnter(TObject object);
 	
 	/**
 	 * Method onExit.
 	 * @param object TObject
 	 */
-	public void onExit(TObject object);
+	void onExit(TObject object);
 	
 	/**
 	 * Method removeListener.
 	 * @param listener TerritoryListener
 	 */
-	public void removeListener(TerritoryListener listener);
+	void removeListener(TerritoryListener listener);
 	
 	/**
 	 * Method setRegions.
 	 * @param regions WorldRegion[]
 	 */
-	public void setRegions(WorldRegion[] regions);
+	void setRegions(WorldRegion[] regions);
 }

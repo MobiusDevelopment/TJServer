@@ -18,11 +18,11 @@ package rlib.network.packets;
 
 public interface ReadeablePacket<C> extends Packet<C>, Runnable
 {
-	public int getAvaliableBytes();
+	int getAvaliableBytes();
 	
-	public boolean isSynchronized();
+	boolean isSynchronized();
 	
-	public ReadeablePacket<C> newInstance();
+	ReadeablePacket<C> newInstance();
 	
-	public boolean read();
+	boolean read();
 }

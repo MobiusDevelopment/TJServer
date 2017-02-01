@@ -189,7 +189,7 @@ public class PlayerEntered extends ServerPacket
 	
 	public PlayerEntered()
 	{
-		this.prepare = ByteBuffer.allocate(4096).order(ByteOrder.LITTLE_ENDIAN);
+		prepare = ByteBuffer.allocate(4096).order(ByteOrder.LITTLE_ENDIAN);
 	}
 	
 	@Override

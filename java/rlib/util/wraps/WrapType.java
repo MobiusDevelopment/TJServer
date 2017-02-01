@@ -34,11 +34,11 @@ public enum WrapType
 	
 	protected void put(Wrap wrap)
 	{
-		this.pool.put(wrap);
+		pool.put(wrap);
 	}
 	
 	protected Wrap take()
 	{
-		return this.pool.take();
+		return pool.take();
 	}
 }

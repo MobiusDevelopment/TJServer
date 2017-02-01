@@ -18,7 +18,7 @@ package rlib.util;
 
 public interface Synchronized
 {
-	public void lock();
+	void lock();
 	
-	public void unlock();
+	void unlock();
 }

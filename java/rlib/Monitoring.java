@@ -31,72 +31,72 @@ public abstract class Monitoring
 	private static RuntimeMXBean runtimeMxBean;
 	private static ThreadMXBean threadMXBean;
 	
-	public static final int getDeamonThreadCount()
+	public static int getDeamonThreadCount()
 	{
 		return threadMXBean.getDaemonThreadCount();
 	}
 	
-	public static final String getJavaVersion()
+	public static String getJavaVersion()
 	{
 		return runtimeMxBean.getSpecVersion();
 	}
 	
-	public static final int getProcessorCount()
+	public static int getProcessorCount()
 	{
 		return operatingSystemMXBean.getAvailableProcessors();
 	}
 	
-	public static final String getStartDate()
+	public static String getStartDate()
 	{
 		return DateFormat.getInstance().format(new Date(runtimeMxBean.getStartTime()));
 	}
 	
-	public static final long getStartTime()
+	public static long getStartTime()
 	{
 		return runtimeMxBean.getStartTime();
 	}
 	
-	public static final String getSystemArch()
+	public static String getSystemArch()
 	{
 		return operatingSystemMXBean.getArch();
 	}
 	
-	public static final double getSystemLoadAverage()
+	public static double getSystemLoadAverage()
 	{
 		return operatingSystemMXBean.getSystemLoadAverage();
 	}
 	
-	public static final String getSystemName()
+	public static String getSystemName()
 	{
 		return operatingSystemMXBean.getName();
 	}
 	
-	public static final String getSystemVersion()
+	public static String getSystemVersion()
 	{
 		return operatingSystemMXBean.getVersion();
 	}
 	
-	public static final int getThreadCount()
+	public static int getThreadCount()
 	{
 		return threadMXBean.getThreadCount();
 	}
 	
-	public static final long getUpTime()
+	public static long getUpTime()
 	{
 		return runtimeMxBean.getUptime();
 	}
 	
-	public static final int getUsedMemory()
+	public static int getUsedMemory()
 	{
 		return (int) (memoryMXBean.getHeapMemoryUsage().getUsed() / 1024 / 1024);
 	}
 	
-	public static final String getVMName()
+	public static String getVMName()
 	{
 		return runtimeMxBean.getVmName();
 	}
 	
-	public static final void init()
+	public static void init()
 	{
 		memoryMXBean = ManagementFactory.getMemoryMXBean();
 		operatingSystemMXBean = ManagementFactory.getOperatingSystemMXBean();

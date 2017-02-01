@@ -30,7 +30,7 @@ import tera.gameserver.model.skillengine.lambdas.FloatSub;
  */
 public class FuncFactory
 {
-	private final static FuncFactory instance = new FuncFactory();
+	private static final FuncFactory instance = new FuncFactory();
 	
 	/**
 	 * Method getInstance.

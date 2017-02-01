@@ -27,31 +27,31 @@ public final class SimpleReadWriteLock implements AsynReadSynWriteLock
 	public SimpleReadWriteLock()
 	{
 		ReadWriteLock readWriteLock = Locks.newRWLock();
-		this.readLock = readWriteLock.readLock();
-		this.writeLock = readWriteLock.writeLock();
+		readLock = readWriteLock.readLock();
+		writeLock = readWriteLock.writeLock();
 	}
 	
 	@Override
 	public void readLock()
 	{
-		this.readLock.lock();
+		readLock.lock();
 	}
 	
 	@Override
 	public void readUnlock()
 	{
-		this.readLock.unlock();
+		readLock.unlock();
 	}
 	
 	@Override
 	public void writeLock()
 	{
-		this.writeLock.lock();
+		writeLock.lock();
 	}
 	
 	@Override
 	public void writeUnlock()
 	{
-		this.writeLock.unlock();
+		writeLock.unlock();
 	}
 }

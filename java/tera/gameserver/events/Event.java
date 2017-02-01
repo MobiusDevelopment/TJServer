@@ -26,47 +26,47 @@ public interface Event
 	 * Method getName.
 	 * @return String
 	 */
-	public String getName();
+	String getName();
 	
 	/**
 	 * Method getType.
 	 * @return EventType
 	 */
-	public EventType getType();
+	EventType getType();
 	
 	/**
 	 * Method isAuto.
 	 * @return boolean
 	 */
-	public boolean isAuto();
+	boolean isAuto();
 	
 	/**
 	 * Method onLoad.
 	 * @return boolean
 	 */
-	public boolean onLoad();
+	boolean onLoad();
 	
 	/**
 	 * Method onReload.
 	 * @return boolean
 	 */
-	public boolean onReload();
+	boolean onReload();
 	
 	/**
 	 * Method onSave.
 	 * @return boolean
 	 */
-	public boolean onSave();
+	boolean onSave();
 	
 	/**
 	 * Method start.
 	 * @return boolean
 	 */
-	public boolean start();
+	boolean start();
 	
 	/**
 	 * Method stop.
 	 * @return boolean
 	 */
-	public boolean stop();
+	boolean stop();
 }

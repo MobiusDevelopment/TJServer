@@ -35,7 +35,7 @@ import tera.gameserver.network.serverpackets.PlayerBankPanel;
  */
 public final class GuildBankDialog extends AbstractDialog implements BankDialog
 {
-	public static final GuildBankDialog newInstance(Npc npc, Player player)
+	public static GuildBankDialog newInstance(Npc npc, Player player)
 	{
 		final GuildBankDialog dialog = (GuildBankDialog) DialogType.GUILD_BANK.newInstance();
 		dialog.npc = npc;

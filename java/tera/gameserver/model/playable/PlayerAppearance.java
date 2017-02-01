@@ -38,7 +38,7 @@ public class PlayerAppearance implements Foldable, Cloneable
 	 * @param objectId int
 	 * @return PlayerAppearance
 	 */
-	public static final PlayerAppearance getInstance(int objectId)
+	public static PlayerAppearance getInstance(int objectId)
 	{
 		PlayerAppearance appearance = pool.take();
 		

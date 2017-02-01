@@ -33,11 +33,11 @@ public class SortedArray<E extends Comparable<E>> extends FastArray<E>
 	@Override
 	public SortedArray<E> add(E element)
 	{
-		if (this.size == ((Comparable[]) this.array).length)
+		if (size == ((Comparable[]) array).length)
 		{
-			this.array = (E[]) Arrays.copyOf((Comparable[]) this.array, ((((Comparable[]) this.array).length * 3) / 2) + 1);
+			array = (E[]) Arrays.copyOf((Comparable[]) array, ((((Comparable[]) array).length * 3) / 2) + 1);
 		}
-		Comparable[] array = this.array();
+		Comparable[] array = array();
 		int i = 0;
 		int length = array.length;
 		while (i < length)
@@ -46,13 +46,13 @@ public class SortedArray<E extends Comparable<E>> extends FastArray<E>
 			if (old == null)
 			{
 				array[i] = element;
-				++this.size;
+				++size;
 				return this;
 			}
 			if (element.compareTo((E) old) < 0)
 			{
-				++this.size;
-				int numMoved = this.size - i - 1;
+				++size;
+				int numMoved = size - i - 1;
 				System.arraycopy(array, i, array, i + 1, numMoved);
 				array[i] = element;
 				return this;

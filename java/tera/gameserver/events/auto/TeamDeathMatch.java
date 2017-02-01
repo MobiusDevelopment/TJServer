@@ -325,55 +325,51 @@ public final class TeamDeathMatch extends AbstractAutoEvent
 			unlock();
 		}
 		final ExecutorManager executorManager = ExecutorManager.getInstance();
-		executorManager.scheduleGeneral(new Runnable()
+		executorManager.scheduleGeneral((Runnable) () ->
 		{
-			@Override
-			public void run()
+			lock();
+			
+			try
 			{
-				lock();
-				
-				try
+				if (getState() != EventState.PREPARE_END)
 				{
-					if (getState() != EventState.PREPARE_END)
-					{
-						return;
-					}
-					
-					final EventPlayer eventPlayer = getPlayers().get(killed.getObjectId());
-					
-					if (eventPlayer == null)
-					{
-						return;
-					}
-					
-					Location[] points = null;
-					
-					if (killed.getFractionId() == 1)
-					{
-						points = firstPoints;
-					}
-					else
-					{
-						points = secondPoints;
-					}
-					
-					final Location location = points[Rnd.nextInt(0, points.length - 1)];
-					killed.sendMessage("You will be resurrected after 5 seconds.");
-					killed.setStamina(killed.getMaxStamina());
-					killed.setCurrentHp(killed.getMaxHp());
-					killed.setCurrentMp(killed.getMaxMp());
-					killed.updateHp();
-					killed.updateMp();
-					killed.updateStamina();
-					killed.broadcastPacket(CharDead.getInstance(killed, false));
-					killed.setXYZ(location.getX(), location.getY(), location.getZ());
-					killed.broadcastMove(killed.getX(), killed.getY(), killed.getZ(), killed.getHeading(), MoveType.STOP, killed.getX(), killed.getY(), killed.getZ(), true);
+					return;
 				}
 				
-				finally
+				final EventPlayer eventPlayer = getPlayers().get(killed.getObjectId());
+				
+				if (eventPlayer == null)
 				{
-					unlock();
+					return;
 				}
+				
+				Location[] points = null;
+				
+				if (killed.getFractionId() == 1)
+				{
+					points = firstPoints;
+				}
+				else
+				{
+					points = secondPoints;
+				}
+				
+				final Location location = points[Rnd.nextInt(0, points.length - 1)];
+				killed.sendMessage("You will be resurrected after 5 seconds.");
+				killed.setStamina(killed.getMaxStamina());
+				killed.setCurrentHp(killed.getMaxHp());
+				killed.setCurrentMp(killed.getMaxMp());
+				killed.updateHp();
+				killed.updateMp();
+				killed.updateStamina();
+				killed.broadcastPacket(CharDead.getInstance(killed, false));
+				killed.setXYZ(location.getX(), location.getY(), location.getZ());
+				killed.broadcastMove(killed.getX(), killed.getY(), killed.getZ(), killed.getHeading(), MoveType.STOP, killed.getX(), killed.getY(), killed.getZ(), true);
+			}
+			
+			finally
+			{
+				unlock();
 			}
 		}, 5000);
 	}

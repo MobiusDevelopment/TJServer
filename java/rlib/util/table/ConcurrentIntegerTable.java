@@ -282,7 +282,7 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 		this.readLock();
 		try
 		{
-			if (this.isEmpty())
+			if (isEmpty())
 			{
 				return;
 			}
@@ -425,7 +425,7 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 		this.readLock();
 		try
 		{
-			StringBuilder builder = new StringBuilder(this.getClass().getSimpleName());
+			StringBuilder builder = new StringBuilder(getClass().getSimpleName());
 			builder.append(" size = ").append(this.size).append(" : ");
 			Entry<V>[] table = this.table();
 			int i = 0;
@@ -541,8 +541,9 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 				return false;
 			}
 			Entry entry = (Entry) object;
-			int firstKey = this.getKey();
-			if ((firstKey == (secondKey = entry.getKey())) && (((firstValue = this.getValue()) == (secondValue = (V) entry.getValue())) || ((firstValue != null) && firstValue.equals(secondValue))))
+			int firstKey = getKey();
+			secondKey = entry.getKey();
+			if ((firstKey == secondKey) && (((firstValue = getValue()) == (secondValue = (V) entry.getValue())) || ((firstValue != null) && firstValue.equals(secondValue))))
 			{
 				return true;
 			}
@@ -605,7 +606,7 @@ public class ConcurrentIntegerTable<V> extends AbstractTable<IntKey, V>
 		
 		public V setValue(V value)
 		{
-			V old = this.getValue();
+			V old = getValue();
 			this.value = value;
 			return old;
 		}

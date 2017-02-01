@@ -20,39 +20,39 @@ import rlib.util.pools.Foldable;
 
 public interface Wrap extends Foldable
 {
-	public void fold();
+	void fold();
 	
-	public byte getByte();
+	byte getByte();
 	
-	public char getChar();
+	char getChar();
 	
-	public double getDouble();
+	double getDouble();
 	
-	public float getFloat();
+	float getFloat();
 	
-	public int getInt();
+	int getInt();
 	
-	public long getLong();
+	long getLong();
 	
-	public Object getObject();
+	Object getObject();
 	
-	public short getShort();
+	short getShort();
 	
-	public WrapType getWrapType();
+	WrapType getWrapType();
 	
-	public void setByte(byte var1);
+	void setByte(byte var1);
 	
-	public void setChar(char var1);
+	void setChar(char var1);
 	
-	public void setDouble(double var1);
+	void setDouble(double var1);
 	
-	public void setFloat(float var1);
+	void setFloat(float var1);
 	
-	public void setInt(int var1);
+	void setInt(int var1);
 	
-	public void setLong(long var1);
+	void setLong(long var1);
 	
-	public void setObject(Object var1);
+	void setObject(Object var1);
 	
-	public void setShort(short var1);
+	void setShort(short var1);
 }

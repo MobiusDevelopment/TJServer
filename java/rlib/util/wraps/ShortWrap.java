@@ -27,7 +27,7 @@ final class ShortWrap extends AbstractWrap
 	@Override
 	public short getShort()
 	{
-		return this.value;
+		return value;
 	}
 	
 	@Override

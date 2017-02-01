@@ -35,7 +35,7 @@ public interface ThinkAction
 	 * @param config ConfigAI
 	 * @param currentTime long
 	 */
-	public <A extends Npc> void prepareState(NpcAI<A> ai, A actor, LocalObjects local, ConfigAI config, long currentTime);
+	<A extends Npc> void prepareState(NpcAI<A> ai, A actor, LocalObjects local, ConfigAI config, long currentTime);
 	
 	/**
 	 * Method startAITask.
@@ -46,7 +46,7 @@ public interface ThinkAction
 	 * @param config ConfigAI
 	 * @param currentTime long
 	 */
-	public <A extends Npc> void startAITask(NpcAI<A> ai, A actor, LocalObjects local, ConfigAI config, long currentTime);
+	<A extends Npc> void startAITask(NpcAI<A> ai, A actor, LocalObjects local, ConfigAI config, long currentTime);
 	
 	/**
 	 * Method think.
@@ -57,5 +57,5 @@ public interface ThinkAction
 	 * @param config ConfigAI
 	 * @param currentTime long
 	 */
-	public <A extends Npc> void think(NpcAI<A> ai, A actor, LocalObjects local, ConfigAI config, long currentTime);
+	<A extends Npc> void think(NpcAI<A> ai, A actor, LocalObjects local, ConfigAI config, long currentTime);
 }

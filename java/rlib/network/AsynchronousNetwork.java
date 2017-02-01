@@ -20,13 +20,13 @@ import java.nio.ByteBuffer;
 
 public interface AsynchronousNetwork
 {
-	public NetworkConfig getConfig();
+	NetworkConfig getConfig();
 	
-	public ByteBuffer getReadByteBuffer();
+	ByteBuffer getReadByteBuffer();
 	
-	public ByteBuffer getWriteByteBuffer();
+	ByteBuffer getWriteByteBuffer();
 	
-	public void putReadByteBuffer(ByteBuffer var1);
+	void putReadByteBuffer(ByteBuffer var1);
 	
-	public void putWriteByteBuffer(ByteBuffer var1);
+	void putWriteByteBuffer(ByteBuffer var1);
 }

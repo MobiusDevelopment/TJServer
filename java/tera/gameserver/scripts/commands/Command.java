@@ -30,17 +30,17 @@ public interface Command
 	 * @param player Player
 	 * @param values String
 	 */
-	public void execution(String command, Player player, String values);
+	void execution(String command, Player player, String values);
 	
 	/**
 	 * Method getAccess.
 	 * @return int
 	 */
-	public int getAccess();
+	int getAccess();
 	
 	/**
 	 * Method getCommands.
 	 * @return String[]
 	 */
-	public String[] getCommands();
+	String[] getCommands();
 }

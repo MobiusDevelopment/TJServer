@@ -32,7 +32,7 @@ public enum QuestPanelState
 	 * @param index int
 	 * @return QuestPanelState
 	 */
-	public static final QuestPanelState valueOf(int index)
+	public static QuestPanelState valueOf(int index)
 	{
 		final QuestPanelState[] values = values();
 		

@@ -22,19 +22,19 @@ import rlib.util.array.Array;
 
 public interface GeoMap
 {
-	public void addQuard(GeoQuard var1);
+	void addQuard(GeoQuard var1);
 	
-	public void addQuard(int var1, int var2, float var3);
+	void addQuard(int var1, int var2, float var3);
 	
-	public void exportTo(File var1);
+	void exportTo(File var1);
 	
-	public Array<GeoQuard> getAllQuards(Array<GeoQuard> var1);
+	Array<GeoQuard> getAllQuards(Array<GeoQuard> var1);
 	
-	public GeoQuard getGeoQuard(float var1, float var2, float var3);
+	GeoQuard getGeoQuard(float var1, float var2, float var3);
 	
-	public float getHeight(float var1, float var2, float var3);
+	float getHeight(float var1, float var2, float var3);
 	
-	public GeoMap importTo(File var1);
+	GeoMap importTo(File var1);
 	
-	public int size();
+	int size();
 }

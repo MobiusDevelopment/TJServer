@@ -20,9 +20,9 @@ import java.util.Iterator;
 
 public interface ArrayIterator<E> extends Iterator<E>
 {
-	public void fastRemove();
+	void fastRemove();
 	
-	public int index();
+	int index();
 	
-	public void slowRemove();
+	void slowRemove();
 }

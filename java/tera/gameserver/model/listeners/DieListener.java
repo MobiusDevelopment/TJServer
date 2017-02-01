@@ -28,5 +28,5 @@ public interface DieListener
 	 * @param killer Character
 	 * @param killed Character
 	 */
-	public void onDie(Character killer, Character killed);
+	void onDie(Character killer, Character killed);
 }

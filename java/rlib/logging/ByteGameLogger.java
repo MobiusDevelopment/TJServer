@@ -41,69 +41,69 @@ public class ByteGameLogger implements GameLogger, Synchronized
 		{
 			outFile.createNewFile();
 		}
-		this.out = new FileOutputStream(outFile);
-		this.channel = this.out.getChannel();
-		this.lock = Locks.newLock();
-		this.cache = ByteBuffer.allocate(1048576).order(ByteOrder.LITTLE_ENDIAN);
+		out = new FileOutputStream(outFile);
+		channel = out.getChannel();
+		lock = Locks.newLock();
+		cache = ByteBuffer.allocate(1048576).order(ByteOrder.LITTLE_ENDIAN);
 	}
 	
 	@Override
 	public void finish()
 	{
-		this.lock.lock();
+		lock.lock();
 		try
 		{
-			this.writeCache();
+			writeCache();
 		}
 		finally
 		{
-			this.lock.unlock();
+			lock.unlock();
 		}
 	}
 	
 	@Override
 	public void lock()
 	{
-		this.lock.lock();
+		lock.lock();
 	}
 	
 	@Override
 	public void unlock()
 	{
-		this.lock.unlock();
+		lock.unlock();
 	}
 	
 	@Override
 	public void write(String text)
 	{
-		this.lock.lock();
+		lock.lock();
 		try
 		{
-			if (this.cache.remaining() < (text.length() * 2))
+			if (cache.remaining() < (text.length() * 2))
 			{
-				this.writeCache();
+				writeCache();
 			}
 			int i = 0;
 			int length = text.length();
 			while (i < length)
 			{
-				this.cache.putChar(text.charAt(i));
+				cache.putChar(text.charAt(i));
 				++i;
 			}
 		}
 		finally
 		{
-			this.lock.unlock();
+			lock.unlock();
 		}
 	}
 	
 	public void writeByte(int value)
 	{
-		if (this.cache.remaining() < 1)
+		if (cache.remaining() < 1)
 		{
-			this.writeCache();
+			writeCache();
 		}
-		this.cache.put((byte) value);
+		cache.put((byte) value);
 	}
 	
 	@Override
@@ -111,10 +111,10 @@ public class ByteGameLogger implements GameLogger, Synchronized
 	{
 		try
 		{
-			this.cache.flip();
-			this.channel.write(this.cache);
-			this.cache.clear();
-			this.out.flush();
+			cache.flip();
+			channel.write(cache);
+			cache.clear();
+			out.flush();
 		}
 		catch (IOException e)
 		{
@@ -124,19 +124,19 @@ public class ByteGameLogger implements GameLogger, Synchronized
 	
 	public void writeFloat(float value)
 	{
-		if (this.cache.remaining() < 4)
+		if (cache.remaining() < 4)
 		{
-			this.writeCache();
+			writeCache();
 		}
-		this.cache.putFloat(value);
+		cache.putFloat(value);
 	}
 	
 	public void writeInt(int value)
 	{
-		if (this.cache.remaining() < 4)
+		if (cache.remaining() < 4)
 		{
-			this.writeCache();
+			writeCache();
 		}
-		this.cache.putInt(value);
+		cache.putInt(value);
 	}
 }

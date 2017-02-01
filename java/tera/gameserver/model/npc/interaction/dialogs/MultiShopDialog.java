@@ -35,7 +35,7 @@ public final class MultiShopDialog extends AbstractDialog
 	 * @param priceId int
 	 * @return MultiShopDialog
 	 */
-	public static final MultiShopDialog newInstance(Npc npc, Player player, ItemTemplate[] items, int[] price, int priceId)
+	public static MultiShopDialog newInstance(Npc npc, Player player, ItemTemplate[] items, int[] price, int priceId)
 	{
 		final MultiShopDialog dialog = (MultiShopDialog) DialogType.MULTI_SHOP.newInstance();
 		dialog.items = items;

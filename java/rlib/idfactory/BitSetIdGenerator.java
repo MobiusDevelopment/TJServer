@@ -58,34 +58,34 @@ public final class BitSetIdGenerator extends SafeTask implements IdGenerator
 	@Override
 	public synchronized int getNextId()
 	{
-		int newID = this.nextFreeId.get();
-		this.freeIds.set(newID);
-		this.freeIdCount.decrementAndGet();
-		int nextFree = this.freeIds.nextClearBit(newID);
+		int newID = nextFreeId.get();
+		freeIds.set(newID);
+		freeIdCount.decrementAndGet();
+		int nextFree = freeIds.nextClearBit(newID);
 		if (nextFree < 0)
 		{
-			nextFree = this.freeIds.nextClearBit(0);
+			nextFree = freeIds.nextClearBit(0);
 		}
 		if (nextFree < 0)
 		{
-			if (this.freeIds.size() < 1879048191)
+			if (freeIds.size() < 1879048191)
 			{
-				this.increaseBitSetCapacity();
+				increaseBitSetCapacity();
 			}
 			else
 			{
 				throw new NullPointerException("Ran out of valid Id's.");
 			}
 		}
-		this.nextFreeId.set(nextFree);
+		nextFreeId.set(nextFree);
 		return newID + 268435456;
 	}
 	
 	protected synchronized void increaseBitSetCapacity()
 	{
-		BitSet newBitSet = new BitSet(PrimeFinder.nextPrime((this.usedIds() * 11) / 10));
-		newBitSet.or(this.freeIds);
-		this.freeIds = newBitSet;
+		BitSet newBitSet = new BitSet(PrimeFinder.nextPrime((usedIds() * 11) / 10));
+		newBitSet.or(freeIds);
+		freeIds = newBitSet;
 	}
 	
 	@Override
@@ -96,10 +96,10 @@ public final class BitSetIdGenerator extends SafeTask implements IdGenerator
 			try
 			{
 				IntegerArray extractedIds;
-				this.freeIds = new BitSet(PrimeFinder.nextPrime(100000));
-				this.freeIds.clear();
-				this.freeIdCount = new AtomicInteger(1879048191);
-				if (this.tables == null)
+				freeIds = new BitSet(PrimeFinder.nextPrime(100000));
+				freeIds.clear();
+				freeIdCount = new AtomicInteger(1879048191);
+				if (tables == null)
 				{
 					break block14;
 				}
@@ -111,9 +111,9 @@ public final class BitSetIdGenerator extends SafeTask implements IdGenerator
 				ResultSet rset = null;
 				try
 				{
-					con = this.connects.getConnection();
+					con = connects.getConnection();
 					statement = con.createStatement();
-					String[][] arrstring = this.tables;
+					String[][] arrstring = tables;
 					int n = arrstring.length;
 					int n2 = 0;
 					while (n2 < n)
@@ -175,8 +175,8 @@ public final class BitSetIdGenerator extends SafeTask implements IdGenerator
 					}
 					else
 					{
-						this.freeIds.set(objectId - 268435456);
-						this.freeIdCount.decrementAndGet();
+						freeIds.set(objectId - 268435456);
+						freeIdCount.decrementAndGet();
 					}
 					++length;
 				}
@@ -186,14 +186,14 @@ public final class BitSetIdGenerator extends SafeTask implements IdGenerator
 				log.warning(e);
 			}
 		}
-		this.nextFreeId = new AtomicInteger(this.freeIds.nextClearBit(0));
-		log.info(String.valueOf(this.freeIds.size()) + " id's available.");
-		this.executor.scheduleAtFixedRate(this, 300000, 300000, TimeUnit.MILLISECONDS);
+		nextFreeId = new AtomicInteger(freeIds.nextClearBit(0));
+		log.info(String.valueOf(freeIds.size()) + " id's available.");
+		executor.scheduleAtFixedRate(this, 300000, 300000, TimeUnit.MILLISECONDS);
 	}
 	
 	protected synchronized boolean reachingBitSetCapacity()
 	{
-		if (PrimeFinder.nextPrime((this.usedIds() * 11) / 10) > this.freeIds.size())
+		if (PrimeFinder.nextPrime((usedIds() * 11) / 10) > freeIds.size())
 		{
 			return true;
 		}
@@ -209,28 +209,28 @@ public final class BitSetIdGenerator extends SafeTask implements IdGenerator
 		}
 		else
 		{
-			this.freeIds.clear(objectId - 268435456);
-			this.freeIdCount.incrementAndGet();
+			freeIds.clear(objectId - 268435456);
+			freeIdCount.incrementAndGet();
 		}
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		if (this.reachingBitSetCapacity())
+		if (reachingBitSetCapacity())
 		{
-			this.increaseBitSetCapacity();
+			increaseBitSetCapacity();
 		}
 	}
 	
 	public synchronized int size()
 	{
-		return this.freeIdCount.get();
+		return freeIdCount.get();
 	}
 	
 	@Override
 	public int usedIds()
 	{
-		return this.size() - 268435456;
+		return size() - 268435456;
 	}
 }

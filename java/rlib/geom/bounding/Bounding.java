@@ -23,27 +23,27 @@ import rlib.geom.VectorBuffer;
 
 public interface Bounding
 {
-	public boolean contains(float var1, float var2, float var3, VectorBuffer var4);
+	boolean contains(float var1, float var2, float var3, VectorBuffer var4);
 	
-	public boolean contains(Vector var1, VectorBuffer var2);
+	boolean contains(Vector var1, VectorBuffer var2);
 	
-	public float distanceTo(Vector var1);
+	float distanceTo(Vector var1);
 	
-	public BoundingType getBoundingType();
+	BoundingType getBoundingType();
 	
-	public Vector getCenter();
+	Vector getCenter();
 	
-	public Vector getOffset();
+	Vector getOffset();
 	
-	public Vector getResultCenter(VectorBuffer var1);
+	Vector getResultCenter(VectorBuffer var1);
 	
-	public boolean intersects(Bounding var1, VectorBuffer var2);
+	boolean intersects(Bounding var1, VectorBuffer var2);
 	
-	public boolean intersects(Ray var1, VectorBuffer var2);
+	boolean intersects(Ray var1, VectorBuffer var2);
 	
-	public boolean intersects(Vector var1, Vector var2, VectorBuffer var3);
+	boolean intersects(Vector var1, Vector var2, VectorBuffer var3);
 	
-	public void setCenter(Vector var1);
+	void setCenter(Vector var1);
 	
-	public void update(Rotation var1, VectorBuffer var2);
+	void update(Rotation var1, VectorBuffer var2);
 }

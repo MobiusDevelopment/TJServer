@@ -32,61 +32,61 @@ public interface ChanceFunc extends Func
 	 * @param skill Skill
 	 * @return boolean
 	 */
-	public boolean apply(Character attacker, Character attacked, Skill skill);
+	boolean apply(Character attacker, Character attacked, Skill skill);
 	
 	/**
 	 * Method getChance.
 	 * @return int
 	 */
-	public int getChance();
+	int getChance();
 	
 	/**
 	 * Method getSkill.
 	 * @return Skill
 	 */
-	public Skill getSkill();
+	Skill getSkill();
 	
 	/**
 	 * Method isOnAttack.
 	 * @return boolean
 	 */
-	public boolean isOnAttack();
+	boolean isOnAttack();
 	
 	/**
 	 * Method isOnAttacked.
 	 * @return boolean
 	 */
-	public boolean isOnAttacked();
+	boolean isOnAttacked();
 	
 	/**
 	 * Method isOnCritAttack.
 	 * @return boolean
 	 */
-	public boolean isOnCritAttack();
+	boolean isOnCritAttack();
 	
 	/**
 	 * Method isOnCritAttacked.
 	 * @return boolean
 	 */
-	public boolean isOnCritAttacked();
+	boolean isOnCritAttacked();
 	
 	/**
 	 * Method isOnOwerturn.
 	 * @return boolean
 	 */
-	public boolean isOnOwerturn();
+	boolean isOnOwerturn();
 	
 	/**
 	 * Method isOnOwerturned.
 	 * @return boolean
 	 */
-	public boolean isOnOwerturned();
+	boolean isOnOwerturned();
 	
 	/**
 	 * Method isOnShieldBlocked.
 	 * @return boolean
 	 */
-	public boolean isOnShieldBlocked();
+	boolean isOnShieldBlocked();
 	
-	public void prepare();
+	void prepare();
 }

@@ -29,12 +29,12 @@ public interface Registered
 	 * @param player Player
 	 * @return boolean
 	 */
-	public boolean registerPlayer(Player player);
+	boolean registerPlayer(Player player);
 	
 	/**
 	 * Method unregisterPlayer.
 	 * @param player Player
 	 * @return boolean
 	 */
-	public boolean unregisterPlayer(Player player);
+	boolean unregisterPlayer(Player player);
 }

@@ -90,7 +90,7 @@ public final class AnnounceManager implements PlayerSelectListener
 		return startAnnouncs;
 	}
 	
-	public synchronized final void save()
+	public final synchronized void save()
 	{
 		document.save();
 	}

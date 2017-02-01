@@ -32,7 +32,7 @@ public final class DeprecatedPlayerFace implements Foldable
 	 * @param objectId int
 	 * @return DeprecatedPlayerFace
 	 */
-	public static final DeprecatedPlayerFace newInstance(int objectId)
+	public static DeprecatedPlayerFace newInstance(int objectId)
 	{
 		DeprecatedPlayerFace face = pool.take();
 		

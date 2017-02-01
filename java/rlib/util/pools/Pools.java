@@ -18,27 +18,27 @@ package rlib.util.pools;
 
 public final class Pools
 {
-	public static final <T extends Foldable> FoldablePool<T> newConcurrentFoldablePool(Class<? extends Foldable> type)
+	public static <T extends Foldable> FoldablePool<T> newConcurrentFoldablePool(Class<? extends Foldable> type)
 	{
 		return new ConcurrentFoldablePool(10, type);
 	}
 	
-	public static final <T extends Foldable> FoldablePool<T> newConcurrentFoldablePool(Class<? extends Foldable> type, int size)
+	public static <T extends Foldable> FoldablePool<T> newConcurrentFoldablePool(Class<? extends Foldable> type, int size)
 	{
 		return new ConcurrentFoldablePool(size, type);
 	}
 	
-	public static final <T extends Foldable> FoldablePool<T> newFoldablePool(Class<? extends Foldable> type)
+	public static <T extends Foldable> FoldablePool<T> newFoldablePool(Class<? extends Foldable> type)
 	{
 		return new FastFoldablePool(10, type);
 	}
 	
-	public static final <T extends Foldable> FoldablePool<T> newFoldablePool(Class<? extends Foldable> type, int size)
+	public static <T extends Foldable> FoldablePool<T> newFoldablePool(Class<? extends Foldable> type, int size)
 	{
 		return new FastFoldablePool(size, type);
 	}
 	
-	public static final <T extends Foldable> FoldablePool<T> newMultiConcurrentFoldablePool(int size, Class<? extends Foldable> type)
+	public static <T extends Foldable> FoldablePool<T> newMultiConcurrentFoldablePool(int size, Class<? extends Foldable> type)
 	{
 		return new MultiConcurrentFoldablePool(size, type);
 	}

@@ -61,7 +61,7 @@ public final class PlayerInventory extends AbstractInventory
 	 * @param level int
 	 * @return Inventory
 	 */
-	public static final Inventory newInstance(Character owner, int level)
+	public static Inventory newInstance(Character owner, int level)
 	{
 		AbstractInventory inventory = (AbstractInventory) inventoryPool.take();
 		

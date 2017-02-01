@@ -27,7 +27,7 @@ final class ByteWrap extends AbstractWrap
 	@Override
 	public byte getByte()
 	{
-		return this.value;
+		return value;
 	}
 	
 	@Override

@@ -30,68 +30,68 @@ public interface Action extends Foldable
 	 * Method assent.
 	 * @param player Player
 	 */
-	public void assent(Player player);
+	void assent(Player player);
 	
 	/**
 	 * Method cancel.
 	 * @param player Player
 	 */
-	public void cancel(Player player);
+	void cancel(Player player);
 	
 	/**
 	 * Method getActor.
 	 * @return Player
 	 */
-	public Player getActor();
+	Player getActor();
 	
 	/**
 	 * Method getId.
 	 * @return int
 	 */
-	public int getId();
+	int getId();
 	
 	/**
 	 * Method getObjectId.
 	 * @return int
 	 */
-	public int getObjectId();
+	int getObjectId();
 	
 	/**
 	 * Method getTarget.
 	 * @return Object
 	 */
-	public Object getTarget();
+	Object getTarget();
 	
 	/**
 	 * Method getType.
 	 * @return ActionType
 	 */
-	public ActionType getType();
+	ActionType getType();
 	
 	/**
 	 * Method init.
 	 * @param actor Player
 	 * @param name String
 	 */
-	public void init(Player actor, String name);
+	void init(Player actor, String name);
 	
-	public void invite();
+	void invite();
 	
 	/**
 	 * Method setActor.
 	 * @param actor Player
 	 */
-	public void setActor(Player actor);
+	void setActor(Player actor);
 	
 	/**
 	 * Method setTarget.
 	 * @param target Object
 	 */
-	public void setTarget(Object target);
+	void setTarget(Object target);
 	
 	/**
 	 * Method test.
 	 * @return boolean
 	 */
-	public boolean test();
+	boolean test();
 }

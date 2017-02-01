@@ -27,7 +27,7 @@ final class DoubleWrap extends AbstractWrap
 	@Override
 	public double getDouble()
 	{
-		return this.value;
+		return value;
 	}
 	
 	@Override

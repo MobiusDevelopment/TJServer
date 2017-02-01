@@ -35,17 +35,17 @@ public abstract class Locks
 		second.lock();
 	}
 	
-	public static final AsynReadSynWriteLock newARSWLock()
+	public static AsynReadSynWriteLock newARSWLock()
 	{
 		return new SimpleReadWriteLock();
 	}
 	
-	public static final Lock newLock()
+	public static Lock newLock()
 	{
 		return new FinalLock();
 	}
 	
-	public static final ReadWriteLock newRWLock()
+	public static ReadWriteLock newRWLock()
 	{
 		return new FinalReadWriteLock();
 	}

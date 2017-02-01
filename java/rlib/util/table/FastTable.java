@@ -31,13 +31,13 @@ public final class FastTable<K, V> implements Table<K, V>
 	private int size = 0;
 	private Entry<V>[] table = new Entry[16];
 	
-	private static final int hash(int hash)
+	private static int hash(int hash)
 	{
 		hash ^= (hash >>> 20) ^ (hash >>> 12);
 		return hash ^ (hash >>> 7) ^ (hash >>> 4);
 	}
 	
-	private static final int indexFor(int hash, int length)
+	private static int indexFor(int hash, int length)
 	{
 		return hash & (length - 1);
 	}

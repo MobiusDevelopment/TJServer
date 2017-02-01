@@ -18,23 +18,23 @@ package rlib.geom;
 
 public interface GamePoint
 {
-	public int getHeading();
+	int getHeading();
 	
-	public float getX();
+	float getX();
 	
-	public float getY();
+	float getY();
 	
-	public float getZ();
+	float getZ();
 	
-	public GamePoint setHeading(int var1);
+	GamePoint setHeading(int var1);
 	
-	public GamePoint setX(float var1);
+	GamePoint setX(float var1);
 	
-	public GamePoint setXYZ(float var1, float var2, float var3);
+	GamePoint setXYZ(float var1, float var2, float var3);
 	
-	public GamePoint setXYZH(float var1, float var2, float var3, int var4);
+	GamePoint setXYZH(float var1, float var2, float var3, int var4);
 	
-	public GamePoint setY(float var1);
+	GamePoint setY(float var1);
 	
-	public GamePoint setZ(float var1);
+	GamePoint setZ(float var1);
 }

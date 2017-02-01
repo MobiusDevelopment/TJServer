@@ -18,11 +18,11 @@ package rlib.concurrent;
 
 public interface AsynReadSynWriteLock
 {
-	public void readLock();
+	void readLock();
 	
-	public void readUnlock();
+	void readUnlock();
 	
-	public void writeLock();
+	void writeLock();
 	
-	public void writeUnlock();
+	void writeUnlock();
 }

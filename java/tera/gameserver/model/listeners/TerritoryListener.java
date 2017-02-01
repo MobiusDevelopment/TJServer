@@ -29,12 +29,12 @@ public interface TerritoryListener
 	 * @param territory Territory
 	 * @param object TObject
 	 */
-	public void onEnter(Territory territory, TObject object);
+	void onEnter(Territory territory, TObject object);
 	
 	/**
 	 * Method onExit.
 	 * @param territory Territory
 	 * @param object TObject
 	 */
-	public void onExit(Territory territory, TObject object);
+	void onExit(Territory territory, TObject object);
 }

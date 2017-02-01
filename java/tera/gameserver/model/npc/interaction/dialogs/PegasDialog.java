@@ -64,7 +64,7 @@ public class PegasDialog extends AbstractDialog implements Runnable
 	 * @param town TownInfo
 	 * @return PegasDialog
 	 */
-	public static final PegasDialog newInstance(Npc npc, Player player, Table<IntKey, Route> routes, TownInfo town)
+	public static PegasDialog newInstance(Npc npc, Player player, Table<IntKey, Route> routes, TownInfo town)
 	{
 		final PegasDialog dialog = (PegasDialog) DialogType.PEGAS.newInstance();
 		dialog.npc = npc;

@@ -33,84 +33,84 @@ public interface Bank extends Foldable, Synchronized
 	 * @param itemCount int
 	 * @return boolean
 	 */
-	public boolean addItem(int itemId, int itemCount);
+	boolean addItem(int itemId, int itemCount);
 	
 	/**
 	 * Method addMoney.
 	 * @param count long
 	 */
-	public void addMoney(long count);
+	void addMoney(long count);
 	
-	public void fold();
+	void fold();
 	
 	/**
 	 * Method getCell.
 	 * @param index int
 	 * @return Cell
 	 */
-	public Cell getCell(int index);
+	Cell getCell(int index);
 	
 	/**
 	 * Method getCells.
 	 * @return Cell[]
 	 */
-	public Cell[] getCells();
+	Cell[] getCells();
 	
 	/**
 	 * Method getItemForObjectId.
 	 * @param objectId int
 	 * @return ItemInstance
 	 */
-	public ItemInstance getItemForObjectId(int objectId);
+	ItemInstance getItemForObjectId(int objectId);
 	
 	/**
 	 * Method getLastIndex.
 	 * @return int
 	 */
-	public int getLastIndex();
+	int getLastIndex();
 	
 	/**
 	 * Method getLocation.
 	 * @return ItemLocation
 	 */
-	public ItemLocation getLocation();
+	ItemLocation getLocation();
 	
 	/**
 	 * Method getMaxSize.
 	 * @return int
 	 */
-	public int getMaxSize();
+	int getMaxSize();
 	
 	/**
 	 * Method getMoney.
 	 * @return long
 	 */
-	public long getMoney();
+	long getMoney();
 	
 	/**
 	 * Method getOwner.
 	 * @return Object
 	 */
-	public Object getOwner();
+	Object getOwner();
 	
 	/**
 	 * Method getTabSize.
 	 * @return int
 	 */
-	public int getTabSize();
+	int getTabSize();
 	
 	/**
 	 * Method getUsedCount.
 	 * @return int
 	 */
-	public int getUsedCount();
+	int getUsedCount();
 	
 	/**
 	 * Method putItem.
 	 * @param item ItemInstance
 	 * @return boolean
 	 */
-	public boolean putItem(ItemInstance item);
+	boolean putItem(ItemInstance item);
 	
 	/**
 	 * Method removeItem.
@@ -118,14 +118,14 @@ public interface Bank extends Foldable, Synchronized
 	 * @param itemCount int
 	 * @return boolean
 	 */
-	public boolean removeItem(int itemId, int itemCount);
+	boolean removeItem(int itemId, int itemCount);
 	
 	/**
 	 * Method removeItem.
 	 * @param item ItemInstance
 	 * @return boolean
 	 */
-	public boolean removeItem(ItemInstance item);
+	boolean removeItem(ItemInstance item);
 	
 	/**
 	 * Method setItem.
@@ -133,23 +133,23 @@ public interface Bank extends Foldable, Synchronized
 	 * @param item ItemInstance
 	 * @return boolean
 	 */
-	public boolean setItem(int index, ItemInstance item);
+	boolean setItem(int index, ItemInstance item);
 	
 	/**
 	 * Method setOwner.
 	 * @param owner Object
 	 */
-	public void setOwner(Object owner);
+	void setOwner(Object owner);
 	
 	/**
 	 * Method sort.
 	 * @return boolean
 	 */
-	public boolean sort();
+	boolean sort();
 	
 	/**
 	 * Method subMoney.
 	 * @param count long
 	 */
-	public void subMoney(long count);
+	void subMoney(long count);
 }

@@ -28,7 +28,7 @@ public final class ShutdownManager
 	
 	private static final ShutdownTask task = new ShutdownTask();
 	
-	public static final void cancel()
+	public static void cancel()
 	{
 		if (task.cancel())
 		{
@@ -36,12 +36,12 @@ public final class ShutdownManager
 		}
 	}
 	
-	public static final void restart(long delay)
+	public static void restart(long delay)
 	{
 		task.next(true, Math.max(delay, 120000));
 	}
 	
-	public static final void shutdown(long delay)
+	public static void shutdown(long delay)
 	{
 		task.next(false, Math.max(delay, 120000));
 	}

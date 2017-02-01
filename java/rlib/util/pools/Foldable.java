@@ -18,7 +18,7 @@ package rlib.util.pools;
 
 public interface Foldable
 {
-	public void finalyze();
+	void finalyze();
 	
-	public void reinit();
+	void reinit();
 }

@@ -294,7 +294,7 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		this.readLock();
 		try
 		{
-			if (this.isEmpty())
+			if (isEmpty())
 			{
 				return;
 			}
@@ -449,7 +449,7 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		this.readLock();
 		try
 		{
-			StringBuilder builder = new StringBuilder(this.getClass().getSimpleName());
+			StringBuilder builder = new StringBuilder(getClass().getSimpleName());
 			builder.append(" size = ").append(this.size).append(" : ");
 			Entry<V>[] table = this.table();
 			int i = 0;
@@ -550,10 +550,6 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		private long key;
 		private int hash;
 		
-		private Entry()
-		{
-		}
-		
 		@Override
 		public boolean equals(Object object)
 		{
@@ -565,8 +561,9 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 				return false;
 			}
 			Entry entry = (Entry) object;
-			long firstKey = this.getKey();
-			if ((firstKey == (secondKey = entry.getKey())) && (((firstValue = this.getValue()) == (secondValue = (V) entry.getValue())) || ((firstValue != null) && firstValue.equals(secondValue))))
+			long firstKey = getKey();
+			secondKey = entry.getKey();
+			if ((firstKey == secondKey) && (((firstValue = getValue()) == (secondValue = (V) entry.getValue())) || ((firstValue != null) && firstValue.equals(secondValue))))
 			{
 				return true;
 			}
@@ -629,7 +626,7 @@ public class ConcurrentLongTable<V> extends AbstractTable<LongKey, V>
 		
 		public V setValue(V value)
 		{
-			V old = this.getValue();
+			V old = getValue();
 			this.value = value;
 			return old;
 		}

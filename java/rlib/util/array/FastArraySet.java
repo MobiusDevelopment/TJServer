@@ -33,7 +33,7 @@ public class FastArraySet<E> extends FastArray<E>
 	@Override
 	public FastArray<E> add(E element)
 	{
-		if (this.contains(element))
+		if (contains(element))
 		{
 			return this;
 		}
