@@ -24,7 +24,6 @@
 
 	<property name="build" location="../build" />
 	<property name="build.bin" location="${build}/bin" />
-	<property name="build.dist" location="${build}/dist" />
 	<property name="datapack" location="dist" />
 	<property name="libs" location="${datapack}/libs" />
 	<property name="src" location="java" />
@@ -89,7 +88,6 @@
 	
 	<target name="cleanup" depends="adding-files" description="Cleaning the build folder.">
 		<delete dir="${build.bin}" />
-		<delete dir="${build.dist}" />
 		<delete file="${libs}/TJServer.jar" />
 	</target>
 </project>
