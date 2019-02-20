@@ -1055,7 +1055,6 @@ public class Region extends SafeTask implements DieListener, PlayerSelectListene
 		schedule = executor.scheduleGeneral(this, battleTime);
 	}
 	
-	@SuppressWarnings("incomplete-switch")
 	private synchronized void status(Npc npc, Player player)
 	{
 		switch (getState())

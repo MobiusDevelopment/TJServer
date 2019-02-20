@@ -513,7 +513,6 @@ public abstract class AbstractCharacterAI<E extends Character> extends AbstractA
 	 * @see tera.gameserver.model.ai.AI#startSay(String, SayType)
 	 */
 	@Override
-	@SuppressWarnings("incomplete-switch")
 	public void startSay(String text, SayType type)
 	{
 		final E actor = getActor();

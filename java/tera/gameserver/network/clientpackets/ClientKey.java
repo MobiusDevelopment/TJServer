@@ -37,7 +37,6 @@ public class ClientKey extends ClientPacket
 	}
 	
 	@Override
-	@SuppressWarnings("incomplete-switch")
 	public void runImpl()
 	{
 		switch (owner.getCryptorState())

@@ -252,7 +252,6 @@ public final class TeamVsTeam extends AbstractAutoEvent
 	 * @param player Player
 	 */
 	@Override
-	@SuppressWarnings("incomplete-switch")
 	protected void onDelete(Player player)
 	{
 		lock();

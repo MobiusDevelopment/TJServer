@@ -52,7 +52,6 @@ public final class TeraCrypt implements GameCrypt
 	 * @see rlib.network.GameCrypt#decrypt(byte[], int, int)
 	 */
 	@Override
-	@SuppressWarnings("incomplete-switch")
 	public void decrypt(byte[] data, int offset, int length)
 	{
 		switch (state)
@@ -91,7 +90,6 @@ public final class TeraCrypt implements GameCrypt
 	 * @see rlib.network.GameCrypt#encrypt(byte[], int, int)
 	 */
 	@Override
-	@SuppressWarnings("incomplete-switch")
 	public void encrypt(byte[] data, int offset, int length)
 	{
 		switch (state)
