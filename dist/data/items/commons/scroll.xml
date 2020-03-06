@@ -15,22 +15,22 @@
 	<common id="143" type="scroll" name="Velika Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
 	
 	<common id="144" type="scroll" name="Frontera Teleport Scroll" activeSkill="144" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="145" type="scroll" name="Tria Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="146" type="scroll" name="Tralion Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="147" type="scroll" name="Acarum Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="148" type="scroll" name="Bleakrock Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="149" type="scroll" name="Elenea Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="145" type="scroll" name="Tria Teleport Scroll" activeSkill="145" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="146" type="scroll" name="Tralion Teleport Scroll" activeSkill="146" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="147" type="scroll" name="Acarum Teleport Scroll" activeSkill="147" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="148" type="scroll" name="Bleakrock Teleport Scroll" activeSkill="148" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="149" type="scroll" name="Elenea Teleport Scroll" activeSkill="149" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
 	<common id="150" type="scroll" name="Unyielding Bastion Teleport Scroll" activeSkill="150" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
 	<common id="151" type="scroll" name="Alemantheia Teleport Scroll" activeSkill="151" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="152" type="scroll" name="Dragonfal Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="153" type="scroll" name="Scythera Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="154" type="scroll" name="Pathfinder Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="155" type="scroll" name="Zulfikar Fortress Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="156" type="scroll" name="Kanstria Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="157" type="scroll" name="Davans Rafuge Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="158" type="scroll" name="Habere Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="159" type="scroll" name="Kaiator Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
-	<common id="160" type="scroll" name="Safe Haven Teleport Scroll" activeSkill="143" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="152" type="scroll" name="Dragonfal Teleport Scroll" activeSkill="152" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="153" type="scroll" name="Scythera Teleport Scroll" activeSkill="153" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="154" type="scroll" name="Pathfinder Teleport Scroll" activeSkill="154" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="155" type="scroll" name="Zulfikar Fortress Teleport Scroll" activeSkill="155" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="156" type="scroll" name="Kanstria Teleport Scroll" activeSkill="156" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="157" type="scroll" name="Davans Rafuge Teleport Scroll" activeSkill="157" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="158" type="scroll" name="Habere Teleport Scroll" activeSkill="158" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="159" type="scroll" name="Kaiator Teleport Scroll" activeSkill="159" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
+	<common id="160" type="scroll" name="Safe Haven Teleport Scroll" activeSkill="160" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
 	
 	<common id="420" type="scroll" name="Bastion Teleport Scroll" activeSkill="420" buyPrice="10000" sellPrice="1000" /> <!-- 127238966 -->
 	
@@ -67,45 +67,13 @@
 	<common id="22039" type="scroll" name="Lesson: Tier 8 Alchemy Extraction" buyPrice="29659" sellPrice="2824" />
 	<common id="22040" type="scroll" name="Lesson: Tier 8 Leather Extraction" buyPrice="29659" sellPrice="2824" />
 	
-
+	<common id="22041" type="scroll" name="Lesson: Tier 9 Cloth Extraction" buyPrice="13925" sellPrice="1326" />
+	<common id="22042" type="scroll" name="Lesson: Tier 9 Metal Extraction" buyPrice="13925" sellPrice="1326" />
+	<common id="22044" type="scroll" name="Lesson: Tier 9 Alchemy Extraction" buyPrice="29659" sellPrice="2824" />
+	<common id="22045" type="scroll" name="Lesson: Tier 9 Leather Extraction" buyPrice="29659" sellPrice="2824" />
+	<common id="22051" type="scroll" name="Lesson: Tier 11 Cloth Extraction" buyPrice="29659" sellPrice="2824" />
+	<common id="22055" type="scroll" name="Lesson: Tier 11 Leather Extraction" buyPrice="29659" sellPrice="2824" />
+	<common id="22054" type="scroll" name="Lesson: Tier 11 Alchemy Extraction" buyPrice="29659" sellPrice="2824" />	
+	<common id="22052" type="scroll" name="Lesson: Tier 11 Metal Extraction" buyPrice="29659" sellPrice="2824" />		
 	
-	
-	
-	
-	<common id="26494" type="scroll" name="Design: Yauldrick Sleeves" buyPrice="56056" sellPricePrice="25425" />
-	<common id="26488" type="scroll" name="Design: Vivid Normal Gauntlets" buyPrice="56056" sellPrice="25425" />
-	<common id="25440" type="scroll" name="Design: Twisting Starwand" buyPrice="186856" sellPrice="84742" />
-	<common id="25433" type="scroll" name="Design: Twice-forged Twins" buyPrice="186856" sellPrice="84742" />
-	<common id="26492" type="scroll" name="Design: Traveler's Creepers" buyPrice="56056" sellPrice="25425" />
-	<common id="26490" type="scroll" name="Design: Totemic Inkbretelle Cuirass" buyPrice="74742" sellPrice="33897" />
-	<common id="25435" type="scroll" name="Design: Sword of Erasure" buyPrice="186856" sellPrice="84742" />
-	<common id="26491" type="scroll" name="Design: Straplasher Gloves" buyPrice="56056" sellPrice="25425" />
-	<common id="26489" type="scroll" name="Design: Shadowfolded Norsteel Breastplate" buyPrice="56056" sellPrice="25425" />
-	<common id="26487" type="scroll" name="Design: Shadowfolded Norsteel Breastplate" buyPrice="74742" sellPrice="33897" />
-	<common id="25439" type="scroll" name="Design: Seren's Nightstaff" buyPrice="186856" sellPrice="84742" />
-	<common id="25434" type="scroll" name="Design: Proctor's Runelance" buyPrice="186856" sellPrice="84742" />
-	<common id="25437" type="scroll" name="Design: Paradise Focus" buyPrice="186856" sellPrice="84742" />
-	<common id="26493" type="scroll" name="Design: Ophiocoil Sandrobe" buyPrice="74742" sellPrice="33897" />
-	<common id="25438" type="scroll" name="Design: Bow of Fallen Stars" buyPrice="186856" sellPrice="84742" />
-	<common id="26495" type="scroll" name="Design: Beachcomber Sandals" buyPrice="56056" sellPrice="25425" />
-	<common id="25436" type="scroll" name="Design: Axe of Fury" buyPrice="186856" sellPrice="84742" />
-	
-	
-	<common id="26539" type="scroll" name="Attune: Yauldrick Sleeves" buyPrice="56056" sellPrice="25425" />
-	<common id="26533" type="scroll" name="Attune: Vivid Normail Gauntlets" buyPrice="56056" sellPrice="25425" />
-	<common id="25480" type="scroll" name="Attune: Twisting Starwand" buyPrice="186856" sellPrice="84742" />
-	<common id="25473" type="scroll" name="Attune: Twice-forged Twins" buyPrice="186856" sellPrice="84742" />
-	<common id="26537" type="scroll" name="Attune: Traveler's Creepers" buyPrice="56056" sellPrice="25425" />
-	<common id="26535" type="scroll" name="Attune: Totemic Inkbretelle Cuirass" buyPrice="74742" sellPrice="33897" />
-	<common id="25475" type="scroll" name="Attune: Sword of Erasure" buyPrice="186856" sellPrice="84742" />
-	<common id="26536" type="scroll" name="Attune: Straplasher Gloves" buyPrice="56056" sellPrice="25425" />
-	<common id="26534" type="scroll" name="Attune: Solferino Normail Treads" buyPrice="56056" sellPrice="25425" />
-	<common id="26532" type="scroll" name="Attune: Shadowfolded Norsteel Breastplate" buyPrice="74742" sellPrice="33897" />
-	<common id="25479" type="scroll" name="Attune: Seren's Nightstaff" buyPrice="186856" sellPrice="84742" />
-	<common id="25474" type="scroll" name="Attune: Proctor's Runelance" buyPrice="186856" sellPrice="84742" />
-	<common id="25477" type="scroll" name="Attune: Paradise Focus" buyPrice="186856" sellPrice="84742" />
-	<common id="26538" type="scroll" name="Attune: Ophiocoil Sandrobe" buyPrice="74742" sellPrice="33897" />
-	<common id="25478" type="scroll" name="Attune: Bow of Fallen Stars" buyPrice="186856" sellPrice="84742" />
-	<common id="26540" type="scroll" name="Attune: Beachcomber Sandals" buyPrice="56056" sellPrice="25425" />
-	<common id="25476" type="scroll" name="Attune: Axe of Fury" buyPrice="186856" sellPrice="84742" />
 </list>

@@ -116,6 +116,7 @@ public final class Config
 	public static boolean WORLD_AUTO_LEARN_SKILLS;
 	public static boolean WORLD_PK_AVAILABLE;
 	public static boolean WORLD_LEARN_ONLY_IMPLEMENTED_SKILLS;
+	public static boolean SERVER_FALLING_DAMAGE;
 	
 	public static final BoneCPConfig DATA_BASE_CONFIG = new BoneCPConfig();
 	public static String DATA_BASE_DRIVER;
@@ -334,6 +335,7 @@ public final class Config
 		WORLD_AUTO_LEARN_SKILLS = vars.getBoolean("WORLD_AUTO_LEARN_SKILLS");
 		WORLD_PK_AVAILABLE = vars.getBoolean("WORLD_PK_AVAILABLE");
 		WORLD_LEARN_ONLY_IMPLEMENTED_SKILLS = vars.getBoolean("WORLD_LEARN_ONLY_IMPLEMENTED_SKILLS");
+		SERVER_FALLING_DAMAGE = vars.getBoolean("SERVER_FALLING_DAMAGE");
 		DATA_BASE_DRIVER = vars.getString("DATA_BASE_DRIVER");
 		DATA_BASE_URL = vars.getString("DATA_BASE_URL");
 		DATA_BASE_LOGIN = vars.getString("DATA_BASE_LOGIN");

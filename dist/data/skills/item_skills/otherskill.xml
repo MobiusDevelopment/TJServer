@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-
 	<skill id="7200" class="-9" name="Bomb I" levels="1">
 		<set name="iconId" value="127508965" />
 		<set name="targetType" value="TARGET_AREA"/>				
@@ -149,13 +148,7 @@
 		<set name="reuseDelay" value="2000"/>
 		<set name="reuseId" value="7200" />
 		<set name="itemIdConsume" value="7209" />
-	</skill>	
-
-
-
-
-
-
+	</skill>
 
 	<skill id="67219975" class="-11" name="Horse" levels="1">
 		<set name="reuseDelay" value="10000"/>
@@ -164,5 +157,168 @@
 		<set name="operateType" value="ACTIVE" />
 		<set name="mpConsume" value="70" />
 		<set name="hitTime" value="1000" />			
-	</skill>	
+	</skill>
+
+	<skill id="67219976" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+
+	<skill id="67219978" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+	
+	<skill id="67219980" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+	
+	<skill id="67219981" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+	
+	<skill id="67219982" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+	
+	<skill id="67219983" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+	
+	<skill id="67219985" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+	
+	<skill id="67219986" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+	
+	<skill id="67219988" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+	
+	<skill id="67219989" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+	
+	<skill id="67219990" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+	
+	<skill id="67219991" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+	
+	<skill id="67219992" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+
+	<skill id="67219996" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+
+	
+	<skill id="67220054" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+
+	<skill id="67220056" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+
+	<skill id="67220061" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
+
+	<skill id="67220062" class="-11" name="Horse" levels="1">
+		<set name="reuseDelay" value="10000"/>
+		<set name="targetType" value="TARGET_SELF"/>		
+		<set name="skillType" value="STRIKE" />
+		<set name="operateType" value="ACTIVE" />
+		<set name="mpConsume" value="70" />
+		<set name="hitTime" value="1000" />			
+	</skill>
 </list>

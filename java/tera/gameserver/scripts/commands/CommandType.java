@@ -41,6 +41,7 @@ public enum CommandType
 		DeveloperCommand.class,
 		100,
 		"event_reg_all_players",
+		"zone",
 		"change_class",
 		"kick",
 		"check_geo",

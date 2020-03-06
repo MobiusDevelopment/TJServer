@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>		
 	<npc id="1002" type="64" > <!-- Poron -->
-		<!-- банк на острове -->
+		<!-- bank on the island -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -11,7 +11,7 @@
 	</npc>
 	
 	<npc id="1003" type="64" > <!-- Kerson -->
-		<!-- банк на острове -->
+		<!-- bank on the island -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -21,7 +21,7 @@
 	</npc>	
 	
 	<npc id="1003" type="60" > <!-- Romgan -->
-		<!-- Банк в Лимбертовне -->
+		<!-- Bank in Limbertovna -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -31,7 +31,7 @@
 	</npc>
 	
 	<npc id="1004" type="60" > <!-- Chase -->
-		<!-- Банк в Лимбертовне -->
+		<!-- Bank in Limbertovna -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -41,7 +41,7 @@
 	</npc>	
 	
 	<npc id="1005" type="59" > <!-- Lemak -->
-		<!-- Банк в Крисцентии -->
+		<!-- Bank in Cryscentia -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -51,7 +51,7 @@
 	</npc>
 	
 	<npc id="1004" type="59" > <!-- Ferox -->
-		<!-- Банк в Крисцентии -->
+		<!-- Bank in Cryscentia -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -61,7 +61,7 @@
 	</npc>	
 	
 	<npc id="1006" type="65" > <!-- Ynnis -->
-		<!-- Банк в Чебике -->
+		<!-- Bank in Chebika -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -71,7 +71,7 @@
 	</npc>
 	
 	<npc id="1005" type="65" > <!-- Verom -->
-		<!-- Банк в Чебике -->
+		<!-- Bank in Chebika -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -81,7 +81,7 @@
 	</npc>	
 	 
 	<npc id="1004" type="66" > <!-- Cenric -->
-		<!-- Банк в Тулуфане -->
+		<!-- Bank in Tulufan -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -91,7 +91,7 @@
 	</npc>
 	
 	<npc id="1005" type="66" > <!-- Iqbal -->
-		<!-- Банк в Тулуфане -->
+		<!-- Bank in Tulufan -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -101,7 +101,7 @@
 	</npc>	
 
 	<npc id="1005" type="61" > <!-- Talonia -->
-		<!-- Банк в Кастанике -->
+		<!-- Bank in Kastanika -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -111,7 +111,7 @@
 	</npc>	
 	
 	<npc id="1006" type="61" > <!-- Pecus -->
-		<!-- Банк в Кастанике -->
+		<!-- Bank in Kastanika -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -121,7 +121,7 @@
 	</npc>
 	
 	<npc id="1007" type="61" > <!-- Vaqtar -->
-		<!-- Банк в Кастанике -->
+		<!-- Bank in Kastanika -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -131,7 +131,7 @@
 	</npc>		
 	
 	<npc id="1003" type="63" > <!-- Kyzion -->
-		<!-- Банк в Велике -->
+		<!-- Bank in Velik -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -141,7 +141,7 @@
 	</npc>		
 	
 	<npc id="1161" type="63" > <!-- Blakewell -->
-		<!-- Банк в Велике -->
+		<!-- Bank in Velik -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -151,7 +151,7 @@
 	</npc>		
 	
 	<npc id="1004" type="63" > <!-- Haphiz -->
-		<!-- Банк в Велике -->
+		<!-- Bank in Velik -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -161,7 +161,7 @@
 	</npc>		
 	
 	<npc id="1004" type="67" > <!-- Keya -->
-		<!-- Банк в Popolion -->
+		<!-- Bank in Popolion -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -171,7 +171,7 @@
 	</npc>		
 	
 	<npc id="1005" type="67" > <!-- Puni -->
-		<!-- Банк в Popolion -->
+		<!-- Bank in Popolion -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -181,7 +181,7 @@
 	</npc>	
 	
 	<npc id="1004" type="68" > <!-- Komba -->
-		<!-- Банк в Pora Elinu -->
+		<!-- Bank in Pora Elinu -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -191,7 +191,7 @@
 	</npc>	
 	
 	<npc id="1005" type="68" > <!-- Kuru -->
-		<!-- Банк в Pora Elinu -->
+		<!-- Bank in Pora Elinu -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -201,7 +201,7 @@
 	</npc>	
 	
 	<npc id="1005" type="72" > <!-- Jangtsu -->
-		<!-- Банк в Alemantheia -->
+		<!-- Bank in Alemantheia -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -211,7 +211,7 @@
 	</npc>	
 	
 	<npc id="1004" type="72" > <!-- Cedric -->
-		<!-- Банк в Alemantheia -->
+		<!-- Bank in Alemantheia -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -221,7 +221,7 @@
 	</npc>	
 	
 	<npc id="1003" type="72" > <!-- Mukuha -->
-		<!-- Банк в Alemantheia -->
+		<!-- Bank in Alemantheia -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -231,7 +231,7 @@
 	</npc>	
 	
 	<npc id="1006" type="72" > <!-- Lubnaria -->
-		<!-- Банк в Alemantheia -->
+		<!-- Bank in Alemantheia -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -241,7 +241,7 @@
 	</npc>	
 	
 	<npc id="1005" type="75" > <!-- Ollen -->
-		<!-- Банк в Frontera -->
+		<!-- Bank in Frontera -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -251,7 +251,7 @@
 	</npc>	
 	
 	<npc id="1004" type="71" > <!-- Zemual -->
-		<!-- Банк в Bastion -->
+		<!-- Bank in Bastion -->
 		<link name="Personal Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
@@ -261,8 +261,29 @@
 	</npc>	
 	
 	<npc id="1005" type="71" > <!-- Graeca -->
-		<!-- Банк в Bastion -->
+		<!-- Bank in Bastion -->
 		<link name="Personal Bank" icon="GREEN" >
+			<reply name="ReplyPlayerBank" />
+		</link>
+		<link name="Guild Bank" icon="GREEN" >
+			<reply name="ReplyGuildBank" />
+		</link>
+	</npc>
+	
+	<!-- Kaiator-->	
+	<npc id="1057" type="84" >
+		<!-- Bank in pathfinder -->
+		<link name="Bank" icon="GREEN" >
+			<reply name="ReplyPlayerBank" />
+		</link>
+		<link name="Guild Bank" icon="GREEN" >
+			<reply name="ReplyGuildBank" />
+		</link>
+	</npc>
+
+	<npc id="1058" type="84" >
+		<!-- Bank in pathfinder -->
+		<link name="Bank" icon="GREEN" >
 			<reply name="ReplyPlayerBank" />
 		</link>
 		<link name="Guild Bank" icon="GREEN" >

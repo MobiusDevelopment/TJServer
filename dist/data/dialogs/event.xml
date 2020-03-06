@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>	
-<!-- Магазин  Кристаллов Island of Dawn -->
+	<!-- Crystal of Island of Dawn -->
 	<!-- <npc id="1004" type="64" >
-		
 		<link name="@npc:100" icon="DIALOG" >
 			<reply name="ReplyMultiShop" priceId="8007" >
 				<item id="8200" price="3" />
@@ -17,16 +16,16 @@
 	
 	<!-- Mystel -->
 	<npc id="10000" type="402" >
-		<link name="Очки славы" icon="GREEN" >
+		<link name="Points of glory" icon="GREEN" >
 			<reply name="ReplyHeroPoint" />
 		</link>
-		<link name="Получить награду" icon="GREEN" >
+		<link name="Get an award" icon="GREEN" >
 			<reply name="ReplyEventReward" />
 		</link>
-		<link name="Обмен на деньги" icon="GREEN" >
+		<link name="Exchange for money" icon="GREEN" >
 			<reply name="ReplyHeroPointToGold" />
 		</link>
-		<link name="Статистика убийcтв" icon="GREEN" >
+		<link name="Kill statistics" icon="GREEN" >
 			<reply name="ReplyKillStatistic" />
 		</link>
 	</npc>

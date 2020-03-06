@@ -27,9 +27,8 @@ import rlib.logging.Loggers;
  */
 public enum ItemExecutorType
 {
-	
 	EVENT_REWARD_BOX(EventRewardBox.class, 0, 408, 409, 410, 411),
-	SKILL_LEARN_ITEM(SkillLearnItem.class, 0, 20),
+	SKILL_LEARN_ITEM(SkillLearnItem.class, 0, 20, 21, 41, 166, 167, 168, 169, 170, 306, 307, 336, 350, 351, 384, 385, 412, 413, 414, 415, 416, 417, 425),
 	BARBECUE_ITEMS(BarbecueItem.class, 0, 5027);
 	
 	private Constructor<? extends ItemExecutor> constructor;

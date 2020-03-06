@@ -34,7 +34,7 @@
 	<set name="WORLD_CONTINENT_COUNT" value="3" />
 	
 	<!-- what level targets can not be drained into the PK -->
-    <set name="WORLD_MIN_TARGET_LEVEL_FOR_PK" value="40" />
+	<set name="WORLD_MIN_TARGET_LEVEL_FOR_PK" value="40" />
 
 	
 	<!-- modifier prices in the store (1) -->
@@ -68,5 +68,7 @@
 	<set name="WORLD_RANGE_SKILL_REUSE_MOD" value="0.9" />
 	<!-- modifier others skills (1) -->
 	<set name="WORLD_OTHER_SKILL_REUSE_MOD" value="0.9" />
+	
+	<set name="SERVER_FALLING_DAMAGE" value="false"/>
 
 </list>    

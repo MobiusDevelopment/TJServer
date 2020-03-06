@@ -104,8 +104,9 @@ public class PlayerInfo extends ServerPacket
 		}
 		packet.writeInt(buffer, newPlayer.isSpawned() ? 1 : 0);
 		packet.writeInt(buffer, newPlayer.getMountId());
-		packet.writeLong(buffer, 0);
-		packet.writeLong(buffer, 0);
+		packet.writeInt(buffer, 0); // pose see C_PLAYER_LOCATION
+		packet.writeInt(buffer, 0); // title
+		packet.writeLong(buffer, 0); // shuttleID
 		packet.writeLong(buffer, 0);
 		packet.writeLong(buffer, 0);
 		packet.writeLong(buffer, 0);
@@ -113,7 +114,7 @@ public class PlayerInfo extends ServerPacket
 		packet.writeShort(buffer, 0);
 		packet.writeByte(buffer, 0);
 		packet.writeInt(buffer, weapon == null ? 0 : weapon.getEnchantLevel());
-		packet.writeByte(buffer, 0);
+		packet.writeByte(buffer, 1); // newbie
 		packet.writeByte(buffer, newPlayer.isPvPMode() ? 1 : 0);
 		packet.writeInt(buffer, newPlayer.getLevel());
 		packet.writeInt(buffer, 0);

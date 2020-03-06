@@ -69,6 +69,7 @@
 	<template id="1802" name="1802" class="FRIENDLY" type="63" level="1" exp="1" attack="100" defense="40" impact="10" balance="50" maxHp="600" maxMp="300" atkSpd="120" runSpd="80" skills="" />
 	<template id="1803" name="1803" class="FRIENDLY" type="63" level="1" exp="1" attack="100" defense="40" impact="10" balance="50" maxHp="600" maxMp="300" atkSpd="120" runSpd="80" skills="" />
 	<template id="1800" name="1800" class="FRIENDLY" type="63" level="1" exp="1" attack="100" defense="40" impact="10" balance="50" maxHp="600" maxMp="300" atkSpd="120" runSpd="80" skills="" />
+	<template id="1801" name="1801" class="FRIENDLY" type="63" level="1" exp="1" attack="100" defense="40" impact="10" balance="50" maxHp="600" maxMp="300" atkSpd="120" runSpd="80" skills="" />
 	<template id="1221" name="1221" class="FRIENDLY" type="63" level="1" exp="1" attack="100" defense="40" impact="10" balance="50" maxHp="600" maxMp="300" atkSpd="120" runSpd="80" skills="" />
 	<template id="1223" name="1223" class="FRIENDLY" type="63" level="1" exp="1" attack="100" defense="40" impact="10" balance="50" maxHp="600" maxMp="300" atkSpd="120" runSpd="80" skills="" />
 	<template id="1222" name="1222" class="FRIENDLY" type="63" level="1" exp="1" attack="100" defense="40" impact="10" balance="50" maxHp="600" maxMp="300" atkSpd="120" runSpd="80" skills="" />
@@ -165,4 +166,5 @@
 	<template id="1214" name="1214" class="FRIENDLY" type="63" level="1" exp="1" attack="100" defense="40" impact="10" balance="50" maxHp="600" maxMp="300" atkSpd="120" runSpd="80" skills="" />
 	<template id="1213" name="1213" class="FRIENDLY" type="63" level="1" exp="1" attack="100" defense="40" impact="10" balance="50" maxHp="600" maxMp="300" atkSpd="120" runSpd="80" skills="" />
 	<template id="1137" name="1137" class="FRIENDLY" type="63" level="1" exp="1" attack="100" defense="40" impact="10" balance="50" maxHp="600" maxMp="300" atkSpd="120" runSpd="80" skills="" />
+	<template id="1108" name="1108" class="FRIENDLY" type="63" level="1" exp="1" attack="100" defense="40" impact="10" balance="50" maxHp="600" maxMp="300" atkSpd="120" runSpd="80" skills="" />
 </list>

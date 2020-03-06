@@ -8,6 +8,7 @@
 	<common id="7154" type="potion" name="Toira Bandage" activeSkill="1454" itemLevel="48" buyPrice="1837" sellPrice="175" />
 	<common id="7155" type="potion" name="Luria Bandage" activeSkill="1455" itemLevel="58" buyPrice="2362" sellPrice="225" />
 	
+	<common id="171" type="potion" name="Combat Panacea" itemLevel="1" activeSkill="171" buyPrice="10000" sellPrice="1000" />
 	<common id="172" type="potion" name="Keener's Medicated Bandage" itemLevel="1" activeSkill="172" buyPrice="150" sellPrice="15" />
 	<common id="173" type="potion" name="Verdra Medicated Bandage" itemLevel="11" activeSkill="173" buyPrice="300" sellPrice="30" />
 	<common id="174" type="potion" name="Sylva Medicated Bandage" itemLevel="23" activeSkill="174" buyPrice="900" sellPrice="90" />
@@ -51,7 +52,6 @@
 	<common id="8007" type="potion" name="Speed Potion" itemLevel="1" activeSkill="1470" buyPrice="5250" sellPrice="500" />
 	
 	<common id="129" type="potion" name="Arunic Panacea" itemLevel="1" activeSkill="129" buyPrice="0" sellPrice="0" />
-	<common id="171" type="potion" name="Combat Panacea" itemLevel="1" activeSkill="171" buyPrice="50000" sellPrice="5000" />
 	<common id="117" type="potion" name="Veteran Panacea" itemLevel="1" activeSkill="117" buyPrice="0" sellPrice="0" />
 	
 	<common id="6048" type="potion" name="Healing Elixir I" activeSkill="6048" itemLevel="1" buyPrice="336" sellPrice="33" />
@@ -71,7 +71,6 @@
 	<common id="6062" type="potion" name="Healing Elixir VIII" activeSkill="6062" itemLevel="57" buyPrice="8160" sellPrice="816" />
 	<common id="6063" type="potion" name="Major Healing Elixir VIII" activeSkill="6063" itemLevel="57" buyPrice="11117" sellPrice="1111" />
 	
-	
 	<common id="130" type="potion" name="Divine Infusion" activeSkill="130" itemLevel="1" buyPrice="2000" sellPrice="200" />
 	
 	<common id="6000" type="potion" name="Healing Potion I" activeSkill="6000" itemLevel="1" buyPrice="525" sellPrice="52" />
@@ -90,7 +89,6 @@
 	<common id="6013" type="potion" name="Major Healing Potion VII" activeSkill="6013" itemLevel="51" buyPrice="10170" sellPrice="1017" />
 	<common id="6014" type="potion" name="Healing Potion VIII" activeSkill="6014" itemLevel="57" buyPrice="12750" sellPrice="1275" />
 	<common id="6015" type="potion" name="Major Healing Potion VIII" activeSkill="6015" itemLevel="57" buyPrice="17370" sellPrice="1737" />
-	
 	
 	<common id="6016" type="potion" name="Mana Potion I" activeSkill="6016" itemLevel="1" buyPrice="315" sellPrice="31" />
 	<common id="6017" type="potion" name="Major Mana Potion I" activeSkill="6017" itemLevel="1" buyPrice="486" sellPrice="48" />

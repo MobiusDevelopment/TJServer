@@ -54,6 +54,7 @@ public abstract class ItemInstance extends TObject implements Foldable
 {
 	static final Logger log = Loggers.getLogger(ItemInstance.class);
 	protected long itemCount;
+	protected int masterworked;
 	protected long spawnTime;
 	protected int ownerId;
 	protected int bonusId;
@@ -77,6 +78,7 @@ public abstract class ItemInstance extends TObject implements Foldable
 		this.template = template;
 		ownerId = 0;
 		itemCount = 1;
+		masterworked = 0;
 		bonusId = 0;
 		enchantLevel = 0;
 		index = 0;
@@ -196,6 +198,7 @@ public abstract class ItemInstance extends TObject implements Foldable
 		dropper = null;
 		enchantLevel = 0;
 		itemCount = 1;
+		masterworked = 0;
 		ownerId = 0;
 		objectId = 0;
 		index = 0;
@@ -300,6 +303,11 @@ public abstract class ItemInstance extends TObject implements Foldable
 	public final long getItemCount()
 	{
 		return itemCount;
+	}
+	
+	public final int getMasterworked()
+	{
+		return masterworked;
 	}
 	
 	public final int getItemId()
@@ -667,6 +675,11 @@ public abstract class ItemInstance extends TObject implements Foldable
 	public final void setItemCount(long itemCount)
 	{
 		this.itemCount = itemCount;
+	}
+	
+	public final void setMasterworked(int masterworked)
+	{
+		this.masterworked = masterworked;
 	}
 	
 	public final void setLocation(ItemLocation location)

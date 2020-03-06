@@ -118,17 +118,25 @@ public class InventoryItemInfo extends ServerPacket
 		writeInt(0);
 		writeInt(item.isBinded() ? 1 : 0);
 		writeInt(10534660);
-		writeInt(0);
-		writeInt(0);
-		writeInt(0);
-		writeByte(0);
+		writeInt(1); // 00 00 00 00 fleet overtone bonus from sharpening
+		// +3 bonus
+		writeInt(1); // 00 00 00 00 fleet sharpening protection bonus
+		// +5 bonus
+		writeInt(1); // 00 00 00 00 fleet overnight protection bonus from sharpening
+		// +7 bonus
+		writeByte(1);
+		writeInt(0xACBD0400);
+		writeInt(0x3CBF0400);
+		writeInt(0x80BC0400);
+		writeInt(0x30C10400);
+		// writeLong(0x0000000000000000);
+		// writeLong(0x0000000000000000);
 		writeLong(0x0000000000000000);
 		writeLong(0x0000000000000000);
 		writeLong(0x0000000000000000);
 		writeLong(0x0000000000000000);
-		writeLong(0x0000000000000000);
-		writeLong(0x0000000000000000);
-		writeInt(0);
+		// Masterwork
+		writeInt(item.getMasterworked()); // 00 00 00 00
 		writeShort(0);
 		writeLong(0x0000000000000000);
 		writeLong(0x0000000000000000);

@@ -531,7 +531,7 @@ public abstract class AbstractCharacterAI<E extends Character> extends AbstractA
 			{
 				final Array<Player> around = World.getAround(Player.class, local.getNextPlayerList(), actor, 300);
 				final Player[] array = around.array();
-				final CharSay say = CharSay.getInstance(actor.getName(), text, type, actor.getObjectId(), actor.getSubId());
+				final CharSay say = CharSay.getInstance(actor.getName(), text, type, actor.getObjectId(), actor.getSubId(), actor.isGM());
 				
 				for (int i = 0, length = around.size(); i < length; i++)
 				{
@@ -580,7 +580,7 @@ public abstract class AbstractCharacterAI<E extends Character> extends AbstractA
 			case TRADE_CHAT:
 			case LOOKING_FOR_GROUP:
 			{
-				final CharSay say = CharSay.getInstance(actor.getName(), text, type, actor.getObjectId(), actor.getSubId());
+				final CharSay say = CharSay.getInstance(actor.getName(), text, type, actor.getObjectId(), actor.getSubId(), actor.isGM());
 				final Array<Player> players = World.getPlayers();
 				players.readLock();
 				

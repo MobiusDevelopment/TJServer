@@ -56,7 +56,6 @@ import rlib.util.array.Array;
  */
 public class DeveloperCommand extends AbstractCommand
 {
-	
 	private static final StatFunc SPEED = new MathFunc(StatType.RUN_SPEED, 0x45, null, new FloatSet(500));
 	private static final StatFunc ATTACK = new MathFunc(StatType.ATTACK, 0x30, null, new FloatMul(50));
 	
@@ -105,6 +104,12 @@ public class DeveloperCommand extends AbstractCommand
 				{
 					players.readUnlock();
 				}
+				break;
+			}
+			
+			case "zone":
+			{
+				player.sendMessage("ZONE :" + player.getZoneId());
 				break;
 			}
 			

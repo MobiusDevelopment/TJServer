@@ -39,7 +39,6 @@ import rlib.util.table.Tables;
  */
 public class EnchantItemDialog extends AbstractActionDialog
 {
-	
 	private static final int MAX_ENCHANT_LEVEL = 12;
 	
 	public static final int ITEM_COUNTER = 2;
@@ -547,6 +546,12 @@ public class EnchantItemDialog extends AbstractActionDialog
 				if (source == null)
 				{
 					actor.sendMessage("Could not find anything.");
+					return;
+				}
+				
+				if ((source.getEnchantLevel() == 9) && (source.getMasterworked() == 0))
+				{
+					actor.sendMessage("Item needs to be masterworked.");
 					return;
 				}
 				

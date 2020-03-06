@@ -2052,6 +2052,7 @@ public final class DataBaseManager
 				item.setLocation(ItemLocation.valueOf(rset.getInt("location")));
 				item.setOwnerId(rset.getInt("owner_id"));
 				item.setItemCount(rset.getLong("item_count"));
+				item.setMasterworked(rset.getInt("masterworked"));
 				item.setEnchantLevel(rset.getShort("enchant_level"));
 				item.setBonusId(rset.getInt("bonus_id"));
 				item.setAutor(rset.getString("autor"));
@@ -2907,6 +2908,13 @@ public final class DataBaseManager
 			playerPreview.setLevel(rset.getByte("level"));
 			playerPreview.setOnlineTime(rset.getLong("online_time"));
 			playerPreview.setName(rset.getString("char_name"));
+			playerPreview.setHp(rset.getInt("hp"));
+			playerPreview.setMp(rset.getInt("mp"));
+			playerPreview.setPosX(rset.getInt("x"));
+			playerPreview.setPosY(rset.getInt("y"));
+			playerPreview.setPosZ(rset.getInt("z"));
+			playerPreview.setZoneId(rset.getInt("zone_id"));
+			playerPreview.setZoneId(rset.getInt("continent_id"));
 			final PlayerAppearance appearance = loadPlayerAppearance(objectId);
 			
 			if (appearance == null)

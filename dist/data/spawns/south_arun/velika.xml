@@ -312,6 +312,7 @@
 				<point x="-820.7849" y="8400.577" z="2176.0" heading="22391" />
 				<point x="-2226.4966" y="7432.1426" z="2173.0" heading="22027" />
 				<point x="36.5573" y="5096.864" z="1682.0" heading="54977" />
+				<point x="-1256.4036" y="10565.424" z="2185.1323" heading="57166" />
 			</time>
 		</ai>
 	</npc>
@@ -514,6 +515,10 @@
 				<point x="-5108.745" y="7252.603" z="2176.0" heading="31493" />
 				<point x="595.43756" y="5065.374" z="1671.0" heading="37736" />
 				<point x="363.6344" y="5315.052" z="1682.0" heading="54977" />
+				<point x="-757.4126" y="10446.49" z="2178.361" heading="61296" />
+				<point x="-939.5198" y="10237.921" z="2174.9897" heading="56996" />
+				<point x="133.76372" y="10637.536" z="2172.6907" heading="45602" />
+				<point x="524.41846" y="10869.793" z="2175.4172" heading="13094" />
 			</time>
 		</ai>
 	</npc>
@@ -566,6 +571,15 @@
 			</time>
 		</ai>
 	</npc>
+	<!-- Freedom Plaza city teleportal -->
+	<npc id="1801" type="63" >
+		 <ai class="DEFAULT" config="DefaultFriendly" >
+			<time respawn="45" >
+				<point x="190.46027" y="11281.147" z="2175.4175" heading="62972" />
+			</time>
+		</ai>
+	</npc>
+	<!-- Velika North Gate city teleportal -->
 	<npc id="1804" type="63" >
 		 <ai class="DEFAULT" config="DefaultFriendly" >
 			<time respawn="45" >
@@ -573,6 +587,7 @@
 			</time>
 		</ai>
 	</npc>
+	<!-- Velika workshop Teleportal -->
 	<npc id="1805" type="63" >
 		 <ai class="DEFAULT" config="DefaultFriendly" >
 			<time respawn="45" >
@@ -580,6 +595,7 @@
 			</time>
 		</ai>
 	</npc>
+	<!-- Plaza of the Huntress city teleportal -->
 	<npc id="1802" type="63" >
 		 <ai class="DEFAULT" config="DefaultFriendly" >
 			<time respawn="45" >
@@ -587,6 +603,7 @@
 			</time>
 		</ai>
 	</npc>
+	<!-- Velika West Gate city teleportal -->
 	<npc id="1803" type="63" >
 		 <ai class="DEFAULT" config="DefaultFriendly" >
 			<time respawn="45" >
@@ -594,6 +611,7 @@
 			</time>
 		</ai>
 	</npc>
+	<!-- Velik's steps city teleportal -->
 	<npc id="1800" type="63" >
 		 <ai class="DEFAULT" config="DefaultFriendly" >
 			<time respawn="45" >
@@ -601,6 +619,7 @@
 			</time>
 		</ai>
 	</npc>
+
 	<npc id="1221" type="63" >
 		 <ai class="DEFAULT" config="DefaultFriendly" >
 			<time respawn="45" >
@@ -869,6 +888,7 @@
 		 <ai class="DEFAULT" config="DefaultFriendly" >
 			<time respawn="45" >
 				<point x="-20.4474" y="9243.93" z="2173.0" heading="21299" />
+				<point x="638.9018" y="9632.684" z="1811.2671" heading="29834" />
 			</time>
 		</ai>
 	</npc>
@@ -885,6 +905,9 @@
 				<point x="-961.2419" y="7465.7266" z="2172.0" heading="39504" />
 				<point x="-1375.6068" y="7202.503" z="2172.0" heading="5825" />
 				<point x="-227.8305" y="6613.2197" z="1956.0" heading="55342" />
+				<point x="400.74387" y="10544.204" z="2172.84" heading="46232" />
+				<point x="287.93884" y="10951.621" z="2175.4172" heading="13708" />
+				<point x="-1086.0492" y="10755.626" z="2185.2556" heading="57580" />
 			</time>
 		</ai>
 	</npc>
@@ -1242,6 +1265,14 @@
 		 <ai class="DEFAULT" config="DefaultFriendly" >
 			<time respawn="45" >
 				<point x="-3347.0713" y="4057.099" z="1979.0" heading="10558" />
+			</time>
+		</ai>
+	</npc>
+
+	<npc id="1108" type="63" >
+		 <ai class="DEFAULT" config="DefaultFriendly" >
+			<time respawn="45" >
+				<point x="692.56006" y="9619.56" z="2179.1792" heading="28108" />
 			</time>
 		</ai>
 	</npc>

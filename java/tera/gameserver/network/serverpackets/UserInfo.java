@@ -113,11 +113,11 @@ public class UserInfo extends ServerPacket
 			packet.writeInt(buffer, 0);
 			packet.writeInt(buffer, 0);
 			packet.writeInt(buffer, 0);
-			packet.writeInt(buffer, 0);
+			packet.writeInt(buffer, player.getKarma());
 			
-			packet.writeInt(buffer, 0);
-			packet.writeInt(buffer, 0);
-			packet.writeLong(buffer, 0);
+			packet.writeInt(buffer, 0); // item level (with inventory)
+			packet.writeInt(buffer, 0); // item level (without inventory)
+			packet.writeLong(buffer, 150);
 			packet.writeInt(buffer, 8000);
 			packet.writeInt(buffer, 1);
 			

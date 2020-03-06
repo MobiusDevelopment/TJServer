@@ -661,20 +661,18 @@ public final class WorldRegion
 		if (zones.length == 1)
 		{
 			final WorldZone zone = zones[0];
-			
+			// if (zone.contains((int) object.getX(), (int) object.getY(), (int) object.getZ()))
+			// {
+			// return zone.getZoneId();
+			// }
+			return zone.getZoneId();
+		}
+		
+		for (WorldZone zone : zones)
+		{
 			if (zone.contains((int) object.getX(), (int) object.getY(), (int) object.getZ()))
 			{
 				return zone.getZoneId();
-			}
-		}
-		else
-		{
-			for (WorldZone zone : zones)
-			{
-				if (zone.contains((int) object.getX(), (int) object.getY(), (int) object.getZ()))
-				{
-					return zone.getZoneId();
-				}
 			}
 		}
 		

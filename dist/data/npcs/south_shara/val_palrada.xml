@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <list>
-
 	<!-- Quarantine Zone -->
 	
-	<template id="18" name="Violent Mycanar" class="MONSTER" type="40" level="46" exp="4300" attack="30000" defense="1000" impact="200" balance="2000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="150" skills="18016;18017;18018;18019;18020;18021;" >
+	<template id="18" name="Violent Mycanar" class="MONSTER" type="40" level="46" exp="8300" attack="10000" defense="1000" impact="200" balance="2000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="150" skills="18016;18017;18018;18019;18020;18021;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
@@ -15,43 +14,43 @@
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="29" name="Brutal Sabertoth" class="MONSTER" type="40" level="46" exp="4300" attack="30000" defense="1000" impact="200" balance="2000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="160" geomRadius="30" skills="18007;18008;18009;" >
+	<template id="29" name="Brutal Sabertoth" class="MONSTER" type="40" level="46" exp="9300" attack="9000" defense="1000" impact="200" balance="2000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="160" geomRadius="30" skills="18007;18008;18009;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="3" name="Enraged Armored Pegling" class="MINION_LEADER" type="40" level="46" exp="3000" attack="30000" defense="1000" impact="200" balance="2000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="150" geomRadius="20" skills="18013;18014;18015;" >
+	<template id="3" name="Enraged Armored Pegling" class="MINION_LEADER" type="40" level="46" exp="7000" attack="10000" defense="1000" impact="200" balance="2000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="150" geomRadius="20" skills="18013;18014;18015;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="4" name="Armored Pegling" class="MINION" type="40" level="46" exp="350" attack="6000" defense="300" impact="150" balance="500" maxHp="7000" maxMp="1000" atkSpd="120" runSpd="150" geomRadius="15" skills="18010;18011;18012;" >
+	<template id="4" name="Armored Pegling" class="MINION" type="40" level="46" exp="350" attack="3000" defense="300" impact="150" balance="500" maxHp="7000" maxMp="1000" atkSpd="120" runSpd="150" geomRadius="15" skills="18010;18011;18012;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="17" name="Mutagenic Wolf" class="MONSTER" type="40" level="46" exp="4300" attack="30000" defense="1000" impact="200" balance="1000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="170" skills="18022;18023;18024;18025;18026;18027;18028;" >
+	<template id="17" name="Mutagenic Wolf" class="MONSTER" type="40" level="46" exp="7300" attack="10000" defense="1000" impact="200" balance="1000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="170" skills="18022;18023;18024;18025;18026;18027;18028;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="39" name="Snarling Redwolf" class="MONSTER" type="40" level="46" exp="4300" attack="30000" defense="1000" impact="200" balance="1000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="170" skills="18022;18023;18024;18025;18026;18027;18028;" >
+	<template id="39" name="Snarling Redwolf" class="MONSTER" type="40" level="46" exp="8300" attack="10000" defense="1000" impact="200" balance="1000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="170" skills="18022;18023;18024;18025;18026;18027;18028;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="12" name="Selvaras Assasin" class="MONSTER" type="40" level="46" exp="4300" attack="30000" defense="1000" impact="200" balance="1000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="150" geomRadius="25" skills="18000;18001;18002;18003;18004;18005;18006;" >
+	<template id="12" name="Selvaras Assasin" class="MONSTER" type="40" level="46" exp="7300" attack="10000" defense="1000" impact="200" balance="1000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="150" geomRadius="25" skills="18000;18001;18002;18003;18004;18005;18006;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="11" name="Selvaras Scout" class="MONSTER" type="40" level="46" exp="4300" attack="30000" defense="1000" impact="200" balance="1000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="150" geomRadius="25" skills="18000;18001;18002;18003;18004;18005;18006;" >
+	<template id="11" name="Selvaras Scout" class="MONSTER" type="40" level="46" exp="8450" attack="10000" defense="1000" impact="200" balance="1000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="150" geomRadius="25" skills="18000;18001;18002;18003;18004;18005;18006;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
@@ -75,132 +74,125 @@
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="15" name="Mutant Worker" class="MONSTER" type="40" level="46" exp="4300" attack="30000" defense="1000" impact="200" balance="1000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="140" skills="18029;18030;18031;" >
+	<template id="15" name="Mutant Worker" class="MONSTER" type="40" level="46" exp="9300" attack="11000" defense="1000" impact="200" balance="1000" maxHp="50000" maxMp="10000" atkSpd="120" runSpd="140" skills="18029;18030;18031;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="19" name="Mutant Polykind" class="MINION_LEADER" type="40" level="45" exp="2900" attack="27000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="140" geomRadius="25" skills="18035;18036;18037;" >
+	<template id="19" name="Mutant Polykind" class="MINION_LEADER" type="40" level="45" exp="5900" attack="8000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="140" geomRadius="25" skills="18035;18036;18037;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="20" name="Mad Polykind" class="MINION" type="40" level="45" exp="320" attack="5600" defense="270" impact="140" balance="900" maxHp="6500" maxMp="1000" atkSpd="120" runSpd="140" geomRadius="15" skills="18032;18033;18034;" >
+	<template id="20" name="Mad Polykind" class="MINION" type="40" level="45" exp="320" attack="3600" defense="270" impact="140" balance="900" maxHp="6500" maxMp="1000" atkSpd="120" runSpd="140" geomRadius="15" skills="18032;18033;18034;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="23" name="Guardian Aberration" class="MINION_LEADER" type="40" level="45" exp="2900" attack="27000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="1000" atkSpd="120" runSpd="140" skills="18038;18039;18040;18041;18042;18043;" >
+	<template id="23" name="Guardian Aberration" class="MINION_LEADER" type="40" level="45" exp="5900" attack="12000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="1000" atkSpd="120" runSpd="140" skills="18038;18039;18040;18041;18042;18043;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="24" name="Crazed Polykind" class="MINION" type="40" level="45" exp="320" attack="5600" defense="270" impact="140" balance="900" maxHp="6500" maxMp="1000" atkSpd="120" runSpd="140" geomRadius="15" skills="18032;18033;18034;" >
+	<template id="24" name="Crazed Polykind" class="MINION" type="40" level="45" exp="320" attack="3600" defense="270" impact="140" balance="900" maxHp="6500" maxMp="1000" atkSpd="120" runSpd="140" geomRadius="15" skills="18032;18033;18034;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="28" name="Turakius" class="MONSTER" type="40" level="45" exp="4200" attack="27000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="140" skills="18044;18045;18046;18047;" >
+	<template id="28" name="Turakius" class="MONSTER" type="40" level="45" exp="7200" attack="10000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="140" skills="18044;18045;18046;18047;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="30" name="Mutant Triblader" class="MONSTER" type="40" level="45" exp="4200" attack="27000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="1000" atkSpd="120" runSpd="140" geomRadius="25" skills="18048;18049;18050;18051;18052;18053;" >
+	<template id="30" name="Mutant Triblader" class="MONSTER" type="40" level="45" exp="7200" attack="8000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="1000" atkSpd="120" runSpd="140" geomRadius="25" skills="18048;18049;18050;18051;18052;18053;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="31" name="Mutant Triblader" class="MONSTER" type="40" level="45" exp="4200" attack="27000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="1000" atkSpd="120" runSpd="140" geomRadius="25" skills="18048;18049;18050;18051;18052;18053;" >
+	<template id="31" name="Mutant Triblader" class="MONSTER" type="40" level="45" exp="6890" attack="10000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="1000" atkSpd="120" runSpd="140" geomRadius="25" skills="18048;18049;18050;18051;18052;18053;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="1" name="Berserk Scarecrow" class="MINION_LEADER" type="40" level="45" exp="2900" attack="27000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="1000" atkSpd="120" runSpd="140" geomRadius="25" skills="18059;18060;18061;18062;18063;" >
+	<template id="1" name="Berserk Scarecrow" class="MINION_LEADER" type="40" level="45" exp="7900" attack="10000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="1000" atkSpd="120" runSpd="140" geomRadius="25" skills="18059;18060;18061;18062;18063;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="2" name="Berserk Puppet" class="MINION" type="40" level="45" exp="320" attack="5600" defense="270" impact="140" balance="900" maxHp="47000" maxMp="1000" atkSpd="120" runSpd="140" geomRadius="15" skills="18054;18055;18056;18057;18058;" >
+	<template id="2" name="Berserk Puppet" class="MINION" type="40" level="45" exp="320" attack="3600" defense="270" impact="140" balance="900" maxHp="47000" maxMp="1000" atkSpd="120" runSpd="140" geomRadius="15" skills="18054;18055;18056;18057;18058;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="5" name="Berser Harvest Golem" class="MINION_LEADER" type="40" level="45" exp="2900" attack="27000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="1000" atkSpd="120" runSpd="150" skills="18064;18065;18066;18067;18068;18069;18070;" >
+	<template id="5" name="Berser Harvest Golem" class="MINION_LEADER" type="40" level="45" exp="4900" attack="13000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="1000" atkSpd="120" runSpd="150" skills="18064;18065;18066;18067;18068;18069;18070;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="8" name="Chaotic Scarecrow" class="MINION" type="40" level="45" exp="320" attack="5600" defense="270" impact="140" balance="900" maxHp="6500" maxMp="1000" atkSpd="120" runSpd="150" geomRadius="15" skills="18054;18055;18056;18057;18058;" >
+	<template id="8" name="Chaotic Scarecrow" class="MINION" type="40" level="45" exp="320" attack="3600" defense="270" impact="140" balance="900" maxHp="6500" maxMp="1000" atkSpd="120" runSpd="150" geomRadius="15" skills="18054;18055;18056;18057;18058;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="13" name="Prion Eviscerator" class="MONSTER" type="40" level="45" exp="4200" attack="27000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="150" skills="18074;18075;18076;18077;18078;18079;18080;18081;" >
+	<template id="13" name="Prion Eviscerator" class="MONSTER" type="40" level="45" exp="7200" attack="14000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="150" skills="18074;18075;18076;18077;18078;18079;18080;18081;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="14" name="Prion Devastator" class="MONSTER" type="40" level="45" exp="4200" attack="27000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="150" skills="18074;18075;18076;18077;18078;18079;18080;18081;" >
+	<template id="14" name="Prion Devastator" class="MONSTER" type="40" level="45" exp="7200" attack="12000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="150" skills="18074;18075;18076;18077;18078;18079;18080;18081;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="32" name="Zombie Miner" class="MONSTER" type="40" level="45" exp="320" attack="5600" defense="270" impact="140" balance="900" maxHp="6500" maxMp="1000" atkSpd="120" runSpd="100" geomRadius="15" skills="18071;18072;18073;" >
+	<template id="32" name="Zombie Miner" class="MONSTER" type="40" level="45" exp="320" attack="3600" defense="270" impact="140" balance="900" maxHp="6500" maxMp="1000" atkSpd="120" runSpd="100" geomRadius="15" skills="18071;18072;18073;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="33" name="33" class="MONSTER" type="40" level="45" exp="320" attack="5600" defense="270" impact="140" balance="900" maxHp="6500" maxMp="1000" atkSpd="120" runSpd="100" geomRadius="15" skills="18071;18072;18073;" >
+	<template id="33" name="33" class="MONSTER" type="40" level="45" exp="320" attack="3600" defense="270" impact="140" balance="900" maxHp="6500" maxMp="1000" atkSpd="120" runSpd="100" geomRadius="15" skills="18071;18072;18073;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="16" name="Mutant Miner" class="MONSTER" type="40" level="45" exp="4200" attack="27000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="140" skills="18029;18030;18031;" >
+	<template id="16" name="Mutant Miner" class="MONSTER" type="40" level="45" exp="8200" attack="12000" defense="900" impact="190" balance="900" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="140" skills="18029;18030;18031;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	
-	<template id="25" name="Crestarath Archer" class="MONSTER" type="40" level="45" exp="6300" attack="40000" defense="1350" impact="250" balance="1450" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="160" skills="18082;18083;18084;18085;18086;18087;" >
+	<template id="25" name="Crestarath Archer" class="MONSTER" type="40" level="45" exp="12320" attack="14000" defense="1350" impact="250" balance="1450" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="160" skills="18082;18083;18084;18085;18086;18087;" >
 		<add stat="weakRcpt" order="0x40" val="45" />
 		<add stat="dmgRcpt" order="0x40" val="45" />
 		<add stat="stunRcpt" order="0x40" val="45" />
 	</template>
 	
-	<template id="26" name="Crestarath Reaper" class="MONSTER" type="40" level="45" exp="6300" attack="40000" defense="1350" impact="250" balance="1450" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="160" skills="18088;18089;18090;18091;18092;18093;" >
+	<template id="26" name="Crestarath Reaper" class="MONSTER" type="40" level="45" exp="11300" attack="12000" defense="1350" impact="250" balance="1450" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="160" skills="18088;18089;18090;18091;18092;18093;" >
 		<add stat="weakRcpt" order="0x40" val="45" />
 		<add stat="dmgRcpt" order="0x40" val="45" />
 		<add stat="stunRcpt" order="0x40" val="45" />
 	</template>
 	
-	<template id="27" name="Crestarath Slayer" class="MONSTER" type="40" level="45" exp="6300" attack="40000" defense="1350" impact="250" balance="1450" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="160" skills="18094;18095;18096;" >
+	<template id="27" name="Crestarath Slayer" class="MONSTER" type="40" level="45" exp="10300" attack="14000" defense="1350" impact="250" balance="1450" maxHp="47000" maxMp="10000" atkSpd="120" runSpd="160" skills="18094;18095;18096;" >
 		<add stat="weakRcpt" order="0x40" val="45" />
 		<add stat="dmgRcpt" order="0x40" val="45" />
 		<add stat="stunRcpt" order="0x40" val="45" />
 	</template>
-	
-	
-	
-	
-	
-	
 	
 	<template id="1900" name="1900" class="FRIENDLY" type="242" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />
 	<template id="9001" name="9001" class="MONSTER" type="42" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="1000" maxMp="1000" atkSpd="120" runSpd="100" skills="" />

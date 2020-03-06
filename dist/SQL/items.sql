@@ -9,6 +9,7 @@ CREATE TABLE `items` (
   `owner_name` varchar(45) NOT NULL DEFAULT '',
   `item_id` int(10) unsigned NOT NULL DEFAULT '0',
   `item_count` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `masterworked` int(10) NOT NULL DEFAULT '0',
   `enchant_level` smallint(5) NOT NULL DEFAULT '0',
   `bonus_id` int(10) NOT NULL DEFAULT '0',
   `autor` varchar(255) NOT NULL DEFAULT '',

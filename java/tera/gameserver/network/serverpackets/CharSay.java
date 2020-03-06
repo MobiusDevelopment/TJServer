@@ -41,12 +41,18 @@ public class CharSay extends ServerPacket
 	 */
 	public static CharSay getInstance(String name, String text, SayType type, int objectId, int subId)
 	{
+		return getInstance(name, text, type, objectId, subId, false);
+	}
+	
+	public static CharSay getInstance(String name, String text, SayType type, int objectId, int subId, boolean isGM)
+	{
 		final CharSay packet = (CharSay) instance.newInstance();
 		packet.name = name;
 		packet.text = text;
 		packet.type = type;
 		packet.objectId = objectId;
 		packet.subId = subId;
+		packet.isGmAccount = (isGM) ? 1 : 0;
 		return packet;
 	}
 	
@@ -59,6 +65,8 @@ public class CharSay extends ServerPacket
 	private int objectId;
 	
 	private int subId;
+	
+	private int isGmAccount;
 	
 	/**
 	 * Method finalyze.
@@ -107,7 +115,7 @@ public class CharSay extends ServerPacket
 		writeInt(buffer, objectId);
 		writeInt(buffer, subId);
 		writeByte(buffer, 0);
-		writeByte(buffer, 0);
+		writeByte(buffer, isGmAccount);
 		writeString(buffer, name);
 		writeByte(buffer, 0);
 		

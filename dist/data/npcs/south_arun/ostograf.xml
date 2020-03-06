@@ -2,143 +2,130 @@
 <list>
 	<!-- Furmount -->
 	
-	<template id="1021" name="Sulphurous Groknar" class="ELITE" type="4" level="49" exp="370000" attack="270000" defense="2200" impact="1200" balance="32000" maxHp="850000" maxMp="100000" atkSpd="150" runSpd="100" geomRadius="150" owerturnDist="120" owerturnTime="9000" skills="5023;5024;5025;5026;5028;5029;5030;5031;5032;5033;5034;" >
+	<template id="1021" name="Sulphurous Groknar" class="ELITE" type="4" level="49" exp="370000" attack="120000" defense="2200" impact="1200" balance="32000" maxHp="850000" maxMp="100000" atkSpd="150" runSpd="100" geomRadius="150" owerturnDist="120" owerturnTime="9000" skills="5023;5024;5025;5026;5028;5029;5030;5031;5032;5033;5034;" >
 		<add stat="weakRcpt" order="0x40" val="66" />
 		<add stat="dmgRcpt" order="0x40" val="66" />
 		<add stat="stunRcpt" order="0x40" val="66" />
 		<add stat="owerturnRcpt" order="0x40" val="80" />
 	</template>
 	
-	<template id="1011" name="Fangspawn" class="ELITE" type="4" level="49" exp="370000" attack="270000" defense="2200" impact="1200" balance="32000" maxHp="850000" maxMp="100000" atkSpd="150" runSpd="200" geomRadius="150" owerturnDist="120" owerturnTime="9000" skills="5035;5036;5037;5038;5039;5040;5041;" >
+	<template id="1011" name="Fangspawn" class="ELITE" type="4" level="49" exp="370000" attack="120000" defense="2200" impact="1200" balance="32000" maxHp="850000" maxMp="100000" atkSpd="150" runSpd="200" geomRadius="150" owerturnDist="120" owerturnTime="9000" skills="5035;5036;5037;5038;5039;5040;5041;" >
 		<add stat="weakRcpt" order="0x40" val="66" />
 		<add stat="dmgRcpt" order="0x40" val="66" />
 		<add stat="stunRcpt" order="0x40" val="66" />
 		<add stat="owerturnRcpt" order="0x40" val="80" />
 	</template>
 	
-	<template id="2011" name="Voracious Fangspawn" class="ELITE" type="4" level="50" exp="390000" attack="300000" defense="2400" impact="1400" balance="35000" maxHp="950000" maxMp="100000" atkSpd="150" runSpd="200" geomRadius="150" owerturnDist="120" owerturnTime="9000" skills="5035;5036;5037;5038;5039;5040;5041;" >
+	<template id="2011" name="Voracious Fangspawn" class="ELITE" type="4" level="50" exp="390000" attack="130000" defense="2400" impact="1400" balance="35000" maxHp="950000" maxMp="100000" atkSpd="150" runSpd="200" geomRadius="150" owerturnDist="120" owerturnTime="9000" skills="5035;5036;5037;5038;5039;5040;5041;" >
 		<add stat="weakRcpt" order="0x40" val="66" />
 		<add stat="dmgRcpt" order="0x40" val="66" />
 		<add stat="stunRcpt" order="0x40" val="66" />
 		<add stat="owerturnRcpt" order="0x40" val="80" />
 	</template>
 	
-	<template id="7012" name="Jirakar" class="ELITE" type="4" level="48" exp="350000" attack="240000" defense="2000" impact="1000" balance="30000" maxHp="800000" maxMp="100000" atkSpd="150" runSpd="200" geomRadius="200" owerturnDist="120" owerturnTime="9000" skills="5089;5090;5091;5092;5093;5094;5095;5096;" >
+	<template id="7012" name="Jirakar" class="ELITE" type="4" level="48" exp="350000" attack="100000" defense="2000" impact="1000" balance="30000" maxHp="800000" maxMp="100000" atkSpd="150" runSpd="200" geomRadius="200" owerturnDist="120" owerturnTime="9000" skills="5089;5090;5091;5092;5093;5094;5095;5096;" >
 		<add stat="weakRcpt" order="0x40" val="66" />
 		<add stat="dmgRcpt" order="0x40" val="66" />
 		<add stat="stunRcpt" order="0x40" val="66" />
 		<add stat="owerturnRcpt" order="0x40" val="80" />
 	</template>
 	
-	<template id="1041" name="Ashstalker Wolf" class="MONSTER" type="4" level="48" exp="4600" attack="50000" defense="1500" impact="300" balance="5000" maxHp="60000" maxMp="5000" atkSpd="150" runSpd="160" owerturnDist="90" skills="5000;5001;5002;5003;5004;5005;5006;" >
+	<template id="1041" name="Ashstalker Wolf" class="MONSTER" type="4" level="48" exp="9600" attack="10000" defense="1500" impact="300" balance="5000" maxHp="60000" maxMp="5000" atkSpd="150" runSpd="160" owerturnDist="90" skills="5000;5001;5002;5003;5004;5005;5006;" >
 		<add stat="weakRcpt" order="0x40" val="55" />
 		<add stat="dmgRcpt" order="0x40" val="55" />
 		<add stat="stunRcpt" order="0x40" val="55" />
 	</template>
 	
-	<template id="1031" name="Sooty Sporewalker" class="MONSTER" type="4" level="48" exp="4000" attack="40000" defense="1400" impact="240" balance="2400" maxHp="60000" maxMp="5000" atkSpd="150" runSpd="120" geomRadius="50" owerturnDist="90" skills="5016;5017;5018;5019;5020;5021;5022;" >
+	<template id="1031" name="Sooty Sporewalker" class="MONSTER" type="4" level="48" exp="10400" attack="5000" defense="1400" impact="240" balance="2400" maxHp="90000" maxMp="5000" atkSpd="150" runSpd="120" geomRadius="50" owerturnDist="90" skills="5016;5017;5018;5019;5020;5021;5022;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="1032" name="Smoldering Ghiliedhu" class="MONSTER" type="4" level="48" exp="4000" attack="40000" defense="1400" impact="240" balance="2400" maxHp="60000" maxMp="5000" atkSpd="150" runSpd="140" geomRadius="70" owerturnDist="90" skills="5007;5008;5009;5010;5011;5012;5013;5014;5015;" >
+	<template id="1032" name="Smoldering Ghiliedhu" class="MONSTER" type="4" level="48" exp="7920" attack="4000" defense="1400" impact="240" balance="2400" maxHp="60000" maxMp="5000" atkSpd="150" runSpd="140" geomRadius="70" owerturnDist="90" skills="5007;5008;5009;5010;5011;5012;5013;5014;5015;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="1061" name="Devan Dark Knight" class="MINION_LEADER" type="4" level="48" exp="3300" attack="50000" defense="1500" impact="240" balance="2400" maxHp="60000" maxMp="5000" atkSpd="150" runSpd="170" geomRadius="70" skills="5049;5050;5051;5052;5053;" >
+	<template id="1061" name="Devan Dark Knight" class="MINION_LEADER" type="4" level="48" exp="7110" attack="10000" defense="1500" impact="240" balance="2400" maxHp="60000" maxMp="5000" atkSpd="150" runSpd="170" geomRadius="70" skills="5049;5050;5051;5052;5053;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="1062" name="Risen Devan Infanty" class="MINION" type="4" level="48" exp="400" attack="11000" defense="350" impact="200" balance="900" maxHp="10000" maxMp="900" atkSpd="150" runSpd="160" geomRadius="30" skills="5047;5048;" >
+	<template id="1062" name="Risen Devan Infanty" class="MINION" type="4" level="48" exp="470" attack="4000" defense="350" impact="200" balance="900" maxHp="10000" maxMp="900" atkSpd="150" runSpd="160" geomRadius="30" skills="5047;5048;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="2051" name="Raging Arbosk" class="MONSTER" type="4" level="50" exp="4200" attack="50000" defense="1500" impact="270" balance="2600" maxHp="70000" maxMp="5000" atkSpd="150" runSpd="140" geomRadius="70" skills="5007;5008;5009;5010;5011;5012;5013;5014;5015;" >
+	<template id="2051" name="Raging Arbosk" class="MONSTER" type="4" level="50" exp="8927" attack="7000" defense="1500" impact="270" balance="2600" maxHp="70000" maxMp="5000" atkSpd="150" runSpd="140" geomRadius="70" skills="5007;5008;5009;5010;5011;5012;5013;5014;5015;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="2041" name="Eldritch Reaver" class="MONSTER" type="4" level="49" exp="4100" attack="44000" defense="1450" impact="260" balance="2500" maxHp="67000" maxMp="5000" atkSpd="150" runSpd="140" owerturnDist="90" skills="5054;5055;5056;5057;5058;5059;5060;" >
+	<template id="2041" name="Eldritch Reaver" class="MONSTER" type="4" level="49" exp="8121" attack="7000" defense="1450" impact="260" balance="2500" maxHp="67000" maxMp="5000" atkSpd="150" runSpd="140" owerturnDist="90" skills="5054;5055;5056;5057;5058;5059;5060;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="2031" name="Eldritch Cardinal" class="MONSTER" type="4" level="50" exp="5000" attack="65000" defense="1700" impact="350" balance="6000" maxHp="70000" maxMp="5000" atkSpd="150" runSpd="140" owerturnDist="90" skills="5061;5062;5063;5064;5065;5066;" >
+	<template id="2031" name="Eldritch Cardinal" class="MONSTER" type="4" level="50" exp="10400" attack="9000" defense="1700" impact="350" balance="6000" maxHp="70000" maxMp="5000" atkSpd="150" runSpd="140" owerturnDist="90" skills="5061;5062;5063;5064;5065;5066;" >
 		<add stat="weakRcpt" order="0x40" val="55" />
 		<add stat="dmgRcpt" order="0x40" val="55" />
 		<add stat="stunRcpt" order="0x40" val="55" />
 	</template>
 	
-	<template id="2021" name="Shurian Foe-Hammer" class="MONSTER" type="4" level="50" exp="5000" attack="65000" defense="1700" impact="350" balance="6000" maxHp="70000" maxMp="5000" atkSpd="150" runSpd="140" owerturnDist="90" skills="5067;5068;5069;5070;5071;5072;5073;" >
+	<template id="2021" name="Shurian Foe-Hammer" class="MONSTER" type="4" level="50" exp="10750" attack="10000" defense="1700" impact="350" balance="6000" maxHp="70000" maxMp="5000" atkSpd="150" runSpd="140" owerturnDist="90" skills="5067;5068;5069;5070;5071;5072;5073;" >
 		<add stat="weakRcpt" order="0x40" val="55" />
 		<add stat="dmgRcpt" order="0x40" val="55" />
 		<add stat="stunRcpt" order="0x40" val="55" />
 	</template>
 	
-	<template id="3041" name="Shurian Mindbender" class="MINION_LEADER" type="4" level="51" exp="3500" attack="75000" defense="1700" impact="300" balance="2800" maxHp="80000" maxMp="5000" atkSpd="170" runSpd="170" owerturnDist="90" skills="5083;5084;5085;5086;5087;5088;" >
+	<template id="3041" name="Shurian Mindbender" class="MINION_LEADER" type="4" level="51" exp="7550" attack="14000" defense="1700" impact="300" balance="2800" maxHp="80000" maxMp="5000" atkSpd="170" runSpd="170" owerturnDist="90" skills="5083;5084;5085;5086;5087;5088;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="3042" name="Helion Thrall" class="MINION" type="4" level="51" exp="420" attack="20000" defense="800" impact="220" balance="1000" maxHp="15000" maxMp="900" atkSpd="150" runSpd="160" geomRadius="30" owerturnDist="90" skills="5080;5082;" >
+	<template id="3042" name="Helion Thrall" class="MINION" type="4" level="51" exp="420" attack="4000" defense="800" impact="220" balance="1000" maxHp="15000" maxMp="900" atkSpd="150" runSpd="160" geomRadius="30" owerturnDist="90" skills="5080;5082;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="3031" name="Tyrak" class="MONSTER" type="4" level="51" exp="5300" attack="75000" defense="1700" impact="400" balance="7000" maxHp="80000" maxMp="5000" atkSpd="150" runSpd="170" owerturnDist="90" skills="5074;5075;5076;5078;5079;" >
+	<template id="3031" name="Tyrak" class="MONSTER" type="4" level="51" exp="11350" attack="14000" defense="1700" impact="400" balance="7000" maxHp="80000" maxMp="5000" atkSpd="150" runSpd="170" owerturnDist="90" skills="5074;5075;5076;5078;5079;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="1051" name="Devan War Golem" class="MINION_LEADER" type="4" level="48" exp="3300" attack="50000" defense="1500" impact="240" balance="2400" maxHp="60000" maxMp="5000" atkSpd="150" runSpd="160" owerturnDist="90" skills="5097;5098;5099;5100;5101;5102;" >
+	<template id="1051" name="Devan War Golem" class="MINION_LEADER" type="4" level="48" exp="6100" attack="7000" defense="1500" impact="240" balance="2400" maxHp="60000" maxMp="5000" atkSpd="150" runSpd="160" owerturnDist="90" skills="5097;5098;5099;5100;5101;5102;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	<template id="1052" name="Fallen Devan Protector" class="MINION" type="4" level="48" exp="400" attack="11000" defense="350" impact="200" balance="900" maxHp="10000" maxMp="900" atkSpd="150" runSpd="160" geomRadius="30" skills="5047;5048;" >
+	<template id="1052" name="Fallen Devan Protector" class="MINION" type="4" level="48" exp="400" attack="4000" defense="350" impact="200" balance="900" maxHp="10000" maxMp="900" atkSpd="150" runSpd="160" geomRadius="30" skills="5047;5048;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<template id="16" name="Naga Clawrider" class="ELITE" type="10" level="48" exp="0" attack="120000" defense="3500" impact="900" balance="22000" maxHp="1900000" maxMp="100000" atkSpd="150" runSpd="200" geomRadius="150" skills="6000;6001;6002;6003;6004;6005;6006;6007;6008;" >
+	<template id="16" name="Naga Clawrider" class="ELITE" type="10" level="48" exp="0" attack="80000" defense="3500" impact="900" balance="22000" maxHp="1900000" maxMp="100000" atkSpd="150" runSpd="200" geomRadius="150" skills="6000;6001;6002;6003;6004;6005;6006;6007;6008;" >
 		<add stat="weakRcpt" order="0x40" val="66" />
 		<add stat="dmgRcpt" order="0x40" val="66" />
 		<add stat="stunRcpt" order="0x40" val="66" />
 		<add stat="owerturnRcpt" order="0x40" val="80" />
 	</template>
  
-	<template id="1021" name="Cromos Prowler" class="MONSTER" type="8" level="48" exp="5500" attack="100000" defense="1450" impact="300" balance="3000" maxHp="60000" maxMp="5000" atkSpd="150" runSpd="160" geomRadius="70" owerturnDist="90" skills="5042;5043;5044;5045;5046;5103;" >
+	<template id="1021" name="Cromos Prowler" class="MONSTER" type="8" level="48" exp="10500" attack="40000" defense="1450" impact="300" balance="3000" maxHp="60000" maxMp="5000" atkSpd="150" runSpd="160" geomRadius="70" owerturnDist="90" skills="5042;5043;5044;5045;5046;5103;" >
 		<add stat="weakRcpt" order="0x40" val="33" />
 		<add stat="dmgRcpt" order="0x40" val="33" />
 		<add stat="stunRcpt" order="0x40" val="33" />
 	</template>
-	
-	
 	
 	<template id="4" name="4" class="MONSTER" type="12" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="900" maxMp="900" atkSpd="120" runSpd="100" skills="" />
 	<template id="5" name="5" class="MONSTER" type="12" level="1" exp="1" attack="1" defense="1" impact="1" balance="1" maxHp="900" maxMp="900" atkSpd="120" runSpd="100" skills="" />

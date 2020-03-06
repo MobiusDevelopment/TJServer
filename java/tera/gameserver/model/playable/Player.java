@@ -146,7 +146,6 @@ import rlib.util.wraps.Wraps;
  */
 public final class Player extends Playable implements Nameable, Identified
 {
-	
 	private static final IdGenerator ID_FACTORY = IdGenerators.newSimpleIdGenerator(0, 300000);
 	
 	private static final int MAXIMUM_QUEST_IN_PANEL = 7;
@@ -852,7 +851,7 @@ public final class Player extends Playable implements Nameable, Identified
 	{
 		final int damage = super.doFall(startZ, endZ);
 		
-		if (damage > 0)
+		if ((damage > 0) && Config.SERVER_FALLING_DAMAGE)
 		{
 			sendMessage("Received " + damage + " damage by falling.");
 		}

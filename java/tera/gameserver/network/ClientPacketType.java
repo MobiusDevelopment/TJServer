@@ -90,6 +90,7 @@ import tera.gameserver.network.clientpackets.RequestPartyLeave;
 import tera.gameserver.network.clientpackets.RequestPartyMakeLeader;
 import tera.gameserver.network.clientpackets.RequestPickUpItem;
 import tera.gameserver.network.clientpackets.RequestPlayerList;
+import tera.gameserver.network.clientpackets.RequestPlayerUnstuck;
 import tera.gameserver.network.clientpackets.RequestRessurect;
 import tera.gameserver.network.clientpackets.RequestRestart;
 import tera.gameserver.network.clientpackets.RequestServerCheck;
@@ -220,7 +221,8 @@ public enum ClientPacketType
 	REQUEST_ADD_ENCHANT_ITEM(0x5E4E, new RequestAddEnchantItem()),
 	ENCHANT_FINISH(0xDDB4, new EnchantFinish()),
 	PLAYER_SELECTED_PACKET(0xE3A4, new SelectedPlayer()),
-	PLAYER_ENTERED_PACKET(0x8E3C, new EnteredWorld());
+	PLAYER_ENTERED_PACKET(0x8E3C, new EnteredWorld()),
+	PLAYER_REQUEST_UNSTUCK(0x86E2, new RequestPlayerUnstuck());
 	
 	private static final Logger log = Loggers.getLogger(ClientPacketType.class);
 	private static ClientPacket[] packets;
